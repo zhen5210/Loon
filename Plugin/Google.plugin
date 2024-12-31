@@ -5,11 +5,11 @@
 #!tag = 功能增强
 #!system = 
 #!system_version = 
-#!loon_version = 3.2.4(787)
+#!loon_version = 3.2.5(805)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Google.png
 #!input = GOOGLE_CAPTCHA_REGEX
-#!date = 2024-11-28 12:00
+#!date = 2025-01-01 00:00
 
 # 2024-05-19 12:00:00
 # https://raw.githubusercontent.com/NobyDa/Script/master/Loon/Loon_Google_CAPTCHA.plugin
