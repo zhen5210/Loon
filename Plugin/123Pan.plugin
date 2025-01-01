@@ -113,6 +113,7 @@ DOMAIN, v.adx.hubcloud.com.cn, REJECT
 
 [Script]
 http-response ^https?:\/\/www\.123pan\.com\/s\/[0-9a-zA-Z=_/-]+\.html script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/123pan.js, requires-body = true, timeout = 60, tag = 123pan.Ads
+
 http-request ^https?:\/\/www\.123pan\.com\/b\/api\/share\/download\/info script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/123pan.js, timeout = 60, tag = 123pan.Enhance
 
 [MitM]
