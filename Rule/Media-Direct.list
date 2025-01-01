@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-12-26 19:50
+# 2025-01-02 02:00
 # https://github.com/fangkuia/XPTV/blob/main/X/xptv.plugin
 
 # --------------- CMSPlayer --------------- #
@@ -94,32 +94,42 @@ DOMAIN-SUFFIX, uc.cn
 DOMAIN-SUFFIX, xiaoya.pro
 
 # 网盘源
-# 小米
-DOMAIN, mihdr.top
+# 奥秘影视
+DOMAIN, vip.omii.top
+# 白嫖分享
+DOMAIN-SUFFIX, smdyo.top
+# 多多影音
+DOMAIN-SUFFIX, yydsys.top
+# 蜡笔盘
+DOMAIN-SUFFIX, duopan.fun
+# 雷鲸小站
+DOMAIN, www.leijing.xyz
+# 六趣网盘
+DOMAIN, wp.0v.fit
 # 木偶
 DOMAIN-SUFFIX, mogg.top
-# 玩偶
-DOMAIN-SUFFIX, wogg.net
-# 雷鲸
-DOMAIN, www.leijing.xyz
-# 校长
-DOMAIN, xzys.fun
-# 蜡笔
-DOMAIN-SUFFIX, duopan.fun
-# 南风
+# 南风短剧
 DOMAIN, www.nanf.cc
-# 多多
-DOMAIN, yydsys.top
 # 欧歌
 DOMAIN, woog.nxog.eu.org
-# 云盘吧
-DOMAIN, yunpan8.cc
-# 奥秘
-DOMAIN, vip.omii.top
-# 六趣
-DOMAIN, wp.0v.fit
 # 闪电UC
 DOMAIN-SUFFIX, dcyun.cc
+# 特下饭
+DOMAIN-SUFFIX, txfyyds.top
+# 玩偶哥哥
+DOMAIN-SUFFIX, wogg.net
+# 小虎斑
+DOMAIN, wp.huban.xyz
+# 小米UC
+DOMAIN, www.mucpan.cc
+# 校长影视
+DOMAIN-SUFFIX, xzys.fun
+# 云盘吧
+DOMAIN-SUFFIX, yunpan8.cc
+# 云盘资源网
+DOMAIN, res.yunpan.win
+# 至臻视觉
+DOMAIN, mihdr.top
 
 # nmlive相关
 DOMAIN-SUFFIX, bilivideo.com

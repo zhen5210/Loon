@@ -1,5 +1,5 @@
 # 影视播放规则(代理)
-# 2024-12-17 19:50
+# 2025-01-02 02:00
 
 # CMSPlayer
 # 海外看
@@ -48,6 +48,8 @@ DOMAIN-SUFFIX, picsum.photos
 DOMAIN-SUFFIX, ibb.co
 # 4K电影馆
 DOMAIN-SUFFIX, 4kdyg.fun
+# 旺旺资源
+DOMAIN-SUFFIX, wwzy.tv
 
 # XPTV
 # VOD TV源
@@ -106,3 +108,7 @@ DOMAIN-SUFFIX, 7341hsck.cc
 DOMAIN-SUFFIX, 822thz.com
 # 玩偶姐姐
 DOMAIN-SUFFIX, hongkongdollvideo.com
+
+# 网盘源
+# 小盘盘
+DOMAIN-SUFFIX, xpanpan.site

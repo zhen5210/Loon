@@ -14,7 +14,7 @@
 # https://github.com/NSRingo/TestFlight/releases/latest/download/TestFlight.plugin
 
 [Argument]
-CountryCode = select, "US", "AUTO", "CN", "HK", "TW", "SG", "JP", "AU", "GB", "KR", "CA", "IE", tag = 国家或地区代码, desc = 不同国家或地区提供的内容或有差别。
+CountryCode = select, "AUTO", "US", "CN", "HK", "TW", "SG", "JP", "AU", "GB", "KR", "CA", "IE", tag = 国家或地区代码, desc = 不同国家或地区提供的内容或有差别。
 MultiAccount = switch, false, tag = 启用多账号支持, desc = 启用多账号支持会自动保存保存更新当前账号信息。
 Universal = switch, true, tag = 启用通用应用支持, desc = 启用通用应用支持会解除 TestFlight app 的 iOS/iPadOS/macOS(AppleSilicon) 平台限制。
 AlwaysShowInstall = switch, false, tag = 总是显示安装选项, desc = 当 Testflight 无法加入时，也总是显示app详情页面的安装选项。
