@@ -168,15 +168,6 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
         <td align=center>288</td>
         <td align=center>×</td>
     </tr>
-    <tr>
-        <td align=center>斐济杯</td>
-        <td align=center>150G</td>
-        <td align=center>15</td>
-        <td align=center>42</td>
-        <td align=center>81</td>
-        <td align=center>153</td>
-        <td align=center>×</td>
-    </tr>
 </table>
 
 - **购买方式**<br>
