@@ -1,5 +1,5 @@
 # 影视播放规则(代理)
-# 2025-01-02 02:00
+# 2025-01-06 18:30
 
 # CMSPlayer
 # 海外看
@@ -76,6 +76,8 @@ DOMAIN-SUFFIX, kmeiju.cc
 # 91Jav
 DOMAIN-SUFFIX, 91jav.fun
 DOMAIN, 041.bndmpsjx.com
+# AVDB
+DOMAIN-SUFFIX, avdbapi.com
 # AV Today
 DOMAIN-SUFFIX, avtoday.io
 # Hanime1.me

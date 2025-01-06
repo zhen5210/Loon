@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2025-01-02 02:00
+# 2025-01-06 18:30
 # https://github.com/fangkuia/XPTV/blob/main/X/xptv.plugin
 
 # --------------- CMSPlayer --------------- #
@@ -100,6 +100,8 @@ DOMAIN, vip.omii.top
 DOMAIN-SUFFIX, smdyo.top
 # 多多影音
 DOMAIN-SUFFIX, yydsys.top
+# 观影 GYING
+DOMAIN-SUFFIX, gyg.la
 # 蜡笔盘
 DOMAIN-SUFFIX, duopan.fun
 # 雷鲸小站
@@ -116,6 +118,8 @@ DOMAIN, woog.nxog.eu.org
 DOMAIN-SUFFIX, dcyun.cc
 # 特下饭
 DOMAIN-SUFFIX, txfyyds.top
+# 天逸搜
+DOMAIN-SUFFIX, tianyiso.com
 # 玩偶哥哥
 DOMAIN-SUFFIX, wogg.net
 # 小虎斑
