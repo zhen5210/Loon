@@ -6,6 +6,8 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
 
 本仓库仅作为个人备份使用，内容包括配置、插件等均不保证及时更新，使用者请自行斟酌。
 
+本仓库所有资源文件仅供本人使用，其他用户如需使用，请根据自身需求进行自主调试与修改。
+
 建议使用更及时、更完善、更全面的[可莉配置](https://github.com/luestr/ProxyResource/blob/main/README.md)。
 
 ![Alt](https://repobeats.axiom.co/api/embed/3deb351aeae7762d0a77427ce568557e05d239b0.svg "Repobeats analytics image")
