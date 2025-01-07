@@ -1,5 +1,5 @@
 # 影视播放规则(代理)
-# 2025-01-01 23:50
+# 2025-01-08 02:00
 
 # CMSPlayer
 # 海外看
@@ -112,6 +112,8 @@ DOMAIN-SUFFIX, 7341hsck.cc
 DOMAIN-SUFFIX, 822thz.com
 # 玩偶姐姐
 DOMAIN-SUFFIX, hongkongdollvideo.com
+# 有爱爱
+DOMAIN-SUFFIX, uaa.com
 
 # 网盘源
 # 小盘盘
