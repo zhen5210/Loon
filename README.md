@@ -495,10 +495,8 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
     </tr>
     <tr>
         <td align=center>16</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/TestFlightBeta.plugin">TestFlightBeta</a></td>
-        <td align=center>17</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/VVebo.plugin">VVebo</a></td>
-        <td align=center>18</td>
+        <td align=center>17</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/XPTV.plugin">XPTV</a></td>
     </tr>
 </table>

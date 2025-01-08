@@ -1,19 +1,17 @@
 #!name = TestFlight
-#!desc = 多账户共存与自动加入TestFlight
+#!desc = 解除TestFlight区域限制，以解决安装或更新TestFlight内App时, 提示“APP不可用”问题。
 #!openUrl = https://apps.apple.com/app/id899247664
-#!author = blackmatrix7[https://github.com/blackmatrix7], NobyDa[https://github.com/NobyDa]
+#!author = NobyDa[https://github.com/NobyDa], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!tag = 功能增强
 #!system = 
 #!system_version = 
 #!loon_version = 3.2.5(805)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
-#!icon= https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/TestFlight-01.png
+#!icon= https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/TestFlight-02.png
 #!date = 2025-01-01 00:00
 
-# 2022-12-22
-# https://github.com/blackmatrix7/ios_rule_script/blob/master/script/testflight/testflight.lnplugin
-# 2024-02-22
-# https://github.com/NobyDa/Script/blob/master/Loon/Loon_TF_Account.plugin
+# 2022-06-16
+# https://github.com/NobyDa/Script/blob/master/Loon/Loon_TF_Download.plugin
 
 [General]
 skip-proxy = iosapps.itunes.apple.com
@@ -21,21 +19,11 @@ skip-proxy = iosapps.itunes.apple.com
 [Rule]
 DOMAIN, testflight.apple.com, PROXY
 
+[Rewrite]
+^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$ request-body-replace-regex "storefrontId"\x20:\x20"\d{6}-\d{2},\d{2}", "storefrontId":"143441-19,29",
+
 [Script]
-# TestFlight_设置篡改
-http-request ^https:\/\/testflight\.apple\.com\/v\d\/accounts\/settings\/.*\/apps\/\d+ script-path = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/testflight/testflight.js, requires-body = true, tag = TestFlight_设置篡改
-
-# TestFlight_应用篡改
-http-request ^https:\/\/testflight\.apple\.com\/v\d\/accounts\/\w{8}-\w{4}-\w{4}-\w{4}-\w{12}\/apps\/\d+ script-path = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/testflight/testflight.js, requires-body = true, tag = TestFlight_应用篡改
-
-# TestFlight_状态篡改
-http-request ^https:\/\/testflight\.apple\.com\/v\d\/apps\/\d+\/\d+\/install\/status$ script-path = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/testflight/testflight.js, requires-body = true, tag = TestFlight_状态篡改
-
-# TestFlight_应用共存
-http-response ^https:\/\/testflight\.apple\.com\/v\d\/accounts\/\w{8}-\w{4}-\w{4}-\w{4}-\w{12}\/apps$ script-path = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/testflight/testflight.js, requires-body = true, tag = TestFlight_应用共存
-
-# TestFlight_自动入列
-http-response ^https:\/\/testflight\.apple\.com\/v3\/accounts\/\w{8}-\w{4}-\w{4}-\w{4}-\w{12}\/ru\/([a-zA-Z0-9]{8})$ script-path = https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/testflight/testflight.js, requires-body = true, tag = TestFlight_自动入列
+# http-request ^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$ script-path = https://gist.githubusercontent.com/NobyDa/9be418b93afc5e9c8a8f4d28ae403cf2/raw/TF_Download.js,  requires-body = true, tag = 解除TestFlight区域限制
 
 [MitM]
 hostname = testflight.apple.com
