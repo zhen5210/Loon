@@ -457,46 +457,48 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
         <td align=center>01</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/1.1.1.1.plugin">1.1.1.1</a></td>
         <td align=center>02</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/AppleWeather.plugin">Apple天气</a></td>
-        <td align=center>03</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/BoxJs.plugin">BoxJs</a></td>
+        <td align=center>03</td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Google.plugin">Google</a></td>
     </tr>
     <tr>
         <td align=center>04</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Google.plugin">Google</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/iRingo.Siri.plugin">iRingo:Siri</a></td>
         <td align=center>05</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/iRingoTestFlight.plugin">iRingo:TestFlight</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/iRingo.TestFlight.plugin">iRingo:TestFlight</a></td>
         <td align=center>06</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Listenify.plugin">Listenify</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/iRingo.WeatherKit.plugin">iRingo:WeatherKit</a></td>
     </tr>
     <tr>
         <td align=center>07</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/LoonGallery.plugin">Loon Gallery</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Listenify.plugin">Listenify</a></td>
         <td align=center>08</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Netisp-x.plugin">网络信息</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/LoonGallery.plugin">Loon Gallery</a></td>
         <td align=center>09</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/NodeTools.plugin">节点检测工具</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Netisp-x.plugin">网络信息</a></td>
     </tr>
     <tr>
         <td align=center>10</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/QQ.plugin">QQ</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/NodeTools.plugin">节点检测工具</a></td>
         <td align=center>11</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Redirect.plugin">重定向</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/QQ.plugin">QQ</a></td>
         <td align=center>12</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Sub-Store.plugin">Sub-Store</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Redirect.plugin">重定向</a></td>
     </tr>
     <tr>
         <td align=center>13</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Script-Hub.plugin">Script Hub</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Sub-Store.plugin">Sub-Store</a></td>
         <td align=center>14</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/TestFlight.plugin">TestFlight</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Script-Hub.plugin">Script Hub</a></td>
         <td align=center>15</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/TestFlightBeta.plugin">TestFlightBeta</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/TestFlight.plugin">TestFlight</a></td>
     </tr>
     <tr>
         <td align=center>16</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/VVebo.plugin">VVebo</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/TestFlightBeta.plugin">TestFlightBeta</a></td>
         <td align=center>17</td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/VVebo.plugin">VVebo</a></td>
+        <td align=center>18</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/XPTV.plugin">XPTV</a></td>
     </tr>
 </table>
