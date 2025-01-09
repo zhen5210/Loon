@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2025-01-09 16:30
+# 2025-01-09 21:00
 # https://github.com/fangkuia/XPTV/blob/main/X/xptv.plugin
 
 # --------------- CMSPlayer --------------- #
@@ -162,6 +162,7 @@ DOMAIN-SUFFIX, bttwo.org
 DOMAIN-SUFFIX, bttwoo.com
 DOMAIN-SUFFIX, bttwo.vip
 # 素白白影院
+DOMAIN, dc.xhscdn.com
 DOMAIN-SUFFIX, subaibai.vip
 DOMAIN-SUFFIX, subaibai.com
 DOMAIN-SUFFIX, subaibaiys.com
@@ -279,9 +280,8 @@ DOMAIN, mdn.alipayobjects.com
 # 在线之家
 DOMAIN-SUFFIX, zxzja.com
 DOMAIN-SUFFIX, ctyunxs.cn
-# 素白白
-DOMAIN, www.subaibaiys.com
-DOMAIN, dc.xhscdn.com
+# 皮皮虾影视
+DOMAIN-SUFFIX, ppxys.vip
 
 # CMS源
 # 360
