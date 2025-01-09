@@ -1,14 +1,14 @@
 #!name = 网易云音乐
 #!desc = 网易云音乐全面净化
 #!openUrl = https://apps.apple.com/app/id590338362
-#!author = RuCu6[https://github.com/RuCu6], Keywos[https://github.com/Keywos], qiuxiuya[https://github.com/qiuxiuya], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!author = RuCu6[https://github.com/RuCu6], Keywos[https://github.com/Keywos], qiuxiuya[https://github.com/qiuxiuya], anyehttp[https://github.com/anyehttp], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!tag = 去广告, 解锁会员
 #!system = 
 #!system_version = 
 #!loon_version = 3.2.5(805)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/NeteaseMusic.png
-#!date = 2025-01-01 00:00
+#!date = 2025-01-09 18:00
 
 # 2024-12-01 21:16:57
 # https://raw.githubusercontent.com/Keywos/rule/main/script/wy/wy.plugin
@@ -16,6 +16,8 @@
 # https://github.com/qiuxiuya/qiuxiuya/blob/main/Loon/NetEaseMusic.plugin
 # 2024-12-02 01:13:20
 # https://kelee.one/Tool/Loon/Plugin/NeteaseCloudMusic_remove_ads.plugin
+# 2024-10-01
+# https://raw.githubusercontent.com/anyehttp/quantumult-x/main/headers/wyy-surge.sgmodule
 
 [Argument]
 FX = switch, false, true, tag = 隐藏[底部-发现], desc = 是否隐藏底部发现标签
@@ -66,31 +68,28 @@ DOMAIN, ipv6.music.163.com, REJECT
 [Script]
 #----------  qiuxiuya ----------#
 # 解锁黑胶音乐
-http-request ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/.*(player\/url|entrance|\/eapi\/search\/) script-path = https://raw.githubusercontent.com/qiuxiuya/qiuxiuya/main/Loon/wyy.js, timeout = 60, enable = {Music163_VIP_Shared}, tag = 黑胶会员@qiuxiuya
+# http-request ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/.*(player\/url|entrance|\/eapi\/search\/) script-path = https://raw.githubusercontent.com/anyehttp/quantumult-x/main/headers/wyy.js, timeout = 60, enable = {Music163_VIP_Shared}, tag = 黑胶会员@qiuxiuya
 
 #----------  会员解锁 ----------#
 # 播放会员歌曲
-http-request ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/eapi\/(?:v1\/artist\/top\/song|v3\/discovery\/recommend\/songs) script-path = https://raw.githubusercontent.com/qiuxiuya/qiuxiuya/main/Loon/wyy.js, requires-body = false, binary-body-mode = false, timeout = 20, enable = {Music163_VIP_Shared}, tag = 播放会员歌曲
-http-request ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/eapi\/v3\/song\/detail script-path = https://raw.githubusercontent.com/qiuxiuya/qiuxiuya/main/Loon/wyy.js, requires-body = false, binary-body-mode = false, timeout = 20, enable = {Music163_VIP_Shared}, tag = 播放会员歌曲
-http-request ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/eapi\/song\/(?:chorus|enhance\/|play\/|type\/detail\/get) script-path = https://raw.githubusercontent.com/qiuxiuya/qiuxiuya/main/Loon/wyy.js, requires-body = false, binary-body-mode = false, timeout = 20, enable = {Music163_VIP_Shared}, tag = 播放会员歌曲
+http-request ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/eapi\/(?:v1\/artist\/top\/song|v3\/discovery\/recommend\/songs) script-path = https://raw.githubusercontent.com/anyehttp/quantumult-x/main/headers/wyy.js, requires-body = false, binary-body-mode = false, timeout = 20, enable = {Music163_VIP_Shared}, tag = 播放会员歌曲
+http-request ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/eapi\/v3\/song\/detail script-path = https://raw.githubusercontent.com/anyehttp/quantumult-x/main/headers/wyy.js, requires-body = false, binary-body-mode = false, timeout = 20, enable = {Music163_VIP_Shared}, tag = 播放会员歌曲
+http-request ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/eapi\/song\/(?:chorus|enhance\/|play\/|type\/detail\/get) script-path = https://raw.githubusercontent.com/anyehttp/quantumult-x/main/headers/wyy.js, requires-body = false, binary-body-mode = false, timeout = 20, enable = {Music163_VIP_Shared}, tag = 播放会员歌曲
 
 # 播放器会员皮肤
-http-request ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/eapi\/playermode\/ script-path = https://raw.githubusercontent.com/qiuxiuya/qiuxiuya/main/Loon/wyy.js, requires-body = false, binary-body-mode = false, timeout = 20, enable = {Music163_VIP_Shared}, tag = 播放器会员皮肤
+http-request ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/eapi\/playermode\/ script-path = https://raw.githubusercontent.com/anyehttp/quantumult-x/main/headers/wyy.js, requires-body = false, binary-body-mode = false, timeout = 20, enable = {Music163_VIP_Shared}, tag = 播放器会员皮肤
 
 # 搜索结果会员歌曲
-http-request ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/eapi\/search\/(?:complex\/page|complex\/rec\/song\/get|song\/list\/page) script-path = https://raw.githubusercontent.com/qiuxiuya/qiuxiuya/main/Loon/wyy.js, requires-body = false, binary-body-mode = false, timeout = 20, enable = {Music163_VIP_Shared}, tag = 搜索结果会员歌曲
+http-request ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/eapi\/search\/(?:complex\/page|complex\/rec\/song\/get|song\/list\/page) script-path = https://raw.githubusercontent.com/anyehttp/quantumult-x/main/headers/wyy.js, requires-body = false, binary-body-mode = false, timeout = 20, enable = {Music163_VIP_Shared}, tag = 搜索结果会员歌曲
 
 # 侧边栏会员等级
-http-request ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/eapi\/vipnewcenter\/app\/resource\/newaccountpage script-path = https://raw.githubusercontent.com/qiuxiuya/qiuxiuya/main/Loon/wyy.js, requires-body = false, binary-body-mode = false, timeout = 20, enable = {Music163_VIP_Shared}, tag = 侧边栏会员等级
+http-request ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/eapi\/vipnewcenter\/app\/resource\/newaccountpage script-path = https://raw.githubusercontent.com/anyehttp/quantumult-x/main/headers/wyy.js, requires-body = false, binary-body-mode = false, timeout = 20, enable = {Music163_VIP_Shared}, tag = 侧边栏会员等级
 
 # 歌单列表会员认证
-http-request ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/w?e?api\/(homepage\/|v6\/)?playlist\/(?!(?:delete|subscribe|unsubscribe)) script-path = https://raw.githubusercontent.com/qiuxiuya/qiuxiuya/main/Loon/wyy.js, requires-body = false, binary-body-mode = false, timeout = 20, enable = {Music163_VIP_Shared}, tag = 歌单列表会员认证
-
-# 动态信息流
-http-request ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/eapi\/v3\/song\/detail script-path = https://raw.githubusercontent.com/qiuxiuya/qiuxiuya/main/Loon/wyy.js, requires-body = false, binary-body-mode = false, timeout = 20, enable = {Music163_VIP_Shared}, tag = 动态信息流
+http-request ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/w?e?api\/(?:homepage\/|v6\/)?playlist\/(?!(?:delete|subscribe|unsubscribe)) script-path = https://raw.githubusercontent.com/anyehttp/quantumult-x/main/headers/wyy.js, requires-body = false, binary-body-mode = false, timeout = 20, enable = {Music163_VIP_Shared}, tag = 歌单列表会员认证
 
 # 会员认证
-http-request ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/eapi\/vipauth\/app\/auth\/(soundquality\/)?query script-path = https://raw.githubusercontent.com/qiuxiuya/qiuxiuya/main/Loon/wyy.js, requires-body = false, binary-body-mode = false, timeout = 20, enable = {Music163_VIP_Shared}, tag = 会员认证
+http-request ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/eapi\/vipauth\/app\/auth\/(soundquality\/)?query script-path = https://raw.githubusercontent.com/anyehttp/quantumult-x/main/headers/wyy.js, requires-body = false, binary-body-mode = false, timeout = 20, enable = {Music163_VIP_Shared}, tag = 会员认证
 
 #----------  广告过滤 ----------#
 # 热推、有话想说、分享一下、歌曲下的祝福等小提示、评论区、乐迷、星评等级、关注等图标

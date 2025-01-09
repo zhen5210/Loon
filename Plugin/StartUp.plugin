@@ -8,9 +8,9 @@
 #!loon_version = 3.2.5(805)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/AdReject.png
-#!date = 2025-01-04 18:30
+#!date = 2025-01-09 18:00
 
-# 2025-01-04
+# 2025-01-09
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf
 
 [Rule]
@@ -20,7 +20,7 @@
 [Rewrite]
 # ======= 0~9 ======= #
 # Version
-^https?:\/\/2025.01.04/c364/v2.0.563 reject-200
+^https?:\/\/2025.01.09/c364/v2.0.564 reject-200
 
 # 58同城
 ^https?:\/\/app\.58\.com\/api\/home\/(advertising|appadv) reject-200
@@ -49,9 +49,6 @@
 
 # 78动漫
 ^https?:\/\/open\.78dm\.net\/v\d\/site\/ad\/ reject-200
-
-# 369出行
-^https?:\/\/api\.369cx\.cn\/v\d\/Splash\/GetSplashAd reject-200
 
 # ======= A ======= #
 # AcFun
@@ -1138,6 +1135,9 @@ http-response ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList script-path = https:
 
 # 123云盘
 http-response ^https?:\/\/www\.123pan\.com\/s\/[0-9a-zA-Z=_/-]+\.html script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/123pan.js, requires-body = true, tag = 123云盘
+
+# 369出行
+http-response ^https?:\/\/api\.369cx\.cn\/v\d\/Splash\/GetSplashAd script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/dict.js, requires-body = true, tag = 369出行
 
 # ======= A ======= #
 # amdc
