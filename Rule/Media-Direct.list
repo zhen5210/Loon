@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2025-01-09 16:15
+# 2025-01-09 16:30
 # https://github.com/fangkuia/XPTV/blob/main/X/xptv.plugin
 
 # --------------- CMSPlayer --------------- #
@@ -120,6 +120,7 @@ DOMAIN, www.nanf.cc
 DOMAIN, woog.nxog.eu.org
 # 闪电UC
 DOMAIN-SUFFIX, dcyun.cc
+IP-CIDR, 1.95.79.193/32, no-resolve
 # 特下饭
 DOMAIN-SUFFIX, txfyyds.top
 # 天逸搜
@@ -134,6 +135,7 @@ DOMAIN, www.mucpan.cc
 DOMAIN-SUFFIX, xzys.fun
 # 云盘吧
 DOMAIN-SUFFIX, yunpan8.cc
+DOMAIN-SUFFIX, yunpan8.net
 # 云盘资源网
 DOMAIN, res.yunpan.win
 # 至臻视觉
