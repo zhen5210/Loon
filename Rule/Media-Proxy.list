@@ -1,5 +1,5 @@
 # 影视播放规则(代理)
-# 2025-01-09 11:45
+# 2025-01-12 01:00
 
 # CMSPlayer
 # 海外看
@@ -115,6 +115,10 @@ DOMAIN-SUFFIX, 822thz.com
 DOMAIN-SUFFIX, hongkongdollvideo.com
 # 有爱爱
 DOMAIN-SUFFIX, uaa.com
+# Taiav
+DOMAIN-SUFFIX, taiav.com
+# JAVMove
+DOMAIN-SUFFIX, javmove.com
 
 # 网盘源
 # 小盘盘
