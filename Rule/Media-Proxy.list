@@ -1,5 +1,5 @@
 # 影视播放规则(代理)
-# 2025-01-12 01:00
+# 2025-01-12 17:00
 
 # CMSPlayer
 # 海外看
@@ -119,6 +119,8 @@ DOMAIN-SUFFIX, uaa.com
 DOMAIN-SUFFIX, taiav.com
 # JAVMove
 DOMAIN-SUFFIX, javmove.com
+# PandaTV
+DOMAIN-SUFFIX, pandalive.co.kr
 
 # 网盘源
 # 小盘盘
