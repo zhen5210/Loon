@@ -244,7 +244,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
 
 - **联系方式**<br>
 官方频道：[@efcloud](https://t.me/efcloud)<br>
-官方群组：暂无<br>
+官方群组：可通过频道加入群组<br>
 
 ### **CloudFisher（云渔）**
 
@@ -335,7 +335,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
         <td align=center>02</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/AdsBlocker.plugin">广告拦截合集</a></td>
         <td align=center>03</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/AliyunDrive.plugin">阿里云盘</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Alipan.plugin">阿里云盘</a></td>
     </tr>
     <tr>
         <td align=center>04</td>
