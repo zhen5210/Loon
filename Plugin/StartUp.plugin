@@ -8,9 +8,9 @@
 #!loon_version = 3.2.5(805)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/AdReject.png
-#!date = 2025-01-09 18:00
+#!date = 2025-01-16 19:15
 
-# 2025-01-09
+# 2025-01-16
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf
 
 [Rule]
@@ -20,7 +20,7 @@
 [Rewrite]
 # ======= 0~9 ======= #
 # Version
-^https?:\/\/2025.01.09/c364/v2.0.564 reject-200
+^https?:\/\/2025.01.16/c365/v2.0.565 reject-200
 
 # 58同城
 ^https?:\/\/app\.58\.com\/api\/home\/(advertising|appadv) reject-200
@@ -1124,6 +1124,9 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do reject-20
 
 # 站酷zcool
 ^https?:\/\/api\.zcool\.com\.cn\/.*common\/open-screen reject-200
+
+# 纵横小说
+^https?:\/\/.*zongheng\.com\/iosapi\/system\/startup reject-200
 
 [Script]
 # ======= 0~9 ======= #
