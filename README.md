@@ -8,7 +8,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
 
 本仓库所有资源文件仅供本人使用，其他用户如需使用，请根据自身需求进行自主调试与修改。
 
-建议使用更及时、更完善、更全面的[可莉配置](https://github.com/luestr/ProxyResource/blob/main/README.md)。
+建议使用更及时、更完善、更全面的[**可莉配置**](https://github.com/luestr/ProxyResource/blob/main/README.md)。
 
 ![Alt](https://repobeats.axiom.co/api/embed/3deb351aeae7762d0a77427ce568557e05d239b0.svg "Repobeats analytics image")
 
@@ -524,40 +524,41 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
     <tr>        
 	<td width="200px"><a href="https://github.com/hfg-gmuend"><em>@hfg-gmuend</em></a></td>
         <td width="200px"><a href="https://github.com/I-am-R-E"><em>@I-am-R-E</em></a></td>
+	<td width="200px"><a href="https://github.com/iniwex5"><em>@iniwex5</em></a></td>
         <td width="200px"><a href="https://github.com/KOP-XIAO"><em>@KOP-XIAO</em></a></td>
-        <td width="200px"><a href="https://github.com/Keywos"><em>@Keywos</em></a></td>
     </tr>
     <tr>
+        <td width="200px"><a href="https://github.com/Keywos"><em>@Keywos</em></a></td>
         <td width="200px"><a href="https://github.com/kokoryh"><em>@kokoryh</em></a></td>
         <td width="200px"><a href="https://github.com/limbopro"><em>@limbopro</em></a></td>
         <td width="200px"><a href="https://github.com/luestr"><em>@luestr</em></a></td>
-        <td width="200px"><a href="https://github.com/Maasea"><em>@Maasea</em></a></td>
     </tr>
     <tr>
+        <td width="200px"><a href="https://github.com/Maasea"><em>@Maasea</em></a></td>
         <td width="200px"><a href="https://github.com/Marol62926"><em>@Marol62926</em></a></td>
         <td width="200px"><a href="https://github.com/mw418"><em>@mw418</em></a></td>
         <td width="200px"><a href="https://github.com/NobyDa"><em>@NobyDa</em></a></td>
-        <td width="200px"><a href="https://github.com/Peng-YM"><em>@Peng-YM</em></a></td>
     </tr>
     <tr>
+        <td width="200px"><a href="https://github.com/Peng-YM"><em>@Peng-YM</em></a></td>
         <td width="200px"><a href="https://github.com/Repcz"><em>@Repcz</em></a></td>
         <td width="200px"><a href="https://github.com/RuCu6"><em>@RuCu6</em></a></td>
         <td width="200px"><a href="https://github.com/Sliverkiss"><em>@Sliverkiss</em></a></td>
-        <td width="200px"><a href="https://github.com/suiyuran"><em>@suiyuran</em></a></td>
     </tr>
     <tr>
+        <td width="200px"><a href="https://github.com/suiyuran"><em>@suiyuran</em></a></td>
         <td width="200px"><a href="https://github.com/VirgilClyne"><em>@VirgilClyne</em></a></td>
         <td width="200px"><a href="https://github.com/wf021325"><em>@wf021325</em></a></td>
         <td width="200px"><a href="https://github.com/xream"><em>@xream</em></a></td>
-        <td width="200px"><a href="https://github.com/Yswag"><em>@Yswag</em></a></td>
     </tr>
     <tr>
+        <td width="200px"><a href="https://github.com/Yswag"><em>@Yswag</em></a></td>
         <td width="200px"><a href="https://github.com/Yu9191"><em>@Yu9191</em></a></td>
         <td width="200px"><a href="https://github.com/Yuheng0101"><em>@Yuheng0101</em></a></td>
         <td width="200px"><a href="https://github.com/ZenmoFeiShi"><em>@ZenmoFeiShi</em></a></td>
-        <td width="200px"><a href="https://github.com/zZPiglet"><em>@zZPiglet</em></a></td>
     </tr>
     <tr>
+        <td width="200px"><a href="https://github.com/zZPiglet"><em>@zZPiglet</em></a></td>
         <td width="200px"><a href="https://github.com/zmqcherish"><em>@zmqcherish</em></a></td>
     </tr>
 </table>
