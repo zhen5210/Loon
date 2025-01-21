@@ -62,10 +62,14 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
 ### **Aladdin（阿拉丁）**
 
 - **机场介绍**<br>
-1. 采用Shadowsocks协议，延迟低，速度快<br>
-2. 多达50+ 节点，包含港、台、日、新、美常用地区及冷门地区节点<br>
-3. 支持多种流媒体服务访问解锁，包含奈飞免登入节点<br>
-4. 与第三方Emby影视库合作，以及自身的机场服Emby<br>
+1. 机场提供单账号持有多个订阅，订阅支持备注<br>
+2. 采用Trojan协议，延迟低速度快，更优的性能和稳定性<br>
+3. 多达60+节点，包含港、台、日、新、美常用地区及冷门地区节点<br>
+4. 支持多种流媒体服务访问解锁，包括但不限于Disney+、YouTube、Netflix等<br>
+5. 提供节点``免登Netflix|Porn|Prime``共享账号观看<br>
+6. 提供双服Emby账号（神灯服、水母机场服）<br>
+7. 每日可在群组发送指令签到获取随机流量<br>
+8. 更多详细内容教程，可在[官方博客公告](https://tutorial.aladdinnet.cc/)了解<br>
 
 - **套餐介绍**<br>
 <table>
@@ -123,82 +127,6 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
 官方频道：[@AladdinNotice](https://t.me/AladdinNotice)<br>
 官方群组：联系[@AladdinNET_bot](https://t.me/AladdinNET_bot)，绑定链接进入群组<br>
 
-### **EFCloud**
-
-- **机场介绍**<br>
-1. 多地中转隧道跨境出国SLA在线保障<br>
-2. 超高带宽接入晚高峰速率保障4k秒开<br>
-3. 支持但不限于 Chatgpt/Netfilx/Hulu/Hbo/Disney+/Dazn 等流媒体<br>
-4. 全球 30+ 国家/地区， 50+ 节点<br>
-5. Trojan 协议，不限制设备数量<br>
-6. 支持Android/iOS/Mac/Windows/Linux/路由器全平台<br>
-
-- **套餐介绍**<br>
-<table>
-    <tr>
-        <th width="100px">周期套餐</th>
-        <th width="100px">月流量</th>
-        <th width="100px">月付</th>
-        <th width="100px">季付</th>
-        <th width="100px">半年付</th>
-        <th width="100px">年付</th>
-        <th width="100px">一次性</th>
-    </tr>
-    <tr>
-        <td align=center>Small</td>
-        <td align=center>100G</td>
-        <td align=center>¥8</td>
-        <td align=center>¥24</td>
-        <td align=center>×</td>
-        <td align=center>¥80</td>
-        <td align=center>×</td>
-    </tr>
-    <tr>
-        <td align=center>Basics</td>
-        <td align=center>200G</td>
-        <td align=center>¥10</td>
-        <td align=center>¥30</td>
-        <td align=center>×</td>
-        <td align=center>¥100</td>
-        <td align=center>×</td>
-    </tr>
-    <tr>
-        <td align=center>Prime</td>
-        <td align=center>500G</td>
-        <td align=center>¥20</td>
-        <td align=center>¥60</td>
-        <td align=center>×</td>
-        <td align=center>¥200</td>
-        <td align=center>×</td>
-    </tr>
-</table>
-<table>
-    <tr>
-        <th width="100px">流量套餐</th>
-        <th width="100px">总流量</th>
-        <th width="100px">月付</th>
-        <th width="100px">季付</th>
-        <th width="100px">半年付</th>
-        <th width="100px">年付</th>
-        <th width="100px">一次性</th>
-    </tr>
-    <tr>
-        <td align=center>Mini</td>
-        <td align=center>100G</td>
-        <td align=center>×</td>
-        <td align=center>×</td>
-        <td align=center>×</td>
-        <td align=center>×</td>
-        <td align=center>¥25</td>
-    </tr>
-</table>
-
-- **购买方式**<br>
-点击[EFCloud官网](https://www.efc123.com/register?aff=hBKGQjGQ)购买，新用户8折优惠码`new`
-
-- **联系方式**<br>
-官方频道：[@efcloud](https://t.me/efcloud)<br>
-官方群组：可通过频道加入群组<br>
 
 ### **CloudFisher（云渔）**
 
