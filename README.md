@@ -85,8 +85,8 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
     <tr>
         <td align=center>轻量套餐</td>
         <td align=center>65G</td>
-        <td align=center>×</td>
-        <td align=center>×</td>
+        <td align=center>¥5</td>
+        <td align=center>¥15</td>
         <td align=center>¥30</td>
         <td align=center>¥60</td>
         <td align=center>×</td>
@@ -94,7 +94,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
     <tr>
         <td align=center>基础套餐</td>
         <td align=center>158G</td>
-        <td align=center>×</td>
+        <td align=center>¥10</td>
         <td align=center>¥30</td>
         <td align=center>¥60</td>
         <td align=center>¥120</td>
