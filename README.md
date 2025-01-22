@@ -283,7 +283,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
 </table>
 
 - **购买方式**<br>
-点击[OuO官网](https://login.ouonetwork.com/register?aff=t5wSjov2)购买
+点击[OuO官网](https://login.ouonetwork.com/register?aff=t5wSjov2)购买，暂无优惠码
 
 - **联系方式**<br>
 官方频道：[@OuOnotification](https://t.me/OuOnotification)<br>
