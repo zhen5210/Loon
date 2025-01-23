@@ -1056,6 +1056,7 @@ https:\/\/uts-front\.line-apps\.com\/event$ reject
 https:\/\/uts-front\.line-apps\.com\/settings$ reject
 https:\/\/static\.line-scdn\.net\/ad-sdk\/ reject
 https:\/\/nelo2-col\.linecorp\.com\/_store$ reject
+
 # 拉卡拉 - lamb.lakala.com, wallet.lakala.com
 ^https?:\/\/lamb\.lakala\.com\/lamo\/adv\/access\/queryMaterialUrl reject-dict
 ^https?:\/\/wallet\.lakala\.com\/m\/lama\/mgt\/activity\/bank\/query\/list reject-dict
