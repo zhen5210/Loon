@@ -24,7 +24,7 @@
 # 7. 因为Follow每日上午8点刷新状态，故设置默认每日上午9点执行签到。
 
 [Argument]
-# csrfToken = input, "", tag = csrfToken, desc = 输入Follow csrfToken的值
+csrfToken = input, "", tag = csrfToken, desc = 输入Follow csrfToken的值
 cookie = input, "", tag = cookie, desc = 输入Follow Cookie的值
 cron-follow = input, "0 9 * * *", tag = Follow Task, desc = 输入cron表达式来定时运行Follow Task
 
