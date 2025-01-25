@@ -2,10 +2,10 @@
 2024-09-25
 https://github.com/chavyleung/scripts/blob/master/follow/follow.js
 */
+
 const $ = new Env('Follow 每日签到')
 $.desc = []
 
-const csrfToken = $argument.csrfToken
 const cookie = $argument.cookie
 
 !(async () => {
@@ -17,15 +17,14 @@ const cookie = $argument.cookie
 function sign() {
   return new Promise((resolve) => {
     const options = {
-      url: 'https://api.follow.is/wallets/transactions/claim_daily',
+      url: 'https://api.follow.is/wallets/transactions/claim-check',
       'headers': {
         'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/8.0.38(0x1800262c) NetType/4G Language/zh_CN',
         'content-type': 'application/json',
         'Accept': '*/*',
         'Connection': 'keep-alive',
         'cookie': cookie
-      },
-      body: JSON.stringify({"csrfToken":csrfToken})
+      }
     }
     $.post(options, async (err, resp, body) => {
       try {
