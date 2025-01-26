@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2025-01-09 21:00
+# 2025-01-26 14:30
 # https://github.com/fangkuia/XPTV/blob/main/X/xptv.plugin
 
 # --------------- CMSPlayer --------------- #
@@ -243,6 +243,8 @@ DOMAIN, www.hanjukankan.com
 DOMAIN, glzx.thekutv.com
 DOMAIN-SUFFIX, thehanju.com
 DOMAIN-SUFFIX, vvddoo.com
+# 影视天堂
+DOMAIN-SUFFIX, ysttv.com
 # 星芽
 DOMAIN, qiniu.rongjuwh.cn
 DOMAIN, app.whjzjx.cn
