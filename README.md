@@ -283,7 +283,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
 </table>
 
 - **购买方式**<br>
-点击[OuO官网](https://login.ouonetwork.com/register?aff=t5wSjov2)购买，暂无优惠码
+点击[OuO官网](https://login.ouonetwork.com/register?aff=t5wSjov2)购买，85折优惠码（截止至2025.02.07） `NY15%OFF`
 
 - **联系方式**<br>
 官方频道：[@OuOnotification](https://t.me/OuOnotification)<br>
@@ -464,16 +464,18 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
     </tr>
     <tr>
         <td align=center>13</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Sub-Store.plugin">Sub-Store</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/StreamingMedia.plugin">流媒体解锁测试</a></td>
         <td align=center>14</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Script-Hub.plugin">Script Hub</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Sub-Store.plugin">Sub-Store</a></td>
         <td align=center>15</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/TestFlight.plugin">TestFlight</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Script-Hub.plugin">Script Hub</a></td>
     </tr>
     <tr>
         <td align=center>16</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/VVebo.plugin">VVebo</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/TestFlight.plugin">TestFlight</a></td>
         <td align=center>17</td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/VVebo.plugin">VVebo</a></td>
+        <td align=center>18</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/XPTV.plugin">XPTV</a></td>
     </tr>
 </table>
@@ -557,41 +559,42 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
     </tr>
     <tr>        
 	<td width="200px"><a href="https://github.com/hfg-gmuend"><em>@hfg-gmuend</em></a></td>
+	<td width="200px"><a href="https://github.com/huskydsb"><em>@huskydsb</em></a></td>
         <td width="200px"><a href="https://github.com/I-am-R-E"><em>@I-am-R-E</em></a></td>
 	<td width="200px"><a href="https://github.com/iniwex5"><em>@iniwex5</em></a></td>
-        <td width="200px"><a href="https://github.com/KOP-XIAO"><em>@KOP-XIAO</em></a></td>
     </tr>
     <tr>
+        <td width="200px"><a href="https://github.com/KOP-XIAO"><em>@KOP-XIAO</em></a></td>
         <td width="200px"><a href="https://github.com/Keywos"><em>@Keywos</em></a></td>
         <td width="200px"><a href="https://github.com/kokoryh"><em>@kokoryh</em></a></td>
         <td width="200px"><a href="https://github.com/limbopro"><em>@limbopro</em></a></td>
-        <td width="200px"><a href="https://github.com/luestr"><em>@luestr</em></a></td>
     </tr>
     <tr>
+        <td width="200px"><a href="https://github.com/luestr"><em>@luestr</em></a></td>
         <td width="200px"><a href="https://github.com/Maasea"><em>@Maasea</em></a></td>
         <td width="200px"><a href="https://github.com/Marol62926"><em>@Marol62926</em></a></td>
         <td width="200px"><a href="https://github.com/mw418"><em>@mw418</em></a></td>
-        <td width="200px"><a href="https://github.com/NobyDa"><em>@NobyDa</em></a></td>
     </tr>
     <tr>
+        <td width="200px"><a href="https://github.com/NobyDa"><em>@NobyDa</em></a></td>
         <td width="200px"><a href="https://github.com/Peng-YM"><em>@Peng-YM</em></a></td>
         <td width="200px"><a href="https://github.com/Repcz"><em>@Repcz</em></a></td>
         <td width="200px"><a href="https://github.com/RuCu6"><em>@RuCu6</em></a></td>
-        <td width="200px"><a href="https://github.com/Sliverkiss"><em>@Sliverkiss</em></a></td>
     </tr>
     <tr>
+        <td width="200px"><a href="https://github.com/Sliverkiss"><em>@Sliverkiss</em></a></td>
         <td width="200px"><a href="https://github.com/suiyuran"><em>@suiyuran</em></a></td>
         <td width="200px"><a href="https://github.com/VirgilClyne"><em>@VirgilClyne</em></a></td>
         <td width="200px"><a href="https://github.com/wf021325"><em>@wf021325</em></a></td>
-        <td width="200px"><a href="https://github.com/xream"><em>@xream</em></a></td>
     </tr>
     <tr>
+        <td width="200px"><a href="https://github.com/xream"><em>@xream</em></a></td>
         <td width="200px"><a href="https://github.com/Yswag"><em>@Yswag</em></a></td>
         <td width="200px"><a href="https://github.com/Yu9191"><em>@Yu9191</em></a></td>
         <td width="200px"><a href="https://github.com/Yuheng0101"><em>@Yuheng0101</em></a></td>
-        <td width="200px"><a href="https://github.com/ZenmoFeiShi"><em>@ZenmoFeiShi</em></a></td>
     </tr>
     <tr>
+        <td width="200px"><a href="https://github.com/ZenmoFeiShi"><em>@ZenmoFeiShi</em></a></td>
         <td width="200px"><a href="https://github.com/zZPiglet"><em>@zZPiglet</em></a></td>
         <td width="200px"><a href="https://github.com/zmqcherish"><em>@zmqcherish</em></a></td>
     </tr>
