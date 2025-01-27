@@ -10,6 +10,9 @@
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Conflux.png
 #!date = 2025-01-27 10:00
 
+# 2025-01-26
+# https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Sgmodule/%E6%B5%81%E5%AA%92%E4%BD%93%E8%A7%A3%E9%94%81%E6%B5%8B%E8%AF%95.module
+
 [Script]
 http-request ^https:\/\/streaming\.test\/$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/front-end.js, timeout = 60, tag = Front-end
 
