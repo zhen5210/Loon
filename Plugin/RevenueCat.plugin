@@ -10,7 +10,7 @@
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/RevenueCat.png
 #!date = 2025-01-10 09:00
 
-# 2025-01-10
+# 2025-02-04
 # https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js
 # 2024-07-11
 # https://gist.githubusercontent.com/ddgksf2013/dbb1695cd96743eef18f3fac5c6fe227/raw/revenuecat.js
@@ -35,7 +35,7 @@ http-request ^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscri
 
 # Guding88
 http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path = https://raw.githubusercontent.com/Guding88/Script/main/APPheji_Revenuecat.js, requires-body = true, enable={RevenueCatScriptEnable-Guding88}, tag = Revenuecat合集
-http-request ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path = https://raw.githubusercontent.com/Guding88/Script/main/APPheji_Revenuecat.js, requires-body = false, enable={RevenueCatScriptEnable-Guding88}, tag = Revenuecat清除缓存
+# http-request ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path = https://raw.githubusercontent.com/Guding88/Script/main/APPheji_Revenuecat.js, requires-body = false, enable={RevenueCatScriptEnable-Guding88}, tag = Revenuecat清除缓存
 
 # ddgksf2013
 http-response ^https:\/\/api\.(revenuecat|rc-backup)\.com\/.+\/(receipts$|subscribers\/[^/]+$) script-path = https://gist.githubusercontent.com/ddgksf2013/dbb1695cd96743eef18f3fac5c6fe227/raw/revenuecat.js, requires-body = true, enable={RevenueCatScriptEnable-ddgksf2013}, tag = RevenueCatVip

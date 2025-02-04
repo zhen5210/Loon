@@ -14,35 +14,59 @@
 # https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Sgmodule/%E6%B5%81%E5%AA%92%E4%BD%93%E8%A7%A3%E9%94%81%E6%B5%8B%E8%AF%95.module
 
 [Script]
-http-request ^https:\/\/streaming\.test\/$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/front-end.js, timeout = 60, tag = Front-end
-
 http-request ^https:\/\/streaming\.test\/bahamut\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/bahamuts.js, timeout = 60, tag = Bahamut
+
+http-request ^https:\/\/streaming\.test\/steam\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/steam.js, timeout = 60, tag = Steam
 
 http-request ^https:\/\/streaming\.test\/bilibili\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/bilibili.js, timeout = 60, tag = Bilibili
 
-http-request ^https:\/\/streaming\.test\/bing\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/bing.js, timeout = 60, tag = Bing
-
-http-request ^https:\/\/streaming\.test\/chatgpt\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/chatgpt.js, timeout = 60, tag = ChatGPT
-
-http-request ^https:\/\/streaming\.test\/disney\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/disney.js, timeout = 60, tag = Disney
-
-http-request ^https:\/\/streaming\.test\/max\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/max.js, timeout = 60, tag = HBO Max
-
-http-request ^https:\/\/streaming\.test\/netflix\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/netflix.js, timeout = 60, tag = Netflix
-
-http-request ^https:\/\/streaming\.test\/niconico\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/niconico.js, timeout = 60, tag = ニコニコ動画（Niconico动画）
-
-http-request ^https:\/\/streaming\.test\/primevideo\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/primevideo.js, timeout = 60, tag = PrimeVideo
+http-request ^https:\/\/streaming\.test\/spotify\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/spotify.js, timeout = 60, tag = Spotify
 
 http-request ^https:\/\/streaming\.test\/scamalytics\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/scamalytics.js, timeout = 60, tag = Scamalytics
 
-http-request ^https:\/\/streaming\.test\/spotify\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/spotify.js, timeout = 60, tag = Spotify
+http-request ^https:\/\/streaming\.test\/disney\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/disney.js, timeout = 60, tag = Disney
 
-http-request ^https:\/\/streaming\.test\/steam\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/steam.js, timeout = 60, tag = Steam
+http-request ^https:\/\/streaming\.test\/netflix\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/netflix.js, timeout = 60, tag = Netflix
+
+http-request ^https:\/\/streaming\.test\/chatgpt\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/chatgpt.js, timeout = 60, tag = ChatGPT
 
 http-request ^https:\/\/streaming\.test\/tiktok\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/tiktok.js, timeout = 60, tag = Tiktok
 
 http-request ^https:\/\/streaming\.test\/youtube\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/youtube.js, timeout = 60, tag = YouTube
+
+http-request ^https:\/\/streaming\.test\/max\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/max.js, timeout = 60, tag = HBO Max
+
+http-request ^https:\/\/streaming\.test\/primevideo\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/primevideo.js, timeout = 60, tag = PrimeVideo
+
+http-request ^https:\/\/streaming\.test\/bing\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/bing.js, timeout = 60, tag = Bing
+
+http-request ^https:\/\/streaming\.test\/nicovideo\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/niconico.js, timeout = 60, tag = ニコニコ動画（Niconico动画）
+
+http-request ^https:\/\/streaming\.test\/googleplay\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/googleplay.js, timeout = 60, tag = Google Play
+
+http-request ^https:\/\/streaming\.test\/wikipedia\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/wikipedia.js, timeout = 60, tag = Wikipedia
+
+http-request ^https:\/\/streaming\.test\/starz\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/starz.js, timeout = 60, tag = Starz
+
+http-request ^https:\/\/streaming\.test\/iqiyi\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/iqiyi.js, timeout = 60, tag = iQIYI
+
+http-request ^https:\/\/streaming\.test\/dazn\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/dazn.js, timeout = 60, tag = DAZN
+
+http-request ^https:\/\/streaming\.test\/paramountplus\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/paramountplus.js, timeout = 60, tag = Paramount Plus
+
+http-request ^https:\/\/streaming\.test\/viutv\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/viutv.js, timeout = 60, tag = ViuTV
+
+http-request ^https:\/\/streaming\.test\/nowe\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/nowe.js, timeout = 60, tag = Now E
+
+http-request ^https:\/\/streaming\.test\/kktv\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/kktv.js, timeout = 60, tag = KKTV
+
+http-request ^https:\/\/streaming\.test\/linetv\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/linetv.js, timeout = 60, tag = LINE TV
+
+http-request ^https:\/\/streaming\.test\/ip\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/ip.js, timeout = 60, tag = IPv6
+
+http-request ^https:\/\/streaming\.test\/dns\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/surfsharkdns.js, timeout = 60, tag = Surfshark DNS
+
+http-request ^https:\/\/streaming\.test\/$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/front-end.js, timeout = 60, tag = Front-end
 
 [MitM]
 hostname = streaming.test
