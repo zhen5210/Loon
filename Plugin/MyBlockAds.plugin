@@ -5,10 +5,10 @@
 #!tag = 去广告
 #!system = 
 #!system_version = 
-#!loon_version = 3.2.5(805)
+#!loon_version = 3.2.6(821)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/MyBlockAds.png
-#!date = 2025-01-01 00:00
+#!date = 2025-02-04 17:00
 
 [Rule]
 # ======= 0 ======= #
