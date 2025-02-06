@@ -13,7 +13,7 @@ if (url.includes("/amdc/mobileDispatch")) {
     ua.includes("Alibaba") || // 阿里巴巴
     ua.includes("Cainiao4iPhone") || // 菜鸟
     ua.includes("%E9%97%B2%E9%B1%BC") || // 闲鱼
-    ua.includes("%E9%A3%9E%E7%8C%AA%E6%97%85%E8%A1%8C") // 飞猪旅行
+    ua.includes("%E9%A3%9E%E7%8C%AA%E6%97%85%E8%A1%8C") || // 飞猪旅行
     ua.includes("%E5%96%B5%E8%A1%97") ||
     ua.includes("%E5%A4%A9%E7%8C%AB") ||
     ua.includes("Moon") ||
