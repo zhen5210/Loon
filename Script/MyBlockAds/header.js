@@ -9,15 +9,15 @@ const isLoon = typeof $task !== "undefined";
 
 if (url.includes("/amdc/mobileDispatch")) {
   if (
-    ua.includes("AMapiPhone*") || // 高德地图
-    ua.includes("Alibaba*") || // 阿里巴巴
+    ua.includes("AMapiPhone") || // 高德地图
+    ua.includes("Alibaba") || // 阿里巴巴
     ua.includes("Cainiao4iPhone") || // 菜鸟
-    ua.includes("%E9%97%B2%E9%B1%BC*") || // 闲鱼
+    ua.includes("%E9%97%B2%E9%B1%BC") || // 闲鱼
     ua.includes("%E9%A3%9E%E7%8C%AA%E6%97%85%E8%A1%8C") // 飞猪旅行
-    ua.includes("%E5%96%B5%E8%A1%97*") ||
-    ua.includes("%E5%A4%A9%E7%8C%AB*") ||
-    ua.includes("Moon*") ||
-    ua.includes("DMPortal*") ||
+    ua.includes("%E5%96%B5%E8%A1%97") ||
+    ua.includes("%E5%A4%A9%E7%8C%AB") ||
+    ua.includes("Moon") ||
+    ua.includes("DMPortal") ||
   ) {
     if (isLoon) {
       $done({ status: "HTTP/1.1 404 Not Found" });
