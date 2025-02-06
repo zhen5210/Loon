@@ -17,7 +17,7 @@ if (url.includes("/amdc/mobileDispatch")) {
     ua.includes("%E5%96%B5%E8%A1%97") ||
     ua.includes("%E5%A4%A9%E7%8C%AB") ||
     ua.includes("Moon") ||
-    ua.includes("DMPortal") ||
+    ua.includes("DMPortal")
   ) {
     if (isLoon) {
       $done({ status: "HTTP/1.1 404 Not Found" });
