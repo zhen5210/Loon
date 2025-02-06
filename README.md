@@ -498,10 +498,6 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
         <td align=center>02</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/iTunes.plugin">iTunes</a></td>
         <td align=center>03</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Nicegram.plugin">Nicegram</a></td>
-    </tr>
-    <tr>
-        <td align=center>04</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/RevenueCat.plugin">RevenueCat</a></td>
     </tr>
 </table>
