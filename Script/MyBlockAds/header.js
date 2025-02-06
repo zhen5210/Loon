@@ -5,17 +5,21 @@ const header = $request.headers;
 const contype = header["Content-Type"] || header["content-type"];
 const headopt = header["Operation-Type"] || header["operation-type"];
 const ua = header["User-Agent"] || header["user-agent"];
-const isQuanX = typeof $task !== "undefined";
+const isLoon = typeof $task !== "undefined";
 
 if (url.includes("/amdc/mobileDispatch")) {
   if (
-    ua.includes("AMapiPhone") || // 高德地图
-    ua.includes("Alibaba") || // 阿里巴巴
+    ua.includes("AMapiPhone*") || // 高德地图
+    ua.includes("Alibaba*") || // 阿里巴巴
     ua.includes("Cainiao4iPhone") || // 菜鸟
     ua.includes("%E9%97%B2%E9%B1%BC*") || // 闲鱼
     ua.includes("%E9%A3%9E%E7%8C%AA%E6%97%85%E8%A1%8C") // 飞猪旅行
+    ua.includes("%E5%96%B5%E8%A1%97*") ||
+    ua.includes("%E5%A4%A9%E7%8C%AB*") ||
+    ua.includes("Moon*") ||
+    ua.includes("DMPortal*") ||
   ) {
-    if (isQuanX) {
+    if (isLoon) {
       $done({ status: "HTTP/1.1 404 Not Found" });
     } else {
       $done();
@@ -42,7 +46,7 @@ if (url.includes("/amdc/mobileDispatch")) {
     "com.cars.otsmobile.paySuccBuss.bussEntryShow" // 商业推广
     // "com.cars.otsmobile.travelPage.initData", // 出行服务
   ];
-  if (isQuanX) {
+  if (isLoon) {
     if (list12306?.includes(headopt)) {
       $done({ status: "HTTP/1.1 404 Not Found" });
     } else {
@@ -61,7 +65,7 @@ if (url.includes("/amdc/mobileDispatch")) {
     "com.bankabc.recommendcenter.homepage.gethpadverinfo",
     "com.abchina.mbank.common.homepage.getStartParam"
   ];
-  if (isQuanX) {
+  if (isLoon) {
     if (listbankabc?.includes(headopt)) {
       $done({ status: "HTTP/1.1 404 Not Found" });
     } else {
@@ -76,7 +80,7 @@ if (url.includes("/amdc/mobileDispatch")) {
   }
 } else if (url.includes("/sec.sginput.qq.com/q")) {
   // 搜狗输入法候选词推广
-  if (isQuanX) {
+  if (isLoon) {
     if (contype === "application/octet-stream") {
       $done({ status: "HTTP/1.1 404 Not Found" });
     } else {
