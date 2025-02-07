@@ -43,11 +43,11 @@ service = switch, false, true, tag = Scriptable服务模式, desc = 是否开启
 [Script]
 # 查询套餐内通话、套餐使用情况
 # 获取参数
-http-request ^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/[LD]N\/uam(?:onekey|randcode)login\/autoLogin script-path = https://github.com/ChinaTelecomOperators/ChinaMobile/releases/download/Prerelease-Alpha/10086.js, requires-body = true, tag = 中国移动获取参数, enable = {enable_capture}
+http-request ^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/[LD]N\/uam(?:onekey|randcode)login\/autoLogin script-path = https://github.com/ChinaTelecomOperators/ChinaMobile/releases/latest/download/10086.js, requires-body = true, tag = 中国移动获取参数, enable = {enable_capture}
 # 定时任务
-cron {cron-10086} script-path = https://github.com/ChinaTelecomOperators/ChinaMobile/releases/download/Prerelease-Alpha/10086.js, tag = 中国移动余量查询, timeout = 60, argument=[{phonenumber},{bark_key},{debug},{silent},{service}]
+cron {cron-10086} script-path = https://github.com/ChinaTelecomOperators/ChinaMobile/releases/latest/download/10086.js, tag = 中国移动余量查询, timeout = 60, argument=[{phonenumber},{bark_key},{debug},{silent},{service}]
 # 查询接口
-http-request ^https?:\/\/api\.example\.com\/10086\/query script-path = https://github.com/ChinaTelecomOperators/ChinaMobile/releases/download/Prerelease-Alpha/10086.js, requires-body = true, timeout = 60, tag = 中国移动查询接口
+http-request ^https?:\/\/api\.example\.com\/10086\/query script-path = https://github.com/ChinaTelecomOperators/ChinaMobile/releases/latest/download/10086.js, requires-body = true, timeout = 60, tag = 中国移动查询接口
 
 # 过滤广告，不对内部活动进行相关广告去除
 # 启动页
