@@ -11,14 +11,14 @@ var url = "http://ip-api.com/json/";
 
 /**
  * build 411 版本后 添加$environment.params.nodeInfo对象，表示简单的节点信息
- * 注意：由于安全限制，nodeInfo对象中仅有一下信息
+ * 注意：由于安全限制，nodeInfo对象中仅有以下信息
  {
     address = "example.com";
     name = "节点名称";
     port = 12443;
     tls = 1;
     type = Vmess;
-}
+ }
  */
 var inputParams = $environment.params;
 var nodeName = inputParams.node;
@@ -48,19 +48,28 @@ $httpClient.get(requestParams, (error, response, data) => {
 });
 
 function json2info(cnt, paras) {
+    // 保存原始 JSON 字符串，用于后续提取欺诈指数与风险等级信息
+    var rawData = cnt;
     var res = "-------------------------------";
     cnt = JSON.parse(cnt);
     console.log(cnt);
-    for (i = 0; i < paras.length; i++) {
-        cnt[paras[i]] = paras[i] == "countryCode" ? cnt[paras[i]] + " ⟦" + flags.get(cnt[paras[i]].toUpperCase()) + "⟧" : cnt[paras[i]];
-        res = cnt[paras[i]] ? res + "</br><b>" + "<font  color=>" + paran[i] + "</font> : " + "</b>" + "<font  color=>" + cnt[paras[i]] + "</font></br>" : res;
+    for (var i = 0; i < paras.length; i++) {
+        // countryCode 字段添加国旗图标
+        cnt[paras[i]] = (paras[i] == "countryCode") ? cnt[paras[i]] + " ⟦" + flags.get(cnt[paras[i]].toUpperCase()) + "⟧" : cnt[paras[i]];
+        if (cnt[paras[i]]) {
+            res += "</br><b><font>" + paran[i] + "</font> : </b><font>" + cnt[paras[i]] + "</font></br>";
+        }
     }
-    res = res + "-------------------------------" + "</br>" + "<font color=#6959CD>" + "<b>节点</b> ➟ " + $environment.params.node + "</font>";
+    // 在节点信息之前添加欺诈指数与风险等级（Display函数从原始字符串中提取相关数据）
+    res += Display(rawData);
+    // 添加分隔线及节点信息
+    res += "-------------------------------" + "</br>" + "<font color=#6959CD>" + "<b>节点</b> ➟ " + $environment.params.node + "</font>";
     res = `<p style="text-align: center; font-family: -apple-system; font-size: large; font-weight: thin">` + res + `</p>`;
     return res;
 }
 
 function Display(cnt) {
+    // 从原始 JSON 字符串中提取欺诈指数与风险等级（score和risk字段）
     let score = cnt.indexOf(`"score":`) != -1 ? cnt.split(`"score":`)[1].split("\n")[0] : "NA";
     score = "</br><b>" + "<font color=>" + "欺诈指数 " + "</font> : " + "</b>" + "<font color=>" + score.replace(/"|,/g, "") + "</font></br>";
     let risk = cnt.indexOf(`"risk":`) != -1 ? cnt.split(`"risk":`)[1].split("\n")[0] : "NA";
