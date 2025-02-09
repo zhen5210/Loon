@@ -57,8 +57,10 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
 
 ## 机场推荐
 
-> **下方所有机场均只推荐购买月付套餐，请根据个人情况自行判断，理性消费，量力而行，本人不承担任何后果。**
-
+> **以下所有机场均推荐按月付方式购买，建议先加入群组了解是否符合您的需求。**
+> 
+> **请根据个人情况作出选择，理性消费，量力而行。本人不承担任何由此产生的后果。**
+> 
 > **下方所有机场提供的套餐价格可能因更新不及时与官网不一致，具体请以官网显示为准。**
 
 ### **Aladdin（阿拉丁）**
@@ -77,12 +79,13 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
 <table>
     <tr>
         <th width="100px">周期套餐</th>
-        <th width="100px">月流量</th>
-        <th width="100px">月付</th>
-        <th width="100px">季付</th>
-        <th width="100px">半年付</th>
-        <th width="100px">年付</th>
-        <th width="100px">一次性</th>
+        <th width="80px">月流量</th>
+        <th width="80px">月付</th>
+        <th width="80px">季付</th>
+        <th width="80px">半年付</th>
+        <th width="80px">年付</th>
+        <th width="80px">两年付</th>
+        <th width="80px">一次性</th>
     </tr>
     <tr>
         <td align=center>轻量套餐</td>
@@ -91,6 +94,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
         <td align=center>¥15</td>
         <td align=center>¥30</td>
         <td align=center>¥60</td>
+        <td align=center>×</td>
         <td align=center>×</td>
     </tr>
     <tr>
@@ -101,6 +105,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
         <td align=center>¥60</td>
         <td align=center>¥120</td>
         <td align=center>×</td>
+        <td align=center>×</td>
     </tr>
     <tr>
         <td align=center>高级套餐</td>
@@ -110,6 +115,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
         <td align=center>¥108</td>
         <td align=center>¥216</td>
         <td align=center>×</td>
+        <td align=center>×</td>
     </tr>
     <tr>
         <td align=center>豪华套餐</td>
@@ -118,6 +124,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
         <td align=center>¥90</td>
         <td align=center>¥180</td>
         <td align=center>¥360</td>
+        <td align=center>×</td>
         <td align=center>×</td>
     </tr>
 </table>
@@ -144,38 +151,42 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
 <table>
     <tr>
         <th width="100px">周期套餐</th>
-        <th width="100px">月流量</th>
-        <th width="100px">月付</th>
-        <th width="100px">季付</th>
-        <th width="100px">半年付</th>
-        <th width="100px">年付</th>
-        <th width="100px">一次性</th>
+        <th width="80px">月流量</th>
+        <th width="80px">月付</th>
+        <th width="80px">季付</th>
+        <th width="80px">半年付</th>
+        <th width="80px">年付</th>
+        <th width="80px">两年付</th>
+        <th width="80px">一次性</th>
     </tr>
     <tr>
         <td align=center>Lite</td>
         <td align=center>120G</td>
         <td align=center>¥9</td>
-        <td align=center>×</td>
-        <td align=center>×</td>
-        <td align=center>×</td>
+        <td align=center>¥25</td>
+        <td align=center>¥48</td>
+        <td align=center>¥90</td>
+        <td align=center>¥172</td>
         <td align=center>×</td>
     </tr>
     <tr>
         <td align=center>Plus</td>
         <td align=center>300G</td>
         <td align=center>¥15</td>
-        <td align=center>×</td>
-        <td align=center>×</td>
-        <td align=center>×</td>
+        <td align=center>¥40</td>
+        <td align=center>¥81</td>
+        <td align=center>¥153</td>
+        <td align=center>¥288</td>
         <td align=center>×</td>
     </tr>
     <tr>
         <td align=center>Max</td>
         <td align=center>500G</td>
         <td align=center>¥25</td>
-        <td align=center>×</td>
-        <td align=center>×</td>
-        <td align=center>×</td>
+        <td align=center>¥70</td>
+        <td align=center>¥135</td>
+        <td align=center>¥255</td>
+        <td align=center>¥480</td>
         <td align=center>×</td>
     </tr>
     <tr>
@@ -186,21 +197,24 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
         <td align=center>×</td>
         <td align=center>¥60</td>
         <td align=center>×</td>
+        <td align=center>×</td>
     </tr>
 </table>
 <table>
     <tr>
         <th width="100px">流量套餐</th>
-        <th width="100px">总流量</th>
-        <th width="100px">月付</th>
-        <th width="100px">季付</th>
-        <th width="100px">半年付</th>
-        <th width="100px">年付</th>
-        <th width="100px">一次性</th>
+        <th width="80px">总流量</th>
+        <th width="80px">月付</th>
+        <th width="80px">季付</th>
+        <th width="80px">半年付</th>
+        <th width="80px">年付</th>
+        <th width="80px">两年付</th>
+        <th width="80px">一次性</th>
     </tr>
     <tr>
         <td align=center>Plus</td>
         <td align=center>300G</td>
+        <td align=center>×</td>
         <td align=center>×</td>
         <td align=center>×</td>
         <td align=center>×</td>
@@ -210,6 +224,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
     <tr>
         <td align=center>Plus+</td>
         <td align=center>1000G</td>
+        <td align=center>×</td>
         <td align=center>×</td>
         <td align=center>×</td>
         <td align=center>×</td>
@@ -226,70 +241,74 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
 官方群组：[@CloudFisherGroup](https://t.me/CloudFisherGroup)<br>
 
 
-### **OuO Network**
+### **Alphaio**
 
 - **机场介绍**<br>
-1. 采用Shadowsocks协议，IEPL稳定链路<br>
+1. 采用Shadowsocks协议，专线加持超凡体验<br>
 2. 提供港、台、日、新、美常用地区及部分冷门地区节点<br>
-4. 提供完善的流媒体解锁，包括但不限于Disney+、Netflix等<br>
-5. 提供OuO Emby影视服使用，畅享观影<br>
-6. 动态节点倍率：平时倍率:1×；闲时倍率:0.8×(9:00-11:00(UTC+8))<br>
+3. 提供高度流媒体解锁，包括但不限于Disney+、Netflix等<br>
+4. 提供AI解锁，包括但不限于ChatGPT、Gemini等<br>
 
 - **套餐介绍**<br>
 <table>
     <tr>
         <th width="100px">周期套餐</th>
-        <th width="100px">月流量</th>
-        <th width="100px">月付</th>
-        <th width="100px">季付</th>
-        <th width="100px">半年付</th>
-        <th width="100px">年付</th>
-        <th width="100px">一次性</th>
+        <th width="80px">月流量</th>
+        <th width="80px">月付</th>
+        <th width="80px">季付</th>
+        <th width="80px">半年付</th>
+        <th width="80px">年付</th>
+        <th width="80px">两年付</th>
+        <th width="80px">一次性</th>
     </tr>
     <tr>
-        <td align=center>小杯</td>
-        <td align=center>100G</td>
-        <td align=center>10</td>
-        <td align=center>30</td>
-        <td align=center>60</td>
-        <td align=center>100</td>
-        <td align=center>×</td>
-    </tr>
-    <tr>
-        <td align=center>中杯</td>
+        <td align=center>新享套餐</td>
         <td align=center>200G</td>
-        <td align=center>18</td>
-        <td align=center>54</td>
-        <td align=center>108</td>
-        <td align=center>180</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+        <td align=center>¥30</td>
+        <td align=center>×</td>
         <td align=center>×</td>
     </tr>
     <tr>
-        <td align=center>大杯</td>
+        <td align=center>随享套餐</td>
+        <td align=center>100G</td>
+        <td align=center>¥8</td>
+        <td align=center>¥22.8</td>
+        <td align=center>¥43.2</td>
+        <td align=center>¥76.8</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+    </tr>
+    <tr>
+        <td align=center>优享套餐</td>
+        <td align=center>200G</td>
+        <td align=center>¥14</td>
+        <td align=center>¥39.9</td>
+        <td align=center>¥75.6</td>
+        <td align=center>¥134.4</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+    </tr>
+    <tr>
+        <td align=center>超享套餐</td>
         <td align=center>500G</td>
-        <td align=center>43</td>
-        <td align=center>129</td>
-        <td align=center>258</td>
-        <td align=center>430</td>
+        <td align=center>¥30</td>
+        <td align=center>¥85.5</td>
+        <td align=center>¥162</td>
+        <td align=center>¥288</td>
         <td align=center>×</td>
-    </tr>
-    <tr>
-        <td align=center>超大杯</td>
-        <td align=center>1000G</td>
-        <td align=center>85</td>
-        <td align=center>255</td>
-        <td align=center>510</td>
-        <td align=center>850</td>
         <td align=center>×</td>
     </tr>
 </table>
 
 - **购买方式**<br>
-点击[OuO官网](https://login.ouonetwork.com/register?aff=t5wSjov2)购买，85折优惠码（截止至2025.02.07） `NY15%OFF`
+点击[Alphaio官网](https://user.alphalo.net/register?code=xGyimy7I)购买，限时优惠码：半年付9折`Alphaio-OPEN90`，年付83折`Alphaio-OPEN83`
 
 - **联系方式**<br>
-官方频道：[@OuOnotification](https://t.me/OuOnotification)<br>
-官方群组：[@OuONetwork](https://t.me/OuONetwork)<br>
+官方频道：[@Alphaio_Channel](https://t.me/Alphaio_Channel)<br>
+官方群组：[@AlphaioNet](https://t.me/AlphaioNet)<br>
 
 
 ## 插件列表
