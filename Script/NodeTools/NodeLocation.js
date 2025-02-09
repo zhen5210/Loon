@@ -10,8 +10,6 @@
 let base_url = "https://scamalytics.com/ip/";
 
 // 使用新的IP地理信息API
-// $environment.params with input params
-console.log($environment.params);
 var url = "http://ip-api.com/json/";
 var inputParams = $environment.params;
 var nodeName = inputParams.node;
