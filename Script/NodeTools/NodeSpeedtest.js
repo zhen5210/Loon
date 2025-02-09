@@ -68,7 +68,7 @@ if (typeof $argument != 'undefined') {
       + `测试用时：${round(Math.abs(duration, 2),2)}s\n`
       + `测试时间：${new Date().toTimeString().split(' ')[0]}\n`
       + `------------------------------\n`
-      + '节点 ➟ ' + $environment.params.nodeInfo.name
+      + '节点 ➜ ' + $environment.params.nodeInfo.name
   } else if ($.isQuanX()) {
       Panel.message = `------------------------------\n`
       + `下行速率：${round(Math.abs(speed * 8))}Mbps [${round(Math.abs(speed, 2), 1)}MB/s]\n`
@@ -76,7 +76,7 @@ if (typeof $argument != 'undefined') {
       + `测试用时：${round(Math.abs(duration, 2),2)}s\n`
       + `测试时间：${new Date().toTimeString().split(' ')[0]}\n`
       + `------------------------------\n`
-      + '节点 ➟ ' + $environment.params
+      + '节点 ➜ ' + $environment.params
   } else if ($.isSurge() || $.isStash()) {
       if ($.isStash()) Panel.icon = arg?.icon ?? icon;
       else Panel.icon = arg?.icon ?? icon;

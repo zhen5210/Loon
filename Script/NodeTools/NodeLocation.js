@@ -63,7 +63,7 @@ function json2info(cnt, paras) {
     // 在节点信息之前添加欺诈指数与风险等级（Display函数从原始字符串中提取相关数据）
     res += Display(rawData);
     // 添加分隔线及节点信息
-    res += "-------------------------------" + "</br>" + "<font color=#6959CD>" + "<b>节点</b> ➟ " + $environment.params.node + "</font>";
+    res += "-------------------------------" + "</br>" + "<font color=#6959CD>" + "<b>节点</b> ➜ " + $environment.params.node + "</font>";
     res = `<p style="text-align: center; font-family: -apple-system; font-size: large; font-weight: thin">` + res + `</p>`;
     return res;
 }
