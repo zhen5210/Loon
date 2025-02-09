@@ -27,36 +27,59 @@ var nodeName = inputParams.node;
  * node: Specify network activity on this node
  */
 var requestParams = {
-    "url":url,
-    "node":nodeName
-}
+    "url": url,
+    "node": nodeName
+};
 
-var message = ""
-const paras = ["query","as","org","isp","countryCode","city","lon","lat"];
-const paran = ["远端IP地址","远端IP ASN","ASN所属机构","远端ISP","远端IP地区","远端IP城市","远端经度","远端纬度"];
+var message = "";
+const paras = ["query", "as", "org", "isp", "countryCode", "city", "lon", "lat"];
+const paran = ["远端IP地址", "远端IP ASN", "ASN所属机构", "远端ISP", "远端IP地区", "远端IP城市", "远端经度", "远端纬度"];
 
 $httpClient.get(requestParams, (error, response, data) => {
     if (error) {
-        message = "</br></br>🔴 查询超时"
-        message = `<p style="text-align: center; font-family: -apple-system; font-size: large; font-weight: bold;">` + message + `</p>`
-        $done({"title": "  地理位置查询", "htmlMessage": message});
+        message = "</br></br>🔴 查询超时";
+        message = `<p style="text-align: center; font-family: -apple-system; font-size: large; font-weight: bold;">` + message + `</p>`;
+        $done({ "title": "  地理位置查询", "htmlMessage": message });
     } else {
         console.log(data);
         message = data ? json2info(data, paras) : "";
-        $done({"title": "  地理位置查询", "htmlMessage": message});
+        $done({ "title": "  地理位置查询", "htmlMessage": message });
     }
-})
+});
 
 function json2info(cnt, paras) {
     var res = "-------------------------------";
     cnt = JSON.parse(cnt);
     console.log(cnt);
-    for (i = 0;i < paras.length; i ++) {
+    for (i = 0; i < paras.length; i++) {
         cnt[paras[i]] = paras[i] == "countryCode" ? cnt[paras[i]] + " ⟦" + flags.get(cnt[paras[i]].toUpperCase()) + "⟧" : cnt[paras[i]];
-        res = cnt[paras[i]] ? res + "</br><b>" + "<font  color=>" + paran[i] + "</font> : " + "</b>"+ "<font  color=>" + cnt[paras[i]] + "</font></br>" : res;
+        res = cnt[paras[i]] ? res + "</br><b>" + "<font  color=>" + paran[i] + "</font> : " + "</b>" + "<font  color=>" + cnt[paras[i]] + "</font></br>" : res;
     }
     res = res + "-------------------------------" + "</br>" + "<font color=#6959CD>" + "<b>节点</b> ➟ " + $environment.params.node + "</font>";
     res = `<p style="text-align: center; font-family: -apple-system; font-size: large; font-weight: thin">` + res + `</p>`;
+    return res;
+}
+
+function Display(cnt) {
+    let score = cnt.indexOf(`"score":`) != -1 ? cnt.split(`"score":`)[1].split("\n")[0] : "NA";
+    score = "</br><b>" + "<font color=>" + "欺诈指数 " + "</font> : " + "</b>" + "<font color=>" + score.replace(/"|,/g, "") + "</font></br>";
+    let risk = cnt.indexOf(`"risk":`) != -1 ? cnt.split(`"risk":`)[1].split("\n")[0] : "NA";
+    risk = "</br><b>" + "<font color=>" + "风险等级 " + "</font> : " + "</b>" + "<font color=>" + E2C(risk.replace(/"|,/g, "")) + "</font></br>";
+    return (score + risk);
+}
+
+// 极高风险🔴、高风险🟠 和 中风险🟡 低风险🟢
+function E2C(cnt) {
+    var res = "NA";
+    if (cnt.indexOf("very high") != -1) {
+        res = "极高风险 🔴";
+    } else if (cnt.indexOf("high") != -1) {
+        res = "高风险 🟠";
+    } else if (cnt.indexOf("medium") != -1) {
+        res = "中风险 🟡";
+    } else if (cnt.indexOf("low") != -1) {
+        res = "低风险 🟢";
+    }
     return res;
 }
 
