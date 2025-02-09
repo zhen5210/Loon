@@ -34,18 +34,18 @@ let result = {
     "Discovery" : "<b>Discoveryᐩ: </b>检测失败，请重试 ❗️",
 }
 
-let arrow = " ➜ "
+let arrow = " ➟ "
 
 Promise.all([ytbTest(),disneyLocation(),nfTest(),daznTest(),parmTest(),discoveryTest(),gptTest()]).then(value => {
     let content = "------------------------------------</br>"+([result["Dazn"],result["Discovery"],result["Paramount"],result["Disney"],result["Netflix"],result["ChatGPT"],result["YouTube"]]).join("</br></br>")
-    content = content + "</br>------------------------------------</br>"+"<font color=#CD5C5C>"+"<b>节点</b> ➜ " + nodeName+ "</font>"
+    content = content + "</br>------------------------------------</br>"+"<font color=#CD5C5C>"+"<b>节点</b> ➟ " + nodeName+ "</font>"
     content =`<p style="text-align: center; font-family: -apple-system; font-size: large; font-weight: thin">` + content + `</p>`
     console.log(content);
     $done({"title":result["title"],"htmlMessage":content})
 }).catch (values => {
     console.log("reject:" + values);
     let content = "------------------------------------</br>"+([result["Dazn"],result["Discovery"],result["Paramount"],result["Disney"],result["Netflix"],result["ChatGPT"],result["YouTube"]]).join("</br></br>")
-    content = content + "</br>------------------------------------</br>"+"<font color=#CD5C5C>"+"<b>节点</b> ➜ " + nodeName+ "</font>"
+    content = content + "</br>------------------------------------</br>"+"<font color=#CD5C5C>"+"<b>节点</b> ➟ " + nodeName+ "</font>"
     content =`<p style="text-align: center; font-family: -apple-system; font-size: large; font-weight: thin">` + content + `</p>`
     $done({"title":result["title"],"htmlMessage":content})
 })
@@ -99,10 +99,10 @@ function disneyLocation() {
                         location: { countryCode },
                     } = resData?.extensions?.sdk?.session
                     if (inSupportedLocation == false) {
-                        result["Disney"] = "<b>Disneyᐩ:</b> 即将登陆 ➜ "+'⟦'+flags.get(countryCode.toUpperCase())+"⟧ ⚠️"
+                        result["Disney"] = "<b>Disneyᐩ:</b> 即将登陆 ➟ "+'⟦'+flags.get(countryCode.toUpperCase())+"⟧ ⚠️"
                         resolve();
                     } else {
-                        result["Disney"] = "<b>Disneyᐩ:</b> 支持 ➜ "+'⟦'+flags.get(countryCode.toUpperCase())+"⟧ 🎉"
+                        result["Disney"] = "<b>Disneyᐩ:</b> 支持 ➟ "+'⟦'+flags.get(countryCode.toUpperCase())+"⟧ 🎉"
                         resolve({ inSupportedLocation, countryCode });
                     }
                 } else {
