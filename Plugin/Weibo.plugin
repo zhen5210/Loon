@@ -1,17 +1,21 @@
 #!name = 微博
 #!desc = 微博全面净化
 #!openUrl = https://apps.apple.com/app/id350962117
-#!author = RuCu6[https://github.com/RuCu6], fmz200[https://github.com/fmz200], zmqcherish[https://github.com/zmqcherish], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!author = RuCu6[https://github.com/RuCu6], fmz200[https://github.com/fmz200], zmqcherish[https://github.com/zmqcherish], neishe321[https://github.com/neishe321], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!tag = 去广告
 #!system = 
 #!system_version = 
 #!loon_version = 3.2.6(821)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Weibo.png
-#!date = 2025-02-08 22:00
+#!date = 2025-02-10 18:00
 
 # 2024-12-17 21:27:52
 # https://kelee.one/Tool/Loon/Plugin/Weibo_remove_ads.plugin
+# 2025-02-08 21:00:00
+# https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/weibo.plugin
+# 2025-02-10
+# https://raw.githubusercontent.com/neishe321/My_Scripts/main/Surge/Module/weibo.sgmodule
 
 [Rule]
 # 请求放行
@@ -27,6 +31,7 @@ URL-REGEX, ^https?:\/\/api-cloudim\.api\.weibo\.com\/v1\/log\/, REJECT-DROP
 
 # 微博开屏广告
 DOMAIN, bootpreload.uve.weibo.com, REJECT
+DOMAIN, bootrealtime.uve.weibo.com, REJECT
 
 # 其他广告
 DOMAIN-SUFFIX, fastimage.uve.weibo.com, REJECT
@@ -62,6 +67,7 @@ DOMAIN, datacollection.uve.weibo.com, REJECT
 DOMAIN, adpinpai.video.weibocdn.com, REJECT
 
 [Rewrite]
+# ---------- RuCu6 ---------- #
 # 首页 - 签到、发布按钮、侧边栏、右上角红包、顶部标签页、侧边栏提醒、超话标签页悬浮、顶部直播
 ^https:\/\/api\.weibo\.cn\/2\/(?:ug\/checkin\/list|push\/daily) reject-dict
 ^https:\/\/api\.weibo\.cn\/2\/!\/live\/media_homelist\? reject-dict
@@ -90,7 +96,30 @@ DOMAIN, adpinpai.video.weibocdn.com, REJECT
 ^https:\/\/card\.weibo\.com\/article\/m\/aj\/(?:reward|uvead) reject-dict
 ^https:\/\/weibo\.com\/ttarticle\/x\/m\/aj\/(?:reward|uvead) reject-dict
 
+# ---------- neishe321 ---------- #
+# 推广内容
+^https?:\/\/api\.weibo\.cn\/\d\/(push\/active|client\/addlog_batch|container\/asyn|shproxy\/chaohua\/discovery\/searchactive|checkin\/show|!\/live\/media_homelist|statuses\/container_positive|!\/was\/finder\/searchbarchange) reject
+
+# tab标签处理
+^https?:\/\/api\.weibo\.cn\/\d\/groups\/allgroups\/v\d response-body-json-jq '.pageDatas |= map(select(.pageDataType != "homeExtend")) | (.pageDatas[0].categories[0].pageDatas |= del(.[0]))'
+
+# 精简我的页面
+^https?:\/\/api\.weibo\.cn\/\d\/profile\/me response-body-json-jq '.items |= (.[0:2] | if length > 0 and .[0].header? then .[0].header |= del(.vipIcon, .vipView) else . end | if length > 1 and .[1].items? then .[1].items |= .[0:4] else . end)'
+
+# 去除超话广场
+^https?:\/\/api\.weibo\.cn\/\d\/\!\/huati\/discovery_home_bottom_channels response-body-json-jq '.button_configs? |= empty | .channelInfo.channel_list |= if length > 1 then del(.[1]) else . end'
+
+# 去除视频流广告
+^https?:\/\/api\.weibo\.cn\/\d\/video\/tiny_stream_video_list response-body-json-jq '.statuses |= map(if (.is_ad == 1 or .mblogtypename == "广告") then empty else . end)'
+
+# 解锁会员图标
+^https?:\/\/new\.vip\.weibo\.cn\/aj\/appicon\/list response-body-json-jq '.data.list |= map(if has("cardType") then .cardType = "2" else . end | if has("tag") then .tag = "" else . end)'
+
 [Script]
+# ---------- neishe321 ---------- #
+# 微博净化
+http-response ^https?:\/\/api\.weibo\.cn\/\d\/(guest\/statuses_extend|statuses\/extend|statuses\/show|comments\/build_comments|search\/(finder|container_timeline|container_discover)|searchall|statuses\/container_timeline(_.*)?(\?.*)?$|profile\/container_timeline|messageflow\/notice|statuses\/repost_timeline|flowlist) script-path = https://raw.githubusercontent.com/neishe321/My_Scripts/main/Scripts/weibo_remove_ads.js, requires-body = true, tag = 微博净化@neishe321
+
 # ---------- RuCu6 ---------- #
 # 首页 - 签到、发布按钮、侧边栏、右上角红包、顶部标签页、侧边栏提醒、超话标签页悬浮、顶部直播
 http-response ^https:\/\/api\.weibo\.cn\/2\/(?:checkin\/show|client\/publisher_list|push\/active) script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除首页推广
