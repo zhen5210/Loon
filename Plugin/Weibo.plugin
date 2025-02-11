@@ -8,7 +8,7 @@
 #!loon_version = 3.2.6(821)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Weibo.png
-#!date = 2025-02-10 18:00
+#!date = 2025-02-11 10:00
 
 # 2024-12-17 21:27:52
 # https://kelee.one/Tool/Loon/Plugin/Weibo_remove_ads.plugin
@@ -118,7 +118,7 @@ DOMAIN, adpinpai.video.weibocdn.com, REJECT
 [Script]
 # ---------- neishe321 ---------- #
 # 微博净化
-http-response ^https?:\/\/api\.weibo\.cn\/\d\/(guest\/statuses_extend|statuses\/extend|statuses\/show|comments\/build_comments|search\/(finder|container_timeline|container_discover)|searchall|statuses\/container_timeline(_.*)?(\?.*)?$|profile\/container_timeline|messageflow\/notice|statuses\/repost_timeline|flowlist) script-path = https://raw.githubusercontent.com/neishe321/My_Scripts/main/Scripts/weibo_remove_ads.js, requires-body = true, tag = 微博净化@neishe321
+http-response ^https?:\/\/api\.weibo\.cn\/\d\/(guest\/statuses_extend|statuses\/extend|statuses\/show|comments\/build_comments|comments\/mix_comments|search\/(finder|container_timeline|container_discover)|searchall|statuses\/container_timeline(_.*)?(\?.*)?$|profile\/container_timeline|messageflow\/notice|statuses\/repost_timeline|like\/show|flowlist) script-path = https://raw.githubusercontent.com/neishe321/My_Scripts/main/Scripts/weibo_remove_ads.js, requires-body = true, tag = 微博净化@neishe321
 
 # ---------- RuCu6 ---------- #
 # 首页 - 签到、发布按钮、侧边栏、右上角红包、顶部标签页、侧边栏提醒、超话标签页悬浮、顶部直播
