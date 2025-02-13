@@ -8,7 +8,7 @@
 #!loon_version = 3.2.6(821)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/ChinaMobile.png
-#!date = 2025-02-04 17:00
+#!date = 2025-02-13 10:00
 
 # version 1.0.0
 # https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/ChinaMobile/NoAds.js
@@ -38,7 +38,8 @@ service = switch, false, true, tag = Scriptable服务模式, desc = 是否开启
 
 [Rewrite]
 # 开屏
-^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/(?:explorePage\/getAdverList|init\/startInit|emotionMarket) reject-200
+^https?:\/\/(client\.app\.coc|app)\.10086\.cn\/biz-orange\/DN\/(explorePage\/getAdverList|init\/startInit|emotionMarket) reject-200
+# ^https?:\/\/h\.app\.coc\.10086\.cn\/biz-orange\/DN\/emotionMarket reject
 
 [Script]
 # 查询套餐内通话、套餐使用情况
