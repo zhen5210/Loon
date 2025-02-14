@@ -12,7 +12,12 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
 
 建议使用更及时、更完善、更全面的[**可莉配置**](https://github.com/luestr/ProxyResource/blob/main/README.md)。
 
-![Alt](https://repobeats.axiom.co/api/embed/3deb351aeae7762d0a77427ce568557e05d239b0.svg "Repobeats analytics image")
+<a href="https://next.ossinsight.io/widgets/official/compose-last-28-days-stats?repo_id=705605979" target="_blank" style="display: block" align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://next.ossinsight.io/widgets/official/compose-last-28-days-stats/thumbnail.png?repo_id=705605979&image_size=auto&color_scheme=dark" width="655" height="auto">
+    <img alt="Performance Stats of sooyaaabo/Loon - Last 28 days" src="https://next.ossinsight.io/widgets/official/compose-last-28-days-stats/thumbnail.png?repo_id=705605979&image_size=auto&color_scheme=light" width="655" height="auto">
+  </picture>
+</a>
 
 ## 使用声明
 
@@ -619,4 +624,9 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
 </table>
 
 ## Star History
-![Star History Chart](https://api.star-history.com/svg?repos=sooyaaabo/Loon&type=Date)
+<a href="https://next.ossinsight.io/widgets/official/analyze-repo-stars-history?repo_id=705605979" target="_blank" style="display: block" align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://next.ossinsight.io/widgets/official/analyze-repo-stars-history/thumbnail.png?repo_id=705605979&image_size=auto&color_scheme=dark" width="721" height="auto">
+    <img alt="Star History of sooyaaabo/Loon" src="https://next.ossinsight.io/widgets/official/analyze-repo-stars-history/thumbnail.png?repo_id=705605979&image_size=auto&color_scheme=light" width="721" height="auto">
+  </picture>
+</a>
