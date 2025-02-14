@@ -624,9 +624,4 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
 </table>
 
 ## Star History
-<a href="https://next.ossinsight.io/widgets/official/analyze-repo-stars-history?repo_id=705605979" target="_blank" style="display: block" align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://next.ossinsight.io/widgets/official/analyze-repo-stars-history/thumbnail.png?repo_id=705605979&image_size=auto&color_scheme=dark" width="721" height="auto">
-    <img alt="Star History of sooyaaabo/Loon" src="https://next.ossinsight.io/widgets/official/analyze-repo-stars-history/thumbnail.png?repo_id=705605979&image_size=auto&color_scheme=light" width="721" height="auto">
-  </picture>
-</a>
+[![Star History Chart](https://api.star-history.com/svg?repos=sooyaaabo/Loon&type=Date)](https://star-history.com/#sooyaaabo/Loon&Date)
