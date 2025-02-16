@@ -89,8 +89,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
         <th width="80px">季付</th>
         <th width="80px">半年付</th>
         <th width="80px">年付</th>
-        <th width="80px">两年付</th>
-        <th width="80px">一次性</th>
+        <th width="100px">日签到</th>
     </tr>
     <tr>
         <td align=center>轻量套餐</td>
@@ -99,8 +98,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
         <td align=center>¥15</td>
         <td align=center>¥30</td>
         <td align=center>¥60</td>
-        <td align=center>×</td>
-        <td align=center>×</td>
+        <td align=center>1~1000M</td>
     </tr>
     <tr>
         <td align=center>基础套餐</td>
@@ -109,8 +107,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
         <td align=center>¥30</td>
         <td align=center>¥60</td>
         <td align=center>¥120</td>
-        <td align=center>×</td>
-        <td align=center>×</td>
+        <td align=center>1~2000M</td>
     </tr>
     <tr>
         <td align=center>高级套餐</td>
@@ -119,8 +116,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
         <td align=center>¥54</td>
         <td align=center>¥108</td>
         <td align=center>¥216</td>
-        <td align=center>×</td>
-        <td align=center>×</td>
+        <td align=center>1~3000M</td>
     </tr>
     <tr>
         <td align=center>豪华套餐</td>
@@ -129,8 +125,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
         <td align=center>¥90</td>
         <td align=center>¥180</td>
         <td align=center>¥360</td>
-        <td align=center>×</td>
-        <td align=center>×</td>
+        <td align=center>1~3888M</td>
     </tr>
 </table>
 
@@ -162,7 +157,6 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
         <th width="80px">半年付</th>
         <th width="80px">年付</th>
         <th width="80px">两年付</th>
-        <th width="80px">一次性</th>
     </tr>
     <tr>
         <td align=center>Lite</td>
@@ -172,7 +166,6 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
         <td align=center>¥48</td>
         <td align=center>¥90</td>
         <td align=center>¥172</td>
-        <td align=center>×</td>
     </tr>
     <tr>
         <td align=center>Plus</td>
@@ -182,7 +175,6 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
         <td align=center>¥81</td>
         <td align=center>¥153</td>
         <td align=center>¥288</td>
-        <td align=center>×</td>
     </tr>
     <tr>
         <td align=center>Max</td>
@@ -192,7 +184,6 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
         <td align=center>¥135</td>
         <td align=center>¥255</td>
         <td align=center>¥480</td>
-        <td align=center>×</td>
     </tr>
     <tr>
         <td align=center>Air</td>
@@ -202,38 +193,22 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
         <td align=center>×</td>
         <td align=center>¥60</td>
         <td align=center>×</td>
-        <td align=center>×</td>
     </tr>
 </table>
 <table>
     <tr>
-        <th width="100px">流量套餐</th>
+        <th width="100px">限量套餐</th>
         <th width="80px">总流量</th>
-        <th width="80px">月付</th>
-        <th width="80px">季付</th>
-        <th width="80px">半年付</th>
-        <th width="80px">年付</th>
-        <th width="80px">两年付</th>
         <th width="80px">一次性</th>
     </tr>
     <tr>
         <td align=center>Plus</td>
         <td align=center>300G</td>
-        <td align=center>×</td>
-        <td align=center>×</td>
-        <td align=center>×</td>
-        <td align=center>×</td>
-        <td align=center>×</td>
         <td align=center>¥40</td>
     </tr>
     <tr>
         <td align=center>Plus+</td>
         <td align=center>1000G</td>
-        <td align=center>×</td>
-        <td align=center>×</td>
-        <td align=center>×</td>
-        <td align=center>×</td>
-        <td align=center>×</td>
         <td align=center>¥80</td>
     </tr>
 </table>
@@ -263,8 +238,6 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
         <th width="80px">季付</th>
         <th width="80px">半年付</th>
         <th width="80px">年付</th>
-        <th width="80px">两年付</th>
-        <th width="80px">一次性</th>
     </tr>
     <tr>
         <td align=center>新享套餐</td>
@@ -273,8 +246,6 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
         <td align=center>×</td>
         <td align=center>×</td>
         <td align=center>¥30</td>
-        <td align=center>×</td>
-        <td align=center>×</td>
     </tr>
     <tr>
         <td align=center>随享套餐</td>
@@ -283,8 +254,6 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
         <td align=center>¥22.8</td>
         <td align=center>¥43.2</td>
         <td align=center>¥76.8</td>
-        <td align=center>×</td>
-        <td align=center>×</td>
     </tr>
     <tr>
         <td align=center>优享套餐</td>
@@ -293,8 +262,6 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
         <td align=center>¥39.9</td>
         <td align=center>¥75.6</td>
         <td align=center>¥134.4</td>
-        <td align=center>×</td>
-        <td align=center>×</td>
     </tr>
     <tr>
         <td align=center>超享套餐</td>
@@ -303,8 +270,6 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
         <td align=center>¥85.5</td>
         <td align=center>¥162</td>
         <td align=center>¥288</td>
-        <td align=center>×</td>
-        <td align=center>×</td>
     </tr>
 </table>
 
