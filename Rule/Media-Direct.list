@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2025-02-14 16:30
+# 2025-02-17 10:00
 # https://github.com/fangkuia/XPTV/blob/main/X/xptv.plugin
 
 # --------------- CMSPlayer --------------- #
@@ -113,7 +113,7 @@ DOMAIN, www.leijing.xyz
 # 六趣网盘
 DOMAIN, wp.0v.fit
 # 木偶
-DOMAIN, muou.666291.xyz
+DOMAIN-SUFFIX, 91muou.icu
 # 南风短剧
 DOMAIN, www.nanf.cc
 # 欧歌
