@@ -13,11 +13,10 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
 建议使用更及时、更完善、更全面的[**可莉配置**](https://github.com/luestr/ProxyResource/blob/main/README.md)。
 
 <a href="https://next.ossinsight.io/widgets/official/compose-last-28-days-stats?repo_id=705605979" target="_blank" style="display: block" align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://next.ossinsight.io/widgets/official/compose-last-28-days-stats/thumbnail.png?repo_id=705605979&image_size=auto&color_scheme=dark" width="655" height="auto">
-    <img alt="Performance Stats of sooyaaabo/Loon - Last 28 days" src="https://next.ossinsight.io/widgets/official/compose-last-28-days-stats/thumbnail.png?repo_id=705605979&image_size=auto&color_scheme=light" width="655" height="auto">
-  </picture>
+  <img src="https://next.ossinsight.io/widgets/official/compose-last-28-days-stats/thumbnail.png?repo_id=705605979&image_size=auto&color_scheme=light" alt="Performance Stats of sooyaaabo/Loon - Last 28 days" width="655" height="auto">
 </a>
+
+[![Performance Stats of sooyaaabo/Loon - Last 28 days](https://next.ossinsight.io/widgets/official/compose-last-28-days-stats/thumbnail.png?repo_id=705605979&image_size=auto&color_scheme=light)](https://next.ossinsight.io/widgets/official/compose-last-28-days-stats?repo_id=705605979)
 
 ## 使用声明
 
@@ -224,10 +223,12 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
 ### **Alphaio**
 
 - **机场介绍**<br>
-1. 采用Shadowsocks协议，专线加持超凡体验<br>
+1. 采用Shadowsocks协议，BGP专线加持超凡体验<br>
 2. 提供港、台、日、新、美常用地区及部分冷门地区节点<br>
 3. 提供高度流媒体解锁，包括但不限于Disney+、Netflix等<br>
 4. 提供AI解锁，包括但不限于ChatGPT、Gemini等<br>
+
+注：若官网中无新享套餐即为售罄，后续补货将会在群组通过置顶通知提前告知。
 
 - **套餐介绍**<br>
 <table>
