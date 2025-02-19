@@ -16,8 +16,6 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
   <img src="https://next.ossinsight.io/widgets/official/compose-last-28-days-stats/thumbnail.png?repo_id=705605979&image_size=auto&color_scheme=light" alt="Performance Stats of sooyaaabo/Loon - Last 28 days" width="655" height="auto">
 </a>
 
-[![Performance Stats of sooyaaabo/Loon - Last 28 days](https://next.ossinsight.io/widgets/official/compose-last-28-days-stats/thumbnail.png?repo_id=705605979&image_size=auto&color_scheme=light)](https://next.ossinsight.io/widgets/official/compose-last-28-days-stats?repo_id=705605979)
-
 ## 使用声明
 
 > [!CAUTION]
