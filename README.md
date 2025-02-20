@@ -13,7 +13,10 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
 建议使用更及时、更完善、更全面的[**可莉配置**](https://github.com/luestr/ProxyResource/blob/main/README.md)。
 
 <a href="https://next.ossinsight.io/widgets/official/compose-last-28-days-stats?repo_id=705605979" target="_blank" style="display: block" align="center">
-  <img src="https://next.ossinsight.io/widgets/official/compose-last-28-days-stats/thumbnail.png?repo_id=705605979&image_size=auto&color_scheme=light" alt="Performance Stats of sooyaaabo/Loon - Last 28 days" width="655" height="auto">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://next.ossinsight.io/widgets/official/compose-last-28-days-stats/thumbnail.png?repo_id=705605979&image_size=auto&color_scheme=dark" width="655" height="auto">
+    <img alt="Performance Stats of sooyaaabo/Loon - Last 28 days" src="https://next.ossinsight.io/widgets/official/compose-last-28-days-stats/thumbnail.png?repo_id=705605979&image_size=auto&color_scheme=light" width="655" height="auto">
+  </picture>
 </a>
 
 ## 使用声明
