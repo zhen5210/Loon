@@ -8,7 +8,7 @@
 #!loon_version = 3.2.6(821)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/RevenueCat.png
-#!date = 2025-02-04 17:00
+#!date = 2025-02-21 10:00
 
 # 2025-02-04
 # https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js
@@ -19,6 +19,8 @@
 # 2023-09-08
 # https://raw.githubusercontent.com/Yu9191/Rewrite/main/Revenuecat.js
 
+# https://gist.githubusercontent.com/Yu9191/45d3784ba323e9d2eac25aa3e0acf3e6/raw/Reven.sgmodule
+
 [Argument]
 RevenueCatScriptEnable-chxm1023 = switch, true, false, tag = RevenueCat-chxm1023, desc = 是否启用chxm1023的脚本来解锁RevenueCat系列
 RevenueCatScriptEnable-Guding88 = switch, true, false, tag = RevenueCat-Guding88, desc = 是否启用Guding88的脚本来解锁RevenueCat系列
@@ -27,6 +29,9 @@ RevenueCatScriptEnable-Yu9191 = switch, true, false, tag = RevenueCat-Yu9191, de
 
 [Rewrite]
 ^https:\/\/api\.lianjiu\.fun\/app\/api\/v1\/profile reject
+
+^https:\/\/(api\.revenuecat\.com|api\.rc-backup\.com)\/.+\/(receipts$|subscribers\/[^/]+$) header https://rc-backup.lovebabyforever.workers.dev
+^https:\/\/(api\.revenuecat\.com|api\.rc-backup\.com)\/.+\/(receipts$|subscribers\/[^/]+$) header https://reven.lovebabyforever.workers.dev
 
 [Script]
 # chxm1023
