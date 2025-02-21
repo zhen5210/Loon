@@ -8,11 +8,12 @@
 #!loon_version = 3.2.6(821)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/TencentVideo.png
-#!date = 2025-02-04 17:00
+#!date = 2025-02-21 20:30
 
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cnftp.snippet
 
 [Rule]
+OR, ((DOMAIN, pgdt.gtimg.cn), (AND, ((USER-AGENT, "live4iphoneRel*"), (IP-CIDR, 0.0.0.0/0, no-resolve)))), REJECT-DROP
 DOMAIN, adsmind.gdtimg.com, REJECT
 DOMAIN, info4.video.qq.com, REJECT
 DOMAIN, info6.video.qq.com, REJECT
