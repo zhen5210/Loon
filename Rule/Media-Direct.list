@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2025-02-17 10:00
+# 2025-02-22 20:30
 # https://github.com/fangkuia/XPTV/blob/main/X/xptv.plugin
 
 # --------------- CMSPlayer --------------- #
@@ -222,7 +222,7 @@ DOMAIN, presale.111.com.cn
 DOMAIN, hdmoli.pro
 DOMAIN, v.damoli.pro
 # 哔嘀影视
-DOMAIN, www.xlys01.com
+DOMAIN, v.xlys.ltd.ua
 DOMAIN-SUFFIX, bytetos.com
 # 烧火影视
 DOMAIN, saohuo.tv
