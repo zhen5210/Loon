@@ -19,8 +19,8 @@
 
 [Argument]
 WeiboScriptEnable-RuCu6 = switch, true, false, tag = WeiboScript-RuCu6, desc = 是否启用RuCu6的脚本来移除广告
-WeiboScriptEnable-fmz200 = switch, true, false, tag = WeiboScript-fmz200, desc = 是否启用fmz200的脚本来移除广告
-WeiboScriptEnable-neishe321 = switch, true, false, tag = WeiboScript-neishe321, desc = 是否启用neishe321的脚本来移除广告
+WeiboScriptEnable-fmz200 = switch, false, true, tag = WeiboScript-fmz200, desc = 是否启用fmz200的脚本来移除广告
+WeiboScriptEnable-neishe321 = switch, false, true, tag = WeiboScript-neishe321, desc = 是否启用neishe321的脚本来移除广告
 
 [Rule]
 # 请求放行
