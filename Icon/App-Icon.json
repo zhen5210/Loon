@@ -611,12 +611,40 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Perplexity.png"
         },
         {
-            "name": "Moonshot",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Moonshot.png"
+            "name": "Grok xAI",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Grok.png"
+        },
+        {
+            "name": "MoonshotAI",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/MoonshotAI.png"
+        },
+        {
+            "name": "Kimi",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Kimi.png"
         },
         {
             "name": "DeepSeek",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/DeepSeek.png"
+        },
+        {
+            "name": "HailuoAI",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/HailuoAI.png"
+        },
+        {
+            "name": "ZhipuChatGLM",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/ZhipuChatGLM.png"
+        },
+        {
+            "name": "Tongyi Qwen",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Tongyi-01.png"
+        },
+        {
+            "name": "Tongyi Qwen",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Tongyi-02.png"
+        },
+        {
+            "name": "Tongyi Qwen",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Tongyi-03.png"
         },
         {
             "name": "InternetExplorer",

@@ -1,6 +1,6 @@
-# 2024-11-12 08:18:31
-# https://kelee.one/Tool/Loon/Rule/AI.list
+# 2025-02-28 22:20:30
 
+# https://kelee.one/Tool/Loon/Rule/AI.list
 # https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/AI.list
 
 # OpenAI ChatGPT
@@ -72,3 +72,7 @@ DOMAIN-SUFFIX, perplexity.com
 DOMAIN, chat.mistral.ai
 DOMAIN, console.mistral.ai
 DOMAIN-SUFFIX, mistral.ai
+
+# Grok AI
+DOMAIN, api.x.ai
+DOMAIN-SUFFIX, x.ai

@@ -8,7 +8,7 @@
 #!loon_version = 3.2.6(821)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Weibo.png
-#!date = 2025-02-22 22:00
+#!date = 2025-02-22 23:00
 
 # 2025-02-28 19:53:25
 # https://kelee.one/Tool/Loon/Plugin/Weibo_remove_ads.plugin
@@ -16,6 +16,11 @@
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/weibo.plugin
 # 2025-02-10
 # https://raw.githubusercontent.com/neishe321/My_Scripts/main/Surge/Module/weibo.sgmodule
+
+[Argument]
+WeiboScriptEnable-RuCu6 = switch, true, false, tag = WeiboScript-RuCu6, desc = 是否启用RuCu6的脚本来移除广告
+WeiboScriptEnable-fmz200 = switch, true, false, tag = WeiboScript-fmz200, desc = 是否启用fmz200的脚本来移除广告
+WeiboScriptEnable-neishe321 = switch, true, false, tag = WeiboScript-neishe321, desc = 是否启用neishe321的脚本来移除广告
 
 [Rule]
 # 请求放行
@@ -124,76 +129,76 @@ DOMAIN, adpinpai.video.weibocdn.com, REJECT
 ^https?:\/\/new\.vip\.weibo\.cn\/aj\/appicon\/list response-body-json-jq '.data.list |= map(if has("cardType") then .cardType = "2" else . end | if has("tag") then .tag = "" else . end)'
 
 [Script]
-# ---------- neishe321 ---------- #
-# 微博净化
-http-response ^https?:\/\/api\.weibo\.cn\/\d\/(guest\/statuses_extend|statuses\/extend|statuses\/show|comments\/build_comments|comments\/mix_comments|search\/(finder|container_timeline|container_discover)|searchall|statuses\/container_timeline(_.*)?(\?.*)?$|profile\/container_timeline|messageflow\/notice|statuses\/repost_timeline|like\/show|flowlist) script-path = https://raw.githubusercontent.com/neishe321/My_Scripts/main/Scripts/weibo_remove_ads.js, requires-body = true, tag = 微博净化@neishe321
-
 # ---------- RuCu6 ---------- #
 # 首页 - 签到、发布按钮、侧边栏、右上角红包、顶部标签页、侧边栏提醒、超话标签页悬浮、顶部直播
-http-response ^https:\/\/api\.weibo\.cn\/2\/(?:checkin\/show|client\/publisher_list|push\/active) script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除首页推广
-http-response ^https:\/\/api\.weibo\.cn\/2\/groups\/allgroups\/v2\? script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除首页顶部标签@RuCu6
+http-response ^https:\/\/api\.weibo\.cn\/2\/(?:checkin\/show|client\/publisher_list|push\/active) script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, enable={WeiboScriptEnable-RuCu6}, tag = 移除首页推广
+http-response ^https:\/\/api\.weibo\.cn\/2\/groups\/allgroups\/v2\? script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, enable={WeiboScriptEnable-RuCu6}, tag = 移除首页顶部标签@RuCu6
 
 # 详情页 - 超话、评论区、看图界面、个人主页、我的页面、信息流、商品橱窗、视频流、视频号、视频调查、话题卡片
-http-response ^https:\/\/api\.weibo\.cn\/2\/(?:cardlist|page) script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除信息流广告@RuCu6
-http-response ^https:\/\/api\.weibo\.cn\/2\/comments\/build_comments\? script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除评论区广告@RuCu6
-http-response ^https:\/\/api\.weibo\.cn\/2\/(?:container\/asyn|flowlist|flowpage) script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除个人微博详情页广告@RuCu6
-http-response ^https:\/\/api\.weibo\.cn\/2\/friendships\/(?:create|destroy) script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除关注、取消关注弹窗@RuCu6
-http-response ^https:\/\/api\.weibo\.cn\/2\/profile\/(?:container_timeline|dealatt|me|statuses\/tab|userinfo) script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除个人主页广告@RuCu6
-http-response ^https:\/\/api\.weibo\.cn\/2\/statuses\/(?:container_timeline(?:_hot|_topic|_topicpage|_unread)?|repost_timeline|unread_hot_timeline) script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除信息流广告@RuCu6
-http-response ^https:\/\/api\.weibo\.cn\/2\/statuses\/(?:extend|show) script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除微博详情页广告@RuCu6
-http-response ^https:\/\/api\.weibo\.cn\/2\/video\/(?:full_screen_stream|tiny_stream_mid_detail|tiny_stream_video_list)\? script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除视频流广告@RuCu6
-http-response ^https:\/\/api\.weibo\.cn\/2\/!\/huati\/discovery_home_bottom_channels\? script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除超话顶部标签@RuCu6
+http-response ^https:\/\/api\.weibo\.cn\/2\/(?:cardlist|page) script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, enable={WeiboScriptEnable-RuCu6}, tag = 移除信息流广告@RuCu6
+http-response ^https:\/\/api\.weibo\.cn\/2\/comments\/build_comments\? script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, enable={WeiboScriptEnable-RuCu6}, tag = 移除评论区广告@RuCu6
+http-response ^https:\/\/api\.weibo\.cn\/2\/(?:container\/asyn|flowlist|flowpage) script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, enable={WeiboScriptEnable-RuCu6}, tag = 移除个人微博详情页广告@RuCu6
+http-response ^https:\/\/api\.weibo\.cn\/2\/friendships\/(?:create|destroy) script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, enable={WeiboScriptEnable-RuCu6}, tag = 移除关注、取消关注弹窗@RuCu6
+http-response ^https:\/\/api\.weibo\.cn\/2\/profile\/(?:container_timeline|dealatt|me|statuses\/tab|userinfo) script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, enable={WeiboScriptEnable-RuCu6}, tag = 移除个人主页广告@RuCu6
+http-response ^https:\/\/api\.weibo\.cn\/2\/statuses\/(?:container_timeline(?:_hot|_topic|_topicpage|_unread)?|repost_timeline|unread_hot_timeline) script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, enable={WeiboScriptEnable-RuCu6}, tag = 移除信息流广告@RuCu6
+http-response ^https:\/\/api\.weibo\.cn\/2\/statuses\/(?:extend|show) script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, enable={WeiboScriptEnable-RuCu6}, tag = 移除微博详情页广告@RuCu6
+http-response ^https:\/\/api\.weibo\.cn\/2\/video\/(?:full_screen_stream|tiny_stream_mid_detail|tiny_stream_video_list)\? script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, enable={WeiboScriptEnable-RuCu6}, tag = 移除视频流广告@RuCu6
+http-response ^https:\/\/api\.weibo\.cn\/2\/!\/huati\/discovery_home_bottom_channels\? script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, enable={WeiboScriptEnable-RuCu6}, tag = 移除超话顶部标签@RuCu6
 
 # 消息页
-http-response ^https:\/\/api\.weibo\.cn\/2\/direct_messages\/user_list\? script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除消息页列表广告@RuCu6
-http-response ^https:\/\/api\.weibo\.cn\/2\/messageflow\/notice\? script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除消息页提醒@RuCu6
+http-response ^https:\/\/api\.weibo\.cn\/2\/direct_messages\/user_list\? script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, enable={WeiboScriptEnable-RuCu6}, tag = 移除消息页列表广告@RuCu6
+http-response ^https:\/\/api\.weibo\.cn\/2\/messageflow\/notice\? script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, enable={WeiboScriptEnable-RuCu6}, tag = 移除消息页提醒@RuCu6
 
 # 发现页 - 热门微博信息流、搜索列表、热搜提醒、猜你想搜、视频流红包
-http-response ^https:\/\/api\.weibo\.cn\/2\/search\/(?:container_timeline|finder) script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除热门微博信息流广告@RuCu6
-http-response ^https:\/\/api\.weibo\.cn\/2\/searchall\? script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除发现页搜索结果广告@RuCu6
+http-response ^https:\/\/api\.weibo\.cn\/2\/search\/(?:container_timeline|finder) script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, enable={WeiboScriptEnable-RuCu6}, tag = 移除热门微博信息流广告@RuCu6
+http-response ^https:\/\/api\.weibo\.cn\/2\/searchall\? script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, enable={WeiboScriptEnable-RuCu6}, tag = 移除发现页搜索结果广告@RuCu6
 
 # 开屏广告 //*.uve.weibo.com
-http-response ^https:\/\/bootpreload\.uve\.weibo\.com\/v[12]\/ad\/preload script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除开屏广告@RuCu6
-http-response ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除开屏广告@RuCu6
-http-response ^https:\/\/wbapp\.uve\.weibo\.com\/(?:preload\/get_ad|wbapplua\/wbpullad\.lua) script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 移除开屏广告@RuCu6
+http-response ^https:\/\/bootpreload\.uve\.weibo\.com\/v[12]\/ad\/preload script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, enable={WeiboScriptEnable-RuCu6}, tag = 移除开屏广告@RuCu6
+http-response ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, enable={WeiboScriptEnable-RuCu6}, tag = 移除开屏广告@RuCu6
+http-response ^https:\/\/wbapp\.uve\.weibo\.com\/(?:preload\/get_ad|wbapplua\/wbpullad\.lua) script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, enable={WeiboScriptEnable-RuCu6}, tag = 移除开屏广告@RuCu6
 
 # 会员图标
-http-response ^https:\/\/new\.vip\.weibo\.cn\/aj\/appicon\/list\? script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, tag = 会员图标@RuCu6
+http-response ^https:\/\/new\.vip\.weibo\.cn\/aj\/appicon\/list\? script-path = https://kelee.one/Resource/Script/Weibo/Weibo_remove_ads.js, requires-body = true, enable={WeiboScriptEnable-RuCu6}, tag = 会员图标@RuCu6
 
 # ---------- fmz200 ---------- #
 # 微博移除发现页广告
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/search\/(finder|container_timeline|container_discover)\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body = true, timeout = 60, tag = 微博发现页广告@fmz200
+http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/search\/(finder|container_timeline|container_discover)\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body = true, timeout = 60, enable={WeiboScriptEnable-fmz200}, tag = 微博发现页广告@fmz200
 
 # 微博热搜页面广告
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/(page|flowpage)\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body = true, timeout = 60, tag = 微博热搜页面广告@fmz200
+http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/(page|flowpage)\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body = true, timeout = 60, enable={WeiboScriptEnable-fmz200}, tag = 微博热搜页面广告@fmz200
 
 # 微博话题页面广告
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/searchall\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body = true, timeout = 60, tag = 微博话题页面广告@fmz200
+http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/searchall\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body = true, timeout = 60, enable={WeiboScriptEnable-fmz200}, tag = 微博话题页面广告@fmz200
 
 # 微博超话页面广告
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/container_timeline_topicpage\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body = true, timeout = 60, tag = 微博超话页面广告@fmz200
+http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/container_timeline_topicpage\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body = true, timeout = 60, enable={WeiboScriptEnable-fmz200}, tag = 微博超话页面广告@fmz200
 
 # 微博超话tab页净化
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/container_timeline_topic\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body = true, timeout = 60, tag = 微博超话tab页净化@fmz200
+http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/container_timeline_topic\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body = true, timeout = 60, enable={WeiboScriptEnable-fmz200}, tag = 微博超话tab页净化@fmz200
 
 # 微博详情页面广告
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/extend\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body = true, timeout = 60, tag = 微博详情页面广告@fmz200
+http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/extend\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body = true, timeout = 60, enable={WeiboScriptEnable-fmz200}, tag = 微博详情页面广告@fmz200
 
 # 微博最顶部的tab页分组
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/groups\/allgroups\/v2 script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body = true, timeout = 60, tag = 微博顶部tab页分组@fmz200
+http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/groups\/allgroups\/v2 script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body = true, timeout = 60, enable={WeiboScriptEnable-fmz200}, tag = 微博顶部tab页分组@fmz200
 
 # 微博去广告以及去除各部分推广模块 - cherish
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)/2/(cardlist|searchall|page|messageflow|statuses/(unread_)?friends(/|_)timeline|groups/timeline|statuses/(container_timeline|container_timeline_hot|unread_hot_timeline|extend|video_mixtimeline)|profile/(me|container_timeline)|video/(community_tab|remind_info|tiny_stream_video_list)|checkin/show|\!/live/media_homelist|comments/build_comments|container/get_item) script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_main.js, requires-body = true, timeout = 60, tag = 微博去广告以及去除各部分推广模块@fmz200
-http-response ^https?:\/\/(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) script-path = https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_launch.js, requires-body = true, timeout = 60, tag = 微博去广告以及去除各部分推广模块@fmz200
+http-response ^https?:\/\/m?api\.weibo\.c(n|om)/2/(cardlist|searchall|page|messageflow|statuses/(unread_)?friends(/|_)timeline|groups/timeline|statuses/(container_timeline|container_timeline_hot|unread_hot_timeline|extend|video_mixtimeline)|profile/(me|container_timeline)|video/(community_tab|remind_info|tiny_stream_video_list)|checkin/show|\!/live/media_homelist|comments/build_comments|container/get_item) script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_main.js, requires-body = true, timeout = 60, enable={WeiboScriptEnable-fmz200}, tag = 微博去广告以及去除各部分推广模块@fmz200
+http-response ^https?:\/\/(sdk|wb)app\.uve\.weibo\.com(/interface/sdk/sdkad.php|/wbapplua/wbpullad.lua) script-path = https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_launch.js, requires-body = true, timeout = 60, enable={WeiboScriptEnable-fmz200}, tag = 微博去广告以及去除各部分推广模块@fmz200
 
 # 自定义tab皮肤
-http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/!\/client\/light_skin script-path = https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_main.js, requires-body = true, timeout = 60, tag = 自定义tab皮肤@fmz200
+http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/!\/client\/light_skin script-path = https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_main.js, requires-body = true, timeout = 60, enable={WeiboScriptEnable-fmz200}, tag = 自定义tab皮肤@fmz200
 
 # 非会员设置tab皮肤 - cherish
-http-response ^https?:\/\/new\.vip\.weibo\.c(n|om)\/littleskin\/preview script-path = https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_main.js, requires-body = true, timeout = 60, tag = 非会员设置tab皮肤@fmz200
+http-response ^https?:\/\/new\.vip\.weibo\.c(n|om)\/littleskin\/preview script-path = https://raw.githubusercontent.com/zmqcherish/proxy-script/main/weibo_main.js, requires-body = true, timeout = 60, enable={WeiboScriptEnable-fmz200}, tag = 非会员设置tab皮肤@fmz200
 
 # 解锁微博会员APP图标
-http-response ^https?:\/\/new\.vip\.weibo\.c(n|om)\/aj\/appicon\/list script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_vip.js, requires-body = true, timeout = 60, tag = 微博会员APP图标@fmz200
+http-response ^https?:\/\/new\.vip\.weibo\.c(n|om)\/aj\/appicon\/list script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_vip.js, requires-body = true, timeout = 60, enable={WeiboScriptEnable-fmz200}, tag = 微博会员APP图标@fmz200
+
+# ---------- neishe321 ---------- #
+# 微博净化
+http-response ^https?:\/\/api\.weibo\.cn\/\d\/(guest\/statuses_extend|statuses\/extend|statuses\/show|comments\/build_comments|comments\/mix_comments|search\/(finder|container_timeline|container_discover)|searchall|statuses\/container_timeline(_.*)?(\?.*)?$|profile\/container_timeline|messageflow\/notice|statuses\/repost_timeline|like\/show|flowlist) script-path = https://raw.githubusercontent.com/neishe321/My_Scripts/main/Scripts/weibo_remove_ads.js, requires-body = true, enable={WeiboScriptEnable-neishe321}, tag = 微博净化@neishe321
 
 [MitM]
 hostname = *.weibo.cn, *.weibo.com, weibo.com
