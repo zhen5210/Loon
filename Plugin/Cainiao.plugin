@@ -8,7 +8,7 @@
 #!loon_version = 3.2.6(821)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Cainiao.png
-#!date = 2025-02-04 17:00
+#!date = 2025-02-28 22:00
 
 # 2024-11-28 00:00:00
 # https://kelee.one/Tool/Loon/Plugin/Cainiao_remove_ads.plugin
@@ -44,7 +44,7 @@ DOMAIN, ykad-data.youku.com, REJECT
 # ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.index\.cn response-body-json-del data
 
 # ---------- RuCu6 ---------- #
-# 底部发现页 - 角标
+# 底栏 - 发现标签的角标
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.app\.home\.tabbar\.marketing\.get\.cn reject-dict
 
 # 首页 - 好物推荐、商品推广、底部标签页、快递详情页、问卷调查、主页图标

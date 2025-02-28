@@ -8,9 +8,9 @@
 #!loon_version = 3.2.6(821)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/RedNote.png
-#!date = 2025-02-04 17:00
+#!date = 2025-02-28 22:00
 
-# 2024-11-28 00:00:00
+# 2025-02-28 19:49:27
 # https://kelee.one/Tool/Loon/Plugin/RedPaper_remove_ads.plugin
 
 [Rule]
@@ -36,9 +36,12 @@ AND, ((PROTOCOL,QUIC), (OR, ((IP-CIDR, 101.227.133.99/32, no-resolve), (IP-CIDR,
 ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/guide\/user_banner reject-dict
 
 [Script]
+# 移除整体配置
+http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system\/service\/ui\/config\? script-path = https://kelee.one/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag = 移除整体配置
+
 # 开屏广告
-http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system_service\/config\? script-path = https://kelee.one/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag = 移除开屏广告 config
-http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config script-path = https://kelee.one/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag = 移除开屏广告 splash_config
+http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system_service\/config\? script-path = https://kelee.one/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag = 移除开屏广告
+http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config script-path = https://kelee.one/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag = 移除开屏广告
 
 # 详情页、关注页
 http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/(?:note\/widgets|user\/followings\/followfeed) script-path = https://kelee.one/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag = 移除详情页小部件、关注页感兴趣的人

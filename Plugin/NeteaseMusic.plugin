@@ -8,13 +8,13 @@
 #!loon_version = 3.2.6(821)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/NeteaseMusic.png
-#!date = 2025-02-17 10:00
+#!date = 2025-02-28 22:00
 
 # 2025-02-17 02:24:04
 # https://raw.githubusercontent.com/Keywos/rule/main/script/wy/wy.plugin
 # 2023-08-23 
 # https://github.com/qiuxiuya/qiuxiuya/blob/main/Loon/NetEaseMusic.plugin
-# 2024-12-02 01:13:20
+# 2025-02-28 20:08:47
 # https://kelee.one/Tool/Loon/Plugin/NeteaseCloudMusic_remove_ads.plugin
 # 2024-10-01
 # https://raw.githubusercontent.com/anyehttp/quantumult-x/main/headers/wyy-surge.sgmodule
@@ -37,7 +37,6 @@ PRCN = switch, false, true, tag = 隐藏[首页-你的专属歌单], desc = 是�
 Music163_VIP_Shared = switch, false, true, tag = 启用[共享会员], desc = 是否启用网易云音乐共享会员
 
 [Rule]
-DOMAIN, httpdns.n.netease.com, REJECT
 DOMAIN, iadmat.nosdn.127.net, REJECT
 DOMAIN, iadmatapk.nosdn.127.net, REJECT
 DOMAIN, iadmusicmat.music.126.net, REJECT
@@ -50,20 +49,21 @@ DOMAIN, ipv6.music.163.com, REJECT
 # ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/e?api\/(?:batch|v\d\/resource\/comment\/floor\/get|homepage\/block\/page|link\/page\/rcmd\/(block\/resource\/multi\/refresh|resource\/show)|user\/follow\/users\/mixed\/get|link\/home\/framework\/tab|link\/position\/show\/resource|link\/page\/discovery\/resource\/show) header-del x-aeapi
 
 # 开屏广告
-^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/e?api\/(ocpc\/)?ad\/ reject-dict
+^https?:\/\/interface\d?\.music\.163\.com\/e?api\/(ocpc\/)?ad\/ mock-response-body data-type=text
 
 # 今日运势 商城 Beat专区 音乐收藏家 | type:ACTIVITY | 低至5.2折
-^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/eapi\/(?:delivery\/(batch-)?deliver|moment\/tab\/info\/|side-bar\/mini-program\/music-service\/account|yunbei\/account\/entrance\/) reject-dict
+^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(?:delivery\/(batch-)?deliver|moment\/tab\/info\/|side-bar\/mini-program\/music-service\/account|yunbei\/account\/entrance\/) reject-dict
 
 # 播放页 歌名下方 乐迷团｜关注｜播放页提示｜音乐应用红点｜播放提示
-^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/eapi\/(?:community\/friends\/fans-group\/artist\/group\/|mine\/applet\/redpoint|music\/songshare\/text\/recommend\/|resniche\/position\/play\/new\/|resource\/comments?\/musiciansaid\/|user\/sub\/artist) reject-dict
-^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/eapi\/(?:ios\/version|mlivestream\/entrance\/playpage\/|link\/position\/show\/strategy|link\/scene\/show\/resource|v1\/content\/exposure\/comment\/banner\/) reject-dict
+^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(?:community\/friends\/fans-group\/artist\/group\/|mine\/applet\/redpoint|music\/songshare\/text\/recommend\/|resniche\/position\/play\/new\/|resniche\/tspopup\/show|resource\/comments?\/musiciansaid\/|user\/sub\/artist) reject-dict
+^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(?:ios\/version|mlivestream\/entrance\/playpage\/|link\/position\/show\/strategy|link\/scene\/show\/resource|v1\/content\/exposure\/comment\/banner\/) reject-dict
 
 # 搜索页 搜索词 热搜卡片 猜你喜欢 我的应用下方提醒
-^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/w?eapi\/(?:activity\/bonus\/playpage\/time\/query|resource-exposure\/|search\/(?:chart\/|default\/|rcmd\/keyword\/|specialkeyword\/)) reject-dict
+^https?:\/\/interface\d?\.music\.163.com\/w?e?api\/search\/default mock-response-body data-type=text
+^https?:\/\/interface\d?\.music\.163\.com\/w?eapi\/(?:activity\/bonus\/playpage\/time\/query|resource-exposure\/|search\/(?:chart\/|rcmd\/keyword\/|specialkeyword\/)) reject-dict
 
 # 主页播客推荐
-^https:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/eapi\/my\/podcast\/tab\/recommend reject-dict
+^https:\/\/interface\d\.music\.163\.com\/eapi\/my\/podcast\/tab\/recommend reject-dict
 
 [Script]
 #----------  qiuxiuya ----------#
