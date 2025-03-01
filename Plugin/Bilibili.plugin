@@ -8,24 +8,23 @@
 #!loon_version = 3.2.6(821)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/BilibiliRed.png
-#!date = 2025-02-28 22:00
+#!date = 2025-03-01 16:30
 
 # 2025-02-28 20:00:19
 # https://kelee.one/Tool/Loon/Plugin/Bilibili_remove_ads.plugin
-# 2024-12-01 23:12
-# https://raw.githubusercontent.com/kokoryh/Script/master/Loon/plugin/bilibili.plugin
-# 2024-12-08 12:14
-# https://github.com/kokoryh/Script/blob/master/Surge/module/bilibili_new.sgmodule
+# 2024-03-01
+# https://raw.githubusercontent.com/kokoryh/Sparkle/master/release/loon/plugin/bilibili.plugin
+# https://raw.githubusercontent.com/kokoryh/Sparkle/master/release/surge/module/bilibili.sgmodule
 
 [Argument]
 showUpList = select, "auto", "true", "false", tag = 动态-最常访问, desc = auto: 仅当列表中存在直播状态时显示; true: 始终显示; false: 始终隐藏;
 
 [Rule]
 # 阻止B站备用域名访问
-DOMAIN, api.biliapi.net, REJECT
-DOMAIN, app.biliapi.net, REJECT
-DOMAIN, api.biliapi.com, REJECT
-DOMAIN, app.biliapi.com, REJECT
+# DOMAIN, api.biliapi.net, REJECT
+# DOMAIN, app.biliapi.net, REJECT
+# DOMAIN, api.biliapi.com, REJECT
+# DOMAIN, app.biliapi.com, REJECT
 
 # 开屏广告
 URL-REGEX, "^http:\/\/upos-sz-static\.bilivideo\.com\/ssaxcode\/\w{2}\/\w{2}\/\w{32}-1-SPLASH", REJECT-DICT
@@ -97,29 +96,29 @@ URL-REGEX, "^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH", REJECT-DICT
 
 [Script]
 # Proto处理
-http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.dynamic\.v2\.Dynamic\/DynAll$ script-path = https://kelee.one/Resource/Script/Bilibili/Bilibili_proto_kokoryh.js, requires-body = true, binary-body-mode = true, tag = 移除动态页面广告, argument=[{showUpList}]
+http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.dynamic\.v2\.Dynamic\/DynAll$ script-path = https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/bilibili.protobuf.js, requires-body = true, binary-body-mode = true, tag = 移除动态页面广告, argument=[{showUpList}]
 
-http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.interface\.v1\.Teenagers\/ModeStatus$ script-path = https://kelee.one/Resource/Script/Bilibili/Bilibili_proto_kokoryh.js, requires-body = true, binary-body-mode = true, tag = 移除青少年模式弹窗
+http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.interface\.v1\.Teenagers\/ModeStatus$ script-path = https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/bilibili.protobuf.js, requires-body = true, binary-body-mode = true, tag = 移除青少年模式弹窗
 
-http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.show\.v1\.Popular\/Index$ script-path = https://kelee.one/Resource/Script/Bilibili/Bilibili_proto_kokoryh.js, requires-body = true, binary-body-mode = true, tag = 移除热门话题
+http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.show\.v1\.Popular\/Index$ script-path = https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/bilibili.protobuf.js, requires-body = true, binary-body-mode = true, tag = 移除热门话题
 
-http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.playurl\.v1\.PlayURL\/PlayView$ script-path = https://kelee.one/Resource/Script/Bilibili/Bilibili_proto_kokoryh.js, requires-body = true, binary-body-mode = true, tag = 移除播放页面广告 playview
+http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.playurl\.v1\.PlayURL\/PlayView$ script-path = https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/bilibili.protobuf.js, requires-body = true, binary-body-mode = true, tag = 移除播放页面广告 playview
 
-http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.playerunite\.v1\.Player\/PlayViewUnite$ script-path = https://kelee.one/Resource/Script/Bilibili/Bilibili_proto_kokoryh.js, requires-body = true, binary-body-mode = true, tag = 移除播放页面广告 playerunite
+http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.playerunite\.v1\.Player\/PlayViewUnite$ script-path = https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/bilibili.protobuf.js, requires-body = true, binary-body-mode = true, tag = 移除播放页面广告 playerunite
 
-http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.view\.v1\.View\/(?:View|ViewProgress|TFInfo)$ script-path = https://kelee.one/Resource/Script/Bilibili/Bilibili_proto_kokoryh.js, requires-body = true, binary-body-mode = true, tag = 移除播放页面广告 view
+http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.view\.v1\.View\/(?:View|ViewProgress|TFInfo)$ script-path = https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/bilibili.protobuf.js, requires-body = true, binary-body-mode = true, tag = 移除播放页面广告 view
 
-http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.viewunite\.v1\.View\/(?:View|ViewProgress|RelatesFeed)$ script-path = https://kelee.one/Resource/Script/Bilibili/Bilibili_proto_kokoryh.js, requires-body = true, binary-body-mode = true, tag = 移除播放页面广告 viewunite
+http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.viewunite\.v1\.View\/(?:View|ViewProgress|RelatesFeed)$ script-path = https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/bilibili.protobuf.js, requires-body = true, binary-body-mode = true, tag = 移除播放页面广告 viewunite
 
-http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.community\.service\.dm\.v1\.DM\/(?:DmView|DmSegMobile)$ script-path = https://kelee.one/Resource/Script/Bilibili/Bilibili_proto_kokoryh.js, requires-body = true, binary-body-mode = true, tag = 移除交互式弹幕
+http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.community\.service\.dm\.v1\.DM\/(?:DmView|DmSegMobile)$ script-path = https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/bilibili.protobuf.js, requires-body = true, binary-body-mode = true, tag = 移除交互式弹幕
 
-http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.main\.community\.reply\.v1\.Reply\/MainList$ script-path = https://kelee.one/Resource/Script/Bilibili/Bilibili_proto_kokoryh.js, requires-body = true, binary-body-mode = true, tag = 移除评论区广告
+http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.main\.community\.reply\.v1\.Reply\/MainList$ script-path = https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/bilibili.protobuf.js, requires-body = true, binary-body-mode = true, tag = 移除评论区广告
 
-http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.pgc\.gateway\.player\.v2\.PlayURL\/PlayView$ script-path = https://kelee.one/Resource/Script/Bilibili/Bilibili_proto_kokoryh.js, requires-body = true, binary-body-mode = true, tag = 移除播放器开通会员横幅
+http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.pgc\.gateway\.player\.v2\.PlayURL\/PlayView$ script-path = https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/bilibili.protobuf.js, requires-body = true, binary-body-mode = true, tag = 移除播放器开通会员横幅
 
-http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.polymer\.app\.search\.v1\.Search\/SearchAll$ script-path = https://kelee.one/Resource/Script/Bilibili/Bilibili_proto_kokoryh.js, requires-body = true, binary-body-mode = true, tag = 移除搜索结果广告
+http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.polymer\.app\.search\.v1\.Search\/SearchAll$ script-path = https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/bilibili.protobuf.js, requires-body = true, binary-body-mode = true, tag = 移除搜索结果广告
 
-http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords$ script-path = https://kelee.one/Resource/Script/Bilibili/Bilibili_proto_kokoryh.js, requires-body = true, binary-body-mode = true, tag = 移除搜索框关键词
+http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords$ script-path = https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/bilibili.protobuf.js, requires-body = true, binary-body-mode = true, tag = 移除搜索框关键词
 
 # JSON配置处理
 http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/(?:brand\/list|event\/list2|list|show) script-path = https://kelee.one/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body = true, tag = 移除开屏广告
