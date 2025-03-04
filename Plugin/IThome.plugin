@@ -8,22 +8,23 @@
 #!loon_version = 3.2.6(821)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/IThome.png
-#!select = 去除轮播图广告,开启,关闭
-#!select = 去除整个轮播图,开启,关闭
-#!select = 去除置顶,开启,关闭
-#!date = 2025-02-04 17:00
+#!date = 2025-03-05 01:00
 
 # 2024-01-27 20:57:40
 # https://raw.githubusercontent.com/Keywos/rule/main/script/ithome/it.plugin
-# 2024-11-28 00:00:00
+# 2025-03-04 22:39:03
 # https://kelee.one/Tool/Loon/Plugin/IThome_remove_ads.plugin
+
+[Argument]
+removeTopSwitch = switch, true, false, tag = 移除置顶项, desc = 是否启用移除置顶项功能
+removeBannerSwitch = switch, true, false, tag = 移除轮播图, desc = 是否启用移除轮播图功能
 
 [Rewrite]
 ^https?:\/\/api\.zuihuimai\.com\/static\/.*\/hongbao reject
 ^https?:\/\/dat\.ruanmei\.com\/ithome\/money\/acd\.json$ reject
 
 [Script]
-http-response ^https:\/\/napi\.ithome\.com\/api\/(?:news\/index|topmenu\/getfeeds\?|api\/douyin\/GetLiveInfo) script-path = https://kelee.one/Resource/Script/IThome/IThome_remove_ads.js, requires-body = true, tag = IT之家去广告
+http-response ^https:\/\/napi\.ithome\.com\/api\/(?:news\/index|topmenu\/getfeeds\?|api\/douyin\/GetLiveInfo) script-path = https://kelee.one/Resource/Script/IThome/IThome_remove_ads.js, requires-body = true, tag = IT之家去广告, argument=[{removeTopSwitch},{removeBannerSwitch}]
   
 [MitM]
 hostname = napi.ithome.com, api.zuihuimai.com, dat.ruanmei.com

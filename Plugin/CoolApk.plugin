@@ -8,9 +8,9 @@
 #!loon_version = 3.2.6(821)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/CoolApk.png
-#!date = 2025-02-04 17:00
+#!date = 2025-03-05 01:00
 
-# 2024-12-05 14:00:35
+# 2025-03-05 00:42:23
 # https://kelee.one/Tool/Loon/Plugin/CoolApk_remove_ads.plugin
 # 2024-07-19 00:45
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/KuAn.snippet
@@ -18,9 +18,21 @@
 [Rewrite]
 ^https:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch reject-dict
 
+^https:\/\/api\.coolapk\.com\/v6\/?:feed\/detail response-body-json-jq '.data.hotReplyRows |= (select(. != null) | map(select(.id))) | .data.topReplyRows |= (select(. != null) | map(select(.id))) | .data.detailSponsorCard = [] | .data.include_goods = [] | .data.include_goods_ids = []'
+
+^https:\/\/api\.coolapk\.com\/v6\/feed\/replyList response-body-json-jq '.data |= map(select(.id))'
+
+^https:\/\/api\.coolapk\.com\/v6\/page\/dataList response-body-json-jq '.data |= map(select(.title != "酷安热搜" and .entityTemplate != "imageScaleCard" and .entityTemplate != "sponsorCard"))'
+
+^https:\/\/api\.coolapk\.com\/v6\/main\/dataList response-body-json-jq '.data |= map(select(.entityTemplate != "sponsorCard" and .title != "精选配件"))'
+
+^https:\/\/api\.coolapk\.com\/v6\/main\/indexV8 response-body-json-jq '.data |= map(select(.entityTemplate != "sponsorCard" and .entityId != 8639 and .entityId != 29349 and .entityId != 33006 and .entityId != 32557 and (.title | contains("值得买") | not) and (.title | contains("红包") | not)))'
+
+^https:\/\/api\.coolapk\.com\/v6\/main\/init response-body-json-jq '.data |= map(select(.entityId != 944 and .entityId != 945 and .entityId != 6390)) | .data |= map(if .entityId == 20131 then .entities |= map(select(.title != "酷品")) else . end)'
+
 [Script]
 # 可莉🅥
-http-response ^https:\/\/api\.coolapk\.com\/v6\/(?:feed\/detail|feed\/replyList|page\/dataList|main\/dataList|main\/indexV8|main\/init) script-path = https://kelee.one/Resource/Script/CoolApk/CoolApk_remove_ads.js, requires-body = true, tag = 移除酷安广告
+# http-response ^https:\/\/api\.coolapk\.com\/v6\/(?:feed\/detail|feed\/replyList|page\/dataList|main\/dataList|main\/indexV8|main\/init) script-path = https://kelee.one/Resource/Script/CoolApk/CoolApk_remove_ads.js, requires-body = true, tag = 移除酷安广告
 
 # ZenmoFeiShi
 http-response ^https:\/\/api\.coolapk\.com\/v6\/main\/init script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/KuAn.js, requires-body = true, tag = 移除酷安广告
