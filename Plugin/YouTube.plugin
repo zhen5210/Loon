@@ -1,19 +1,21 @@
 #!name = Youtube (Music)
 #!desc = 过滤Youtube (Music)广告，增加画中画、字幕翻译、歌词翻译功能，支持后台播放。需要启用QUIC回退保护。不支持tvOS设备。
 #!openUrl = https://apps.apple.com/app/id544007664
-#!author = Maasea[https://github.com/Maasea], VirgilClyne[https://github.com/VirgilClyne], Choler[https://github.com/Choler], DivineEngine[https://github.com/DivineEngine], app2smile[https://github.com/app2smile]
+#!author = Maasea[https://github.com/Maasea], VirgilClyne[https://github.com/VirgilClyne], Choler[https://github.com/Choler], DivineEngine[https://github.com/DivineEngine], app2smile[https://github.com/app2smile], ddgksf2013[https://github.com/ddgksf2013]
 #!tag = 去广告
 #!system = 
 #!system_version = 
 #!loon_version = 3.2.6(821)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/YouTube.png
-#!date = 2025-02-04 17:00
+#!date = 2025-03-04 12:40
 
 # 2024-11-24
 # https://github.com/Maasea/sgmodule/blob/master/YouTube.Enhance.sgmodule
 # 2024-11-28 02:07:31
 # https://kelee.one/Tool/Loon/Plugin/YouTube_remove_ads.plugin
+# 2024-11-24
+# https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/YoutubeAds.conf
 
 # YouTube 画中画和后台播放可在客户端内关闭
 #   - 设置 -> 播放 -> 画中画
@@ -27,13 +29,20 @@ lyricLang = select, "zh-Hans", "zh-Hant", "ja", "ko", "en", "off", tag = 歌词�
 debug = switch, false, true, tag = 启用调试模式, desc = 是否启用调试模式
 
 [Rule]
-AND, ((DOMAIN-SUFFIX, googlevideo.com),  (PROTOCOL, QUIC)), REJECT
-AND, ((DOMAIN-SUFFIX, youtubei.googleapis.com),  (PROTOCOL, QUIC)), REJECT
+AND, ((DOMAIN-SUFFIX, googlevideo.com),  (PROTOCOL, UDP)), REJECT
+AND, ((DOMAIN-SUFFIX, youtubei.googleapis.com),  (PROTOCOL, UDP)), REJECT
 
 [Rewrite]
 ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad mock-response-body data-type=text status-code=502
-# 短链移除追踪参数
-(^https:\/\/youtu\.be\/[\w-]+)(?:\?si=\w+) 307 $1
+
+# 视频广告请求
+(^https?:\/\/[\w-]+\.googlevideo\.com\/(?!dclk_video_ads).+?)&ctier=L(&.+?),ctier,(.+) 302 $1$2$3
+^https?:\/\/[\w-]+\.googlevideo\.com\/(?!(dclk_video_ads|videoplayback\?)).+&oad reject-200
+
+# 通用广告请求
+^https?:\/\/(www|s)\.youtube\.com\/api\/stats\/ads reject-200
+^https?:\/\/(www|s)\.youtube\.com\/(pagead|ptracking) reject-200
+^https?:\/\/s\.youtube\.com\/api\/stats\/qoe\?adcontext reject-200
 
 [Script]
 # http-request ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(?:browse|next|player|reel\/reel_watch_sequence|get_watch) script-path = https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.request.preview.js, requires-body = true, binary-body-mode = true, tag = YouTube请求
@@ -41,4 +50,4 @@ AND, ((DOMAIN-SUFFIX, youtubei.googleapis.com),  (PROTOCOL, QUIC)), REJECT
 http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(?:browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch) script-path = https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.response.preview.js, requires-body = true, binary-body-mode = true, tag = YouTube响应, argument=[{blockUpload},{blockImmersive},{captionLang},{lyricLang},{debug}]
 
 [MitM]
-hostname = youtu.be, *.googlevideo.com, youtubei.googleapis.com
+hostname = -redirector*.googlevideo.com, *.googlevideo.com, www.youtube.com, s.youtube.com, youtubei.googleapis.com
