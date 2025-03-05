@@ -8,11 +8,11 @@
 #!loon_version = 3.2.6(821)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Weibo_intl.png
-#!date = 2025-03-05 01:00
+#!date = 2025-03-05 11:45
 
 # 2023-09-06 17:07:45
 # https://raw.githubusercontent.com/Keywos/rule/main/script/weibo_us/wb_us.plugin
-# 2025-03-05 00:56:01
+# 2025-03-05 10:07:41
 # https://kelee.one/Tool/Loon/Plugin/Weibo_intl_remove_ads.plugin
 
 [Rewrite]
@@ -25,9 +25,9 @@
 
 ^https?:\/\/api\.weibo\.cn\/2\/ad\/weibointl\? reject-dict
 
-^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=get_searching_info& mock-response-body data-type=text data="{"retcode":0,"info":"","data":{"expiration_time":"86400","cards":[{"tip":"搜索微博","word":""}]}}"
+^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=get_searching_info& mock-response-body data-type=html data="{"retcode":0,"info":"","data":{"expiration_time":"86400","cards":[{"tip":"搜索微博","word":""}]}}"
 
-^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?ct=feed&a=search_topic& mock-response-body data-type=text data="{"retcode":0,"info":"","data":[],"ext":{}}"
+^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?ct=feed&a=search_topic& mock-response-body data-type=html data="{"retcode":0,"info":"","data":[],"ext":{}}"
 
 ^https?:\/\/api\.weibo\.cn\/2\/statuses\/unread_hot_timeline$ response-body-json-jq 'del(.ad, .advertises, .trends) | if .statuses then .statuses |= map(select(((.promotion.type == "ad") or (.mblogtypename | IN("广告", "廣告", "热推", "熱推"))) | not)) end'
 
