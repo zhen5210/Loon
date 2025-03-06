@@ -8,7 +8,7 @@
 #!loon_version = 3.2.6(821)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/YoukuVideo.png
-#!date = 2025-02-04 17:00
+#!date = 2025-03-06 22:45
 
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cnftp.snippet
 
@@ -39,6 +39,16 @@ DOMAIN, vali-ugc.cp31.ott.cibntv.net, REJECT
 DOMAIN, yk-ssp.ad.youku.com, REJECT
 DOMAIN, ykad-data.youku.com, REJECT
 DOMAIN, youku-acs.m.taobao.com, REJECT
+DOMAIN, zconfig.alibabausercontent.com, REJECT
+DOMAIN-SUFFIX, acz.youku.com, REJECT  
+DOMAIN-SUFFIX, adx-core.youku.com, REJECT  
+DOMAIN-SUFFIX, adx-open-service.youku.com, REJECT  
+DOMAIN-SUFFIX, mazu.m.qq.com, REJECT  
+DOMAIN-SUFFIX, partner.uc.cn, REJECT  
+DOMAIN-SUFFIX, ranfenghd.com, REJECT  
+DOMAIN-SUFFIX, rhdc-acs.youku.com, REJECT  
+# DOMAIN-SUFFIX, sm.cn, REJECT  
+DOMAIN-SUFFIX, ubixioe.com, REJECT  
 
 [Rewrite]
 # 播放页弹窗动图
