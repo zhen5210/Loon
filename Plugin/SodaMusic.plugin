@@ -10,6 +10,9 @@
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/SodaMusic.png
 #!date = 2025-03-06 18:00
 
+# 2024-11-28 00:00:00
+# https://kelee.one/Tool/Loon/Plugin/SodaMusic_remove_ads.plugin
+
 [Rule]
 # 拦截HTTPDNS
 AND, ((DOMAIN-KEYWORD, api100-core-quic-), (DOMAIN-SUFFIX, amemv.com)), REJECT
