@@ -8,21 +8,21 @@
 #!loon_version = 3.2.6(821)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/AdReject.png
-#!date = 2025-03-03 18:30
+#!date = 2025-03-06 22:00
 
-# 2025-03-03
+# 2025-03-06
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf
 
 [Rewrite]
 # ======= 0~9 ======= #
 # Version
-^https?:\/\/2025.03.03/c370/v2.0.570 reject-200
+^https?:\/\/2025.03.06/c370/v2.0.571 reject-200
 
 # 58 TongCheng
 ^https?:\/\/app\.58\.com\/api\/home\/(advertising|appadv) reject-200
 
 # 555 DianYing
-^https?:\/\/[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+){1,3}(:\d+)?\/.*?\/v\d\/(version$|notice\?|top_notice\?|advert\?position=[^2]+) reject-200
+^https?:\/\/[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+){1,4}(:\d+)?\/.*?\/v\d\/(version$|notice\?|top_notice\?|advert\?position=[^2]+) reject-200
 
 # 5EPlay
 ^https?:\/\/.*5eplay\.com\/.*adv_slot reject-200
@@ -1124,7 +1124,7 @@
 [Script]
 # ======= 0~9 ======= #
 # 555 DianYing
-http-response ^https?:\/\/[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+){1,3}(:\d+)?\/api\/v\d\/movie\/index_recommend script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/555Ad.js, requires-body = true, tag = 555 DianYing
+http-response ^https?:\/\/[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+){1,4}(:\d+)?\/api\/v\d\/movie\/index_recommend script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/555Ad.js, requires-body = true, tag = 555 DianYing
 
 # TieLu 12306
 http-response ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/12306.js, requires-body = true, tag = TieLu 12306
