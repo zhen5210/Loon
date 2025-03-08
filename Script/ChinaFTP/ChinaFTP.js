@@ -1,4 +1,4 @@
-// 2024-01-14 18:15
+// 2025-03-08 22:15
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -102,7 +102,7 @@ if (isIQY) {
       obj.cache_expired_sec = 1;
     }
     if (obj?.data) {
-      obj.data = [{ query: "搜索内容" }];
+      obj.data = [{query: "搜索内容"}];
     }
     if (obj?.show_style?.roll_period) {
       obj.show_style.roll_period = 1000;
@@ -140,9 +140,7 @@ if (isIQY) {
     if (obj?.cards?.length > 0) {
       // 评论资源位 无alias_name字段的为广告
       obj.cards = obj.cards.filter(
-        (i) =>
-          i.hasOwnProperty("alias_name") &&
-          !["comment_resource_card", "comment_resource_convention_card"]?.includes(i?.alias_name)
+        (i) => i.hasOwnProperty("alias_name") && !["comment_resource_card", "comment_resource_convention_card"]?.includes(i?.alias_name)
       );
     }
   } else if (url.includes("/views_home/")) {
@@ -384,7 +382,7 @@ if (isIQY) {
   } else if (url.includes("/mobile/recommend/v2?")) {
     // 芒果 搜索框填充词
     if (obj?.data?.default) {
-      obj.data.default = { 0: ["搜索内容"] };
+      obj.data.default = {0: ["搜索内容"]};
     }
     if (obj?.data?.recommend) {
       obj.data.recommend = [];
@@ -579,32 +577,32 @@ if (isIQY) {
     if (obj?.data?.["2019061000"]?.data) {
       let objData = obj.data["2019061000"].data;
       if (objData?.nodes?.length > 0) {
-        let newNodes = [];
-        for (let item of objData.nodes) {
-          if (item?.typeName === "PHONE_FEED_CARD_GROUP") {
-            if (item?.nodes?.length > 0) {
-              let newItems = [];
-              for (let i of item.nodes) {
-                if (i?.typeName === "PHONE_FEED_CARD_S_AD") {
+        let newNodes1 = [];
+        for (let node1 of objData.nodes) {
+          if (node1?.typeName === "PHONE_FEED_CARD_GROUP") {
+            if (node1?.nodes?.length > 0) {
+              let newNode2 = [];
+              for (let node2 of node1.nodes) {
+                if (node2?.typeName === "PHONE_FEED_CARD_S_AD") {
                   // 首页 四格小图广告
                   continue;
-                } else if (i?.typeName === "PHONE_H_UC_AD") {
+                } else if (node2?.typeName === "PHONE_H_UC_AD") {
                   // 首页 横版独占广告
                   continue;
                 } else {
-                  newItems.push(i);
+                  newNode2.push(node2);
                 }
               }
-              item.nodes = newItems;
-              newNodes.push(item);
+              node1.nodes = newNode2;
+              newNodes1.push(node1);
             } else {
-              newNodes.push(item);
+              newNodes1.push(node1);
             }
           } else {
-            newNodes.push(item);
+            newNodes1.push(node1);
           }
         }
-        objData.nodes = newNodes;
+        objData.nodes = newNodes1;
       }
     }
   } else if (url.includes("columbus.home.query/")) {
@@ -616,53 +614,50 @@ if (isIQY) {
         objData.data.indexPositionResult = [];
       }
       if (objData?.nodes?.length > 0) {
-        let newNodes = [];
-        for (let item of objData.nodes) {
-          // 第一层级循环
-          if (["CHILD", "COMIC2", "20230929GREATWORKMFK"]?.includes(item?.data?.nodeKey)) {
+        let newNodes1 = [];
+        for (let node1 of objData.nodes) { // 第一层级node，属于obj.data[2019061000].data.nodes
+          if (["CHILD", "COMIC2", "20230929GREATWORKMFK"]?.includes(node1?.data?.nodeKey)) {
             // 首页 少儿 动漫 国庆长假免费看
             continue;
           } else {
-            if (item?.data?.indexPositionResult?.length > 0) {
+            if (node1?.data?.indexPositionResult?.length > 0) {
               // 剧集 电影 二楼
-              item.data.indexPositionResult = [];
+              node1.data.indexPositionResult = [];
             }
-            if (item?.data?.refreshImg) {
+            if (node1?.data?.refreshImg) {
               // 电影 综艺 纪录片 下拉刷新的背景图片
-              delete item.data.refreshImg;
+              delete node1.data.refreshImg;
             }
             // 首页 剧集 电影 全都有信息流广告
             // 去掉nodeKey的判断 直接处理下一层级
-            if (item?.nodes?.length > 0) {
-              let newItems = [];
-              for (let i of item.nodes) {
-                // 第二层级循环
-                if (i?.data?.crmSale) {
+            if (node1?.nodes?.length > 0) {
+              let newNode2 = [];
+              for (let node2 of node1.nodes) { // 第二层级循环 node
+                if (node2?.data?.crmSale) {
                   // 季卡会员横幅
-                  delete i.data.crmSale;
+                  delete node2.data.crmSale;
                 }
-                if (["UC广告抽屉", "橱窗广告"]?.includes(i?.typeName)) {
+                if (["UC广告抽屉", "橱窗广告"].includes(node2?.typeName)) {
                   // 横版独占广告
                   continue;
-                } else if (i?.id === 31476) {
+                } else if (node2?.id === 31476) {
                   // 正在热播
-                  if (i?.data?.keywords?.length > 0) {
+                  if (node2?.data?.keywords?.length > 0) {
                     // 滚动热词
-                    delete i.data.keywords;
+                    delete node2.data.keywords;
                   }
-                } else if (i?.id === 35505) {
+                } else if (node2?.id === 35505) {
                   // 优惠购会员横幅
                   continue;
-                } else if (i?.id === 37335) {
+                } else if (node2?.id === 37335) {
                   // 首页二楼
                   continue;
                 } else {
-                  // 16214猜你在追
-                  // 38820首页顶部轮播图
-                  if (i?.nodes?.length > 0) {
-                    let newII = [];
-                    for (let ii of i.nodes) {
-                      // 第三层级循环
+                  // 16214 猜你在追
+                  // 38820 首页顶部轮播图
+                  if (node2?.nodes?.length > 0) {
+                    let newNode3 = [];
+                    for (let node3 of node2.nodes) { // 第三层级循环 node
                       if (
                         [
                           "PHONE_FEED_CARD_B_AD", // 横版独占广告
@@ -670,44 +665,46 @@ if (isIQY) {
                           "PHONE_H_UC_AD", // 剧集 横版独占广告
                           "PHONE_IMG_A", // 剧集 开通会员卡片
                           "PHONE_YK_AD_BANNER" // 剧集 横版独占广告
-                        ]?.includes(ii?.typeName)
+                        ].includes(node3?.typeName)
                       ) {
                         continue;
+                      } else if (node3.id === 272768) { // 首页的轮播广告
+                        console.log("移除首页的轮播广告");
+                        continue;
                       } else {
-                        if (ii?.nodes?.length > 0) {
-                          let newIII = [];
-                          for (let iii of ii.nodes) {
-                            // 第四层级循环
-                            if (iii?.typeName === "PHONE_FEED_CARD_S_AD") {
+                        if (node3?.nodes?.length > 0) {
+                          let newNode4 = [];
+                          for (let node4 of node3.nodes) { // 第四层级循环
+                            if (node4?.typeName === "PHONE_FEED_CARD_S_AD") {
                               // 剧集 四格小图广告
                               continue;
-                            } else if (iii?.data.hasOwnProperty("ad")) {
+                            } else if (node4?.data.hasOwnProperty("ad")) {
                               // 有ad字段的为广告
                               continue;
                             } else {
-                              newIII.push(iii);
+                              newNode4.push(node4);
                             }
                           }
-                          ii.nodes = newIII;
-                          newII.push(ii);
+                          node3.nodes = newNode4;
+                          newNode3.push(node3);
                         } else {
-                          newII.push(ii);
+                          newNode3.push(node3);
                         }
                       }
                     }
-                    i.nodes = newII;
-                    newItems.push(i);
+                    node2.nodes = newNode3;
+                    newNode2.push(node2);
                   } else {
-                    newItems.push(i);
+                    newNode2.push(node2);
                   }
                 }
               }
-              item.nodes = newItems;
+              node1.nodes = newNode2;
             }
-            newNodes.push(item);
+            newNodes1.push(node1);
           }
         }
-        objData.nodes = newNodes;
+        objData.nodes = newNodes1;
       }
     }
   } else if (url.includes("columbus.uc.query/")) {
@@ -873,4 +870,4 @@ if (isIQY) {
   }
 }
 
-$done({ body: JSON.stringify(obj) });
+$done({body: JSON.stringify(obj)});
