@@ -8,7 +8,7 @@
 #!loon_version = 3.2.6(821)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/BilibiliRed.png
-#!date = 2025-03-08 00:30
+#!date = 2025-03-08 12:00
 
 # 2025-03-08 00:01:52
 # https://kelee.one/Tool/Loon/Plugin/Bilibili_remove_ads.plugin
@@ -73,31 +73,25 @@ URL-REGEX, "^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH", REJECT-DICT
 ^https:\/\/api\.bilibili\.com\/pgc\/view\/v2\/app\/season\? response-body-json-jq 'del(.data.payment)'
 
 # 开屏广告
-# ^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/(?:brand\/list|event\/list2|list|show) response-body-json-jq jq-path = "https://kelee.one/Resource/JQLang/Bilibili/Bilibili_remove_ads.jq"
 ^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/(?:brand\/list|event\/list2|list|show) response-body-json-jq 'if .data != null then .data |= del(.account, .event_list, .preload, .show) | .data.max_time = 0 | .data.min_interval = 31536000 | .data.pull_interval = 31536000 | .data.list[] |= (.duration = 0 | .enable_pre_download = false | .begin_time = 3818332800 | .end_time = 3818419199) else . end'
 
 # 首页顶部标签
-# ^https:\/\/app\.bilibili\.com\/x\/resource\/show\/tab\/v2\? response-body-json-jq jq-path = "https://kelee.one/Resource/JQLang/Bilibili/Bilibili_remove_ads.jq"
 ^https:\/\/app\.bilibili\.com\/x\/resource\/show\/tab\/v2\? response-body-json-jq '.data.tab |= if . != null then map(select(.name | IN("直播", "推荐", "热门", "影视"))) else . end | .data.bottom |= if . != null then map(select(.name | IN("首页", "动态", "关注", "我的"))) else . end | .data.top |= if . != null then map(if .name == "消息" then .pos = 1 | . else empty end) else . end'
 
 # 首页推荐广告
-# ^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\? response-body-json-jq jq-path = "https://kelee.one/Resource/JQLang/Bilibili/Bilibili_remove_ads.jq"
 ^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\? response-body-json-jq 'if .data.items then .data.items |= map(select((has("banner_item") | not) and (has("ad_info") | not) and (.card_goto == "av") and (.card_type | IN("small_cover_v2", "large_cover_single_v9", "large_cover_v1")))) end'
 
 # 竖屏广告
-# ^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\/story\? response-body-json-jq jq-path = "https://kelee.one/Resource/JQLang/Bilibili/Bilibili_remove_ads.jq"
 ^https:\/\/app\.bilibili\.com\/x\/v2\/feed\/index\/story\? response-body-json-jq 'if .data.items then .data.items |= map(select((.ad_info == null) and (.card_goto | startswith("ad") | not)) | del(.story_cart_icon))'
 
 # 我的页面
-# ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/(?:mine|myinfo) response-body-json-jq jq-path = "https://kelee.one/Resource/JQLang/Bilibili/Bilibili_remove_ads.jq"
-^https:\/\/app\.bilibili\.com\/x\/v2\/account\/(?:mine|myinfo) response-body-json-jq 'if .data != null then .data |= del(.ipad_upper_sections, .rework_v1, .vip_section, .vip_section_v2) else . end | if .data.ipad_recommend_sections != null then .data.ipad_recommend_sections |= (map(select(.id == 789 or .id == 790))) else . end | if .data.ipad_more_sections != null then .data.ipad_more_sections |= (map(select(.id == 797 or .id == 798))) else . end | if .data.sections_v2 != null then .data.sections_v2 |= (map(del(.button) | select(.style == 1 or .style == 2) | select(.title != "创作中心" and .title != "推荐服务") | if .title == "更多服务" then del(.title) | .items |= map(select(.uri | test("user_center/feedback") or test("user_center/setting"))) else . end)) else . end | if .data.vip != null and .data.vip.status == 0 then .data.vip |= (.vip_type = 2 | .type = 2 | .status = 1 | .due_date = 3818419199 | .label = {path: "", text: "年度大会员", label_theme: "annual_vip", text_color: "#FFFFFF", bg_style: 1, bg_color: "#FB7299", border_color: "", image: "https://i0.hdslb.com/bfs/vip/8d4f8bfc713826a5412a0a27eaaac4d6b9ede1d9.png"} | .nickname_color = "#FB7299" | .role = 3) else . end'
+# ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/(?:mine|myinfo) response-body-json-jq 'if .data != null then .data |= del(.ipad_upper_sections, .rework_v1, .vip_section, .vip_section_v2) else . end | if .data.ipad_recommend_sections != null then .data.ipad_recommend_sections |= (map(select(.id == 789 or .id == 790))) else . end | if .data.ipad_more_sections != null then .data.ipad_more_sections |= (map(select(.id == 797 or .id == 798))) else . end | if .data.sections_v2 != null then .data.sections_v2 |= (map(del(.button) | select(.style == 1 or .style == 2) | select(.title != "创作中心" and .title != "推荐服务") | if .title == "更多服务" then del(.title) | .items |= map(select(.uri | test("user_center/feedback") or test("user_center/setting"))) else . end)) else . end | if .data.vip != null and .data.vip.status == 0 then .data.vip |= (.vip_type = 2 | .type = 2 | .status = 1 | .due_date = 3818419199 | .label = {path: "", text: "年度大会员", label_theme: "annual_vip", text_color: "#FFFFFF", bg_style: 1, bg_color: "#FB7299", border_color: "", image: "https://i0.hdslb.com/bfs/vip/8d4f8bfc713826a5412a0a27eaaac4d6b9ede1d9.png"} | .nickname_color = "#FB7299" | .role = 3) else . end'
+^https:\/\/app\.bilibili\.com\/x\/v2\/account\/(?:mine|myinfo) response-body-json-jq 'if .data != null then .data |= del(.ipad_upper_sections, .rework_v1, .vip_section, .vip_section_v2) else . end | if .data.ipad_recommend_sections != null then .data.ipad_recommend_sections |= (map(select(.id == 789 or .id == 790))) else . end | if .data.ipad_more_sections != null then .data.ipad_more_sections |= (map(select(.id == 797 or .id == 798))) else . end | if .data.sections_v2 != null then .data.sections_v2 |= (map(del(.button) | select(.style == 1 or .style == 2) | if .title == "创作中心" then empty elif .title == "推荐服务" then .items |= map(select(.title=="个性装扮" or .title=="我的钱包" or .title=="会员购中心")) elif .title == "更多服务" then del(.title) | .items |= map(select(.uri | test("user_center/feedback") or test("user_center/setting"))) else . end)) else . end | if .data.vip != null and .data.vip.status == 0 then .data.vip |= (.vip_type = 2 | .type = 2 | .status = 1 | .due_date = 3818419199 | .label = {path:"", text:"年度大会员", label_theme:"annual_vip", text_color:"#FFFFFF", bg_style:1, bg_color:"#FB7299", border_color:"", image:"https://i0.hdslb.com/bfs/vip/8d4f8bfc713826a5412a0a27eaaac4d6b9ede1d9.png"} | .nickname_color = "#FB7299" | .role = 3) else . end'
 
 # 番剧页、观影页广告
-# ^https:\/\/api\.bilibili\.com\/pgc\/page\/(?:bangumi|cinema\/tab) response-body-json-jq jq-path = "https://kelee.one/Resource/JQLang/Bilibili/Bilibili_remove_ads.jq"
 ^https:\/\/api\.bilibili\.com\/pgc\/page\/(?:bangumi|cinema\/tab)\? response-body-json-jq '.result.modules |= if . then map(if (.style | startswith("tip")) or (.module_id | IN(241, 1283, 1441, 1284)) then .items = [] elif .style | startswith("banner") then .items |= if . then map(select(.link | contains("play"))) else [] end elif .style | startswith("function") then .items |= if . then map(select(.blink | startswith("bilibili"))) else [] end end) end'
 
 # 直播间
-# ^https:\/\/api\.bilibili\.com\/pgc\/page\/(?:bangumi|cinema\/tab) response-body-json-jq jq-path="https://kelee.one/Resource/JQLang/Bilibili/Bilibili_remove_ads.jq"
 ^https:\/\/api\.live\.bilibili\.com\/xlive\/(?:app-interface\/v2\/index\/feed|app-room\/v1\/index\/getInfoBy(?:Room|User))\? response-body-json-jq '.data |= (del(.play_together_info, .play_together_info_v2, .activity_banner_info) | if .function_card then .function_card[] = null end | if .new_tab_info.outer_list then .new_tab_info.outer_list |= map(select(.biz_id != 33)) end | if .card_list then .card_list |= map(select(.card_type != "banner_v2")) end | reduce ([["show_reserve_status"], false], [["reserve_info", "show_reserve_status"], false], [["shopping_info", "is_show"], 0]) as [$path, $value] (.; if getpath($path) then setpath($path; $value) end))'
 
 [Script]
