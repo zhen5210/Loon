@@ -1,4 +1,3 @@
-
 .data |= (
     del(.answer, .live_tip, .vip_section, .vip_section_v2) | 
     if .sections_v2 then .sections_v2 = 
@@ -50,7 +49,7 @@
                 },
                 {
                     "id": 622,
-                    "title": "会员购中心",
+                    "title": "会员购",
                     "uri": "bilibili://mall/home",
                     "icon": "http://i0.hdslb.com/bfs/archive/19c794f01def1a267b894be84427d6a8f67081a9.png",
                     "common_op_item": {}
@@ -61,14 +60,7 @@
                     "uri": "bilibili://bilipay/mine_wallet",
                     "icon": "http://i0.hdslb.com/bfs/archive/f416634e361824e74a855332b6ff14e2e7c2e082.png",
                     "common_op_item": {}
-                },
-                {
-                    "id": 514,
-                    "title": "社区中心",
-                    "uri": "https://www.bilibili.com/blackboard/dynamic/169422",
-                    "icon": "http://i0.hdslb.com/bfs/archive/551a39b7539e64d3b15775295c4b2e13e5513b43.png",
-                    "common_op_item": {}
-                },
+                }
             ],
             "style": 1,
             "button": {}
