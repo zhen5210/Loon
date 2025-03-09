@@ -170,7 +170,7 @@
             "mng_resource": { "icon_id": 0, "icon": "" }
         }
     ] end | 
-    if .data.vip != null and .data.vip.status == 0 then .data.vip = 
+    if .vip != null and .vip.status == 0 then .vip = 
     [
         {
             "vip_type": 2,
