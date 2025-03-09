@@ -169,26 +169,5 @@
             "icon": "http://i0.hdslb.com/bfs/feed-admin/34e8faea00b3dd78977266b58d77398b0ac9410b.png",
             "mng_resource": { "icon_id": 0, "icon": "" }
         }
-    ] end | 
-    if .vip != null and .vip.status == 0 then .vip = 
-    [
-        {
-            "vip_type": 2,
-            "type": 2,
-            "status": 1,
-            "due_date": 3818419199,
-            "label": {
-                "bg_color": "#FB7299",
-                "border_color": "",
-                "bg_style": 1,
-                "text": "年度大会员",
-                "path": "",
-                "image": "https://i0.hdslb.com/bfs/vip/8d4f8bfc713826a5412a0a27eaaac4d6b9ede1d9.png",
-                "label_theme": "annual_vip",
-                "text_color": "#FFFFFF"
-            },
-            "nickname_color": "#FB7299",
-            "role": 3
-        }
     ] end
 )
