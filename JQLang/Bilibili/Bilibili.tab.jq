@@ -5,7 +5,7 @@
         name: "直播",
         tab_id: "直播tab",
         uri: "bilibili://live/home"
-    }
+    },
     {
         pos: 2,
         id: 477,
