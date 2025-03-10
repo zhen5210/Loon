@@ -62,11 +62,11 @@
                     "common_op_item": {}
                 },
                 {
-                    "id": 514,
-                    "title": "社区中心",
-                    "uri": "https://www.bilibili.com/blackboard/dynamic/169422",
-                    "icon": "http://i0.hdslb.com/bfs/archive/551a39b7539e64d3b15775295c4b2e13e5513b43.png",
-                    "common_op_item": {}
+                    id: 406,
+                    title: '我的直播',
+                    uri: 'bilibili://user_center/live_center',
+                    icon: 'http://i0.hdslb.com/bfs/archive/1db5791746a0112890b77a0236baf263d71ecb27.png',
+                    common_op_item: {},
                 }
             ],
             "style": 1,
