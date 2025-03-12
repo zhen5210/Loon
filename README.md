@@ -128,7 +128,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
         <td align=center>1~3888M</td>
     </tr>
     <tr>
-        <td align=center>喀什切糕（新疆套餐）</td>
+        <td align=center>喀什切糕(新疆套餐)</td>
         <td align=center>100G</td>
         <td align=center>¥10</td>
         <td align=center>×</td>
