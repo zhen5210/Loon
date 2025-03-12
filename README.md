@@ -83,13 +83,13 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
 - **套餐介绍**<br>
 <table>
     <tr>
-        <th width="100px">周期套餐</th>
-        <th width="80px">月流量</th>
-        <th width="80px">月付</th>
-        <th width="80px">季付</th>
-        <th width="80px">半年付</th>
-        <th width="80px">年付</th>
-        <th width="100px">日签到</th>
+        <th width="100px" align=center>周期套餐</th>
+        <th width="80px" align=center>月流量</th>
+        <th width="80px" align=center>月付</th>
+        <th width="80px" align=center>季付</th>
+        <th width="80px" align=center>半年付</th>
+        <th width="80px" align=center>年付</th>
+        <th width="100px" align=center>日签到</th>
     </tr>
     <tr>
         <td align=center>轻量套餐</td>
@@ -127,6 +127,15 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
         <td align=center>¥360</td>
         <td align=center>1~3888M</td>
     </tr>
+    <tr>
+        <td align=center>喀什切糕（新疆套餐）</td>
+        <td align=center>100G</td>
+        <td align=center>¥10</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+    </tr>
 </table>
 
 - **购买方式**<br>
@@ -150,13 +159,13 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
 - **套餐介绍**<br>
 <table>
     <tr>
-        <th width="100px">周期套餐</th>
-        <th width="80px">月流量</th>
-        <th width="80px">月付</th>
-        <th width="80px">季付</th>
-        <th width="80px">半年付</th>
-        <th width="80px">年付</th>
-        <th width="80px">两年付</th>
+        <th width="100px" align=center>周期套餐</th>
+        <th width="80px" align=center>月流量</th>
+        <th width="80px" align=center>月付</th>
+        <th width="80px" align=center>季付</th>
+        <th width="80px" align=center>半年付</th>
+        <th width="80px" align=center>年付</th>
+        <th width="80px" align=center>两年付</th>
     </tr>
     <tr>
         <td align=center>Lite</td>
@@ -197,9 +206,9 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
 </table>
 <table>
     <tr>
-        <th width="100px">限量套餐</th>
-        <th width="80px">总流量</th>
-        <th width="80px">一次性</th>
+        <th width="100px" align=center>限量套餐</th>
+        <th width="80px" align=center>总流量</th>
+        <th width="80px" align=center>一次性</th>
     </tr>
     <tr>
         <td align=center>Plus</td>
@@ -225,7 +234,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
 
 - **机场介绍**<br>
 1. 采用Shadowsocks协议，BGP专线加持超凡体验<br>
-2. 提供港、台、日、新、美常用地区及部分冷门地区节点<br>
+2. 提供20+ 包含港、台、日、新、美等常用地区节点<br>
 3. 提供高度流媒体解锁，包括但不限于Disney+、Netflix等<br>
 4. 提供AI解锁，包括但不限于ChatGPT、Gemini等<br>
 
@@ -234,12 +243,12 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
 - **套餐介绍**<br>
 <table>
     <tr>
-        <th width="100px">周期套餐</th>
-        <th width="80px">月流量</th>
-        <th width="80px">月付</th>
-        <th width="80px">季付</th>
-        <th width="80px">半年付</th>
-        <th width="80px">年付</th>
+        <th width="100px" align=center>周期套餐</th>
+        <th width="80px" align=center>月流量</th>
+        <th width="80px" align=center>月付</th>
+        <th width="80px" align=center>季付</th>
+        <th width="80px" align=center>半年付</th>
+        <th width="80px" align=center>年付</th>
     </tr>
     <tr>
         <td align=center>新享套餐</td>
