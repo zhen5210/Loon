@@ -10,7 +10,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
 
 本仓库所有资源文件仅供本人使用，其他用户如需使用，请根据自身需求进行自主调试与修改。
 
-建议使用更及时、更完善、更全面的<a href="https://github.com/luestr/ProxyResource/blob/main/README.md" target="_blank">**可莉配置**</a>。
+建议使用更及时、更完善、更全面的[**可莉配置**](https://github.com/luestr/ProxyResource/blob/main/README.md)。
 
 <a href="https://next.ossinsight.io/widgets/official/compose-last-28-days-stats?repo_id=705605979" target="_blank" style="display: block" align="center">
   <picture>
