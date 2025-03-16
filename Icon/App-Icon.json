@@ -240,27 +240,39 @@
         },
         {
             "name": "Alipan Aliyunpan AliyunDrive",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Alipan.png"
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Alipan-01.png"
+        },
+        {
+            "name": "Alipan Aliyunpan AliyunDrive",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Alipan-02.png"
         },
         {
             "name": "BaiduNetDisk",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/BaiduNetDisk.png"
         },
         {
+            "name": "123Pan",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/123Pan-01.png"
+        },
+        {
+            "name": "123Pan",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/123Pan-02.png"
+        },
+        {
+            "name": "115NetDisk",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/115NetDisk-01.png"
+        },
+        {
+            "name": "115NetDisk",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/115NetDisk-02.png"
+        },
+        {
             "name": "ThunderCloudDisk Xunlei",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/ThunderCloudDisk.png"
         },
         {
-            "name": "123Pan",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/123Pan.png"
-        },
-        {
             "name": "FeijiPan",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/FeijiPan.png"
-        },
-        {
-            "name": "115NetDisk",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/115NetDisk.png"
         },
         {
             "name": "CtfileDrive",
@@ -277,6 +289,10 @@
         {
             "name": "MicrosoftOneDrive",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/MicrosoftOneDrive.png"
+        },
+        {
+            "name": "fnOS",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/fnOS.png"
         },
         {
             "name": "Amap Gaode",
