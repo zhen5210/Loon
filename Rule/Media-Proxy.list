@@ -1,5 +1,5 @@
 # 影视播放规则(代理)
-# 2025-01-12 17:00
+# 2025-03-16 10:40
 
 # CMSPlayer
 # 海外看
@@ -88,6 +88,8 @@ DOMAIN-SUFFIX, hanime1.me
 DOMAIN-SUFFIX, hohoj.tv
 # Jable
 DOMAIN-SUFFIX, jable.tv
+# KanAV
+DOMAIN-SUFFIX, kanav.info
 # KoreaPornMovie
 DOMAIN-SUFFIX, koreanpornmovie.com
 # MissAV
