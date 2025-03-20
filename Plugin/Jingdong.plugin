@@ -1,5 +1,5 @@
 #!name = 京东
-#!desc = 1.过滤京东广告；2.历史比价信息（提供[嵌入版]和[通知版]，任选其一即可），仅支持京东标准模式，具体适用App版本请自行测试。
+#!desc = 1.过滤京东广告；2.历史比价信息（任选其一即可），仅支持京东标准模式，具体适用App版本请自行测试。
 #!openUrl = https://apps.apple.com/app/id414245413
 #!author = RuCu6[https://github.com/RuCu6], MuTu[https://github.com/githubdulong], 苍井灰灰[https://github.com/wf021325], mw418[https://github.com/mw418], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!tag = 去广告
@@ -16,10 +16,13 @@
 # https://raw.githubusercontent.com/wf021325/qx/master/js/jd_price.js
 # 2024-12-26
 # https://raw.githubusercontent.com/mw418/Loon/main/script/jd_price.js
+# 2025-03-20
+# https://raw.githubusercontent.com/githubdulong/Script/master/Surge/jd_price2.sgmodule
 
 [Argument]
-JingdongPrice-Embed = switch, true, false, tag = 京东比价-嵌入版, desc = 点击商品标题即可直接查看嵌入式历史价格
-JingdongPrice-Notify = switch, false, true, tag = 京东比价-通知版, desc = 点击商品详情页通过弹窗通知查看历史价格
+JingdongPrice-TitleEmbed = switch, true, false, tag = 京东比价-标题嵌入版, desc = 点击商品标题即可直接查看嵌入式历史价格
+JingdongPrice-DetailNotify = switch, false, true, tag = 京东比价-详情通知版, desc = 点击商品详情页通过弹窗通知查看历史价格
+JingdongPrice-DetailEmbed = switch, false, true, tag = 京东比价-详情嵌入版, desc = 点击商品详情页即可直接查看嵌入式历史价格
 
 [Rule]
 DOMAIN, dns.jd.com, REJECT
@@ -40,8 +43,9 @@ http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:deliverL
 http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, argument = jdLiteAdvertisingVO -> sooyaaabo, requires-body = true, tag = 移除京东极速版广告
 
 # 京东比价
-http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) script-path = https://raw.githubusercontent.com/wf021325/qx/master/js/jd_price.js, requires-body = true, enable={JingdongPrice-Embed}, tag = 京东比价（嵌入版）
-http-request ^https:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html script-path = https://raw.githubusercontent.com/mw418/Loon/main/script/jd_price.js, timeout = 60, enable={JingdongPrice-Notify}, tag = 京东比价（通知版）
+http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) script-path = https://raw.githubusercontent.com/wf021325/qx/master/js/jd_price.js, requires-body = true, enable={JingdongPrice-TitleEmbed}, tag = 京东比价-标题嵌入版
+http-request ^https:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html script-path = https://raw.githubusercontent.com/mw418/Loon/main/script/jd_price.js, timeout = 60, enable={JingdongPrice-DetailNotify}, tag = 京东比价-详情通知版
+http-response ^https:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html script-path = https://raw.githubusercontent.com/githubdulong/Script/master/jd_price.js, timeout = 60, enable={JingdongPrice-DetailEmbed}, tag = 京东比价-详情嵌入版
 
 [MitM]
 hostname = api.m.jd.com, in.m.jd.com
