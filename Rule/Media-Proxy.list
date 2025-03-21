@@ -1,5 +1,5 @@
 # 影视播放规则(代理)
-# 2025-03-16 10:40
+# 2025-03-21 21:00
 
 # CMSPlayer
 # 海外看
@@ -119,6 +119,8 @@ DOMAIN-SUFFIX, hongkongdollvideo.com
 DOMAIN-SUFFIX, uaa.com
 # Taiav
 DOMAIN-SUFFIX, taiav.com
+# TwiVideo
+DOMAIN-SUFFIX, twivideo.net
 # JAVMove
 DOMAIN-SUFFIX, javmove.com
 # PandaTV
