@@ -45,7 +45,7 @@ http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advert
 # 京东比价
 http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) script-path = https://raw.githubusercontent.com/wf021325/qx/master/js/jd_price.js, requires-body = true, enable={JingdongPrice-TitleEmbed}, tag = 京东比价-标题嵌入版
 http-request ^https:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html script-path = https://raw.githubusercontent.com/mw418/Loon/main/script/jd_price.js, timeout = 60, enable={JingdongPrice-DetailNotify}, tag = 京东比价-详情通知版
-http-response ^https:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html script-path = https://raw.githubusercontent.com/githubdulong/Script/master/jd_price.js, requires-body = true, timeout = 60, enable={JingdongPrice-DetailEmbed}, tag = 京东比价-详情嵌入版
+http-response ^https:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html script-path = https://raw.githubusercontent.com/githubdulong/Script/master/jd_price.js, requires-body = true, timeout = 30, enable={JingdongPrice-DetailEmbed}, tag = 京东比价-详情嵌入版
 
 [MitM]
 hostname = api.m.jd.com, in.m.jd.com
