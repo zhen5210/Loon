@@ -62,6 +62,7 @@ DOMAIN, lookup.api.bsb.baidu.com, REJECT
 # 百度
 DOMAIN-SUFFIX, pos.baidu.com, REJECT
 DOMAIN, mobads.baidu.com, REJECT
+DOMAIN, afd.baidu.com, REJECT
 
 # 百度地图
 DOMAIN, afd.baidu.com, REJECT
