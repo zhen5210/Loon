@@ -8,7 +8,7 @@
 #!loon_version = 3.2.9(837)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/MyBlockAds.png
-#!date = 2025-03-21 23:00
+#!date = 2025-03-23 13:00
 
 [Rule]
 # ======= 0 ======= #
@@ -333,6 +333,7 @@ URL-REGEX, "^http:\/\/\w{32}\.jddebug\.com\/diagnose\?", REJECT
 ^https:\/\/list-app-m\.i4\.cn\/(?:adclickcb|getHotSearchList|getopfstadinfo)\.xhtml reject
 
 # 百度贴吧 //tiebac.baidu.com
+^https:\/\/tiebac\.baidu\.com\/c\/u\/chat\/getChatSubscriptionList reject-dict
 ^https:\/\/tiebac\.baidu\.com\/c\/f\/search\/discover reject-dict
 ^https:\/\/tiebac\.baidu\.com\/c\/f\/forum\/forumGuide reject-dict
 
