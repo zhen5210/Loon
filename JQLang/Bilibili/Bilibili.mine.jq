@@ -1,5 +1,5 @@
 .data |= (
-    del(.answer, .live_tip, .vip_section, .vip_section_v2) | 
+    del(.answer, .live_tip, .vip_section, .vip_section_v2, .modular_vip_section) | 
     if .sections_v2 then .sections_v2 = 
     [
         {
