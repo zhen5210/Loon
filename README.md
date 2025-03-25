@@ -615,4 +615,4 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
 </table>
 
 ## Star History
-[![Star History Chart](https://api.star-history.com/svg?repos=sooyaaabo/Loon&type=Date)](https://star-history.com/#sooyaaabo/Loon&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=sooyaaabo/Loon&type=Date)](https://www.star-history.com/#sooyaaabo/Loon&Date)
