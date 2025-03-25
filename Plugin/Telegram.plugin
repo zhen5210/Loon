@@ -1,0 +1,20 @@
+#!name = Telegram
+#!desc = Telegram外部链接跳转，可选择Telegram、Swiftgram、Turrit
+#!openUrl = https://apps.apple.com/app/id686449807
+#!author = sooyaaabo[https://github.com/sooyaaabo]
+#!tag = 功能增强
+#!system = 
+#!system_version = 
+#!loon_version = 3.2.9(837)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Telegram-01.png
+#!date = 2025-03-25 18:00
+
+[Argument]
+t.me_redirect = select, "Telegram", "Swiftgram", "Turrit", tag = 跳转至客户端
+
+[Script]
+http-response (https:\/\/)?t\.me\/(.+) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Telegram/t.me_redirect.js, requires-body = false, tag = t.me_redirect, argument = [{t.me_redirect}]
+
+[MitM]
+hostname = t.me
