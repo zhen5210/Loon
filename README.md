@@ -473,18 +473,26 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
     </tr>
     <tr>
         <td align=center>13</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/StreamingMedia.plugin">流媒体解锁测试</a></td>
-        <td align=center>14</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Sub-Store.plugin">Sub-Store</a></td>
-        <td align=center>15</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Script-Hub.plugin">Script Hub</a></td>
+        <td align=center>14</td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/StreamingMedia.plugin">流媒体解锁测试</a></td>
+        <td align=center>15</td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Sub-Store.plugin">Sub-Store</a></td>
     </tr>
     <tr>
         <td align=center>16</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/TestFlight.plugin">TestFlight</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Swiftgram.plugin">Swiftgram</a></td>
         <td align=center>17</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/VVebo.plugin">VVebo</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Telegram.plugin">Telegram</a></td>
         <td align=center>18</td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/TestFlight.plugin">TestFlight</a></td>
+    </tr>
+    <tr>
+        <td align=center>19</td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Turrit.plugin">Turrit</a></td>
+        <td align=center>20</td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/VVebo.plugin">VVebo</a></td>
+        <td align=center>21</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/XPTV.plugin">XPTV</a></td>
     </tr>
 </table>
