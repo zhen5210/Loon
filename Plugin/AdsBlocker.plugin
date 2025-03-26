@@ -1072,6 +1072,9 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 ^https?:\/\/cdn\.kuaidi100\.com\/images\/open\/appads reject-img
 ^https?:\/\/p\.kuaidi100\.com\/mobile\/mobileapi\.do reject
 
+# 看东方 - bp-api.bestv.com.cn
+^https:\/\/bp-api\.bestv\.com\.cn\/cms\/api\/free\/open\/advertisingV2 reject-dict
+
 # 开源中国 - www.oschina.net
 ^https?:\/\/www\.oschina\.net\/action\/apiv2\/get_launcher reject-img
 
@@ -1088,9 +1091,6 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 
 # 公考雷达 - api.gongkaoleida.com
 ^https?:\/\/api\.gongkaoleida\.com\/api\/v2\/ad\/info reject-dict
-
-# 看东方 - bp-api.bestv.com.cn
-^https:\/\/bp-api\.bestv\.com\.cn\/cms\/api\/free\/open\/advertisingV2 reject-dict
 
 # >>>>>>>>>>>>>>> ✅ L ✅ <<<<<<<<<<<<<<< #
 # Line - a.line.me, ad.line-scdn.net, buy.line.me, cix.line-apps.com, crs-event.line.me, d.line-scdn.net, gw.line.naver.jp, legy.line-apps.com, nelo2-col.linecorp.com, obs.line-scdn.net, scdn.line-apps.com, sch.line.me, static.line-scdn.net, uts-front.line-apps.com, w.line.me
