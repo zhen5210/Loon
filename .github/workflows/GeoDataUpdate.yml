@@ -4,7 +4,7 @@ name: Loon GeoData
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 */3 * * *"
+    - cron: "0 */12 * * *"
 
 permissions:
   actions: write  
@@ -47,12 +47,12 @@ jobs:
 ###### Commit
     - name: 添加Commits
       run: |
-        cd KeleeOne
+        cd Loon
         if [[ -n $(git status -s) ]]; then
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add .
-          git commit -m "KeleeOne Update $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M')"
+          git commit -m "Routine Updates $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M')"
           git push origin HEAD
         else
           echo "No changes to commit."
