@@ -8,7 +8,7 @@
 #!loon_version = 3.2.9(837)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Weibo.png
-#!date = 2025-03-21 23:00
+#!date = 2025-03-26 21:00
 
 # 2025-02-28 19:53:25
 # https://kelee.one/Tool/Loon/Plugin/Weibo_remove_ads.plugin
@@ -179,6 +179,9 @@ http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/statuses\/extend\? script-pa
 
 # 微博最顶部的tab页分组
 http-response ^https?:\/\/m?api\.weibo\.c(n|om)\/2\/groups\/allgroups\/v2 script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_ads.js, requires-body = true, timeout = 60, enable={WeiboScriptEnable-fmz200}, tag = 微博顶部tab页分组@fmz200
+
+# 微博转发评论区广告
+http-response ^https:\/\/api\.weibo\.cn\/2\/statuses\/repost_timeline\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_main.js, requires-body = true, timeout = 60, enable={WeiboScriptEnable-fmz200}, tag = 微博转发评论区广告@fmz200
 
 # 微博去广告以及去除各部分推广模块 - cherish
 http-response ^https?:\/\/m?api\.weibo\.c(n|om)/2/(cardlist|searchall|page|messageflow|statuses/(unread_)?friends(/|_)timeline|groups/timeline|statuses/(container_timeline|container_timeline_hot|unread_hot_timeline|extend|video_mixtimeline)|profile/(me|container_timeline)|video/(community_tab|remind_info|tiny_stream_video_list)|checkin/show|\!/live/media_homelist|comments/build_comments|container/get_item) script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/weibo/weibo_main.js, requires-body = true, timeout = 60, enable={WeiboScriptEnable-fmz200}, tag = 微博去广告以及去除各部分推广模块@fmz200
