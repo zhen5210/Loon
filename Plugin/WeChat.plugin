@@ -8,7 +8,7 @@
 #!loon_version = 3.2.9(837)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/WeChat.png
-#!date = 2025-03-27 00:00
+#!date = 2025-03-27 08:00
 
 # 2024-07-03 16:17:23
 # https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/WeChat/WeChat.list
@@ -16,7 +16,7 @@
 # https://kelee.one/Tool/Loon/Plugin/Weixin_Official_Accounts_remove_ads.plugin
 # 2024-11-28 00:00:00
 # https://kelee.one/Tool/Loon/Plugin/Weixin_external_links_unlock.plugin
-# 2025-03-26 23:21:49
+# 2025-03-27 00:08:11
 # https://kelee.one/Tool/Loon/Plugin/WexinMiniPrograms_Remove_ads.plugin
 
 [Rule]
