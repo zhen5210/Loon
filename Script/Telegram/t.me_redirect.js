@@ -5,7 +5,9 @@ let scheme = $argument["t.me_redirect"];
 const mapping = {
     "Telegram": "tg",
     "Swiftgram": "sg",
-    "Turrit": "turrit"
+    "Turrit": "turrit",
+    "iMe": "ime",
+    "Nicegram": "ng"
 };
 
 // 检查并转换 t.me_redirect 参数
