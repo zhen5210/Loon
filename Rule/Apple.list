@@ -1,4 +1,4 @@
-# 2024-11-05 10:50
+# 2024-04-02 17:30
 # https://support.apple.com/zh-cn/101555
 # https://support.apple.com/zh-cn/102266
 
@@ -119,10 +119,6 @@ DOMAIN-SUFFIX, iwork.apple.com // iWork 文稿
 DOMAIN, mask.icloud.com // iCloud 专用代理
 DOMAIN, mask-h2.icloud.com // iCloud 专用代理
 DOMAIN, mask-api.icloud.com // iCloud 专用代理
-
-# Apple Intelligence、Siri 和搜索 - Apple 设备必须能够连接到以下主机，才能处理使用私有云计算的 Apple Intelligence 请求以及处理 Siri 请求，包括听写和在 Apple App 中搜索。
-DOMAIN, guzzoni.apple.com //Siri 和听写请求
-DOMAIN-SUFFIX, smoot.apple.com //搜索服务，包括 Siri、聚焦、查询、Safari 浏览器、新闻、信息和音乐
 
 # 关联域 - Apple 设备必须能够连接到以下主机，才能在 iOS 14、iPadOS 14 和 macOS Big Sur 及更高版本中使用关联域。关联域是通用链接的基础，通用链接功能允许在 App 中呈现内容，而不是在 App 的全部或部分网站中呈现内容。接力、轻 App 和单点登录扩展都使用关联域。
 DOMAIN, app-site-association.cdn-apple.com //通用链接的关联域

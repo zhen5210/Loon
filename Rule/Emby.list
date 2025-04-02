@@ -2,14 +2,20 @@
 # 最后更新时间：2024-12-04
 
 # 规则名称: Emby
-# 规则统计: 166
+# 规则统计: 183
 
-DOMAIN, aca.misakaf.org
+DOMAIN, 2pfdml.mobaiemby.site
 DOMAIN, cc.coemn.com
+DOMAIN, cf-cdn1.nebula-media.org
 DOMAIN, cminf.sfcat.link
 DOMAIN, cuinf.sfcat.link
+DOMAIN, emby-cdn1.nebula-media.org
+DOMAIN, emby.nebula-media.org
 DOMAIN, notnetflix.cos.cat
-DOMAIN, oversea.alphatvapp.top
+DOMAIN, starharn-cf.nebula-media.org
+DOMAIN, starharn.nebula-media.org
+DOMAIN, web-starharn.nebula-media.org
+DOMAIN, web.nebula-media.org
 DOMAIN-SUFFIX, 123456.al
 DOMAIN-SUFFIX, 16bit.cfd
 DOMAIN-SUFFIX, 20120714.xyz
@@ -27,6 +33,8 @@ DOMAIN-SUFFIX, agahk.odysseyplus.site
 DOMAIN-SUFFIX, agan2.vip
 DOMAIN-SUFFIX, agasg.odysseyplus.site
 DOMAIN-SUFFIX, agon.cf
+DOMAIN-SUFFIX, alphatvapp.top
+DOMAIN-SUFFIX, as174.de
 DOMAIN-SUFFIX, az-hk.embyclub.com
 DOMAIN-SUFFIX, azsgp.embyclub.com
 DOMAIN-SUFFIX, baisi.pro
@@ -46,12 +54,13 @@ DOMAIN-SUFFIX, cherrytv.one
 DOMAIN-SUFFIX, cinema.facmata.net
 DOMAIN-SUFFIX, deja-vu.beauty
 DOMAIN-SUFFIX, dicarerhome.com
+DOMAIN-SUFFIX, e.degyax.one
 DOMAIN-SUFFIX, ednovas.org
 DOMAIN-SUFFIX, em.ssky.me
 DOMAIN-SUFFIX, emby-cf.plusmedia.site
+DOMAIN-SUFFIX, emby-myg-de.vfing.de
 DOMAIN-SUFFIX, emby-sg.plusmedia.site
 DOMAIN-SUFFIX, emby.aiyowei.ml
-DOMAIN-SUFFIX, emby.as174.com
 DOMAIN-SUFFIX, emby.bid
 DOMAIN-SUFFIX, emby.cjpc.cc
 DOMAIN-SUFFIX, emby.cl
@@ -66,6 +75,7 @@ DOMAIN-SUFFIX, emby.loan
 DOMAIN-SUFFIX, emby.maying.club
 DOMAIN-SUFFIX, emby.mdss.cloud
 DOMAIN-SUFFIX, emby.ml
+DOMAIN-SUFFIX, emby.moe
 DOMAIN-SUFFIX, emby.neko.edu.rs
 DOMAIN-SUFFIX, emby.nexitally.com
 DOMAIN-SUFFIX, emby.nyancat.net
@@ -87,6 +97,7 @@ DOMAIN-SUFFIX, emby2.otakudrive.life
 DOMAIN-SUFFIX, emby77.cf
 DOMAIN-SUFFIX, emby77.org
 DOMAIN-SUFFIX, embyclub.com
+DOMAIN-SUFFIX, embymv.link
 DOMAIN-SUFFIX, embymv.me
 DOMAIN-SUFFIX, embymv.tk
 DOMAIN-SUFFIX, embyplus.club
@@ -101,7 +112,6 @@ DOMAIN-SUFFIX, gtlx.org
 DOMAIN-SUFFIX, gugumedia.link
 DOMAIN-SUFFIX, happyav.eu.org
 DOMAIN-SUFFIX, hovervan.org
-DOMAIN-SUFFIX, hxd.as174.com
 DOMAIN-SUFFIX, i109.com
 DOMAIN-SUFFIX, ii00.cc
 DOMAIN-SUFFIX, imetyou.top
@@ -115,14 +125,12 @@ DOMAIN-SUFFIX, lyrebirdemby.com
 DOMAIN-SUFFIX, magpie.cyou
 DOMAIN-SUFFIX, magpiecdn.tech
 DOMAIN-SUFFIX, mcjoker.xyz
-DOMAIN-SUFFIX, misakaf.org
 DOMAIN-SUFFIX, misty.ltd
 DOMAIN-SUFFIX, mius.uk
 DOMAIN-SUFFIX, mjjemby.org
 DOMAIN-SUFFIX, movie.xeton.dev
 DOMAIN-SUFFIX, mulgore.net
 DOMAIN-SUFFIX, nanflix.net
-DOMAIN-SUFFIX, nebula-media.org
 DOMAIN-SUFFIX, newpppp.com
 DOMAIN-SUFFIX, newwan.top
 DOMAIN-SUFFIX, nijigem.by
@@ -159,14 +167,23 @@ DOMAIN-SUFFIX, studyfun.live
 DOMAIN-SUFFIX, tanhuatv.site
 DOMAIN-SUFFIX, texon.fans
 DOMAIN-SUFFIX, tkremby.xyz
+DOMAIN-SUFFIX, tv.worldline.space
 DOMAIN-SUFFIX, uuuoo.cc
 DOMAIN-SUFFIX, wiri.tk
 DOMAIN-SUFFIX, xiaoyi.one
 DOMAIN-SUFFIX, xmsl.org
 DOMAIN-SUFFIX, zi0.icu
 DOMAIN-SUFFIX, zox.show
+IP-CIDR, 103.197.185.84/32, no-resolve
+IP-CIDR, 148.135.94.8/32, no-resolve
 IP-CIDR, 152.53.67.239/32, no-resolve
+IP-CIDR, 154.40.33.88/32, no-resolve
+IP-CIDR, 168.119.137.205/32, no-resolve
 IP-CIDR, 188.172.228.49/32, no-resolve
+IP-CIDR, 195.128.100.146/32, no-resolve
+IP-CIDR, 195.128.102.208/32, no-resolve
 IP-CIDR, 195.201.86.86/32, no-resolve
+IP-CIDR, 202.61.247.129/32, no-resolve
 IP-CIDR, 202.61.255.248/32, no-resolve
 IP-CIDR, 212.90.120.164/32, no-resolve
+IP-CIDR, 37.123.192.219/32, no-resolve
