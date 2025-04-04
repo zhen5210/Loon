@@ -8,7 +8,7 @@
 #!loon_version = 3.2.9(837)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Zhihu.png
-#!date = 2025-03-21 23:00
+#!date = 2025-04-03 00:00
 
 # 2024-11-28 00:00:00
 # https://kelee.one/Tool/Loon/Plugin/Zhihu_remove_ads.plugin
@@ -50,6 +50,7 @@ IP-CIDR6, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT, no-resolve
 ^https:\/\/api\.zhihu\.com\/comment_v5\/(?:articles|answers)\/\d+\/list-headers reject-dict
 ^https:\/\/api\.zhihu\.com\/prague\/related_suggestion_native\/feed\? reject-dict
 ^https:\/\/api\.zhihu\.com\/v5\.1\/topics\/answer\/\d+\/relation reject-dict
+^https:\/\/api\.zhihu\.com\/questions\/\d+(?:\/answers|\/feeds|\?include=) response-body-json-jq 'del(.ad_info, .data.ad_info?, .query_info) | if (.data | type) == "array" then .data |= map(select((.target?.answer_type? // "") | contains("paid") | not)) else . end'
 
 # 其他 - 服务器推送配置
 ^https:\/\/api\.zhihu\.com\/ab\/api\/v1\/products\/zhihu\/platforms\/ios\/config reject-dict
@@ -76,7 +77,7 @@ http-response ^https:\/\/api\.zhihu\.com\/v2\/topstory\/hot-lists\/everyone-seei
 
 # 回答详情页 - 评论区顶部、下一个回答
 http-response ^https:\/\/api\.zhihu\.com\/next-(?:bff|data|render) script-path = https://kelee.one/Resource/Script/Zhihu/Zhihu_remove_ads.js, requires-body = true, tag = 移除下一个回答推广、评论区顶部推广
-http-response ^https:\/\/api\.zhihu\.com\/questions\/\d+(?:\/answers|\/feeds|\?include=) script-path = https://kelee.one/Resource/Script/Zhihu/Zhihu_remove_ads.js, requires-body = true, tag = 移除回答详情页推广
+# http-response ^https:\/\/api\.zhihu\.com\/questions\/\d+(?:\/answers|\/feeds|\?include=) script-path = https://kelee.one/Resource/Script/Zhihu/Zhihu_remove_ads.js, requires-body = true, tag = 移除回答详情页推广
 http-response ^https:\/\/www\.zhihu\.com\/api\/v4\/(?:articles|answers)\/\d+\/recommendations?\? script-path = https://kelee.one/Resource/Script/Zhihu/Zhihu_remove_ads.js, requires-body = true, tag = 移除回答详情页推广
 
 # 其他 - 服务器推送配置
