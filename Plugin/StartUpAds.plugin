@@ -68,7 +68,7 @@
 
 # ======= B ======= #
 # BaiDuTieBa
- ^https?:\/\/tiebac\.baidu\.com\/c\/f\/ad\/getFeedAd reject-200
+^https?:\/\/tiebac\.baidu\.com\/c\/f\/ad\/getFeedAd reject-200
 
 # BaiDuFanYi
 ^https?:\/\/mime\.baidu\.com\/v\d\/IosStart\/getStartInfo reject-200
