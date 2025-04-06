@@ -301,19 +301,19 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
     </tr>
     <tr>
         <td align=center>01</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/AdsBlocker.plugin">广告拦截合集</a></td>
-        <td align=center>02</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Alipan.plugin">阿里云盘</a></td>
-        <td align=center>03</td>
+        <td align=center>02</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Amap.plugin">高德地图</a></td>
+        <td align=center>03</td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/BaiduNetDisk.plugin">百度网盘</a></td>
     </tr>
     <tr>
         <td align=center>04</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/BaiduNetDisk.plugin">百度网盘</a></td>
-        <td align=center>05</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Bank.plugin">银行App</a></td>
-        <td align=center>06</td>
+        <td align=center>05</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Bilibili.plugin">哔哩哔哩</a></td>
+        <td align=center>06</td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/BlockAds.plugin">广告拦截合集</a></td>
     </tr>
     <tr>
         <td align=center>07</td>
@@ -391,7 +391,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
         <td align=center>34</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Soul.plugin">Soul</a></td>
         <td align=center>35</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/StartUp.plugin">墨鱼去开屏</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/StartUpAds.plugin">墨鱼去开屏</a></td>
         <td align=center>36</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Taobao.plugin">淘宝</a></td>
     </tr>
