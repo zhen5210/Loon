@@ -1,0 +1,83 @@
+name: Convert proxy-list.txt
+
+on:
+  schedule:
+    - cron: '0 2 * * *' # 每天UTC时间2点自动运行
+  workflow_dispatch: # 允许手动触发
+
+permissions:
+  actions: write
+  contents: write  
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          repository: sooyaaabo/Loon
+          path: Loon
+
+      - name: Download Global Domain List
+        run: |
+          curl -O https://raw.githubusercontent.com/Code-Dramatist/Rule_Actions/main/Proxy_Rule/Global_Domain.list
+   
+      - name: Convert Domains
+        id: convert_domains
+        run: |
+          # 创建目标目录 Rule
+          mkdir -p Loon/Rule
+          # 写入规则头部
+          echo '# 原始链接：https://raw.githubusercontent.com/Code-Dramatist/Rule_Actions/main/Proxy_Rule/Global_Domain.list' > Loon/Rule/Global_Domain.list
+          # Read the downloaded file into an array
+          input_domains=()
+          while IFS= read -r line; do
+            input_domains+=("$line")
+          done < Global_Domain.list
+
+          output_domains=()
+
+          # Process each domain
+          for domain in "${input_domains[@]}"; do
+            # Remove any leading/trailing whitespace
+            domain=$(echo $domain | xargs)
+
+            # Skip empty lines
+            if [ -z "$domain" ]; then
+              continue
+            fi
+
+            # If the domain starts with a dot, treat it as DOMAIN-SUFFIX
+            if [[ $domain == .* ]]; then
+              domain_suffix=$(echo $domain | sed 's/^\.//')
+              output_domains+=("DOMAIN-SUFFIX, $domain_suffix")
+            # If the domain doesn't start with a dot, treat it as DOMAIN
+            else
+              output_domains+=("DOMAIN, $domain")
+            fi
+          done
+
+          # Create a file with the converted domains and save it with .list extension
+          echo "${output_domains[@]}" > Global_Domain.list
+
+      - name: Commit and push changes
+        run: |
+          cd Loon
+          if [[ -n $(git status -s) ]]; then
+            git config --local user.email "action@github.com"
+            git config --local user.name "GitHub Action"
+            git add .
+            git commit -m "Proxy-List Update $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M')"
+            git push origin HEAD
+          else
+            echo "No changes to commit."
+          fi
+          
+      - name: 清理Workflow
+        uses: Mattraks/delete-workflow-runs@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          retain_days: 0
+          keep_minimum_runs: 5
