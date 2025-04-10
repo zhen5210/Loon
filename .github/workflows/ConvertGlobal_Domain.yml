@@ -22,7 +22,7 @@ jobs:
 
       - name: Download Global Domain List
         run: |
-          curl -O https://raw.githubusercontent.com/Code-Dramatist/Rule_Actions/main/Proxy_Rule/Global_Domain.list
+          curl -o Global_Domain.list https://raw.githubusercontent.com/Code-Dramatist/Rule_Actions/main/Proxy_Rule/Global_Domain.list
             
       - name: Process and Modify Domain List
         run: |
@@ -31,7 +31,7 @@ jobs:
           # 写入规则头部
           echo '# 原始链接：https://raw.githubusercontent.com/Code-Dramatist/Rule_Actions/main/Proxy_Rule/Global_Domain.list' > Loon/Rule/Global_Domain.list
           # 创建一个新的文件来保存修改后的域名
-          output_file="Processed_Global_Domain.list"
+          output_file="Loon/Rule/Processed_Global_Domain.list"
           > $output_file
 
           # 读取并处理每一行
@@ -58,7 +58,7 @@ jobs:
             echo "No changes to commit."
           fi
           
-      - name: 清理Workflow
+      - name: Clean up workflow runs
         uses: Mattraks/delete-workflow-runs@main
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
