@@ -22,7 +22,7 @@ jobs:
           # 创建目标目录 Rule
           mkdir -p Rule
           # 写入规则头部
-          echo '[Rule]' > Rule/proxy-list.list
+          echo '[Rule]' > Rule/Proxy-List.list
           # 读取每一行
           while read -r line; do
             # 忽略空行和注释
@@ -31,26 +31,23 @@ jobs:
               if [[ "$line" =~ ^full: ]]; then
                 domain="${line#full:}"
                 # 写入 DOMAIN 格式
-                echo "DOMAIN, $domain" >> Rule/proxy-list.list
+                echo "DOMAIN, $domain" >> Rule/Proxy-List.list
               # 处理类似 "regexp:" 的规则
               elif [[ "$line" =~ ^regexp: ]]; then
                 regex="${line#regexp:}"
                 # 确保正则表达式格式正确
-                echo "URL-REGEX, ^https?:\/\/(.*\.)?$regex" >> Rule/proxy-list.list
+                echo "URL-REGEX, \"^https?:\/\/(.*\.)?$regex\"" >> Rule/Proxy-List.list
               # 处理一般域名，转换为 "DOMAIN-SUFFIX"
               else
-                echo "DOMAIN-SUFFIX, $line" >> Rule/proxy-list.list
+                echo "DOMAIN-SUFFIX, $line" >> Rule/Proxy-List.list
               fi
             fi
           done < proxy-list.txt
 
       - name: Commit and push changes
         run: |
-          # 配置 git 用户信息
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
-          # 添加并提交修改
-          git add Rule/proxy-list.list
-          git commit -m "Update Loon proxy list on $(date +'%Y-%m-%d')" || echo "No changes to commit"
-          # 推送修改
-          git push
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Update Proxy-List.list on $(date +'%Y-%m-%d')" || echo "No changes to commit"
+          git push origin HEAD
