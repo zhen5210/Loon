@@ -1,0 +1,47 @@
+name: Convert proxy-list.txt
+
+on:
+  schedule:
+    - cron: '0 2 * * *' # 每天UTC时间2点自动运行
+  workflow_dispatch: # 允许手动触发
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Download proxy-list.txt
+        run: |
+          curl -sSL -o proxy-list.txt https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/proxy-list.txt
+
+      - name: Convert to Loon format
+        run: |
+          echo '[Rule]' > Rule/proxy-list.list
+          while read -r line; do
+            # 忽略空行和注释
+            if [[ -n "$line" && ! "$line" =~ ^# ]]; then
+              # 处理 "full:" 开头的规则
+              if [[ "$line" =~ ^full: ]]; then
+                domain="${line#full:}"
+                echo "DOMAIN, $domain" >> Rule/proxy-list.list
+              # 处理类似 "regexp:" 的规则
+              elif [[ "$line" =~ ^regexp: ]]; then
+                regex="${line#regexp:}"
+                echo "URL-REGEX, "^https?:\/\/(.*\.)?$regex"" >> Rule/proxy-list.list
+              # 处理一般域名，转换为 "DOMAIN-SUFFIX"
+              else
+                echo "DOMAIN-SUFFIX, $line" >> Rule/proxy-list.list
+              fi
+            fi
+          done < proxy-list.txt
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add Rule/proxy-list.list
+          git commit -m "Update Loon proxy list on $(date +'%Y-%m-%d')" || echo "No changes to commit"
+          git push
