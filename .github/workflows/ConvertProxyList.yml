@@ -43,7 +43,7 @@ jobs:
               elif [[ "$line" =~ ^regexp: ]]; then
                 regex="${line#regexp:}"
                 # 确保正则表达式格式正确
-                echo "URL-REGEX, \"^https?:\/\/(.*\.)?$regex\"" >> Loon/Rule/Proxy-List.list
+                echo "URL-REGEX, \"$regex\"" >> Loon/Rule/Proxy-List.list
               # 处理一般域名，转换为 "DOMAIN-SUFFIX"
               else
                 echo "DOMAIN-SUFFIX, $line" >> Loon/Rule/Proxy-List.list
