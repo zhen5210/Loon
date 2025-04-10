@@ -10,7 +10,7 @@ permissions:
   contents: write  
 
 jobs:
-  convert_global_domain:
+  convert_rule_format:
     runs-on: ubuntu-latest
 
     steps:
