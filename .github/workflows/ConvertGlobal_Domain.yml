@@ -1,4 +1,4 @@
-name: Convert proxy-list.txt
+name: Convert Global_Domain.list
 
 on:
   schedule:
