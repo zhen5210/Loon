@@ -28,10 +28,10 @@ jobs:
         run: |
           # 创建目标目录 Rule
           mkdir -p Loon/Rule
+          # 创建一个新的文件来保存修改后的域名
+          output_file="Loon/Rule/Global_Domain.list"
           # 写入规则头部
           echo '# 原始链接：https://raw.githubusercontent.com/Code-Dramatist/Rule_Actions/main/Proxy_Rule/Global_Domain.list' > Loon/Rule/Global_Domain.list
-          # 创建一个新的文件来保存修改后的域名
-          output_file="Loon/Rule/Processed_Global_Domain.list"
           > $output_file
 
           # 读取并处理每一行
