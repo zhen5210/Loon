@@ -6,9 +6,9 @@ on:
   workflow_dispatch: # 允许手动触发
 
 permissions:
-  actions: write  
+  actions: write
   contents: write  
-  
+
 jobs:
   convert:
     runs-on: ubuntu-latest
@@ -52,9 +52,17 @@ jobs:
           done < proxy-list.txt
 
       - name: Commit and push changes
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}  # 使用 GitHub Secrets 中的 Token
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          # 重新初始化 Git 配置，避免 "--local" 错误
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+          
+          # 通过 GitHub Token 进行身份验证
+          git config --global url."https://$GH_TOKEN@github.com".insteadOf "https://github.com"
+          
+          # 添加并提交更改
           git add .
           git commit -m "Update Proxy-List.list on $(date +'%Y-%m-%d')" || echo "No changes to commit"
           git push origin HEAD
