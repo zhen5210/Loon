@@ -29,7 +29,7 @@ jobs:
           # 创建目标目录 Rule
           mkdir -p Loon/Rule
           # 写入规则头部
-          echo '[Rule]' > Loon/Rule/Proxy-List.list
+          echo '# 原始链接：https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/proxy-list.txt' > Loon/Rule/Proxy-List.list
           # 读取每一行
           while read -r line; do
             # 忽略空行和注释
@@ -63,3 +63,10 @@ jobs:
           else
             echo "No changes to commit."
           fi
+          
+      - name: 清理Workflow
+        uses: Mattraks/delete-workflow-runs@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          retain_days: 0
+          keep_minimum_runs: 5
