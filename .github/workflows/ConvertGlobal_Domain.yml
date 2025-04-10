@@ -23,44 +23,27 @@ jobs:
       - name: Download Global Domain List
         run: |
           curl -O https://raw.githubusercontent.com/Code-Dramatist/Rule_Actions/main/Proxy_Rule/Global_Domain.list
-   
-      - name: Convert Domains
-        id: convert_domains
+            
+      - name: Process and Modify Domain List
         run: |
           # 创建目标目录 Rule
           mkdir -p Loon/Rule
           # 写入规则头部
           echo '# 原始链接：https://raw.githubusercontent.com/Code-Dramatist/Rule_Actions/main/Proxy_Rule/Global_Domain.list' > Loon/Rule/Global_Domain.list
-          # Read the downloaded file into an array
-          input_domains=()
+          # 创建一个新的文件来保存修改后的域名
+          output_file="Processed_Global_Domain.list"
+          > $output_file
+
+          # 读取并处理每一行
           while IFS= read -r line; do
-            input_domains+=("$line")
-          done < Global_Domain.list
-
-          output_domains=()
-
-          # Process each domain
-          for domain in "${input_domains[@]}"; do
-            # Remove any leading/trailing whitespace
-            domain=$(echo $domain | xargs)
-
-            # Skip empty lines
-            if [ -z "$domain" ]; then
-              continue
-            fi
-
-            # If the domain starts with a dot, treat it as DOMAIN-SUFFIX
-            if [[ $domain == .* ]]; then
-              domain_suffix=$(echo $domain | sed 's/^\.//')
-              output_domains+=("DOMAIN-SUFFIX, $domain_suffix")
-            # If the domain doesn't start with a dot, treat it as DOMAIN
+            if [[ "$line" =~ ^\. ]]; then
+              # 如果行是以.开头，替换为DOMAIN-SUFFIX
+              echo "DOMAIN-SUFFIX,${line:1}" >> $output_file
             else
-              output_domains+=("DOMAIN, $domain")
+              # 如果行不是以.开头，添加DOMAIN
+              echo "DOMAIN,$line" >> $output_file
             fi
-          done
-
-          # Create a file with the converted domains and save it with .list extension
-          echo "${output_domains[@]}" > Global_Domain.list
+          done < Global_Domain.list
 
       - name: Commit and push changes
         run: |
@@ -69,7 +52,7 @@ jobs:
             git config --local user.email "action@github.com"
             git config --local user.name "GitHub Action"
             git add .
-            git commit -m "Proxy-List Update $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M')"
+            git commit -m "Global_Domain Update $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M')"
             git push origin HEAD
           else
             echo "No changes to commit."
