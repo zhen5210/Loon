@@ -28,11 +28,10 @@ jobs:
         run: |
           # 创建目标目录 Rule
           mkdir -p Loon/Rule
-          # 创建一个新的文件来保存修改后的域名
+          # 创建输出文件路径
           output_file="Loon/Rule/Global_Domain.list"
           # 写入规则头部
-          echo '# 原始链接：https://raw.githubusercontent.com/Code-Dramatist/Rule_Actions/main/Proxy_Rule/Global_Domain.list' > Loon/Rule/Global_Domain.list
-          > $output_file
+          echo '# 原始链接：https://raw.githubusercontent.com/Code-Dramatist/Rule_Actions/main/Proxy_Rule/Global_Domain.list' > $output_file
 
           # 读取并处理每一行
           while IFS= read -r line; do
@@ -41,10 +40,10 @@ jobs:
               echo "$line" >> $output_file
             elif [[ "$line" =~ ^\. ]]; then
               # 如果行是以.开头，替换为DOMAIN-SUFFIX
-              echo "DOMAIN-SUFFIX, ${line:1}" >> $output_file
+              echo "DOMAIN-SUFFIX,${line:1}" >> $output_file
             else
               # 如果行不是以.开头，添加DOMAIN
-              echo "DOMAIN, $line" >> $output_file
+              echo "DOMAIN,$line" >> $output_file
             fi
           done < Global_Domain.list  # 结束循环
 
