@@ -31,12 +31,15 @@ jobs:
           # 写入规则头部
           echo '# 原始链接：https://raw.githubusercontent.com/Code-Dramatist/Rule_Actions/main/Proxy_Rule/Global_Domain.list' > Loon/Rule/Global_Domain.list
           # 创建一个新的文件来保存修改后的域名
-          output_file="Loon/Rule/Processed_Global_Domain.list"
+          output_file="Loon/Rule/Global_Domain.list"
           > $output_file
 
           # 读取并处理每一行
           while IFS= read -r line; do
-            if [[ "$line" =~ ^\. ]]; then
+            # 跳过以#开头的注释行
+            if [[ "$line" =~ ^# ]]; then
+              echo "$line" >> $output_file
+            elif [[ "$line" =~ ^\. ]]; then
               # 如果行是以.开头，替换为DOMAIN-SUFFIX
               echo "DOMAIN-SUFFIX,${line:1}" >> $output_file
             else
@@ -56,11 +59,3 @@ jobs:
             git push origin HEAD
           else
             echo "No changes to commit."
-          fi
-          
-      - name: Clean up workflow runs
-        uses: Mattraks/delete-workflow-runs@main
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          retain_days: 0
-          keep_minimum_runs: 5
