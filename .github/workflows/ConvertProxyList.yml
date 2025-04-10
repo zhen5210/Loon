@@ -27,9 +27,9 @@ jobs:
       - name: Convert to Loon format
         run: |
           # 创建目标目录 Rule
-          mkdir -p Rule
+          mkdir -p Loon/Rule
           # 写入规则头部
-          echo '[Rule]' > Rule/Proxy-List.list
+          echo '[Rule]' > Loon/Rule/Proxy-List.list
           # 读取每一行
           while read -r line; do
             # 忽略空行和注释
@@ -38,15 +38,15 @@ jobs:
               if [[ "$line" =~ ^full: ]]; then
                 domain="${line#full:}"
                 # 写入 DOMAIN 格式
-                echo "DOMAIN, $domain" >> Rule/Proxy-List.list
+                echo "DOMAIN, $domain" >> Loon/Rule/Proxy-List.list
               # 处理类似 "regexp:" 的规则
               elif [[ "$line" =~ ^regexp: ]]; then
                 regex="${line#regexp:}"
                 # 确保正则表达式格式正确
-                echo "URL-REGEX, \"^https?:\/\/(.*\.)?$regex\"" >> Rule/Proxy-List.list
+                echo "URL-REGEX, \"^https?:\/\/(.*\.)?$regex\"" >> Loon/Rule/Proxy-List.list
               # 处理一般域名，转换为 "DOMAIN-SUFFIX"
               else
-                echo "DOMAIN-SUFFIX, $line" >> Rule/Proxy-List.list
+                echo "DOMAIN-SUFFIX, $line" >> Loon/Rule/Proxy-List.list
               fi
             fi
           done < proxy-list.txt
