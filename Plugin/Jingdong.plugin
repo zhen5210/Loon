@@ -8,7 +8,7 @@
 #!loon_version = 3.2.9(837)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Jingdong.png
-#!date = 2025-04-11 12:00
+#!date = 2025-04-11 22:30
 
 # 2024-12-29 02:12:10
 # https://kelee.one/Tool/Loon/Plugin/JD_remove_ads.plugin
@@ -45,7 +45,7 @@ http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advert
 
 # 京东比价
 http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) script-path = https://raw.githubusercontent.com/wf021325/qx/master/js/jd_price.js, requires-body = true, enable={JDPrice-TitleEmbed}, tag = 京东比价-标题嵌入版
-http-response ^https:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html script-path = https://raw.githubusercontent.com/mw418/Loon/main/script/jd_price.js, requires-body = true, timeout = 60, enable={JDPrice-DetailNotify}, tag = 京东比价-详情通知版
+http-request ^https:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html script-path = https://raw.githubusercontent.com/mw418/Loon/main/script/jd_price.js, timeout = 60, tag = 京东比价-详情通知版
 http-response ^https:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html script-path = https://raw.githubusercontent.com/wf021325/qx/master/js/jd_price.js, requires-body = true, timeout = 60, enable={JDPrice-DetailEmbed-text}, tag = 京东比价-详情嵌入版（文本样式）
 http-response ^https:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html script-path = https://raw.githubusercontent.com/githubdulong/Script/master/jd_price.js, requires-body = true, timeout = 60, enable={JDPrice-DetailEmbed-table}, tag = 京东比价-详情嵌入版（表格样式）
 
