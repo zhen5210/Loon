@@ -20,10 +20,10 @@
 # https://raw.githubusercontent.com/githubdulong/Script/master/Surge/jd_price2.sgmodule
 
 [Argument]
-JDPrice-TitleEmbed = switch, true, false, tag = 京东比价-标题嵌入版, desc = 点击商品标题即可直接查看嵌入式历史价格
+JDPrice-TitleEmbed = switch, false, true, tag = 京东比价-标题嵌入版, desc = 点击商品标题即可直接查看嵌入式历史价格
 JDPrice-DetailNotify = switch, false, true, tag = 京东比价-详情通知版, desc = 点击商品详情页通过弹窗通知查看历史价格
 JDPrice-DetailEmbed-text = switch, false, true, tag = 京东比价-详情嵌入版（文本样式）, desc = 点击商品详情页即可直接查看嵌入式历史价格
-JDPrice-DetailEmbed-table = switch, false, true, tag = 京东比价-详情嵌入版（表格样式）, desc = 点击商品详情页即可直接查看嵌入式历史价格
+JDPrice-DetailEmbed-table = switch, true, false, tag = 京东比价-详情嵌入版（表格样式）, desc = 点击商品详情页即可直接查看嵌入式历史价格
 
 [Rule]
 DOMAIN, dns.jd.com, REJECT
