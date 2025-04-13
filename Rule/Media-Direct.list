@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2025-03-13 18:00
+# 2025-04-13 21:00
 # https://github.com/fangkuia/XPTV/blob/main/X/xptv.plugin
 
 # --------------- CMSPlayer --------------- #
@@ -157,10 +157,8 @@ DOMAIN, lemonlive.deno.dev
 DOMAIN-SUFFIX, iyf.tv
 # 金牌影院
 DOMAIN-SUFFIX, cfkj86.com
-# 两个BT
-DOMAIN-SUFFIX, bttwo.org
-DOMAIN-SUFFIX, bttwoo.com
-DOMAIN-SUFFIX, bttwo.vip
+# 老地方
+DOMAIN-SUFFIX, laodifang.tv
 # 素白白影院
 DOMAIN, dc.xhscdn.com
 DOMAIN-SUFFIX, subaibai.vip
