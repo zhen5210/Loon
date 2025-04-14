@@ -2,14 +2,14 @@
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-04-13 02:12:46
+# UPDATED: 2025-04-14 02:12:21
 # DOMAIN: 87
 # DOMAIN-KEYWORD: 36
-# DOMAIN-SUFFIX: 31295
+# DOMAIN-SUFFIX: 31296
 # IP-CIDR: 112
 # IP-CIDR6: 4
 # USER-AGENT: 46
-# TOTAL: 31580
+# TOTAL: 31581
 DOMAIN-SUFFIX,000webhost.com
 DOMAIN-SUFFIX,01.org
 DOMAIN-SUFFIX,02weqj32.com
@@ -2582,6 +2582,7 @@ DOMAIN-SUFFIX,audiencenetwork.com
 DOMAIN-SUFFIX,audiencenetwork.tv
 DOMAIN-SUFFIX,audiobeatsau.com
 DOMAIN-SUFFIX,audiobeatsbydre.com
+DOMAIN-SUFFIX,audiomack.com
 DOMAIN-SUFFIX,audiomonsterbeatsonline.com
 DOMAIN-SUFFIX,audionow.com
 DOMAIN-SUFFIX,aue.ac.uk
