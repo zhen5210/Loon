@@ -335,7 +335,7 @@
     </tr>
     <tr>
         <td align=center>13</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Douyin-HK.plugin">香港抖音</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Douyin_HK.plugin">香港抖音</a></td>
         <td align=center>14</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Ezviz.plugin">萤石云视频</a></td>
         <td align=center>15</td>
@@ -415,16 +415,18 @@
     </tr>
     <tr>
         <td align=center>43</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Ximalaya.plugin">喜马拉雅</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/WPS_Office.plugin">WPS Office</a></td>
         <td align=center>44</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/YoukuVideo.plugin">优酷视频</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Ximalaya.plugin">喜马拉雅</a></td>
         <td align=center>45</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/YouTube.plugin">YouTube (Music)</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/YoukuVideo.plugin">优酷视频</a></td>
     </tr>
     <tr>
         <td align=center>46</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Zhihu.plugin">知乎</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/YouTube.plugin">YouTube (Music)</a></td>
         <td align=center>47</td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Zhihu.plugin">知乎</a></td>
+        <td align=center>48</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Zhidemai.plugin">什么值得买</a></td>
     </tr>
 </table>
@@ -451,11 +453,11 @@
     </tr>
     <tr>
         <td align=center>04</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/iRingo.Siri.plugin">iRingo:Siri</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/iRingo_Siri.plugin">iRingo:Siri</a></td>
         <td align=center>05</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/iRingo.TestFlight.plugin">iRingo:TestFlight</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/iRingo_TestFlight.plugin">iRingo:TestFlight</a></td>
         <td align=center>06</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/iRingo.WeatherKit.plugin">iRingo:WeatherKit</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/iRingo_WeatherKit.plugin">iRingo:WeatherKit</a></td>
     </tr>
     <tr>
         <td align=center>07</td>
