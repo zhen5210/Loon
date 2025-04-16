@@ -227,6 +227,10 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/DingTalk.png"
         },
         {
+            "name": "Feishu",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Feishu.png"
+        },
+        {
             "name": "TikTok Douyin",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/TikTok-01.png"
         },
@@ -345,6 +349,46 @@
         {
             "name": "WPS Office",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/WPS_Office.png"
+        },
+        {
+            "name": "KDocs",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/KDocs.png"
+        },
+        {
+            "name": "TencentDocs",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/TencentDocs.png"
+        },
+        {
+            "name": "Evernote",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Evernote.png"
+        },
+        {
+            "name": "Verse",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Verse.png"
+        },
+        {
+            "name": "FlowUs",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/FlowUs.png"
+        },
+        {
+            "name": "Shimo",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Shimo.png"
+        },
+        {
+            "name": "Wolai",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Wolai.png"
+        },
+        {
+            "name": "Mubu",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Mubu.png"
+        },
+        {
+            "name": "Notion",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Notion.png"
+        },
+        {
+            "name": "Obsidian",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Obsidian.png"
         },
         {
             "name": "Fenbi",

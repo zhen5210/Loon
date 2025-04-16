@@ -1,5 +1,5 @@
-#!name = WPS Office
-#!desc = 过滤WPS Office广告
+#!name = 金山文档
+#!desc = 过滤金山文档广告
 #!openUrl = https://apps.apple.com/app/id1398120225
 #!author = 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!tag = 去广告
@@ -7,7 +7,7 @@
 #!system_version = 
 #!loon_version = 3.2.9(837)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
-#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/WPS_Office.png
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/KDocs.png
 #!date = 2025-04-16 08:00
 
 # 2025-04-14 14:16:55
