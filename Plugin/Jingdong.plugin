@@ -8,7 +8,7 @@
 #!loon_version = 3.3.0(853)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Jingdong.png
-#!date = 2025-04-19 18:00
+#!date = 2025-04-20 12:00
 
 # 2024-12-29 02:12:10
 # https://kelee.one/Tool/Loon/Plugin/JD_remove_ads.plugin
@@ -36,7 +36,7 @@ URL-REGEX, "^http:\/\/\w{32}\.jddebug\.com\/diagnose\?", REJECT
 ^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs reject-200
 ^http:\/\/\w{32}\.jddebug\.com\/diagnose\? reject
 ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:searchBoxWord|stationPullService|uniformRecommend[06]) reject-dict
-^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising response-body-replace-regex jdLiteAdvertisingVO  sooyaaabo
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising response-body-replace-regex jdLiteAdvertisingVO sooyaaabo
 
 [Script]
 # 京东
