@@ -663,7 +663,7 @@ const main = async () => {
     const isDark = hour >= 20 || hour < 6;
 
     Render
-    .inject(Table(result))
+    // .inject(Table(result))
     .inject(JdLine(result))
     .inject(`<script>isDark=${isDark}</script>`)
     .done();
