@@ -8,7 +8,7 @@
 #!loon_version = 3.3.0(853)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Jingdong.png
-#!date = 2025-04-23 09:00
+#!date = 2025-04-23 12:00
 
 # 2024-12-29 02:12:10
 # https://kelee.one/Tool/Loon/Plugin/JD_remove_ads.plugin
@@ -25,6 +25,7 @@ JDPrice-TitleEmbed = switch, false, true, tag = 京东比价-标题嵌入版, de
 JDPrice-DetailNotify = switch, false, true, tag = 京东比价-详情通知版, desc = 点击商品详情页通过弹窗通知查看历史价格
 JDPrice-DetailEmbed-Table = switch, true, false, tag = 京东比价-详情嵌入版（表格图）, desc = 点击商品详情页即可直接查看嵌入式历史价格
 JDPrice-DetailEmbed-Line = switch, false, true, tag = 京东比价-详情嵌入版（折线图）, desc = 点击商品详情页即可直接查看嵌入式历史价格
+JDPrice-DetailEmbed-LineNoTable = switch, false, true, tag = 京东比价-详情嵌入版（折线图-无表格图）, desc = 点击商品详情页即可直接查看嵌入式历史价格
 
 [Rule]
 DOMAIN, dns.jd.com, REJECT
@@ -54,7 +55,7 @@ http-request ^https?:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html script-pat
 
 http-response ^https?:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html script-path = https://raw.githubusercontent.com/wf021325/qx/master/js/jd_price.js, requires-body = true, timeout = 60, enable={JDPrice-DetailEmbed-Table}, tag = 京东比价-详情嵌入版（表格图）
 
-http-response ^https?:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html script-path = https://raw.githubusercontent.com/githubdulong/Script/master/jd_price.js, requires-body = true, timeout = 60, enable={JDPrice-DetailEmbed-Line}, tag = 京东比价-详情嵌入版（折线图）
+http-response ^https?:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html script-path = https://raw.githubusercontent.com/githubdulong/Script/master/jd_price.js, requires-body = true, timeout = 60, enable={JDPrice-DetailEmbed-Line}, argument=[{JDPrice-DetailEmbed-LineNoTable}], tag = 京东比价-详情嵌入版（折线图）
 
 [MitM]
 hostname = api.m.jd.com, in.m.jd.com, apapia-sqk-weblogic.manmanbuy.com, m.360buyimg.com
