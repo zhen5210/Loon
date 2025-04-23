@@ -4,7 +4,7 @@
  * 支持版本：App V15.0.80（自行测试）
  * 脚本作者：小白脸
  * 特别鸣谢：数据逆向@苍井灰灰
- 
+
 [Script]
 慢慢买 CK = type=http-request,pattern=^https?:\/\/apapia-sqk-weblogic\.manmanbuy\.com/baoliao\/center\/menu,requires-body=1,max-size=0,binary-body-mode=0,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/MmmCK.js
 京东比价 = type=http-response,pattern=^https:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html,requires-body=1,max-size=0,binary-body-mode=0,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/jd_price.js,timeout=30
@@ -15,10 +15,217 @@ hostname = %APPEND% in.m.jd.com, apapia-sqk-weblogic.manmanbuy.com
 const { $log, $msg, $prs, $http, md5, jsonToCustomString, jsonToQueryString } =
   init();
 
+// 注释掉表格图相关函数
+/*
+const priceHistoryTable = (data) => {
+  const themeDetection = `
+    <script>
+      const setTimeBasedTheme = () => {
+      const rootElement = document.documentElement;
+        
+        if (isDark) {
+          rootElement.setAttribute('data-theme', 'dark');
+        } else {
+          rootElement.setAttribute('data-theme', 'light');
+        }
+      }
+      document.addEventListener('DOMContentLoaded', setTimeBasedTheme);
+    </script>
+  `;
+
+  const css = `<style>
+    /* Theme variables */
+    :root {
+      --background-color: #fff;
+      --text-color: #262626;
+      --secondary-text-color: #8c8c8c;
+      --header-bg: #fafafa;
+      --border-color: #f0f0f0;
+      --hover-bg: #fafafa;
+      --box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      --table-border: 2px solid #f5f5f5;
+    }
+    
+    /* Dark theme variables */
+    [data-theme="dark"] {
+      --background-color: #1f1f1f;
+      --text-color: #e6e6e6;
+      --secondary-text-color: #a6a6a6;
+      --header-bg: #2a2a2a;
+      --border-color: #303030;
+      --hover-bg: #2a2a2a;
+      --box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      --table-border: 2px solid #303030;
+    }
+
+    .price-container {
+      width: 100%;
+      background: var(--background-color);
+      transition: background 0.3s ease;
+    }
+
+    .price-table {
+      width: 92%;
+      margin: 0 auto;
+      border-collapse: collapse;
+      font-size: 13px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--box-shadow);
+      color: var(--text-color);
+      transition: color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .price-table th,
+    .price-table td {
+      padding: 14px 12px;
+      text-align: center;
+      border: 1px solid var(--border-color);
+      transition: border 0.3s ease;
+    }
+
+    .table-header {
+      background: var(--header-bg);
+      border-bottom: var(--table-border);
+      text-align: left;
+      padding-left: 16px;
+      transition: background 0.3s ease, border-bottom 0.3s ease;
+    }
+
+    .table-header h2 {
+      margin: 0;
+      text-align: left;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--text-color);
+      transition: color 0.3s ease;
+    }
+
+    .price-table th {
+      background: var(--header-bg);
+      color: var(--secondary-text-color);
+      font-weight: normal;
+      font-size: 13px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    .price-table td {
+      vertical-align: middle;
+      transition: all 0.3s ease;
+    }
+
+    .price-table tr:hover td {
+      background: var(--hover-bg);
+      transition: background 0.3s ease;
+    }
+
+    .price-table td:first-child {
+      color: var(--text-color);
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .price-table td:nth-child(2) {
+      color: var(--secondary-text-color);
+      transition: color 0.3s ease;
+    }
+
+    .price-up td:nth-child(3),
+    .price-up td:last-child {
+      color: #ff4d4f;
+    }
+
+    .price-down td:nth-child(3),
+    .price-down td:last-child {
+      color: #52c41a;
+    }
+
+    .price-same td:nth-child(3),
+    .price-same td:last-child {
+      color: var(--secondary-text-color);
+      transition: color 0.3s ease;
+    }
+
+    .price-table td:nth-child(3) {
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    .price-table td:last-child {
+      font-size: 12px;
+    }
+  </style>`;
+
+  let html = `
+    ${css}
+    ${themeDetection}
+    <div class="price-container">
+      <table class="price-table">
+        <tr>
+          <th colspan="4" class="table-header">
+            <h2>${data.groupName}</h2>
+          </th>
+        </tr>
+        <tr>
+          <th>类型</th>
+          <th>日期</th>
+          <th>价格</th>
+          <th>状态</th>
+        </tr>`;
+
+  data.atts.forEach((row) => {
+    const statusClass = row.status?.includes("↑")
+      ? "price-up"
+      : row.status.includes("↓")
+      ? "price-down"
+      : "price-same";
+
+    const td = Object.keys(row)
+      .map((item) => `<td>${row[item]}</td>`)
+      .join("");
+
+    html += `
+      <tr class="${statusClass}">
+       ${td}
+      </tr>`;
+  });
+
+  html += `</table></div>`;
+  return html;
+};
+
+const Table = (result) => {
+  const toDate = (t = Date.now()) => {
+    const d = new Date(t - new Date().getTimezoneOffset() * 60000);
+    return d.toISOString().split("T")[0];
+  };
+
+  const getJdData = (data) => {
+    return data.flatMap(({ ShowName, Difference, Price, Date }) => {
+      const re = /历史最高|常购价/;
+      if (re.test(ShowName)) return [];
+
+      return [
+        {
+          name: ShowName,
+          date: Date || toDate(),
+          price: Price,
+          status: Difference.replace("-", "●"),
+        },
+      ];
+    });
+  };
+
+  const { ListPriceDetail } = result.priceRemark;
+  return priceHistoryTable({
+    groupName: "历史比价",
+    atts: getJdData(ListPriceDetail),
+  });
+};
+*/
+
 const JdLine = (data) => {
   return `
-
-
 <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.4.3/echarts.min.js"></script>
     <style>
         /* 基础样式 */
@@ -275,7 +482,7 @@ const JdLine = (data) => {
                 },
                 axisLabel: {
                     color: isDark ? '#e0e0e0' : '#333',
-                                        fontSize: 9,
+                    fontSize: 9,
                     formatter(value) {
                         return value && (uniquePrices[value - 1] ?? "MAX");
                     }
@@ -299,8 +506,6 @@ const JdLine = (data) => {
         myChart.setOption(option);
 
         //监听折线图切换 歪门斜道的法子
-let scaleRestoreTimer = null;
-
 myChart.on('legendselectchanged', ({ name }) => {
   const max = series.find(i => i.name === name).data.length;
   myChart.setOption({
@@ -344,6 +549,8 @@ myChart.on('legendselectchanged', ({ name }) => {
     </script>`;
 };
 
+
+
 const getMMdata = (id) => {
   const getmmCK = () => {
     const ck = $prs.get("慢慢买CK");
@@ -384,30 +591,19 @@ const getMMdata = (id) => {
   const apiCall = (url, buildBody) =>
     $http(reqOpts({ url, buildBody }))
       .then((resp) => {
-				const body = resp.json();
+        const body = resp.json();
         if (!url.endsWith("trendData") && body.code !== 2000) throw new Error(`${url}：${body.msg}`);
         return body;
       });
 
-  return apiCall(
-    "https://apapia-common.manmanbuy.com/SiteCommand/parse",
-    (set) =>
-      set({
-        methodName: "commonMethod",
-        searchKey: `https://item.jd.com/${id}.html`,
-      })
-  )
-    .then(({ result: { stteId, link } }) =>
-      apiCall(
-        "https://apapia-history-weblogic.manmanbuy.com/basic/v2/getItemBasicInfo",
+  return  apiCall(
+            "https://apapia-history-weblogic.manmanbuy.com/basic/getItemBasicInfo",
         (set) =>
           set({
             methodName: "getHistoryInfoJava",
-            searchKey: link,
-            stteId,
+            searchKey: `https://item.jd.com/${id}.html`,
           })
       )
-    )
     .then(({ result: { spbh, url } }) =>
       apiCall(
         "https://apapia-history-weblogic.manmanbuy.com/app/share",
@@ -451,6 +647,8 @@ const main = async () => {
     const hour = new Date().getHours();
     const isDark = hour >= 20 || hour < 6;
 
+    // 注释掉注入表格图的代码
+    // .inject(Table(result))
     Render
     .inject(JdLine(result))
     .inject(`<script>isDark=${isDark}</script>`)
@@ -469,7 +667,6 @@ function init(){CryptoJS=function(t,r){var n;if("undefined"!=typeof window&&wind
 function md5(word){return CryptoJS.MD5(word).toString();}
   
 function jsonToQueryString(jsonObject) {return Object.keys(jsonObject).map(key => `${encodeURIComponent(key)}=${encodeURIComponent(jsonObject[key])}`).join('&');}
-
 
 function jsonToCustomString(jsonObject){return Object.keys(jsonObject).filter(key=>jsonObject[key]!==''&&key.toLowerCase()!=='token').sort().map(key=>`${key.toUpperCase()}${jsonObject[key].toUpperCase()}`).join('');}
 
