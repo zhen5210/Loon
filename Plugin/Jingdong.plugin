@@ -8,7 +8,7 @@
 #!loon_version = 3.3.0(853)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Jingdong.png
-#!date = 2025-04-21 22:00
+#!date = 2025-04-23 09:00
 
 # 2024-12-29 02:12:10
 # https://kelee.one/Tool/Loon/Plugin/JD_remove_ads.plugin
@@ -23,7 +23,8 @@
 Manmanbuy-Cookie = switch, true, false, tag = 获取慢慢买Cookie, desc = 首次使用请先打开【慢慢买】APP，提示【获取ck成功🎉】即可正常比价。
 JDPrice-TitleEmbed = switch, false, true, tag = 京东比价-标题嵌入版, desc = 点击商品标题即可直接查看嵌入式历史价格
 JDPrice-DetailNotify = switch, false, true, tag = 京东比价-详情通知版, desc = 点击商品详情页通过弹窗通知查看历史价格
-JDPrice-DetailEmbed = switch, true, false, tag = 京东比价-详情嵌入版, desc = 点击商品详情页即可直接查看嵌入式历史价格
+JDPrice-DetailEmbed-Table = switch, true, false, tag = 京东比价-详情嵌入版（表格图）, desc = 点击商品详情页即可直接查看嵌入式历史价格
+JDPrice-DetailEmbed-Line = switch, false, true, tag = 京东比价-详情嵌入版（折线图）, desc = 点击商品详情页即可直接查看嵌入式历史价格
 
 [Rule]
 DOMAIN, dns.jd.com, REJECT
@@ -51,7 +52,9 @@ http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(wareBusin
 
 http-request ^https?:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html script-path = https://raw.githubusercontent.com/mw418/Loon/main/script/jd_price.js, timeout = 60, enable={JDPrice-DetailNotify}, tag = 京东比价-详情通知版
 
-http-response ^https?:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html script-path = https://raw.githubusercontent.com/wf021325/qx/master/js/jd_price.js, requires-body = true, timeout = 60, enable={JDPrice-DetailEmbed}, tag = 京东比价-详情嵌入版
+http-response ^https?:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html script-path = https://raw.githubusercontent.com/wf021325/qx/master/js/jd_price.js, requires-body = true, timeout = 60, enable={JDPrice-DetailEmbed-Table}, tag = 京东比价-详情嵌入版（表格图）
+
+http-response ^https?:\/\/in\.m\.jd\.com\/product\/graphext\/\d+\.html script-path = https://raw.githubusercontent.com/githubdulong/Script/master/jd_price.js, requires-body = true, timeout = 60, enable={JDPrice-DetailEmbed-Line}, tag = 京东比价-详情嵌入版（折线图）
 
 [MitM]
 hostname = api.m.jd.com, in.m.jd.com, apapia-sqk-weblogic.manmanbuy.com, m.360buyimg.com
