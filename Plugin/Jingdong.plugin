@@ -12,12 +12,12 @@
 
 # 2024-12-29 02:12:10
 # https://kelee.one/Tool/Loon/Plugin/JD_remove_ads.plugin
-# 2025-04-21
-# https://raw.githubusercontent.com/wf021325/qx/master/js/jd_price.js
+# 2025-04-22
+# https://github.com/wf021325/qx/blob/main/js/jd_price.js
 # 2025-04-23
-# https://raw.githubusercontent.com/mw418/Loon/main/script/jd_price.js
+# https://github.com/mw418/Loon/blob/main/plugin/jd_price.plugin
 # 2025-04-23
-# https://raw.githubusercontent.com/githubdulong/Script/master/jd_price.js
+# https://github.com/githubdulong/Script/blob/master/jd_price.js
 
 [Argument]
 Manmanbuy-Cookie = switch, true, false, tag = 获取慢慢买Cookie, desc = 首次使用请先打开【慢慢买】APP，提示【获取ck成功🎉】即可正常比价。
