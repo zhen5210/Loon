@@ -2,14 +2,14 @@
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-04-23 02:13:32
+# UPDATED: 2025-04-26 02:13:59
 # DOMAIN: 89
 # DOMAIN-KEYWORD: 36
-# DOMAIN-SUFFIX: 31354
+# DOMAIN-SUFFIX: 31352
 # IP-CIDR: 112
 # IP-CIDR6: 4
 # USER-AGENT: 46
-# TOTAL: 31641
+# TOTAL: 31639
 DOMAIN-SUFFIX,000webhost.com
 DOMAIN-SUFFIX,01.org
 DOMAIN-SUFFIX,02weqj32.com
@@ -12144,7 +12144,6 @@ DOMAIN-SUFFIX,gotgayporn.com
 DOMAIN-SUFFIX,gotgeeks.com
 DOMAIN-SUFFIX,gothdporn.com
 DOMAIN-SUFFIX,gotporn.com
-DOMAIN-SUFFIX,gotquestions.org
 DOMAIN-SUFFIX,gotraffic.net
 DOMAIN-SUFFIX,gotrusted.com
 DOMAIN-SUFFIX,gotw.ca
@@ -13950,7 +13949,6 @@ DOMAIN-SUFFIX,idiomconnection.com
 DOMAIN-SUFFIX,idlcoyote.com
 DOMAIN-SUFFIX,idnike.com
 DOMAIN-SUFFIX,idol-sagasukun.com
-DOMAIN-SUFFIX,idope.se
 DOMAIN-SUFFIX,idouga.com
 DOMAIN-SUFFIX,idras.ac.uk
 DOMAIN-SUFFIX,idreamx.com
@@ -19501,6 +19499,7 @@ DOMAIN-SUFFIX,newpppp.com
 DOMAIN-SUFFIX,newroutephd.ac.uk
 DOMAIN-SUFFIX,news.co.uk
 DOMAIN-SUFFIX,news.com.au
+DOMAIN-SUFFIX,news.mt.co.kr
 DOMAIN-SUFFIX,news.net.au
 DOMAIN-SUFFIX,news1.kr
 DOMAIN-SUFFIX,news100.com.tw
@@ -25750,7 +25749,6 @@ DOMAIN-SUFFIX,stxmosquitoproject.com
 DOMAIN-SUFFIX,stxmosquitoproject.net
 DOMAIN-SUFFIX,stxmosquitoproject.org
 DOMAIN-SUFFIX,sub147.com
-DOMAIN-SUFFIX,subhd.tv
 DOMAIN-SUFFIX,sublimedirectory.com
 DOMAIN-SUFFIX,sublimetext.com
 DOMAIN-SUFFIX,submarin.online
