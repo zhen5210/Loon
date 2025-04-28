@@ -8,7 +8,7 @@
 #!loon_version = 3.3.0(853)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/ShieldReject.png
-#!date = 2025-04-20 16:00
+#!date = 2025-04-20 22:00
 
 # 2025-03-21 16:30:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
@@ -2597,7 +2597,7 @@ https?:\/\/api\.taptapdada\.com\/startup\-logo\/v1\/combo\? reject-dict
 ^https?:\/\/mlol\.qt\.qq\.com\/go\/recommend\/(?!v2\/platactivity.*) reject
 
 # 浙里办 - portal.zjzwfw.gov.cn
-^https?:\/\/portal\.zjzwfw\.gov\.cn\/app_api\/appHome\/selectStartPic reject-200
+^https?:\/\/portal\.zjzwfw\.gov\.cn\/app_api\/appHome\/selectStartPic response-body-json-replace data {}
 
 # 郑好办 - app-izz.zhengzhou.gov.cn
 ^https?:\/\/app-izz\.zhengzhou\.gov\.cn:10019\/bizgw\/gateway\.do response-body-replace-regex "imgUrl19_5x9":".+?" "imgUrl19_5x9":""
