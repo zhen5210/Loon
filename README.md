@@ -81,7 +81,8 @@
 5. 提供双服Emby账号（神灯服、水母机场服）以及0.3倍率节点畅享观影。<br>
 6. 提供节点``免登流媒体``共享账号观看Netflix、HBO、PrimeVideo、PornHub。<br>
 7. 每日可在群组发送指令签到获取随机流量。<br>
-8. 更多详细内容教程，可在[官方博客公告](https://tutorial.aladdinnet.cc/)了解。<br>
+8. 独家首发流量转结系统，上月剩余流量转结并延长有效期至下个月。<br>
+9. 更多详细内容教程，可在[官方博客公告](https://tutorial.aladdinnet.cc/)了解。<br>
 
 - **套餐介绍**<br>
   <table>
@@ -131,13 +132,30 @@
           <td align=center>1~3888M</td>
       </tr>
   </table>
-
+  <table>
+      <tr>
+          <th width="120px" align=center>流量套餐</th>
+          <th width="80px" align=center>总流量</th>
+          <th width="80px" align=center>价格</th>
+          <th width="80px" align=center>有效期</th>
+          <th width="80px" align=center>日签到</th>
+          <th width="100px" align=center>流量重置</th>
+      </tr>
+      <tr>
+          <td align=center>888流量套餐</td>
+          <td align=center>100G</td>
+          <td align=center>¥88</td>
+	  <td align=center>888天</td>
+          <td align=center>1~1000M</td>
+          <td align=center>无重置</td>
+      </tr>
+  </table>
 - **购买方式**<br>
 点击[Aladdin官网](https://www.aladingnet.com/register?aff=ZX3lqgP6jj)购买，半年付9折优惠码`SemiAnnually`，年付8折优惠码`Annually`
 
 - **联系方式**<br>
 官方频道：[@AladdinNotice](https://t.me/AladdinNotice)<br>
-官方群组：联系[@AladdinNET_bot](https://t.me/AladdinNET_bot)，绑定链接进入群组<br>
+官方群组：联系[@AladdinNET_bot](https://t.me/AladdinNET_bot)，绑定订阅链接进入群组<br>
 
 ### **CloudFisher（云渔）**
 
