@@ -149,7 +149,7 @@
       <tr>
           <td align=center>888流量套餐</td>
           <td align=center>100G</td>
-          <td align=center>¥88</td>
+          <td align=center>¥100</td>
 	  <td align=center>888天</td>
           <td align=center>1~1000M</td>
           <td align=center>无重置</td>
