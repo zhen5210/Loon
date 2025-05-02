@@ -88,54 +88,59 @@
   <table>
       <tr>
           <th width="100px" align=center>周期套餐</th>
-          <th width="80px" align=center>月流量</th>
+          <th width="100px" align=center>初始流量</th>
           <th width="80px" align=center>月付</th>
           <th width="80px" align=center>季付</th>
           <th width="80px" align=center>半年付</th>
           <th width="80px" align=center>年付</th>
           <th width="100px" align=center>日签到</th>
+	  <th width="100px" align=center>流量重置</th>
       </tr>
       <tr>
           <td align=center>轻量套餐</td>
-          <td align=center>65G</td>
-          <td align=center>¥5</td>
-          <td align=center>¥15</td>
-          <td align=center>¥30</td>
-          <td align=center>¥60</td>
+          <td align=center>88G</td>
+          <td align=center>¥7.5</td>
+          <td align=center>¥22.5</td>
+          <td align=center>¥45</td>
+          <td align=center>¥90</td>
           <td align=center>1~1000M</td>
+          <td align=center>每月1号</td>
       </tr>
       <tr>
           <td align=center>基础套餐</td>
-          <td align=center>158G</td>
-          <td align=center>¥10</td>
-          <td align=center>¥30</td>
-          <td align=center>¥60</td>
-          <td align=center>¥120</td>
+          <td align=center>188G</td>
+          <td align=center>¥15</td>
+          <td align=center>¥45</td>
+          <td align=center>¥90</td>
+          <td align=center>¥180</td>
           <td align=center>1~2000M</td>
+          <td align=center>每月1号</td>
       </tr>
       <tr>
           <td align=center>高级套餐</td>
-          <td align=center>338G</td>
-          <td align=center>¥18</td>
-          <td align=center>¥54</td>
-          <td align=center>¥108</td>
-          <td align=center>¥216</td>
-          <td align=center>1~3000M</td>
-      </tr>
-      <tr>
-          <td align=center>豪华套餐</td>
-          <td align=center>638G</td>
+          <td align=center>388G</td>
           <td align=center>¥30</td>
           <td align=center>¥90</td>
           <td align=center>¥180</td>
           <td align=center>¥360</td>
+          <td align=center>1~3000M</td>
+          <td align=center>每月1号</td>
+      </tr>
+      <tr>
+          <td align=center>豪华套餐</td>
+          <td align=center>688G</td>
+          <td align=center>¥50</td>
+          <td align=center>¥150</td>
+          <td align=center>¥300</td>
+          <td align=center>¥600</td>
           <td align=center>1~3888M</td>
+          <td align=center>每月1号</td>
       </tr>
   </table>
   <table>
       <tr>
           <th width="120px" align=center>流量套餐</th>
-          <th width="80px" align=center>总流量</th>
+          <th width="100px" align=center>初始流量</th>
           <th width="80px" align=center>价格</th>
           <th width="80px" align=center>有效期</th>
           <th width="80px" align=center>日签到</th>
