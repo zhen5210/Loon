@@ -71,7 +71,7 @@ function Display(cnt) {
     return (score + risk);
 }
 
-// 极高风险🔴、高风险🟠 和 中风险🟡 低风险🟢
+// 极高风险🔴、高风险🟠 、 中风险🟡、 低风险🟢、未知风险 ⚪
 function E2C(cnt) {
     var res = "NA";
     if (cnt.indexOf("very high") != -1) {
@@ -82,6 +82,8 @@ function E2C(cnt) {
         res = "中风险 🟡";
     } else if (cnt.indexOf("low") != -1) {
         res = "低风险 🟢";
+    } else {
+        res = "未知风险 ⚪";
     }
     return res;
 }
