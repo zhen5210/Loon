@@ -8,13 +8,13 @@
 #!loon_version = 3.3.0(853)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Soul.png
-#!date = 2025-05-04 17:00
+#!date = 2025-05-04 18:00
 
 # 2024-08-15 19:00
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.snippet
 # 2024-11-28 00:00:00
 # https://kelee.one/Tool/Loon/Plugin/Soul_remove_ads.plugin
-# 2025-05-04 15:15:00
+# 2025-05-04 17:44:00
 # https://raw.githubusercontent.com/mist-whisper/Loon/master/Plugins/Soul_remove_ads.plugin
 
 [Argument]
@@ -36,7 +36,11 @@ story = switch, true, false, tag = 派对分类：情感故事, desc = 显示/�
 chat = switch, true, false, tag = 派对分类：闲聊唠嗑, desc = 显示/隐藏按钮
 heart = switch, true, false, tag = 派对分类：心动速配, desc = 显示/隐藏按钮
 
-picRead = switch, true, false, tag = 开启/关闭秘密武器, desc = 开启/关闭功能
+picRead = switch, true, false, tag = 阅后即焚, desc = 开启/关闭功能
+chatPri = switch, true, false, tag = 私聊免礼, desc = 开启/关闭功能
+guess = switch, true, false, tag = 派对猜你喜欢, desc = 开启/关闭功能
+vist = switch, true, false, tag = 主页访问数量提示, desc = 开启/关闭功能
+planetPage = switch, true, false, tag = 星球页面, desc = 开启/关闭功能
 
 [Rule]
 IP-CIDR, 8.210.3.170/32, PROXY
@@ -111,21 +115,21 @@ IP-CIDR, 47.75.72.47/32, PROXY
 ^https:\/\/api-user\.soulapp\.cn\/user\/desc\/getUserPersonalDesc reject-dict
 
 [Script]
-http-response ^https:\/\/chat-live\.soulapp\.cn\/square\/relation\/guideUserList script-path = https://raw.githubusercontent.com/mist-whisper/Script/master/Soul/Soul_remove_ads.js, requires-body = true, tag = [Soul]派对猜你喜欢
+http-response ^https:\/\/chat-live\.soulapp\.cn\/square\/relation\/guideUserList script-path = https://klraw.pages.dev/kelv1n1n/script/main/js/soul.js?token=209863, requires-body = true, tag = [Soul]派对猜你喜欢, enable={guess}
 
-http-response ^https:\/\/api-chat\.soulapp\.cn\/chat\/limitInfo script-path = https://raw.githubusercontent.com/mist-whisper/Script/master/Soul/Soul_remove_ads.js, requires-body = true, tag = [Soul]去除私聊限制
+http-response ^https:\/\/api-chat\.soulapp\.cn\/chat\/limitInfo script-path = https://klraw.pages.dev/kelv1n1n/script/main/js/soul.js?token=209863, requires-body = true, tag = [Soul]去除私聊限制, enable={chatPri}
 
-http-response ^https:\/\/api-user\.soulapp\.cn\/v6\/planet\/config script-path = https://raw.githubusercontent.com/mist-whisper/Script/master/Soul/Soul_remove_ads.js, requires-body = true, tag = [Soul]星球页面按钮, argument=[{soulMatch}, {voiceMatch}, {partyMatch}, {masked}, {maskedMatch}, {planet}]
+http-response ^https:\/\/api-user\.soulapp\.cn\/v6\/planet\/config script-path = https://klraw.pages.dev/kelv1n1n/script/main/js/soul.js?token=209863, requires-body = true, tag = [Soul]星球页面按钮, enable={planetPage}, argument=[{soulMatch}, {voiceMatch}, {partyMatch}, {masked}, {maskedMatch}, {planet}]
 
-http-response ^https:\/\/chat-live\.soulapp\.cn\/chatroom\/chatClassifyRoomList script-path = https://raw.githubusercontent.com/mist-whisper/Script/master/Soul/Soul_remove_ads.js, requires-body = true, tag = [Soul]派对列表中间横幅官方广告
+http-response ^https:\/\/chat-live\.soulapp\.cn\/chatroom\/chatClassifyRoomList script-path = https://klraw.pages.dev/kelv1n1n/script/main/js/soul.js?token=209863, requires-body = true, tag = [Soul]派对列表中间横幅官方广告
 
-http-response ^https:\/\/api-user\.soulapp\.cn\/user\/homepage\/metrics script-path = https://raw.githubusercontent.com/mist-whisper/Script/master/Soul/Soul_remove_ads.js, requires-body = true, tag = [Soul]个人主页数量提示
+http-response ^https:\/\/api-user\.soulapp\.cn\/user\/homepage\/metrics script-path = https://klraw.pages.dev/kelv1n1n/script/main/js/soul.js?token=209863, requires-body = true, tag = [Soul]个人主页数量提示, enable={vist}
 
-http-response ^https:\/\/post\.soulapp\.cn\/homepage\/tabs\/v2 script-path = https://raw.githubusercontent.com/mist-whisper/Script/master/Soul/Soul_remove_ads.js, requires-body = true, tag = [Soul]个人主页tab
+http-response ^https:\/\/post\.soulapp\.cn\/homepage\/tabs\/v2 script-path = https://klraw.pages.dev/kelv1n1n/script/main/js/soul.js?token=209863, requires-body = true, tag = [Soul]个人主页tab
 
-http-response ^https:\/\/chat-live\.soulapp\.cn\/chatroom\/getRoomTagInfo script-path = https://raw.githubusercontent.com/mist-whisper/Script/master/Soul/Soul_remove_ads.js, requires-body = true, tag = [Soul]派对频道列表, argument=[{hot}, {all}, {emotion}, {personal}, {play}, {interest} , {argue}, {story}, {chat}, {heart}]
+http-response ^https:\/\/chat-live\.soulapp\.cn\/chatroom\/getRoomTagInfo script-path = https://klraw.pages.dev/kelv1n1n/script/main/js/soul.js?token=209863, requires-body = true, tag = [Soul]派对频道列表, argument=[{hot},{all},{emotion},{personal},{play},{interest},{argue},{story},{chat},{heart}]
 
-http-response ^https:\/\/api-chat\.soulapp\.cn\/snapchat\/url script-path = https://raw.githubusercontent.com/mist-whisper/Script/master/Soul/Soul_remove_ads.js, requires-body = true, tag = [Soul]私聊阅后即焚, enable={picRead}
+http-response ^https:\/\/api-chat\.soulapp\.cn\/snapchat\/url script-path = https://klraw.pages.dev/kelv1n1n/script/main/js/soul.js?token=209863, requires-body = true, tag = [Soul]私聊阅后即焚, enable={picRead}
 
 [MitM]
 hostname = ssp.soulapp.cn, increase-openapi.soulapp.cn, data-collector.soulapp.cn, post.soulapp.cn, api-account.soulapp.cn, api-a.soulapp.cn, gateway-mobile-gray.soulapp.cn, api-user.soulapp.cn, chat-live.soulapp.cn, api-chat.soulapp.cn, 47.110.187.87
