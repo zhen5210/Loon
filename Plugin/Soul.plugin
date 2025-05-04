@@ -20,7 +20,7 @@
 [Argument]
 soulMatch = switch, true, false, tag = 灵魂匹配, desc = 显示/隐藏按钮
 voiceMatch = switch, true, false, tag = 语音匹配, desc = 显示/隐藏按钮
-partyMatch = switch, true, false, tag = 派对, desc = 显示/隐藏按钮
+partyMatch = switch, true, false, tag = 群聊派对, desc = 显示/隐藏按钮
 masked = switch, true, false, tag = 蒙面酒馆, desc = 显示/隐藏按钮
 maskedMatch = switch, true, false, tag = 蒙面匹配, desc = 显示/隐藏按钮
 planet = switch, true, false, tag = 星球实验室/兴趣群组, desc = 显示/隐藏按钮
