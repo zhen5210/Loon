@@ -453,6 +453,10 @@
     <tr>
         <td align=center>49</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Zhidemai.plugin">什么值得买</a></td>
+	<td align=center></td>
+	<td width="150px"></td>
+	<td align=center></td>
+	<td width="150px"></td>
     </tr>
 </table>
 <table>
@@ -527,6 +531,10 @@
     <tr>
         <td align=center>22</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/XPTV.plugin">XPTV</a></td>
+	<td align=center></td>
+	<td width="150px"></td>
+	<td align=center></td>
+	<td width="150px"></td>
     </tr>
 </table>
 <table>
@@ -576,9 +584,9 @@
 
 
 ## 鸣谢
-<table style="width:100%; height:100%;">
+<table width="100%" height="100%">
     <tr>
-        <td colspan="4" style="text-align:center;"><b>作者（按 GitHub 用户名字母顺序排序）</b></td>
+        <td colspan="4" align=center><b>作者（按 GitHub 用户名字母顺序排序）</b></td>
     </tr>
     <tr>
         <td width="200px"><a href="https://github.com/anker1209"><em>@anker1209</em></a></td>
@@ -649,6 +657,8 @@
     <tr>
         <td width="200px"><a href="https://github.com/zZPiglet"><em>@zZPiglet</em></a></td>
         <td width="200px"><a href="https://github.com/zmqcherish"><em>@zmqcherish</em></a></td>
+	<td width="200px"></td>
+	<td width="200px"></td>
     </tr>
 </table>
 
