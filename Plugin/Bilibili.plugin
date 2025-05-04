@@ -8,19 +8,19 @@
 #!loon_version = 3.3.0(853)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/BilibiliPink.png
-#!date = 2025-05-03 18:00
+#!date = 2025-05-04 20:00
 
-# 2025-04-25 23:12:32
+# 2025-05-04 18:22:02
 # https://kelee.one/Tool/Loon/Plugin/Bilibili_remove_ads.plugin
 # 2024-05-03
 # https://raw.githubusercontent.com/kokoryh/Sparkle/master/release/loon/plugin/bilibili.plugin
 # https://raw.githubusercontent.com/kokoryh/Sparkle/master/release/surge/module/bilibili.sgmodule
 
 [Argument]
-showUpList = select, "auto", "true", "false", tag = 动态-最常访问, desc = auto: 仅当列表中存在直播状态时显示; true: 始终显示; false: 始终隐藏;
-filterTopReplies = switch, true, false, tag = 评论区-置顶广告, desc = true: 开启过滤评论区置顶广告; false: 关闭过滤评论区置顶广告;
-enableAirborne = switch, true, false, tag = 空降助手, desc = true: 开启空降助手; false: 关闭空降助手;
-enableAirborneDm = switch, false, true, tag = 空降助手弹幕版（仅限iPad开启）, desc = true: 开启空降助手弹幕版; false: 关闭空降助手弹幕版;
+showUpList = select, "auto", "true", "false", tag = [动态]中[最常访问]的显示方式, desc = auto: 仅当列表中存在直播状态时显示; true: 始终显示; false: 始终隐藏;
+filterTopReplies = switch, true, false, tag = 过滤[评论区]置顶广告, desc = true: 开启; false: 关闭;
+enableAirborne = switch, true, false, tag = 过滤[视频内]插播广告, desc = true: 开启; false: 关闭;
+enableAirborneDm = switch, false, true, tag = 过滤[视频内]插播广告（仅限iPad版）, desc = true: 开启; false: 关闭;
 
 [Rule]
 # 阻止B站备用域名访问
