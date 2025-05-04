@@ -29,4 +29,4 @@ cookie = input, "", tag = cookie, desc = 输入Folo Cookie的值
 cron-folo = input, "0 9 * * *", tag = Folo Task, desc = 输入cron表达式来定时运行Folo Task
 
 [Script]
-cron {cron-folo} script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Folo/Folo.js, timeout = 60, tag = Folo Task, argument=[{csrfToken},{cookie}]
+cron {cron-folo} script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Folo/Folo.js, timeout = 60, tag = [Folo]定时任务, argument=[{csrfToken},{cookie}]

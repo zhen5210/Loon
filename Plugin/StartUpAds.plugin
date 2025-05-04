@@ -1,8 +1,8 @@
-#!name = 墨鱼去开屏
+#!name = 墨鱼去开屏2.0
 #!desc = 去除开屏广告，部分APP要清除缓存或者重新安装拦截广告才会生效!
 #!openUrl = 
 #!author = ddgksf2013[https://github.com/ddgksf2013]
-#!tag = 去广告
+#!tag = [墨鱼去开屏2.0]去广告
 #!system = 
 #!system_version = 
 #!loon_version = 3.3.0(853)
@@ -1155,158 +1155,158 @@
 [Script]
 # ======= 0~9 ======= #
 # 555 DianYing
-http-response ^https?:\/\/[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+){1,4}(:\d+)?\/api\/v\d\/movie\/index_recommend script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/555Ad.js, requires-body = true, tag = 555 DianYing
+http-response ^https?:\/\/[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+){1,4}(:\d+)?\/api\/v\d\/movie\/index_recommend script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/555Ad.js, requires-body = true, tag = [墨鱼去开屏2.0]555 DianYing
 
 # TieLu 12306
-http-response ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/12306.js, requires-body = true, tag = TieLu 12306
+http-response ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/12306.js, requires-body = true, tag = [墨鱼去开屏2.0]TieLu 12306
 
 # 123 YunPan
-http-response ^https?:\/\/www\.123pan\.com\/s\/[0-9a-zA-Z=_/-]+\.html script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/123pan.js, requires-body = true, tag = 123 YunPan
+http-response ^https?:\/\/www\.123pan\.com\/s\/[0-9a-zA-Z=_/-]+\.html script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/123pan.js, requires-body = true, tag = [墨鱼去开屏2.0]123 YunPan
 
 # 369 ChuXing
-http-response ^https?:\/\/api\.369cx\.cn\/v\d\/Splash\/GetSplashAd script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/dict.js, requires-body = true, tag = 369 ChuXing
+http-response ^https?:\/\/api\.369cx\.cn\/v\d\/Splash\/GetSplashAd script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/dict.js, requires-body = true, tag = [墨鱼去开屏2.0]369 ChuXing
 
 # ======= A ======= #
 # Amdc
-http-response ^http:\/\/amdc\.m\.taobao\.com script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/amdc.js, requires-body = true, tag = Amdc
+http-response ^http:\/\/amdc\.m\.taobao\.com script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/amdc.js, requires-body = true, tag = [墨鱼去开屏2.0]Amdc
 
 # Ahhhhfs
-http-response ^https?:\/\/.*(xbwpys|ahhhhfs)\.com\/($|[0-9a-zA-Z_/]+\/$) script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/ahfs.js, requires-body = true, tag = Ahhhhfs
+http-response ^https?:\/\/.*(xbwpys|ahhhhfs)\.com\/($|[0-9a-zA-Z_/]+\/$) script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/ahfs.js, requires-body = true, tag = [墨鱼去开屏2.0]Ahhhhfs
 
 # ======= B ======= #
 # BaiDuDiTu
-http-response ^https:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/baidumap.js, requires-body = true, tag = BaiDuDiTu
+http-response ^https:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/baidumap.js, requires-body = true, tag = [墨鱼去开屏2.0]BaiDuDiTu
 
 # BaiShiTV
-http-response ^https?:\/\/bp-api\.bestv\.com\.cn\/cms\/api\/audit\/home\/getCommonMixData script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/baishitv.js, requires-body = true, tag = BaiShiTV
+http-response ^https?:\/\/bp-api\.bestv\.com\.cn\/cms\/api\/audit\/home\/getCommonMixData script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/baishitv.js, requires-body = true, tag = [墨鱼去开屏2.0]BaiShiTV
 
 # ======= C ======= #
 # CaiXin
-http-response ^https?:\/\/gg\.caixin\.com\/s\?z=caixin&op=1&c=3362 script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/caixinads.js, requires-body = true, tag = CaiXin
+http-response ^https?:\/\/gg\.caixin\.com\/s\?z=caixin&op=1&c=3362 script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/caixinads.js, requires-body = true, tag = [墨鱼去开屏2.0]CaiXin
 
 # ======= D ======= #
 # DongQiuDi
-http-request ^https?:\/\/ap\.dongqiudi\.com\/plat\/v4 script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/echo-response.js, requires-body = true, tag = DongQiuDi, argument="text/json&url=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/dongqiudi.js"
+http-request ^https?:\/\/ap\.dongqiudi\.com\/plat\/v4 script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/echo-response.js, requires-body = true, tag = [墨鱼去开屏2.0]DongQiuDi, argument="text/json&url=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/dongqiudi.js"
 
 # DongHuaFeng
-# http-response ^https:\/\/api\.gamer\.com\.tw\/mobile_app\/anime\/v\d\/(token|m3u8).php\? script-path = https://raw.githubusercontent.com/NobyDa/Script/master/Bahamut/BahamutAnimeAds.js, requires-body = true, tag = DongHuaFeng
+# http-response ^https:\/\/api\.gamer\.com\.tw\/mobile_app\/anime\/v\d\/(token|m3u8).php\? script-path = https://raw.githubusercontent.com/NobyDa/Script/master/Bahamut/BahamutAnimeAds.js, requires-body = true, tag = [墨鱼去开屏2.0]DongHuaFeng
 
 # DingDongMaiCai
-http-response ^https?:\/\/maicai\.api\.ddxq\.mobi\/advert\/getAd script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = DingDongMaiCai, argument="rt_time":\d{2}->rt_time":40"
+http-response ^https?:\/\/maicai\.api\.ddxq\.mobi\/advert\/getAd script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = [墨鱼去开屏2.0]DingDongMaiCai, argument="rt_time":\d{2}->rt_time":40"
 
 # ======= F ======= #
 # FeiKeChaGuan
-http-response ^https?:\/\/.*flyert.*\/api\/mobile\/index\.php\?version=\d&mobile=yes&module=basicdata&type=forumlist script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = FeiKeChaGuan, argument="adv->ddgksf2013"
-http-response ^https?:\/\/.*flyert.*\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1 script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/fly.js, requires-body = true, tag = FeiKeChaGuan
+http-response ^https?:\/\/.*flyert.*\/api\/mobile\/index\.php\?version=\d&mobile=yes&module=basicdata&type=forumlist script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = [墨鱼去开屏2.0]FeiKeChaGuan, argument="adv->ddgksf2013"
+http-response ^https?:\/\/.*flyert.*\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1 script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/fly.js, requires-body = true, tag = [墨鱼去开屏2.0]FeiKeChaGuan
 
 # ======= H ======= #
 # HangLüZongHeng
-http-response ^https?:\/\/.*umetrip\.com\.cn\/gateway\/api\/umetrip\/native$ script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/hanglvzongheng.js, requires-body = true, tag = HangLüZongHeng
-# http-response ^https?:\/\/114\.115\.217\.129\/gateway\/api\/umetrip\/native$ script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/hanglvzongheng.js, requires-body = true, tag = HangLüZongHeng
+http-response ^https?:\/\/.*umetrip\.com\.cn\/gateway\/api\/umetrip\/native$ script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/hanglvzongheng.js, requires-body = true, tag = [墨鱼去开屏2.0]HangLüZongHeng
+# http-response ^https?:\/\/114\.115\.217\.129\/gateway\/api\/umetrip\/native$ script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/hanglvzongheng.js, requires-body = true, tag = [墨鱼去开屏2.0]HangLüZongHeng
 
 # ======= I ======= #
 # i3 ZongHeSheQu
-# http-response ^https?:\/\/www\.i3zh\.com script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = i3 ZongHeSheQu, argument="cm-pop-up-banners->ddgksf2013"
+# http-response ^https?:\/\/www\.i3zh\.com script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = [墨鱼去开屏2.0]i3 ZongHeSheQu, argument="cm-pop-up-banners->ddgksf2013"
 
 # IQIYI
-http-response ^https?:\/\/.*cupid\.iqiyi\.com\/mixer\? script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/iqiyi_open_ads.js, requires-body = true, tag = IQIYI
+http-response ^https?:\/\/.*cupid\.iqiyi\.com\/mixer\? script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/iqiyi_open_ads.js, requires-body = true, tag = [墨鱼去开屏2.0]IQIYI
 
 # IT ZhiJia
-http-response ^https?:\/\/napi\.ithome\.com\/api\/news\/indexv\d\/iphone script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/ithome.js, requires-body = true, tag = IT ZhiJia
+http-response ^https?:\/\/napi\.ithome\.com\/api\/news\/indexv\d\/iphone script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/ithome.js, requires-body = true, tag = [墨鱼去开屏2.0]IT ZhiJia
 
 # ======= J ======= #
 # JingXiTeJia
-http-response ^https?:\/\/api\.m\.jd\.com\/api\?functionId=delivery_show script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/startup.js, requires-body = true, tag = JingXiTeJia
+http-response ^https?:\/\/api\.m\.jd\.com\/api\?functionId=delivery_show script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/startup.js, requires-body = true, tag = [墨鱼去开屏2.0]JingXiTeJia
 
 # JingDong [Invalid]
-http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(hotWords|hotSearchTerms) script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/jd_json.js, requires-body = true, tag = JingDong
+http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(hotWords|hotSearchTerms) script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/jd_json.js, requires-body = true, tag = [墨鱼去开屏2.0]JingDong
 
 # JingDongLite
-http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = JingDongLite, argument="jdLiteAdvertisingVO->ddgksf2013"
-http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_SmartPush script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = JingDongLite, argument="pushData->ddgksf2013"
+http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = [墨鱼去开屏2.0]JingDongLite, argument="jdLiteAdvertisingVO->ddgksf2013"
+http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_SmartPush script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = [墨鱼去开屏2.0]JingDongLite, argument="pushData->ddgksf2013"
 
 # ======= K ======= #
 # KFC KenDeJi
-http-response ^https?:\/\/res.kfc.com.cn\/CRM\/kfcad\/apphome6\/apphome.*json script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = KFC KenDeJi, argument="bootStrapAd->ddgksf2013"
+http-response ^https?:\/\/res.kfc.com.cn\/CRM\/kfcad\/apphome6\/apphome.*json script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = [墨鱼去开屏2.0]KFC KenDeJi, argument="bootStrapAd->ddgksf2013"
 
 # KuAn
-http-response ^https?:\/\/api\.coolapk\.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList) script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/coolapk.js, requires-body = true, tag = KuAn
-http-response ^https?:\/\/api.coolapk.com\/v6\/main\/init script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/coolapk.js, requires-body = true, tag = KuAn
+http-response ^https?:\/\/api\.coolapk\.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList) script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/coolapk.js, requires-body = true, tag = [墨鱼去开屏2.0]KuAn
+http-response ^https?:\/\/api.coolapk.com\/v6\/main\/init script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/coolapk.js, requires-body = true, tag = [墨鱼去开屏2.0]KuAn
 
 # KuaKe
-http-response ^https?:\/\/open-cms-api\.(uc|quark)\.cn\/open-cms script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/quark.js, requires-body = true, tag = KuaKe
+http-response ^https?:\/\/open-cms-api\.(uc|quark)\.cn\/open-cms script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/quark.js, requires-body = true, tag = [墨鱼去开屏2.0]KuaKe
 
 # ======= M ======= #
 # ManManMai
-http-response ^https?:\/\/apapia-sqk\.manmanbuy\.com\/index_json\.ashx script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = ManManMai, argument="splashAD->ddgksf2013"
+http-response ^https?:\/\/apapia-sqk\.manmanbuy\.com\/index_json\.ashx script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = [墨鱼去开屏2.0]ManManMai, argument="splashAD->ddgksf2013"
 
 # ======= N ======= #
 # NongYeYinHang
-http-response ^https?:\/\/mobilepaas\.abchina\.com\.cn:441\/mgw\.htm script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/abchina.js, requires-body = true, tag = NongYeYinHang
+http-response ^https?:\/\/mobilepaas\.abchina\.com\.cn:441\/mgw\.htm script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/abchina.js, requires-body = true, tag = [墨鱼去开屏2.0]NongYeYinHang
 
 # ======= O ======= #
 # Oclean Care
-http-response ^https?:\/\/careapi\.oclean\.com\/mall\/v\d\/User\/GetUserCenter script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = Oclean Care, argument="banner"->ddgksf2013""
+http-response ^https?:\/\/careapi\.oclean\.com\/mall\/v\d\/User\/GetUserCenter script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = [墨鱼去开屏2.0]Oclean Care, argument="banner"->ddgksf2013""
 
 # ======= P ======= #
 # PuPuChaoShi
-http-response ^https?:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v\d\?position script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/pupumarket.js, requires-body = true, tag = PuPuChaoShi
+http-response ^https?:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v\d\?position script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/pupumarket.js, requires-body = true, tag = [墨鱼去开屏2.0]PuPuChaoShi
 
 # PingAnJianKangQuanQiuBan
-http-response ^https?:\/\/api\.jk\.cn\/m\.api script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/pinganads.js, requires-body = false, tag = PingAnJianKangQuanQiuBan
+http-response ^https?:\/\/api\.jk\.cn\/m\.api script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/pinganads.js, requires-body = false, tag = [墨鱼去开屏2.0]PingAnJianKangQuanQiuBan
 
 # ======= Q ======= #
 # QiDianYueDu
-http-response ^https?:\/\/apps\.teamair\.cn\/app\/version script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/qidian.js, requires-body = false, tag = QiDianYueDu
+http-response ^https?:\/\/apps\.teamair\.cn\/app\/version script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/qidian.js, requires-body = false, tag = [墨鱼去开屏2.0]QiDianYueDu
 
 # ======= S ======= #
 # Spotify
-http-request ^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/ script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js, timeout = 10, tag = Spotify-JSON
-http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js, requires-body = true, binary-body-mode = true, timeout = 10, tag = Spotify-Proto
+http-request ^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/ script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js, timeout = 10, tag = [墨鱼去开屏2.0]Spotify-JSON
+http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js, requires-body = true, binary-body-mode = true, timeout = 10, tag = [墨鱼去开屏2.0]Spotify-Proto
 
 # ShunFeng
-http-response ^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/queryInfoFlow script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/shunfeng_json.js, requires-body = true, tag = ShunFeng
+http-response ^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/queryInfoFlow script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/shunfeng_json.js, requires-body = true, tag = [墨鱼去开屏2.0]ShunFeng
 
 # Stay
-http-response ^https?:\/\/api\.shenyin\.name\/stay-fork\/browse\/featured$ script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/stay.js, requires-body = true, tag = Stay
+http-response ^https?:\/\/api\.shenyin\.name\/stay-fork\/browse\/featured$ script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/stay.js, requires-body = true, tag = [墨鱼去开屏2.0]Stay
 
 # ShiHuo
-http-response ^https?:\/\/sh-gateway\.shihuo\.cn\/v\d\/services\/sh-adapi\/home\/screen script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = ShiHuo, argument="egin_time":"\d{4}->egin_time":"2099"
+http-response ^https?:\/\/sh-gateway\.shihuo\.cn\/v\d\/services\/sh-adapi\/home\/screen script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = [墨鱼去开屏2.0]ShiHuo, argument="egin_time":"\d{4}->egin_time":"2099"
 
 # ShenMeZhiDeMai
-http-response ^https?:\/\/.*zdmimg\.com\/cpm\/api\/v\d\/advert_distribution\/get_all_advertise script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/smzdm_json.js, requires-body = true, tag = ShenMeZhiDeMai
+http-response ^https?:\/\/.*zdmimg\.com\/cpm\/api\/v\d\/advert_distribution\/get_all_advertise script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/smzdm_json.js, requires-body = true, tag = [墨鱼去开屏2.0]ShenMeZhiDeMai
 
 # ShenZhouZuChe
-http-response ^https?:\/\/apiproxy\.zuche\.com\/resource\/cardes\/toufang\/marketing script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/dict.js, requires-body = true, tag = ShenZhouZuChe
+http-response ^https?:\/\/apiproxy\.zuche\.com\/resource\/cardes\/toufang\/marketing script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/dict.js, requires-body = true, tag = [墨鱼去开屏2.0]ShenZhouZuChe
 
 # ======= T ======= #
 # TianFuTong
-http-response ^https?:\/\/tft-app\.cdtft\.cn\/gateway-customer\/tftapp\/tft-ams\/api\/appAd script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = TianFuTong, argument="officialAdvertResultVo->ddgksf2013"
+http-response ^https?:\/\/tft-app\.cdtft\.cn\/gateway-customer\/tftapp\/tft-ams\/api\/appAd script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = [墨鱼去开屏2.0]TianFuTong, argument="officialAdvertResultVo->ddgksf2013"
 
 # ======= V ======= #
 # V2EX
-http-response ^https?:\/\/.*v2ex\.com\/($|t\/\d+) script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/v2ex.js, requires-body = true, tag = V2EX
+http-response ^https?:\/\/.*v2ex\.com\/($|t\/\d+) script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/v2ex.js, requires-body = true, tag = [墨鱼去开屏2.0]V2EX
 
 # ======= W ======= #
 # WeiXin 110
-http-response ^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/weixin110.js, requires-body = true, tag = WeiXin 110
+http-response ^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/weixin110.js, requires-body = true, tag = [墨鱼去开屏2.0]WeiXin 110
 
 # WeiXin
-# http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = WeiXin, argument="advertisement->ddgksf2013"
+# http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = [墨鱼去开屏2.0]WeiXin, argument="advertisement->ddgksf2013"
 
 # WeiFeng
-# http-response ^https?:\/\/api\.wfdata\.club\/v\d\/search\/hot\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = WeiFeng, argument="dataList":\[.+\]->dataList":[{}]"
+# http-response ^https?:\/\/api\.wfdata\.club\/v\d\/search\/hot\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = [墨鱼去开屏2.0]WeiFeng, argument="dataList":\[.+\]->dataList":[{}]"
 
 # ======= X ======= #
 # XiaoTe
-http-response ^https?:\/\/lcen\.xiaote\.net\/api\/graphql script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = XiaoTe, argument="screenSplashAd->ddgksf2013"
+http-response ^https?:\/\/lcen\.xiaote\.net\/api\/graphql script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = [墨鱼去开屏2.0]XiaoTe, argument="screenSplashAd->ddgksf2013"
 
 # XiaoXiongBoFangQi
-http-response ^https?:\/\/apps\.workair\.cn\/app\/version script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = XiaoXiongBoFangQi, argument="ads"->ddgksf2013""
+http-response ^https?:\/\/apps\.workair\.cn\/app\/version script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = [墨鱼去开屏2.0]XiaoXiongBoFangQi, argument="ads"->ddgksf2013""
 
 # ======= Z ======= #
 # ZhiHu
-http-response ^https?:\/\/api\.zhihu\.com\/commercial_api.*launch_v2 script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/zhihu_openads.js, requires-body = true, tag = ZhiHu
+http-response ^https?:\/\/api\.zhihu\.com\/commercial_api.*launch_v2 script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/zhihu_openads.js, requires-body = true, tag = [墨鱼去开屏2.0]ZhiHu
 
 [MitM]
 hostname = apptec.leapmotor.cn, admin-app.edifier.com, ac1.dcloud.net.cn, *.weathercn.com, *.tianmu.mobi, *.ranfenghd.com, tiebac.baidu.com, adx.zuoyebang.com, www.hpoi.net.cn, cdn.web.chelaile.net.cn, www.ctm.net, yyfapi.huatu.com, pjlapi.paojd.cn, api.dnurse.com, sdk.tianmu.mobi, newsuperapp.ftms.com.cn, gw-app-gateway.gwmapp-w.com, *.zongheng.com, oneapp-api.faw-vw.com, creditcardapp.bankcomm.com, api.369cx.cn, api.xiaoheihe.cn, api.zcool.com.cn, api.livelab.com.cn, pinggai*.caixin.com, *.5eplay.com, app.duxiaoman.com, *.flyert.*, lop-proxy.jd.com, 101.227.139.118, i.zhaojinapp.com, patientgate.91160.com, iyes.youku.com, gateway.cotticoffee.com, app.jiantou8.com, capi.lkcoffee.com, www.123pan.com, api-access.pangolin-sdk-toutiao.*com, zjh5api.ott4china.com, napi.ithome.com, api.qd-metro.com, api.kurobbs.com, apiproxy.zuche.com, api.smart.jd.com, mobileapi.xiamenair.com, home.mi.com, apps.teamair.cn, cn-app.narwaltech.com, api2.picooc.com, file.mylyg.net, lens.leoao.com, www.ahzs10000.com, api.qbb6.com, *.zdmimg.com, cdns.chinastock.com.cn, api.futunn.com, api.ireader.mobi, www.xqpark.cn, api.jk.cn, api.moomoo.com, api.ys7.com, cq11344-app-https-api-1.ictun.com, hxqapi.hiyun.tv, m-adphone.wenhua.com.cn, *.fenbi.com, api.medlive.cn, smsrebuild1.mail.10086.cn, ad.mcloud.139.com, comapi.reader.qq.com, commontgw.reader.qq.com, fuwu.nhsa.gov.cn, compus.xiaofubao.com, *.ubixioe.com, bp-api.bestv.com.cn, app.ibuscloud.com, www.kujiale.com, mama.dxy.com, newapp2.szsmk.com, vidz.3hxq.cn, xapi.xinmanhua.net, jz.wacaijizhang.com, ads.closeli.cn, shop-api.retail.mi.com, gorgon.youdao.com, cdke.youdao.com, m.stock.pingan.com, *.1rtb.net, careapi.oclean.com, app.10099.com.cn, hc-ssp.sm.cn, apps.workair.cn, app-api.medsci.cn, ad.cj.sina.cn, app-cdn.2q10.com, api.merach.com, advertise.bczeducation.cn, notify.baicizhan.com, app.api.qjjfin.com, dynamicad.kfc.com.cn, ump.sz.creditcard.ecitic.com, *.didapinche.com, api.mcd.cn, comicapi.manhuashe.com, acs-m.freshippo.com, zjmbank.js96008.com, www.flyert.com, api.ys7.com, saad.ms.zhangyue.net, dj.palmestore.com, device-box.onethingpcs.com, *.anythinktech.com, api.xueqiu.com, 182.92.251.113, 101.201.175.228, switch.jumpvg.com, mobilepaas.abchina.com.cn, api-one-wscn.awtmt.com, restapi.iyunmai.com, maicai.api.ddxq.mobi, info.mina.mi.com, qadx.qinlinad.com, app-gateway.leisuapi.com, app.c.nf.migu.cn, app.flymodem.com.cn, hfapp-service.qweather.net, *.ahhhhfs.com, promotion.medlive.cn, mobads.baidu.com, entree-ws.igetget.com, axxd.xmseeyouyima.com, guide-acs.m.taobao.com, *.mting.info, ad.lofter.com, entry.ubixioe.com, *.v2ex.com, adv.ccb.com, client-api-v2.oray.com, www.pansearch.me, td.cgmcare.cn, *.yuanfudao.com, ad.mcloud.139.com, wallpaper.soutushenqi.com, 140.179.224.63, ap.dongqiudi.com, apapia-sqk.manmanbuy.com, *.tipatipa.xyz, superapp.xgimi.com, mix-api.camera360.com, api1.34580.com, api.wmpvp.com, gateway.abite.com, rengine-platform.llsapp.com, 1jietu.com, bbs-api.miyoushe.com, tcmobileapi.17usoft.com, m.msyc.cc, mgw.mpaas.cn-hangzhou.aliyuncs.com, ytmsout.radio.cn, api.kmovie.gifshow.com, igetcool-gateway.igetcool.com, *.xbwpys.com, open-cms-api.quark.cn, ftapi.10jqka.com.cn, wxa.wxs.qq.com, evs.500.com, j1.pupuapi.com, dq.dxy.cn, m.you.163.com, open-cms-api.uc.cn, *.yuxueyuan.cn, pan-api.bitqiu.com, client.tujia.com, vip7.fzwdyy.cn, *.qyfxgd.cn, *.weilai555.com, *.ecoliving168.com, *cupid.iqiyi.com, gateway.36kr.com, shopapi.io.mi.com, tk.lanjiyin.com, gongdu.youshu.cc, api.21ec74.com, ztoread.ziroom.com, iphone.ac.qq.com, web.chelaile.net.cn, gd.10086.cn, api.00bang.cn, app.hbooker.com, api.sfacg.com, newclient.map.baidu.com, api3.cls.cn, gateway-api.dushu365.com, p0.pipi.cn, jdread-api.jd.com, ms.jr.jd.com, bdsp-x.jd.com, dsp-x.jd.com, api.m.jd.com, router-app-api.jdcloud.com, app.homeinns.com, cdn-evone-ceph.echargenet.com, gg.caixin.com, app-gw.csdn.net, api.gameplus.qq.com, mrobot.pconline.com.cn, djcapp.game.qq.com, mxsa.mxbc.net, cn-acs.m.cainiao.com, zjdr666.com, api.caiyunapp.com, api.ahmobile.cn, gx.10086.cn, emdcad*.eastmoney.com, api-sams.walmartmobile.cn, creditcardapp.bankcomm.cn, lban.spdb.com.cn, adapi.izuiyou.com, i.ys7.com, apps.api.ke.com, api.yonghuivip.com, access.mypikpak.com, gateway.shouqiev.com, res.pizzahut.com.cn, api.caijingmobile.com, 3g.csair.com, client-api.oray.com, bgw.xinyue.qq.com, api-new.app.acfun.cn, m.client.10010.com, open.fitdays.cn, gha.ghac.cn, sh-gateway.shihuo.cn, wcprd.hilton.com, ad.12306.cn, 103.91.210.141, adx-cn.anythinktech.com, js-ad.ayximgs.com, api.dangdang.com, pzoap.moedot.com, pipi.4kya.com, vip7.fzwdyy.cn, sdk.alibaba.com.ailbaba.me, tft-app.cdtft.cn, bgw.xinyue.qq.com, pan.baidu.com, yunbusiness.ccb.com, client.app.coc.10086.cn, t1.market.xiaomi.com, api.m.mi.com, app.zhuanzhuan.com, api.cloud.189.cn, appwk.baidu.com, us.l.qq.com, open.e.kuaishou.com, mi.gdt.qq.com, adm.10jqka.com.cn, a.qiumibao.com, api.tipsoon.com, b.appsimg.com, ios.sspai.com, zconfig.alibabausercontent.com, api.touker.com, mpcs.suning.com, api.yangkeduo.com, easyreadfs.nosdn.127.net, sp.kaola.com, gw.kaola.com, mime.baidu.com, learn.chaoxing.com, mapi.dangdang.com, api.dangdang.com, open.e.kuaishou.com, client.qunar.com, mpos-pic.helipay.com, dili.bdatu.com, wap.ngchina.cn, ih2.ireader.com, adpai.thepaper.cn, api.haohaozhu.cn, list-app-m.i4.cn, api.xiachufang.com, peisongapi.meituan.com, *gaoqingdianshi.com, *.kakamobi.cn, api.jxedt.com, slapi.oray.net, r.inews.qq.com, app.yinxiang.com, mapi.appvipshop.com, syh.zybang.com, cdn.cmgadx.com, api.internetofcity.cn, img.meituan.net, lcen.xiaote.net, venus.yhd.com, api.shenyin.name, mage*.if.qidian.com, god.gameyw.netease.com, m.ibuscloud.com, e.dangdang.com, app2.autoimg.cn, adproxy.autohome.com.cn, *.umetrip.com, explorer.tratao.com, overseas.weico.cc, 118.178.214.118, 182.92.251.113, 120.241.*, dapis.mting.info, acs.m.taobao.com, open3.vistastory.com, ssp.dzh.com.cn, www.meituan.com, client.mail.163.com, api.izuiyou.com, appapi.huazhu.com, api.wfdata.club, interface*.music.163.com, api.psy-1.com, res.kfc.com.cn, security.wechat.com, weixin110.qq.com, cdn.*.chelaileapp.cn, api.coolapk.com, app3.qdaily.com, daoyu.sdo.com, img.jiemian.com, ccsp-egmas.sf-express.com, *.laichon.com, app.ap.d3yuiw4.com, www.i3zh.com, api.yikaobang.com.cn, api-ad-product.huxiu.com, jad-api.jin10.com, mob.mddcloud.com.cn, appactive.1234567.com.cn, rtbapi.douyucdn.cn, service.busi.inke.cn, gab.122.gov.cn, dispatcher.camera360.com, app.api.versa-ai.com, open.taou.com, api.taou.com, track.mm.taou.com, app.dewu.com, data-collector.soulapp.cn, api.gamer.com.tw, beta-api.crunchyroll.com, api.vistopia.com.cn, pss.txffp.com, m.sd.10086.cn, helper.2bulu.com, 47.100.65.202, api.weibo.cn, mapi.weibo.com, *.uve.weibo.com, new.vip.weibo.cn, wap.js.10086.cn, tagit.hyhuo.com, top-widgets-api.xiaozujian.com, *mangaapi.manhuaren.*, apis.lifeweek.com.cn, support.you.163.com, yanxuan.nosdn.127.net, *.peopleapp.com, new-app-api.ylyk.com, gw.aihuishou.com, *.58cdn.com.cn, app.58.com, api.zhihu.com, creditcardapp.bankcomm.com, res.xiaojukeji.com, 116.85.2.15, 116.85.2.14, 212.129.159.79, lchttpapi.xczim.com, business.msstatic.com, api.kkmh.com, *.chelaile.net.cn, api.jr.mi.com, api.m.mi.com, guanyu.longfor.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, m.tuniu.com, mapi.mafengwo.cn, api.xiaoyi.com, api.douban.com, otheve.beacon.qq.com, mapi.sfbest.com, api.mwee.cn, sso.ifanr.com, s3plus.meituan.net, flowplus.meituan.net, p*.meituan.net, testflight.apple.com, wmapi.meituan.com, appconf.mail.163.com, dl-cu-hz.lechange.cn, fbchina.flipchina.cn, zone.guiderank-app.com, homefront.qunar.com, afd.baidu.com, ma-adx.ctrip.com, mbd.baidu.com, img.rr.tv, api.rr.tv, *.hoopchina.com, goblin.hupu.com, spclient.wg.spotify.com

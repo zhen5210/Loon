@@ -118,10 +118,10 @@ DOMAIN, et.tanx.com, REJECT
 
 [Script]
 # 解锁迅雷会员
-http-response ^https:\/\/xluser-ssl\.xunlei\.com\/xluser\.core\.login\/v3\/getuserinfo script-path = https://raw.githubusercontent.com/Marol62926/MarScrpt/main/xunlei.js, requires-body = true, tag = 解锁迅雷会员
+http-response ^https:\/\/xluser-ssl\.xunlei\.com\/xluser\.core\.login\/v3\/getuserinfo script-path = https://raw.githubusercontent.com/Marol62926/MarScrpt/main/xunlei.js, requires-body = true, tag = [迅雷云盘]解锁会员
 
 # 精简我的页面
-http-response ^https:\/\/conf-m-ssl\.xunlei\.com\/external\/ script-path = https://kelee.one/Resource/Script/XunLei/XunLei_remove_ads.js, requires-body = true, tag = 精简我的页面
+http-response ^https:\/\/conf-m-ssl\.xunlei\.com\/external\/ script-path = https://kelee.one/Resource/Script/XunLei/XunLei_remove_ads.js, requires-body = true, tag = [迅雷云盘]精简我的页面
 
 [MitM]
 hostname = api-shoulei-ssl.xunlei.com, conf-m-ssl.xunlei.com, xluser-ssl.xunlei.com

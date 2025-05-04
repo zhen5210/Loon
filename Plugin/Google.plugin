@@ -21,7 +21,7 @@
 ^https?:\/\/translate\.google\.cn 307 https://translate.google.com
 
 [Script]
-http-response ^https:\/\/www\.google\.com(?:\.[a-z]+|)\/(?:search\?(?:|.+?&)q=|$) script-path = https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Google_CAPTCHA.js, requires-body = true, timeout = 30, tag = Google人机验证
+http-response ^https:\/\/www\.google\.com(?:\.[a-z]+|)\/(?:search\?(?:|.+?&)q=|$) script-path = https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Google_CAPTCHA.js, requires-body = true, timeout = 30, tag = [Google]人机验证
 
 [MitM]
 hostname = *.google.cn, *.g.cn, www.google.com*

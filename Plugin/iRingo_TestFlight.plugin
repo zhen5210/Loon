@@ -25,9 +25,9 @@ LogLevel = select, "WARN", "OFF", "ERROR", "INFO", "DEBUG", "ALL", tag = [调试
 skip-proxy = iosapps.itunes.apple.com
 
 [Script]
-http-request ^https?:\/\/testflight\.apple\.com\/ script-path = https://github.com/NSRingo/TestFlight/releases/latest/download/request.bundle.js, requires-body = true, tag = iRingo.TestFlight.request, argument=[{CountryCode},{MultiAccount},{Universal},{AlwaysShowInstall},{MergeNotifications},{LogLevel}]
+http-request ^https?:\/\/testflight\.apple\.com\/ script-path = https://github.com/NSRingo/TestFlight/releases/latest/download/request.bundle.js, requires-body = true, tag = [iRingo_TestFlight]Request, argument=[{CountryCode},{MultiAccount},{Universal},{AlwaysShowInstall},{MergeNotifications},{LogLevel}]
 
-http-response ^https?:\/\/testflight\.apple\.com\/ script-path = https://github.com/NSRingo/TestFlight/releases/latest/download/response.bundle.js, requires-body = true, tag = iRingo.TestFlight.response, argument=[{CountryCode},{MultiAccount},{Universal},{AlwaysShowInstall},{MergeNotifications},{LogLevel}]
+http-response ^https?:\/\/testflight\.apple\.com\/ script-path = https://github.com/NSRingo/TestFlight/releases/latest/download/response.bundle.js, requires-body = true, tag = [iRingo_TestFlight]Response, argument=[{CountryCode},{MultiAccount},{Universal},{AlwaysShowInstall},{MergeNotifications},{LogLevel}]
 
 [MitM]
 hostname = testflight.apple.com
