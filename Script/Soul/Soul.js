@@ -33,22 +33,22 @@ if (url.indexOf("/chat/limitInfo") != -1) {
     };
 
     let resultArray = [];
-    if (soulMatch) {
+    if (soulMatch == false) {
         resultArray.push(sortIdMap.soulMatch);
     }
-    if (voiceMatch) {
+    if (voiceMatch == false) {
         resultArray.push(sortIdMap.voiceMatch);
     }
-    if (partyMatch) {
+    if (partyMatch == false) {
         resultArray.push(sortIdMap.partyMatch);
     }
-    if (masked) {
+    if (masked == false) {
         resultArray.push(sortIdMap.masked);
     }
-    if (maskedMatch) {
+    if (maskedMatch == false) {
         resultArray.push(sortIdMap.maskedMatch);
     }
-    if (planet) {
+    if (planet == false) {
         resultArray.push(sortIdMap.planet);
     }
     
@@ -136,34 +136,34 @@ if (url.indexOf("/chat/limitInfo") != -1) {
     let resultArray = [];
 
     // 检查每个变量，如果为 true 则将对应的 id 添加到结果数组中
-    if (hot) {
+    if (hot == false) {
         resultArray.push(idMap.hot);
     }
-    if (all) {
+    if (all == false) {
         resultArray.push(idMap.all);
     }
-    if (emotion) {
+    if (emotion == false) {
         resultArray.push(idMap.emotion);
     }
-    if (personal) {
+    if (personal == false) {
         resultArray.push(idMap.personal);
     }
-    if (play) {
+    if (play == false) {
         resultArray.push(idMap.play);
     }
-    if (interest) {
+    if (interest == false) {
         resultArray.push(idMap.interest);
     }
-    if (argue) {
+    if (argue == false) {
         resultArray.push(idMap.argue);
     }
-    if (story) {
+    if (story == false) {
         resultArray.push(idMap.story);
     }
-    if (chat) {
+    if (chat == false) {
         resultArray.push(idMap.chat);
     }
-    if (heart) {
+    if (heart == false) {
         resultArray.push(idMap.heart);
     }
     obj.data.res = obj.data.res.filter(t => resultArray.includes(t.id));
