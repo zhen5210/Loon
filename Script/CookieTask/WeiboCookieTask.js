@@ -174,7 +174,8 @@ function getsign() {
         $.get(opt, async(error, resp, data) => {
             let result = JSON.parse(data)
             if (result.status == 10000) {
-                wbsign = `每日签到：连续签到 ${result.data.continuous} 天，${result.data.desc}`
+                // wbsign = `每日签到：连续签到 ${result.data.continuous} 天，${result.data.desc}`
+                wbsign = `每日签到：连续签到 ${result.data.continuous} 天`
             } else if (result.errno == 30000) {
                 wbsign = `每日签到：重复签到`
             } else if (result.status == 90005) {

@@ -8,7 +8,7 @@
 #!loon_version = 3.3.0(853)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Notifyman.png
-#!date = 2025-05-05 09:00
+#!date = 2025-05-06 01:00
 
 # 2024-05-18
 # https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js
@@ -40,9 +40,9 @@ Task-weibo = switch, true, false, tag = [微博]每日签到Task, desc = 定时�
 Cron-weibo = input, "0 0 9 * * *", tag = [微博]定时参数Cron, desc = 输入Cron表达式来定时运行[微博]每日签到Task
 
 # Soul
-Cookie-soul = switch, true, false, tag = [Soul]每日金币签到Token, desc = 获取[Soul]每日金币签到Token
-Task-soul = switch, true, false, tag = [Soul]每日金币签到Task, desc = 定时运行[Soul]每日金币签到Task
-Cron-soul = input, "0 0 9 * * *", tag = [Soul]定时参数Cron, desc = 输入Cron表达式来定时运行[Soul]每日金币签到Task
+# Cookie-soul = switch, true, false, tag = [Soul]每日金币签到Token, desc = 获取[Soul]每日金币签到Token
+# Task-soul = switch, true, false, tag = [Soul]每日金币签到Task, desc = 定时运行[Soul]每日金币签到Task
+# Cron-soul = input, "0 0 9 * * *", tag = [Soul]定时参数Cron, desc = 输入Cron表达式来定时运行[Soul]每日金币签到Task
 
 # 爱奇艺
 # Cookie-iqiyi = switch, true, false, tag = [爱奇艺]每日会员签到Token, desc = 获取[爱奇艺]每日会员签到Token
@@ -69,8 +69,8 @@ http-request ^https?:\/\/api\.weibo\.cn\/\d\/users\/show script-path = https://r
 cron {Cron-weibo} script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CookieTask/WeiboCookieTask.js, tag = [微博]每日签到Task, enable={Task-weibo}
 
 # Soul - increase-openapi.soulapp.cn
-http-request ^https:\/\/increase-openapi\.soulapp\.cn\/increase\/sign\/userSign script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/SoulSing.js, tag = [Soul]每日金币签到Token, enable={Cookie-soul}
-cron {Cron-soul} script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/SoulSing.js, tag = [Soul]每日金币签到Task, enable={Task-soul}
+#http-request ^https:\/\/increase-openapi\.soulapp\.cn\/increase\/sign\/userSign script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/SoulSing.js, tag = [Soul]每日金币签到Token, enable={Cookie-soul}
+#cron {Cron-soul} script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/SoulSing.js, tag = [Soul]每日金币签到Task, enable={Task-soul}
 
 # 爱奇艺 - passport.iqiyi.com
 # http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CookieTask/IQIYICookieTask.js, tag = [爱奇艺]每日会员签到Token, enable={Cookie-iqiyi}
@@ -82,4 +82,4 @@ http-request ^https?:\/\/m.bilibili.com/$ script-path = https://raw.githubuserco
 cron {Cron-bilibili} script-path = https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag = [哔哩哔哩]每日等级任务Task, enable={Task-bilibili}
 
 [MitM]
-hostname = payapp.weixin.qq.com, auth.alipan.com, auth.aliyundrive.com, api.weibo.cn, increase-openapi.soulapp.cn, cm.bilibili.com, m.bilibili.com
+hostname = payapp.weixin.qq.com, auth.alipan.com, auth.aliyundrive.com, api.weibo.cn, cm.bilibili.com, m.bilibili.com
