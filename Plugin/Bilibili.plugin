@@ -18,9 +18,9 @@
 
 [Argument]
 showUpList = select, "auto", "true", "false", tag = [动态]中[最常访问]的显示方式, desc = auto: 仅当列表中存在直播状态时显示; true: 始终显示; false: 始终隐藏;
-filterTopReplies = switch, true, false, tag = 过滤[评论区]置顶广告, desc = true: 开启; false: 关闭;
-enableAirborne = switch, true, false, tag = 过滤[视频内]插播广告, desc = true: 开启; false: 关闭;
-enableAirborneDm = switch, false, true, tag = 过滤[视频内]插播广告（仅限iPad版）, desc = true: 开启; false: 关闭;
+filterTopReplies = switch, true, false, tag = 过滤[评论区]置顶评论广告, desc = true: 开启; false: 关闭;
+enableAirborne = switch, true, false, tag = [空降助手]跳过[视频内]插播广告, desc = true: 开启; false: 关闭;
+enableAirborneDm = switch, false, true, tag = [空降助手]（仅限iPad开启）, desc = true: 开启; false: 关闭;
 
 [Rule]
 # 阻止B站备用域名访问
