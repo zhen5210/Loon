@@ -894,15 +894,15 @@ DOMAIN, ad.tencentmusic.com
 DOMAIN, adstats.tencentmusic.com
 DOMAIN, tmead.y.qq.com
 DOMAIN-SUFFIX, rqd.qq.com
- DOMAIN-SUFFIX, wup.imtt.qq.com
- DOMAIN-SUFFIX, gdt.qq.com
- DOMAIN-SUFFIX, android.rqd.qq.com
- DOMAIN-SUFFIX, e.qq.com
- DOMAIN-SUFFIX, v.gdt.qq.com
- DOMAIN, amsweb-cdn-gz-1258344696.file.myqcloud.com
- DOMAIN, wallpaper-1258344696.file.myqcloud.com
- DOMAIN, xs.gdt.qq.com
- IP-CIDR, 120.222.240.171/32, no-resolve
+DOMAIN-SUFFIX, wup.imtt.qq.com
+DOMAIN-SUFFIX, gdt.qq.com
+DOMAIN-SUFFIX, android.rqd.qq.com
+DOMAIN-SUFFIX, e.qq.com
+DOMAIN-SUFFIX, v.gdt.qq.com
+DOMAIN, amsweb-cdn-gz-1258344696.file.myqcloud.com
+DOMAIN, wallpaper-1258344696.file.myqcloud.com
+DOMAIN, xs.gdt.qq.com
+IP-CIDR, 120.222.240.171/32, no-resolve
 
 # 蜻蜓FM
 DOMAIN, ad.qingting.fm
@@ -1459,23 +1459,23 @@ DOMAIN, ads.yahoo.com
 DOMAIN, ads.yahoo.de
 
 # 优酷
-DOMAIN-SUFFIX, sm.cn
- DOMAIN-SUFFIX, acz.youku.com
- DOMAIN-SUFFIX, adx-core.youku.com
- DOMAIN-SUFFIX, adx-open-service.youku.com
- DOMAIN-SUFFIX, rhdc-acs.youku.com
- DOMAIN-SUFFIX, partner.uc.cn
- DOMAIN-SUFFIX, ubixioe.com
- DOMAIN-SUFFIX, uczzd.cn
- DOMAIN-SUFFIX, ranfenghd.com
- DOMAIN-SUFFIX, zconfig.alibabausercontent.com
- DOMAIN-SUFFIX, bgg.baidu.com
- DOMAIN-SUFFIX, gdt.qq.com
- DOMAIN-SUFFIX, sdk.e.qq.com
- DOMAIN-SUFFIX, mazu.m.qq.com
- DOMAIN-SUFFIX, snowflake.qq.com
- DOMAIN-SUFFIX, cad.youku.com
- DOMAIN-SUFFIX, sjarvis.taobao.com
+DOMAIN-SUFFIX, api.sm.cn
+DOMAIN-SUFFIX, acz.youku.com
+DOMAIN-SUFFIX, adx-core.youku.com
+DOMAIN-SUFFIX, adx-open-service.youku.com
+DOMAIN-SUFFIX, rhdc-acs.youku.com
+DOMAIN-SUFFIX, partner.uc.cn
+DOMAIN-SUFFIX, ubixioe.com
+DOMAIN-SUFFIX, uczzd.cn
+DOMAIN-SUFFIX, ranfenghd.com
+DOMAIN-SUFFIX, zconfig.alibabausercontent.com
+DOMAIN-SUFFIX, bgg.baidu.com
+DOMAIN-SUFFIX, gdt.qq.com
+DOMAIN-SUFFIX, sdk.e.qq.com
+DOMAIN-SUFFIX, mazu.m.qq.com
+DOMAIN-SUFFIX, snowflake.qq.com
+DOMAIN-SUFFIX, cad.youku.com
+DOMAIN-SUFFIX, sjarvis.taobao.com
 DOMAIN, adsmind.ugdtimg.com
 DOMAIN, amdc.m.youku.com
 DOMAIN, apiv4-iyes.youku.com
@@ -1493,7 +1493,7 @@ DOMAIN-SUFFIX, ad.api.3g.tudou.com
 DOMAIN-SUFFIX, ad.api.3g.youku.com
 DOMAIN-SUFFIX, ad.api.mobile.youku.com
 DOMAIN-SUFFIX, store.tv.api.3g.youku.com
- DOMAIN-SUFFIX, store.xl.api.3g.youku.com
+DOMAIN-SUFFIX, store.xl.api.3g.youku.com
 DOMAIN-SUFFIX, a-dxk.play.api.3g.youku.com
 DOMAIN-SUFFIX, b.smartvideo.youku.com
 DOMAIN-SUFFIX, c.yes.youku.com
