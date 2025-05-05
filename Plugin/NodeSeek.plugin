@@ -16,16 +16,17 @@
 # https://gist.githubusercontent.com/Sliverkiss/18bd01be356360a8065a21ea71685ad3/raw/5b6b1b8ff6f96c35bf5c011abe645e3ddd5a5e91/sliverkiss.boxjs.json
 
 [Argument]
-CookieScript-nodeseek = switch, true, false, tag = NodeSeek Token, desc = 是否启用NodeSeek Token脚本来获取Token
-cron-nodeseek = input, "0 7 0 * * *", tag = NodeSeek Task, desc = 输入cron表达式来定时运行NodeSeek Task
+Cookie-nodeseek = switch, true, false, tag = [NodeSeek]每日签到Token, desc = 获取[NodeSeek]每日签到Token
+Task-nodeseek = switch, true, false, tag = [NodeSeek]每日签到Task, desc = 定时运行[NodeSeek]每日签到Task
+Cron-nodeseek = input, "0 0 9 * * *", tag = [NodeSeek]定时参数Cron, desc = 输入Cron表达式来定时运行[NodeSeek]每日签到Task
 
 [Rule]
 DOMAIN, www.nodeseek.com, PROXY
 DOMAIN-SUFFIX, nodeseek.com, PROXY
 
 [Script]
-http-response ^https:\/\/www\.nodeseek\.com\/api\/account\/getInfo\/.+\?readme=1&signature=1&phone=1 script-path = https://gist.githubusercontent.com/Sliverkiss/2b5acc2c4960dd06618c6912302c2c7f/raw/nodeseek.js, requires-body = true, timeout = 60, enabled = {CookieScript-nodeseek}, tag = [NodeSeek]获取Token
-cron {cron-nodeseek} script-path = https://gist.githubusercontent.com/Sliverkiss/2b5acc2c4960dd06618c6912302c2c7f/raw/nodeseek.js, timeout = 60, tag = [NodeSeek]定时任务
+http-response ^https:\/\/www\.nodeseek\.com\/api\/account\/getInfo\/.+\?readme=1&signature=1&phone=1 script-path = https://gist.githubusercontent.com/Sliverkiss/2b5acc2c4960dd06618c6912302c2c7f/raw/nodeseek.js, requires-body = true, timeout = 60, tag = [NodeSeek]每日签到Token, enabled={Cookie-nodeseek}
+cron {Cron-nodeseek} script-path = https://gist.githubusercontent.com/Sliverkiss/2b5acc2c4960dd06618c6912302c2c7f/raw/nodeseek.js, timeout = 60, tag = [NodeSeek]每日签到Task, enabled={Task-nodeseek}
 
 [MitM]
 hostname = www.nodeseek.com
