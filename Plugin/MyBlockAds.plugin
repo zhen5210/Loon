@@ -8,7 +8,7 @@
 #!loon_version = 3.3.0(853)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/MyBlockAds.png
-#!date = 2025-04-30 22:30
+#!date = 2025-05-06 16:15
 
 [Rule]
 # ======= 0 ======= #
@@ -480,6 +480,9 @@ URL-REGEX, "^http:\/\/\w{32}\.jddebug\.com\/diagnose\?", REJECT
 # 网上国网 //osg-service.sgcc.com.cn
 ^https:\/\/osg-service\.sgcc\.com\.cn:18600\/emss-pfa-appset-front\/bootpageoutter\/ reject-dict
 
+# 小宇宙 //api.xiaoyuzhoufm.com
+^https:\/\/api\.xiaoyuzhoufm\.com\/v1\/flash-screen\/list reject-dict
+
 # 小米商城 //api.m.mi.com, shop-api.retail.mi.com
 ^https:\/\/api\.m\.mi\.com\/v1\/order\/expressView response-body-json-del data.bottom.ad_info
 ^https:\/\/api\.m\.mi\.com\/(?:v1\/(?:app\/popup_info|home\/page_feed|misearch\/search_input)|v2\/search\/search_default) reject-dict
@@ -552,4 +555,4 @@ http-response ^https:\/\/ad\.mcloud\.139\.com\/advertapi\/adv-filter\/ script-pa
 http-response ^https:\/\/jzts\.cmpassport\.com\/personalized\/getPushContent script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/MyBlockAds/Cloud139.js, requires-body = true, tag = [MyBlockAds]中国移动云盘
 
 [MitM]
-hostname = wx.17u.cn, web.meituan.com, npay.meituan.com, a1d5b283e-wx621112590b635086.sh.wxgateway.com, apimobile.meituan.com, app-v1.ecoliving168.com, 852b95d36.xwlpk.cn, list-app-m.i4.cn, tiebac.baidu.com, tieba.baidu.com, 2023.redircdn.com, www.washpayer.com, emdcadvertise.eastmoney.com, emdcadvertisepj.eastmoney.com, swdlcdn.eastmoney.com, api.douban.com, img3.doubanio.com, qnmob3.doubanio.com, image.mybank.icbc.com.cn, hfapp-service.qweather.net, acs-m.freshippo.com, gab.122.gov.cn, api.coolapk.com, adserviceretry.kglink.cn, gateway.kugou.com, p0.pipi.cn, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, osg-service.sgcc.com.cn, api.m.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, mobilepaas.abchina.com.cn, ad.mcloud.139.com, jzts.cmpassport.com, kad.gotokeep.com, 42.187.199.248, api.gotokeep.com, common.diditaxi.com.cn, freight.xiaojukeji.com, daijia.kuaidadi.com, ct.xiaojukeji.com, res.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, 123.207.209.*, 112.53.55.225, 120.241.142.*, 120.241.143.*, 116.85.2.*, 116.85.3.*, 139.199.240.84, 114.115.217.129, home.umetrip.com, *.hupu.com, acs.m.taobao.com, amdc.m.taobao.com, img.alicdn.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, acs-m.freshippo.com, gw.alicdn.com, elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, www1.elecfans.com, nr-op.elemecdn.com, amdc.m.ele.me
+hostname = wx.17u.cn, web.meituan.com, npay.meituan.com, a1d5b283e-wx621112590b635086.sh.wxgateway.com, apimobile.meituan.com, app-v1.ecoliving168.com, 852b95d36.xwlpk.cn, list-app-m.i4.cn, tiebac.baidu.com, tieba.baidu.com, 2023.redircdn.com, www.washpayer.com, emdcadvertise.eastmoney.com, emdcadvertisepj.eastmoney.com, swdlcdn.eastmoney.com, api.douban.com, img3.doubanio.com, qnmob3.doubanio.com, image.mybank.icbc.com.cn, hfapp-service.qweather.net, acs-m.freshippo.com, gab.122.gov.cn, api.coolapk.com, adserviceretry.kglink.cn, gateway.kugou.com, p0.pipi.cn, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, osg-service.sgcc.com.cn, api.m.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, mobilepaas.abchina.com.cn, ad.mcloud.139.com, jzts.cmpassport.com, kad.gotokeep.com, 42.187.199.248, api.gotokeep.com, common.diditaxi.com.cn, freight.xiaojukeji.com, daijia.kuaidadi.com, ct.xiaojukeji.com, res.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, 123.207.209.*, 112.53.55.225, 120.241.142.*, 120.241.143.*, 116.85.2.*, 116.85.3.*, 139.199.240.84, 114.115.217.129, home.umetrip.com, *.hupu.com, acs.m.taobao.com, amdc.m.taobao.com, img.alicdn.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, acs-m.freshippo.com, gw.alicdn.com, elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, www1.elecfans.com, nr-op.elemecdn.com, amdc.m.ele.me, api.xiaoyuzhoufm.com
