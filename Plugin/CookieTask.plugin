@@ -1,5 +1,5 @@
 #!name = Cookie & Task
-#!desc = 每天自动完成相关签到任务，根据需求打开相应开关即可。需先获取Cookie/Token，成功后关闭脚本以避免无意义的MitM。（具体获取Cookie/Token方法自行查看脚本内容）
+#!desc = 自动完成每日签到任务，按需开启相应功能即可。具体使用方法请查看所引用脚本或插件内详细说明。
 #!openUrl = 
 #!author = FoKit[https://github.com/FoKit], Sliverkiss[https://github.com/Sliverkiss], GoodHolidays[https://github.com/GoodHolidays], ZenmoFeiShi[https://github.com/ZenmoFeiShi], NobyDa[https://github.com/NobyDa], ClydeTime[https://github.com/ClydeTime], sooyaaabo[https://github.com/sooyaaabo]
 #!tag = 功能增强
@@ -8,7 +8,7 @@
 #!loon_version = 3.3.0(853)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Notifyman.png
-#!date = 2025-05-06 01:00
+#!date = 2025-05-07 21:00
 
 # 2024-05-18
 # https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js
@@ -20,8 +20,8 @@
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/SoulSing.js
 # 2024-05-15
 # https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
-# 2025-01-31
-# https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js
+# 2025-05-07
+# https://raw.githubusercontent.com/ClydeTime/BiliBili/master/modules/BiliBiliDailyBonus.plugin
 
 [Argument]
 # 微信支付有优惠
@@ -51,7 +51,7 @@ Cron-weibo = input, "0 0 9 * * *", tag = [微博]定时参数Cron, desc = 输入
 
 # Bilibili
 Cookie-bilibiliapp = switch, true, false, tag = [哔哩哔哩App]每日等级任务Token, desc = 获取[哔哩哔哩App]每日等级任务Token
-Cookie-bilibiliweb = switch, true, false, tag = [哔哩哔哩Web]每日等级任务Token, desc = 获取[哔哩哔哩Web]每日等级任务Token
+Cookie-bilibilicode = switch, false, true, tag = [哔哩哔哩Code]每日等级任务Token, desc = 获取[哔哩哔哩Code]每日等级任务Token
 Task-bilibili = switch, true, false, tag = [哔哩哔哩]每日等级任务Task, desc = 定时运行[哔哩哔哩]每日等级任务Task
 Cron-bilibili = input, "0 0 9 * * *", tag = [哔哩哔哩]定时参数Cron, desc = 输入Cron表达式来定时运行[哔哩哔哩]每日等级任务Task
 
@@ -77,8 +77,8 @@ cron {Cron-weibo} script-path = https://raw.githubusercontent.com/sooyaaabo/Loon
 # cron {Cron-iqiyi} script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CookieTask/IQIYICookieTask.js, tag = [爱奇艺]每日会员签到Task, enable={Task-iqiyi}
 
 # Bilibili - cm.bilibili.com, m.bilibili.com
-http-request ^https?:\/\/cm\.bilibili\.com\/cm\/api\/fees\/wise$ script-path = https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag = [哔哩哔哩App]每日等级任务Token, enable={Cookie-bilibiliapp}
-http-request ^https?:\/\/m.bilibili.com/$ script-path = https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag = [哔哩哔哩Web]每日等级任务Token, enable={Cookie-bilibiliweb}
+http-request ^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\? script-path = https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag = [哔哩哔哩App]每日等级任务Token, enable={Cookie-bilibiliapp}
+http-reponse ^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\? script-path = https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag = [哔哩哔哩Code]每日等级任务Token, enable={Cookie-bilibilicode}
 cron {Cron-bilibili} script-path = https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag = [哔哩哔哩]每日等级任务Task, enable={Task-bilibili}
 
 [MitM]
