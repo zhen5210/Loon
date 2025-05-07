@@ -1,5 +1,5 @@
 #!name = MyBlockAds
-#!desc = 去广告插件，以下app请使用单独插件：高德地图，哔哩哔哩，网易云音乐，微博，YouTube (Music)，知乎。
+#!desc = 过滤部分App广告，优化使用体验。
 #!openUrl = 
 #!author = RuCu6[https://github.com/RuCu6], zZPiglet[https://github.com/zZPiglet], app2smile[https://github.com/app2smile], ZenmoFeiShi[https://github.com/ZenmoFeiShi], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!tag = 去广告
@@ -62,16 +62,13 @@ DOMAIN, lookup.api.bsb.baidu.com, REJECT
 # 百度
 DOMAIN-SUFFIX, pos.baidu.com, REJECT
 DOMAIN, mobads.baidu.com, REJECT
-DOMAIN, afd.baidu.com, REJECT
+IP-CIDR, 180.76.76.112/32, REJECT, no-resolve
+IP-CIDR, 180.76.76.200/32, REJECT, no-resolve
 
 # 百度地图
 DOMAIN, afd.baidu.com, REJECT
 DOMAIN, afdconf.baidu.com, REJECT
 DOMAIN, lc.map.baidu.com, REJECT
-
-# 百度
-IP-CIDR, 180.76.76.112/32, REJECT, no-resolve
-IP-CIDR, 180.76.76.200/32, REJECT, no-resolve
 
 # ======= C ======= #
 # 昌原云充
@@ -306,7 +303,7 @@ AND, ((URL-REGEX, "^http:\/\/.+\/amdc\/mobileDispatch"), (USER-AGENT, "ishare4ip
 DOMAIN, tong.8888888888.bid, REJECT
 AND, ((OR, ((DOMAIN-KEYWORD, kc.), (DOMAIN-KEYWORD, kcc.), (DOMAIN-KEYWORD, kg.))), (DEST-PORT, 8008)), REJECT
 
-# 云闪付 开屏广告
+# 云闪付
 DOMAIN, ads.95516.com, REJECT
 DOMAIN, switch.cup.com.cn, REJECT
 
@@ -382,9 +379,14 @@ URL-REGEX, "^http:\/\/\w{32}\.jddebug\.com\/diagnose\?", REJECT
 ^https:\/\/emdcadvertise(?:pj)?\.eastmoney\.com\/infoService\/v2 response-body-json-replace data.adpositionidlist []
 ^https:\/\/swdlcdn\.eastmoney\.com\/app\/adimg\/ reject-dict
 
-# 豆瓣 //api.douban.com, img3.doubanio.com, qnmob3.doubanio.com
+# 豆瓣 //api.douban.com, img3.doubanio.com, qnmob3.doubanio.com, frodo.douban.com, erebor.douban.com
 ^https:\/\/api\.douban\.com\/v2\/app_ads\/splash\w+ reject-dict
 ^https:\/\/(?:img|qnmob)3\.doubanio\.com\/view\/dale-online\/dale_ad\/public\/\w+ reject-dict
+^https?:\/\/api\.douban\.com\/v\d\/app_ads\/ reject-dict
+^https?:\/\/api\.douban\.com\/b.*\/common_ads\?.* reject-dict
+^https?:\/\/img\d\.doubanio\.com\/view\/dale-online\/dale_ad\/ reject
+^https?:\/\/frodo\.douban\.com\/api\/v2\/movie\/banner reject
+^https?:\/\/erebor\.douban\.com\/count\/\?ad= reject
 
 # 饿了么 //elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, www1.elecfans.com, nr-op.elemecdn.com
 ^https?:\/\/elemecdn\.com\/.+\/sitemap reject
@@ -515,7 +517,7 @@ URL-REGEX, "^http:\/\/\w{32}\.jddebug\.com\/diagnose\?", REJECT
 # 云闪付 //wallet.95516.com
 ^https:\/\/wallet\.95516\.com(:10533)?\/s\/wl\/icon\/large\/1 reject
 
-# 中国人寿开屏广告 //ecssmobile.e-chinalife.com
+# 中国人寿 //ecssmobile.e-chinalife.com
 ^https:\/\/ecssmobile\.e-chinalife\.com:8082\/ecss\/web\/appupdate\/customization\/getFlashScreenInfo reject-dict
 
 [Script]
@@ -575,4 +577,4 @@ http-response ^https:\/\/ad\.mcloud\.139\.com\/advertapi\/adv-filter\/ script-pa
 http-response ^https:\/\/jzts\.cmpassport\.com\/personalized\/getPushContent script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/MyBlockAds/Cloud139.js, requires-body = true, tag = [MyBlockAds]中国移动云盘
 
 [MitM]
-hostname = wx.17u.cn, web.meituan.com, npay.meituan.com, a1d5b283e-wx621112590b635086.sh.wxgateway.com, apimobile.meituan.com, app-v1.ecoliving168.com, 852b95d36.xwlpk.cn, list-app-m.i4.cn, tiebac.baidu.com, tieba.baidu.com, 2023.redircdn.com, www.washpayer.com, emdcadvertise.eastmoney.com, emdcadvertisepj.eastmoney.com, swdlcdn.eastmoney.com, api.douban.com, img3.doubanio.com, qnmob3.doubanio.com, image.mybank.icbc.com.cn, hfapp-service.qweather.net, acs-m.freshippo.com, gab.122.gov.cn, api.coolapk.com, adserviceretry.kglink.cn, gateway.kugou.com, p0.pipi.cn, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, osg-service.sgcc.com.cn, api.m.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, mobilepaas.abchina.com.cn, ad.mcloud.139.com, jzts.cmpassport.com, kad.gotokeep.com, 42.187.199.248, api.gotokeep.com, common.diditaxi.com.cn, freight.xiaojukeji.com, daijia.kuaidadi.com, ct.xiaojukeji.com, res.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, 123.207.209.*, 112.53.55.225, 120.241.142.*, 120.241.143.*, 116.85.2.*, 116.85.3.*, 139.199.240.84, 114.115.217.129, home.umetrip.com, *.hupu.com, acs.m.taobao.com, amdc.m.taobao.com, img.alicdn.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, acs-m.freshippo.com, gw.alicdn.com, elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, www1.elecfans.com, nr-op.elemecdn.com, amdc.m.ele.me, api.xiaoyuzhoufm.com, ecssmobile.e-chinalife.com, www.haixue.com, download1.bankcomm.com
+hostname = wx.17u.cn, web.meituan.com, npay.meituan.com, a1d5b283e-wx621112590b635086.sh.wxgateway.com, apimobile.meituan.com, app-v1.ecoliving168.com, 852b95d36.xwlpk.cn, list-app-m.i4.cn, tiebac.baidu.com, tieba.baidu.com, 2023.redircdn.com, www.washpayer.com, emdcadvertise.eastmoney.com, emdcadvertisepj.eastmoney.com, swdlcdn.eastmoney.com, api.douban.com, img3.doubanio.com, qnmob3.doubanio.com, frodo.douban.com, erebor.douban.com, image.mybank.icbc.com.cn, hfapp-service.qweather.net, acs-m.freshippo.com, gab.122.gov.cn, api.coolapk.com, adserviceretry.kglink.cn, gateway.kugou.com, p0.pipi.cn, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, osg-service.sgcc.com.cn, api.m.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, mobilepaas.abchina.com.cn, ad.mcloud.139.com, jzts.cmpassport.com, kad.gotokeep.com, 42.187.199.248, api.gotokeep.com, common.diditaxi.com.cn, freight.xiaojukeji.com, daijia.kuaidadi.com, ct.xiaojukeji.com, res.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, 123.207.209.*, 112.53.55.225, 120.241.142.*, 120.241.143.*, 116.85.2.*, 116.85.3.*, 139.199.240.84, 114.115.217.129, home.umetrip.com, *.hupu.com, acs.m.taobao.com, amdc.m.taobao.com, img.alicdn.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, acs-m.freshippo.com, gw.alicdn.com, elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, www1.elecfans.com, nr-op.elemecdn.com, amdc.m.ele.me, api.xiaoyuzhoufm.com, ecssmobile.e-chinalife.com, www.haixue.com, download1.bankcomm.com
