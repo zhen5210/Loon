@@ -8,7 +8,7 @@
 #!loon_version = 3.3.0(853)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/MyBlockAds.png
-#!date = 2025-05-07 12:00
+#!date = 2025-05-08 11:00
 
 [Rule]
 # ======= 0 ======= #
@@ -501,6 +501,10 @@ URL-REGEX, "^http:\/\/\w{32}\.jddebug\.com\/diagnose\?", REJECT
 
 # 小宇宙 //api.xiaoyuzhoufm.com
 ^https:\/\/api\.xiaoyuzhoufm\.com\/v1\/flash-screen\/list reject-dict
+^https:\/\/api\.xiaoyuzhoufm\.com\/v1\/ai-summary reject-dict
+^https:\/\/api\.xiaoyuzhoufm\.com\/v1\/membership\/platform reject-dict
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v1\/search reject-dict
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v1\/category\/list-daily-suggestion reject-dict
 
 # 小米商城 //api.m.mi.com, shop-api.retail.mi.com
 ^https:\/\/api\.m\.mi\.com\/v1\/order\/expressView response-body-json-del data.bottom.ad_info
