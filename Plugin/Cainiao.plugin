@@ -62,6 +62,7 @@ DOMAIN, ykad-data.youku.com, REJECT
 
 # 支付宝 - 菜鸟小程序
 ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.adx\.flyad\.getad reject-dict
+^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads reject
 
 [Script]
 # 移除阿里巴巴通用广告请求

@@ -8,7 +8,7 @@
 #!loon_version = 3.3.0(853)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/CNY.png
-#!date = 2025-04-17 11:00
+#!date = 2025-05-08 18:00
 
 # 2024-11-28 00:00:00
 # https://kelee.one/Tool/Loon/Plugin/Bank_remove_ads.plugin
@@ -25,6 +25,9 @@ URL-REGEX, "^http:\/\/mps\.95508\.com\/mps\/icppweb\/images\/mps\/migration\/mps
 # 广发银行
 # 开屏广告、内页广告
 ^https:\/\/static\.95508\.com\/icppweb\/images\/modelMaterial\/advertising\/ reject
+^https?:\/\/static\.95508\.com\/icppweb\/images\/modelMaterial\/accurate\/202\d{5}\/.*.(png|jpg) reject-200
+^https?:\/\/static\.95508\.com\/icppweb\/images\/modelMaterial\/advertising\/202\d{5}\/.*.(png|jpg) reject-200
+^https?:\/\/mps\.95508\.com\/mps\/club\/cardPortals\/adv\/\d{25}\.(png|jpg) reject-img
 # 国寿联盟悬浮组件
 ^https:\/\/unionsr\.chinalifeonline\.com\.cn\/gslm\/upload\/ reject-200
 
@@ -32,15 +35,65 @@ URL-REGEX, "^http:\/\/mps\.95508\.com\/mps\/icppweb\/images\/mps\/migration\/mps
 # 开屏广告 @jFrecht
 ^https:\/\/imcs\.citicbank\.com\/cloud\/[a-zA-Z0-9]{32}\.(?:jpg|jpeg|png)\?width=(?:5..|6..|7..|1125|1242|1400|1863|1330|1500|1080)&height=(?:2436|2688|1624|12..|3031|4032|2688|1137|2880|3248|720|23..|1462) reject
 ^https:\/\/imcs\.citicbank\.com\/cloud\/([a-fA-F0-9]{32})\.(?:jpg|jpeg|png)\?width=[0-9]{4}&height=[0-9]{4} reject
+^https?:\/\/wap\.bank\.ecitic\.com:6443\/NMBFOServer\/cbframework\.do\?act=CUBEPAGEDATA reject-200
+^https?:\/\/imcs\.citicbank\.com\/cloud\/.+(1125.+2436|1242.+2688|750.+1638|563.+1218) reject-dict
 
 # 浦发银行
 ^https:\/\/lban\.spdb\.com\.cn\/mspmk-web-component\/getAdvertisementList\.ah$ reject-dict
 ^https:\/\/lban\.spdb\.com\.cn\/mspmk-web-component\/getAdvList\.ah$ reject-dict
 ^https:\/\/lban\.spdb\.com\.cn\/mspmk-web-component\/prefetchAdvList\.ah reject-dict
+^https?:\/\/wap\.spdb\.com\.cn\/mspmk-web-homeassist\/OpenScreenAdv\.ah$ reject
 
 # 招商银行 
 # 开屏广告
 ^https:\/\/s3gw\.cmbimg\.com\/mbappinitads\/ reject
+^https?:\/\/webappcfg\.paas\.cmbchina\.com\/v\d\/func\/getmarketconfig reject-200
+^https?:\/\/mbmodule-openapi\.paas\.cmbchina\.com\/graphic\/v2\/module\/graphic reject-dict
+
+# 建设银行
+^http:\/\/image1\.ccb\.com\/newsinfo\/eBranch\/check\/(?:nf\/newfin\/activity|po\/poortheme\/activity)\/\w+\.png reject
+
+# 交通银行
+^https?:\/\/download1\.bankcomm\.com\/chngweb\/CHNRCSP\/media reject
+^https?:\/\/download1\.bankcomm\.com\/mobs6-inner\/offline\/static\/releaseConf reject
+
+# 百信银行
+^https?:\/\/mres\.aibank\.com\/app\/resource\/cim\/cim0000001\/.+\.jpg reject-200
+
+# 光大银行
+^https?:\/\/mobile\.cebbank\.com\/cebclient\/ClientNoticeList reject-200
+^https?:\/\/yghsh\.cebbank\.com\/static\/picture\/.*.jpg reject-200
+
+# 工商银行
+^https?:\/\/v\.icbc\.com\.cn\/userfiles\/Resources\/WAP\/advertisement\/ reject-200
+
+# 广州农商银行
+^https?:\/\/mbank\.grcbank\.com\/ydyh\/resources\/startpage\/.*.(jpg|png) reject-200
+
+# 吉林银行
+^https?:\/\/cdn\.jlbank\.com\.cn\/jlstaticresource\/APPSTART reject-200
+
+# 江苏银行
+^https?:\/\/mbank5\.jsbchina\.cn:443 reject-dict
+
+# 农业银行
+# ^https?:\/\/midc\.cdn-static\.abchina\.com\.cn\/distributecenterimg\/file\/download\/(?!bbc2|f015|1655|0992|4678|a194|d8e2|c513|e51c|0ee1|166e|05ca|c882|d5b8|22ed|a0dc|a55a|6f89|3bf9|3c71|52ec|5b62|ve7a|001c|923d|accf|4a10|0bd7|be7a|5b62|5dd6|1f24|006c|775d|bd02|b983|5251|806b|d119|db14|43c9|41d3|8570|2c10|85ea|1435|814e|f422|aec7|738c|d7c8|0538|02b4|fd20|7647|f6ef|07c5|885b|e4cb|685b|30aa|c23b|9603|f27f|eaf8|8011|a5eb|409d|724c|3f2a|e07f|6744|60a6|158c|8ce3) reject-dict
+^https?:\/\/enjoy\.cdn-static\.abchina\.com\/yx-engine-web\/file\/download\/(?!7dc2|fe96|cea3|06a8|1b11|d57b|6918|61db|2d58|aa23|) reject-200
+^https?:\/\/firefly\.abchina\.com\.cn\/firefly-collection\/Collect reject-200
+
+# 天府手机银行
+^https?:\/\/cgbank\.oss-cn-shenzhen\.aliyuncs\.com\/visual\/advertisingImg\/.+.jpg reject-200
+
+# 兴业银行
+^https?:\/\/images\.cib\.com\.cn\/commons\/uploads\/commons\/[a-zA-Z0-9]{32}\.jpg\?ver=20221[1-2]{1} reject-200
+^https?:\/\/file\.cibfintech\.com\/file\/M0[1-9]{1}\/*\/*\/.*.zip url reject-img
+
+# 邮储银行
+^https?:\/\/static.psbc.com:8090\/mbank_f\/images\/[0-9]+\.png - reject-200
+^https?:\/\/mcc.psbc.com:9090\/mcc\/resources\/[0-9]+\.(jpg|png) reject-200
+
+# 中国银行
+^https?:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\?txnId=2PIC000001 reject-200
 
 [MitM]
-hostname = static.95508.com, unionsr.chinalifeonline.com.cn, imcs.citicbank.com, lban.spdb.com.cn, s3gw.cmbimg.com
+hostname = static.95508.com, mps.95508.com, unionsr.chinalifeonline.com.cn, imcs.citicbank.com, wap.bank.ecitic.com, lban.spdb.com.cn, wap.spdb.com.cn, s3gw.cmbimg.com, webappcfg.paas.cmbchina.com, mbmodule-openapi.paas.cmbchina.com, image1.ccb.com, download1.bankcomm.com, mres.aibank.com, mobile.cebbank.com, yghsh.cebbank.com, v.icbc.com.cn, mbank.grcbank.com, cdn.jlbank.com.cn, mbank5.jsbchina.cn, midc.cdn-static.abchina.com.cn, enjoy.cdn-static.abchina.com, firefly.abchina.com.cn, cgbank.oss-cn-shenzhen.aliyuncs.com, images.cib.com.cn, file.cibfintech.com, static.psbc.com, mcc.psbc.com, mlife.jf365.boc.cn

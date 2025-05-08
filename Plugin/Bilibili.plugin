@@ -119,4 +119,4 @@ http-response ^https:\/\/(?:grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.(?
 # http-response ^https:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom\? script-path = https://kelee.one/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body = true, tag = [哔哩哔哩]移除直播间广告
 
 [MitM]
-hostname = grpc.biliapi.net,app.bilibili.com,api.bilibili.com,api.live.bilibili.com
+hostname = grpc.biliapi.net, app.bilibili.com, api.bilibili.com, api.live.bilibili.com

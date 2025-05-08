@@ -37,6 +37,7 @@ URL-REGEX, "^http:\/\/\w{32}\.jddebug\.com\/diagnose\?", REJECT
 ^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs reject-200
 ^http:\/\/\w{32}\.jddebug\.com\/diagnose\? reject
 ^https:\/\/api\.m\.jd\.com\/\?loginType=11 reject-dict
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getWidgetV1052 reject
 ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:searchBoxWord|stationPullService|uniformRecommend[06]) reject-dict
 ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising response-body-replace-regex jdLiteAdvertisingVO sooyaaabo
 ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=basicConfig response-body-json-replace data.JDMessage.socketmonitor.isSocketEstablishedAhead 0 data.JDMessage.socketmonitor.isSocketReport 0 data.JDHttpToolKit.httpdns.httpdns 0

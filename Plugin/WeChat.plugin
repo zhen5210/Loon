@@ -8,7 +8,7 @@
 #!loon_version = 3.3.0(853)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/WeChat.png
-#!date = 2025-04-17 11:00
+#!date = 2025-05-08 16:00
 
 # 2024-07-03 16:17:23
 # https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/WeChat/WeChat.list
@@ -63,7 +63,12 @@ DOMAIN-SUFFIX, wechatlegal.net, PROXY
 DOMAIN-SUFFIX, wechatos.net, PROXY
 USER-AGENT, "WeChat*", PROXY
 USER-AGENT, "MicroMessenger*", PROXY
-IP-ASN, 132203, no-resolve, PROXY
+IP-ASN, 132203, PROXY, no-resolve
+
+# WeChatPay
+DOMAIN-KEYWORD, wechatpay, DIRECT
+DOMAIN, epay.ahrcu.com, DIRECT
+DOMAIN, mixpay.wechat.com, DIRECT  
 
 # --------------- 微信公众号 --------------- #
 DOMAIN-SUFFIX, wxs.qq.com, REJECT
@@ -85,11 +90,16 @@ DOMAIN, ad.maoyan.com, REJECT
 # 捷停车 @怎么肥事
 DOMAIN, e.jparking.cn, REJECT
 
+# 快充 微信小程序
+DOMAIN, et.ykccn.com, REJECT
+
 [Rewrite]
 # --------------- 微信公众号 --------------- #
 # 移除公众号中的推广内容 //mp.weixin.qq.com
 # ^http:\/\/\w+\.wxs\.qq\.com\/\d+\/\d+\/(snscosdownload|snssvpdownload)\/(SH|SZ)\/reserved\/\w+ reject-dict
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/(?:cps_product_info|getappmsgad|jsmonitor|masonryfeed|relatedarticle) reject-dict
+# 移除微信公众号文章底栏都在搜
+^https:\/\/mp\.weixin\.qq\.com\/mp\/relatedsearchword reject-dict
 
 # --------------- 微信小程序 --------------- #
 # 企迈点单系统
@@ -167,7 +177,9 @@ DOMAIN, e.jparking.cn, REJECT
 # 霸王茶姬 @ArthasYZ
 
 # EMS @ArthasYZ
-^https:\/\/ump\.ems\.com\.cn\/mailAd$ reject
+^https?:\/\/ec\.ems\.com\.cn\/mailAd$ reject
+^https?:\/\/ec\.ems\.com\.cn\/ecr-exp-web\/advert reject
+^https?:\/\/ump\.ems\.com\.cn\/mailAd$ reject
 
 # 曹操出行 //minicap.caocaokeji.cn
 ^https:\/\/minicap\.caocaokeji\.cn\/advert-bss\/pullAdvert reject-dict
@@ -349,6 +361,10 @@ DOMAIN, e.jparking.cn, REJECT
 # 顺丰速运+ @可莉🅥
 ^https:\/\/ucmp\.sf-express\.com\/proxy\/operation-platform\/info-flow-adver\/query reject-dict
 ^https:\/\/ucmp\.sf-express\.com\/proxy\/esgcempcore\/memberGoods\/pointMallService\/goodsList reject-dict
+^https?:\/\/mcs-mimp-web\.sf-express\.com\/mcs-mimp\/integralPlanet\/getCxAdvertiseList reject-dict
+^https?:\/\/ucmp-static\.sf-express\.com\/proxy\/wxbase\/wxTicket\/wxLiveStreamInfo\?pageNo reject-dict
+^https?:\/\/ucmp\.sf-express\.com\/proxy\/esgcempcore\/memberManage\/memberEquity\/queryRecommendEquity reject-dict
+^https?:\/\/ucmp\.sf-express\.com\/proxy\/esgcempcore\/memberActLengthy\/fullGiveActivityService\/fullGiveInfo reject-dict
 
 # 滴滴代驾 //daijia.kuaidadi.com, as.xiaojukeji.com
 ^https:\/\/as\.xiaojukeji\.com\/ep\/as\/conf\?ns=daijia-front&name= reject-dict
@@ -368,6 +384,30 @@ DOMAIN, e.jparking.cn, REJECT
 ^https:\/\/wx\.online-cmcc\.cn\/contactpoint\/customer\/api\/list\? reject-dict
 ^https:\/\/wx\.10086\.cn\/qwhdhub\/activity\/info reject-dict
 
+# 工银e生活 //elife.icbc.com.cn
+^https?:\/\/elife\.icbc\.com\.cn\/OFSTNEWBASE\/floorinfo\/getMantlePages\.do reject-200
+
+# 易捷加油 //ocrifs.ejoy.sinopec.com
+^https?:\/\/ocrifs\.ejoy\.sinopec\.com\/advertitfs\/advert\/findAdvertInfo reject-dict
+
+# 云快充 //web-stable-cdn.ykccn.com, gw3.ykccn.com
+^https?:\/\/web-stable-cdn\.ykccn\.com\/sp-img-2023\/common\/weCom-open reject-img
+^https?:\/\/gw3\.ykccn\.com\/api\/omp\/mt\/appAdvertising\/ reject-dict
+^https?:\/\/gw3\.ykccn\.com\/activityServer\/app\/commandAd reject
+^https?:\/\/gw3\.ykccn\.com\/api\/omp\/mt\/charge\/activity\/package\/newest reject-dict
+
+# ClubMed //clubmed.bd.clubmedmnp.com
+^https?:\/\/clubmed\.bd\.clubmedmnp\.com\/miniorder\/api\/basic\/common reject-dict
+
+# 故宫博物馆 //gugongmini.dpm.org.cn
+^https?:\/\/gugongmini\.dpm\.org\.cn\/gugong_applet\/open-screen reject-dict
+
+# 海尔服务 //service.haiersmarthomes.com
+^https?:\/\/service\.haiersmarthomes\.com\/management\/banner\/getBannerList\?source=4 reject-dict
+
+# 美团充电宝 //cdb.meituan.com
+^https?:\/\/cdb\.meituan\.com\/marketing\/source\/getPageSlotList reject-dict
+
 [Script]
 # --------------- 微信外部链接解锁 --------------- #
 http-response ^https\:\/\/(?:weixin110\.qq|security\.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? script-path = https://kelee.one/Resource/Script/Weixin/Weixin_external_links_unlock.js, requires-body = true, tag = [微信]外部链接解锁
@@ -379,7 +419,9 @@ http-response ^https\:\/\/(?:weixin110\.qq|security\.wechat)\.com\/cgi-bin\/mmsp
 # 企迈点单系统 //webapi.qmai.cn, images.qmai.cn
 http-response ^https:\/\/webapi\.qmai\.cn\/web\/catering\/design\/homePage-Config script-path = https://kelee.one/Resource/Script/WexinMiniPrograms/kff/kff.js, requires-body = true, tag = [微信]移除企迈点单系统广告
 
-# EMS中国邮政物流速递 @TEAXS //ump.ems.com.cn
+# EMS中国邮政物流速递 @TEAXS //ec.ems.com.cn, ump.ems.com.cn
+http-response ^https?:\/\/ec\.ems\.com\.cn\/ecr-qry-web\/redis\/pageInfoByChannel script-path = https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/wechatApplet.js, requires-body = true, tag = [微信]移除EMS中国邮政物流速递广告
+http-response ^https?:\/\/ump\.ems\.com\.cn\/new-generation-extend\/redis\/pageInfoByChannel script-path = https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/wechatApplet.js, requires-body = true, tag = [微信]移除EMS中国邮政物流速递广告
 http-response ^https:\/\/ump\.ems\.com\.cn\/new-generation-extend\/redis\/pageInfoByChannel script-path = https://kelee.one/Resource/Script/WexinMiniPrograms/ems/ems.js, requires-body = true, tag = [微信]移除EMS中国邮政物流速递广告
 
 # 小兔充充 @TEAXS //mapi.xiaotucc.com
@@ -413,4 +455,4 @@ http-response ^https:\/\/passenger\.t3go\.cn\/(solution\-|common\-)?(passenger\-
 http-response ^https:\/\/newton\.gumingnc\.com\/newton-buyer\/newton\/buyer\/(ump|touch|external\/front) script-path = https://kelee.one/Resource/Script/WexinMiniPrograms/ming/ming.js, requires-body = true, tag = [微信]移除古茗广告
 
 [MitM]
-hostname = mp.weixin.qq.com, weixin110.qq.com, security.wechat.com, 3pp.starbucks.com.cn, aag.enmonster.com, activity.yonghuivip.com, ad.maoyan.com, ad.xiaotucc.com, ads.ishansong.com, alittle-tea.oss-cn-shanghai.aliyuncs.com, api-fouth-mem.huazhu.com, api-marketing.zhinengxiyifang.cn, api.hellobike.com, api.hengdianfilm.com, api.hongyibo.com.cn, api.kuaidihelp.com, api.maoyan.com, api.mcd.cn, api.pinduoduo.com, api.prod.dj.mstand.cn, api.songguo7.com, api.yonghuivip.com, apiproxy.zuche.com, apis.alenable.com, app.95504.net, app.homeinns.com, applets.jtexpress.com.cn, appuser-static.huolala.cn, as.xiaojukeji.com, capis*.didapinche.com, cappapi.alittle-tea.com, cbd-gateway-service-applets.hualala.com, ccmsupport-sz.tenpay.com, coco-com.e.verystar.net, creditcardapp.bankcomm.com, customer-app.sto.cn, daijia.kuaidadi.com, dock.tenchii.com, dsp.fcbox.com, file.dian.so, flow.dmall.com, fscdn.zto.com, gw-passenger-wap.01zhuanche.com, hdgateway.zto.com, htwkop.xiaojukeji.com, images.qmai.cn, lawsonapi.yorentown.com, m.ctrip.com, mapi.xiaotucc.com, mbmodule-openapi.paas.cmbchina.com, member.lxjchina.com.cn, miniapp.sexytea2013.com, minicap.caocaokeji.cn, minifm.maxxipoint.com, minipro.95504.net, miniprogram.ishansong.com, mkt-gateway.tuhu.cn, mobile-api.imlaidian.com, mxsa.mxbc.net, newton.gumingnc.com, passenger.t3go.cn, passengerapi.saicmobility.com, plt.yorentown.com, qapi.huolala.cn, r2.gzyct.com, res.hongyibo.com.cn, res.pizzahut.com.cn, s.jiediankeji.com, saas-ad.cloudpnr.com, sauron-report.yonghuivip.com, smarket.dian.so, sto-customer-app.oss-cn-shanghai.aliyuncs.com, supplier-api.imdada.cn, suyun-guest.daojia.com, tbgapplet.carlsberg.asia, tm-api.pin-dao.cn, ucmp.sf-express.com, ump.ems.com.cn, vod-movie.maoyan.com, webapi.qmai.cn, webchatapp.fcbox.com, wechat-api.i-xiaoma.com.cn, www.deppon.com, wx.bthhotels.com, wx.maoyan.com, wxapp.bestwehotel.com, wxproj.seeyouyima.com, wxs-weixin.sd.zhumanggroup.com, mcsp.cloudpnr.com, api.szbgcx.cn, rms.meituan.com, chong.qq.com, wx.online-cmcc.cn, wx.10086.cn
+hostname = mp.weixin.qq.com, weixin110.qq.com, security.wechat.com, 3pp.starbucks.com.cn, aag.enmonster.com, activity.yonghuivip.com, ad.maoyan.com, ad.xiaotucc.com, ads.ishansong.com, alittle-tea.oss-cn-shanghai.aliyuncs.com, api-fouth-mem.huazhu.com, api-marketing.zhinengxiyifang.cn, api.hellobike.com, api.hengdianfilm.com, api.hongyibo.com.cn, api.kuaidihelp.com, api.maoyan.com, api.mcd.cn, api.pinduoduo.com, api.prod.dj.mstand.cn, api.songguo7.com, api.yonghuivip.com, apiproxy.zuche.com, apis.alenable.com, app.95504.net, app.homeinns.com, applets.jtexpress.com.cn, appuser-static.huolala.cn, as.xiaojukeji.com, capis*.didapinche.com, cappapi.alittle-tea.com, cbd-gateway-service-applets.hualala.com, ccmsupport-sz.tenpay.com, coco-com.e.verystar.net, creditcardapp.bankcomm.com, customer-app.sto.cn, daijia.kuaidadi.com, dock.tenchii.com, dsp.fcbox.com, file.dian.so, flow.dmall.com, fscdn.zto.com, gw-passenger-wap.01zhuanche.com, hdgateway.zto.com, htwkop.xiaojukeji.com, images.qmai.cn, lawsonapi.yorentown.com, m.ctrip.com, mapi.xiaotucc.com, mbmodule-openapi.paas.cmbchina.com, member.lxjchina.com.cn, miniapp.sexytea2013.com, minicap.caocaokeji.cn, minifm.maxxipoint.com, minipro.95504.net, miniprogram.ishansong.com, mkt-gateway.tuhu.cn, mobile-api.imlaidian.com, mxsa.mxbc.net, newton.gumingnc.com, passenger.t3go.cn, passengerapi.saicmobility.com, plt.yorentown.com, qapi.huolala.cn, r2.gzyct.com, res.hongyibo.com.cn, res.pizzahut.com.cn, s.jiediankeji.com, saas-ad.cloudpnr.com, sauron-report.yonghuivip.com, smarket.dian.so, sto-customer-app.oss-cn-shanghai.aliyuncs.com, supplier-api.imdada.cn, suyun-guest.daojia.com, tbgapplet.carlsberg.asia, tm-api.pin-dao.cn, mcs-mimp-web.sf-express.com, ucmp-static.sf-express.com, ucmp.sf-express.com, ump.ems.com.cn, ec.ems.com.cn, vod-movie.maoyan.com, webapi.qmai.cn, webchatapp.fcbox.com, wechat-api.i-xiaoma.com.cn, www.deppon.com, wx.bthhotels.com, wx.maoyan.com, wxapp.bestwehotel.com, wxproj.seeyouyima.com, wxs-weixin.sd.zhumanggroup.com, mcsp.cloudpnr.com, api.szbgcx.cn, rms.meituan.com, chong.qq.com, wx.online-cmcc.cn, wx.10086.cn, elife.icbc.com.cn, ocrifs.ejoy.sinopec.com, web-stable-cdn.ykccn.com, gw3.ykccn.com, clubmed.bd.clubmedmnp.com, gugongmini.dpm.org.cn, service.haiersmarthomes.com, cdb.meituan.com
