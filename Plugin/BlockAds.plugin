@@ -8,7 +8,7 @@
 #!loon_version = 3.3.0(853)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/ShieldReject.png
-#!date = 2025-05-08 18:30
+#!date = 2025-05-08 22:00
 
 # 2025-04-20 17:39:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
@@ -1952,11 +1952,11 @@ https?:\/\/api\.taptapdada\.com\/startup\-logo\/v1\/combo\? reject-dict
 ^https:\/\/gw\.xiaocantech\.com\/g\/pa reject-dict
 
 # 小宇宙 - api.xiaoyuzhoufm.com
-^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/flash- reject-dict
-^https:\/\/api\.xiaoyuzhoufm\.com\/v1\/ai-summary reject-dict
-^https:\/\/api\.xiaoyuzhoufm\.com\/v1\/membership\/platform reject-dict
-^https?:\/\/api\.xiaoyuzhoufm\.com\/v1\/search reject-dict
-^https?:\/\/api\.xiaoyuzhoufm\.com\/v1\/category\/list-daily-suggestion reject-dict
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/flash reject-dict
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/ai reject-dict
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/search\/get reject-dict
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/category reject-dict
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/membership\/platform reject-dict
 
 # 小芒 - mgesq.api.mgtv.com
 ^https:\/\/mgesq\.api\.mgtv\.com\/v2\/goods\/guess_you_like reject-dict
