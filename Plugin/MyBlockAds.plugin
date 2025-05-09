@@ -76,10 +76,6 @@ DOMAIN, md-i-s.apptimize.com, REJECT
 # DNS 无响应
 DOMAIN, adttrackingprd.hwwt8.com, REJECT
 
-# 叮咚买菜
-DOMAIN, ddfs-public.ddimg.mobi, REJECT
-DOMAIN, trackercollect.ddxq.mobi, REJECT
-
 # ======= E ======= #
 # 饿了么
 AND, ((URL-REGEX, "^http:\/\/.+\/amdc\/mobileDispatch"), (USER-AGENT, "eleme*")), REJECT
