@@ -1,0 +1,28 @@
+#!name = 小宇宙
+#!desc = 过滤小宇宙广告
+#!openUrl = https://apps.apple.com/app/id1488894313
+#!author = mist-whisper[https://github.com/mist-whisper]
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.0(853)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/CosmosFM.png
+#!date = 2025-05-09 21:00
+
+[Rewrite]
+# 移除开屏广告
+^https:\/\/api\.xiaoyuzhoufm\.com\/v\d\/flash reject-dict
+
+# 移除单集总结和ai总结
+^https:\/\/api\.xiaoyuzhoufm\.com\/v\d\/ai reject-dict
+
+# 移除小宇宙搜索框内容
+^https:\/\/api\.xiaoyuzhoufm\.com\/v\d\/search\/get reject-dict
+^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/category reject-dict
+
+# 会员横幅设为不可点击
+^https:\/\/api\.xiaoyuzhoufm\.com\/v1\/membership\/platform reject-dict
+
+[MitM]
+hostname = api.xiaoyuzhoufm.com

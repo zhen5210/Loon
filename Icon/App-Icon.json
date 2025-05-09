@@ -435,6 +435,18 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/KuwoMusic.png"
         },
         {
+            "name": "Ximalaya",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Ximalaya.png"
+        },
+        {
+            "name": "CosmosFM Xiaoyuzhou",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/CosmosFM.png"
+        },
+        {
+            "name": "LEMOFM",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/LEMOFM.png"
+        },
+        {
             "name": "LMP",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/LMP.png"
         },
@@ -639,10 +651,6 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Fanshu.png"
         },
         {
-            "name": "Ximalaya",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Ximalaya.png"
-        },
-        {
             "name": "Shenmezhidemai",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Zhidemai.png"
         },
@@ -653,10 +661,6 @@
         {
             "name": "ColorfulCloudsWeatherPro Caiyun",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/ColorfulCloudsWeatherPro.png"
-        },
-        {
-            "name": "LEMO FM",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/LEMO%20FM.png"
         },
         {
             "name": "Memento",
