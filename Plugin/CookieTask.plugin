@@ -51,7 +51,7 @@ Cron-weibo = input, "0 0 9 * * *", tag = [微博]定时参数Cron, desc = 输入
 
 # Bilibili
 Cookie-bilibiliapp = switch, true, false, tag = [哔哩哔哩App]每日等级任务Token, desc = 获取[哔哩哔哩App]每日等级任务Token
-Cookie-bilibilicode = switch, false, true, tag = [哔哩哔哩Code]每日等级任务Token, desc = 获取[哔哩哔哩Code]每日等级任务Token
+Cookie-bilibiliqrcode = switch, false, true, tag = [哔哩哔哩QR Code]每日等级任务Token, desc = 获取[哔哩哔哩QR Code]每日等级任务Token
 Task-bilibili = switch, true, false, tag = [哔哩哔哩]每日等级任务Task, desc = 定时运行[哔哩哔哩]每日等级任务Task
 Cron-bilibili = input, "0 0 9 * * *", tag = [哔哩哔哩]定时参数Cron, desc = 输入Cron表达式来定时运行[哔哩哔哩]每日等级任务Task
 
@@ -78,7 +78,7 @@ cron {Cron-weibo} script-path = https://raw.githubusercontent.com/sooyaaabo/Loon
 
 # Bilibili - cm.bilibili.com, m.bilibili.com
 http-request ^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\? script-path = https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag = [哔哩哔哩App]每日等级任务Token, enable={Cookie-bilibiliapp}
-http-reponse ^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\? script-path = https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag = [哔哩哔哩Code]每日等级任务Token, enable={Cookie-bilibilicode}
+http-reponse ^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\? script-path = https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag = [哔哩哔哩QR Code]每日等级任务Token, enable={Cookie-bilibiliqrcode}
 cron {Cron-bilibili} script-path = https://raw.githubusercontent.com/ClydeTime/BiliBili/main/js/BiliBiliDailyBonus.js, tag = [哔哩哔哩]每日等级任务Task, enable={Task-bilibili}
 
 [MitM]
