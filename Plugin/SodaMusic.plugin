@@ -8,9 +8,9 @@
 #!loon_version = 3.3.0(853)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/SodaMusic.png
-#!date = 2025-04-22 22:00
+#!date = 2025-05-11 09:00
 
-# 2024-11-28 00:00:00
+# 2025-05-11 01:31:09
 # https://kelee.one/Tool/Loon/Plugin/SodaMusic_remove_ads.plugin
 
 [Rule]
@@ -88,20 +88,33 @@ DOMAIN-KEYWORD, video-cn.snssdk.com, REJECT
 DOMAIN-KEYWORD, asiad.byteactivity, REJECT
 
 [Rewrite]
+^https:\/\/beta-luna\.douyin\.com\/luna\/commerce\/upsells_config\? reject-dict
+
+^https:\/\/api\.qishui\.com\/luna\/ads\/config\? reject-dict
+
 # 发现页面 - 正在直播
 ^https:\/\/webcast-open\.douyin\.com\/webcast\/openapi\/feed\/\? reject-dict
+
+^https:\/\/beta-luna\.douyin\.com\/luna\/treasure\/entrance\/config\? reject-dict
 
 # 我的页面 - 看视频免费听歌60分钟
 ^https:\/\/beta-luna\.douyin\.com\/luna\/me\? response-body-json-del reward_ad_banner
 
 # 搜索页面 - 新歌首发
-# ^https:\/\/beta-luna\.douyin\.com\/luna\/activities\? reject-dict
+^https:\/\/beta-luna\.douyin\.com\/luna\/activities\? reject-dict
+
+^https:\/\/beta-luna\.douyin\.com\/luna\/me\/recently-played-media\? response-body-json-jq '.media |= map(select(.type != "video"))'
+^https:\/\/beta-luna\.douyin\.com\/luna\/feed\/song-tab\? response-body-json-jq 'del(.items[] | select(.type == "video_track_mix"))'
+
+^https:\/\/beta-luna\.douyin\.com\/luna\/card\? response-body-json-del preview_guide
+
+^https:\/\/beta-luna\.douyin\.com\/luna\/card\? response-body-json-jq 'del(.card_items[] | select(has("priority_display")))'
 
 # 播放器界面 - 关联提示语及你关注的人喜欢了
-^https:\/\/beta-luna\.douyin\.com\/luna\/card\? response-body-json-replace card_items[0].priority_display false card_items[0].is_show false preview_guide null
+^https:\/\/beta-luna\.douyin\.com\/luna\/media_ads\? reject-dict
 
 # 歌曲详情 - 热门视频
-^https:\/\/beta-luna\.douyin\.com\/luna\/more-panel\? response-body-json-del blocks[1]
+^https:\/\/beta-luna\.douyin\.com\/luna\/more-panel\? response-body-json-jq '.blocks |= map(select(.type != "related_video"))'
 
 # 免费听歌推广
 ^https:\/\/beta-luna\.douyin\.com\/luna\/commerce\/upsells\? reject-dict
@@ -110,4 +123,4 @@ DOMAIN-KEYWORD, asiad.byteactivity, REJECT
 ^https:\/\/beta-luna\.douyin\.com\/luna\/commerce\/v2\/commerce_info\? reject-dict
 
 [MitM]
-hostname = webcast-open.douyin.com, beta-luna.douyin.com
+hostname = webcast-open.douyin.com, beta-luna.douyin.com, api.qishui.com
