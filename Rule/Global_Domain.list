@@ -2,14 +2,14 @@
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-05-10 02:13:23
+# UPDATED: 2025-05-12 02:13:18
 # DOMAIN: 89
 # DOMAIN-KEYWORD: 36
-# DOMAIN-SUFFIX: 31359
+# DOMAIN-SUFFIX: 31366
 # IP-CIDR: 112
 # IP-CIDR6: 4
 # USER-AGENT: 46
-# TOTAL: 31646
+# TOTAL: 31653
 DOMAIN-SUFFIX,000webhost.com
 DOMAIN-SUFFIX,01.org
 DOMAIN-SUFFIX,02weqj32.com
@@ -11719,6 +11719,7 @@ DOMAIN-SUFFIX,gmms.ac.uk
 DOMAIN-SUFFIX,gmocloud.com
 DOMAIN-SUFFIX,gmodules.com
 DOMAIN-SUFFIX,gmoney.org
+DOMAIN-SUFFIX,gmp4.com
 DOMAIN-SUFFIX,gmsa.ac.uk
 DOMAIN-SUFFIX,gmx.net
 DOMAIN-SUFFIX,gnai-dh.sbs
@@ -13791,6 +13792,7 @@ DOMAIN-SUFFIX,i-lab.ac.uk
 DOMAIN-SUFFIX,i-o-u.info
 DOMAIN-SUFFIX,i-part.com.tw
 DOMAIN-SUFFIX,i-scmp.com
+DOMAIN-SUFFIX,i.111666.best
 DOMAIN-SUFFIX,i.org
 DOMAIN-SUFFIX,i1.hk
 DOMAIN-SUFFIX,i2p2.de
@@ -22526,6 +22528,7 @@ DOMAIN-SUFFIX,puppiesofourtime.ac.uk
 DOMAIN-SUFFIX,pure18.com
 DOMAIN-SUFFIX,pureapk.com
 DOMAIN-SUFFIX,pureconcepts.net
+DOMAIN-SUFFIX,puredns.org
 DOMAIN-SUFFIX,pureinsight.org
 DOMAIN-SUFFIX,purelov5.com
 DOMAIN-SUFFIX,purelyceleb.com
@@ -22644,6 +22647,7 @@ DOMAIN-SUFFIX,qmced.ac.uk
 DOMAIN-SUFFIX,qml.ac.uk
 DOMAIN-SUFFIX,qmov.com
 DOMAIN-SUFFIX,qmov.net
+DOMAIN-SUFFIX,qmp4.com
 DOMAIN-SUFFIX,qmpgmc.ac.uk
 DOMAIN-SUFFIX,qmttqg3k.me
 DOMAIN-SUFFIX,qmu.ac.uk
@@ -31139,7 +31143,10 @@ DOMAIN-SUFFIX,yyjlymb.xyz
 DOMAIN-SUFFIX,yysub.net
 DOMAIN-SUFFIX,yzld188.top
 DOMAIN-SUFFIX,yzzk.com
+DOMAIN-SUFFIX,z-lib.fm
+DOMAIN-SUFFIX,z-lib.fo
 DOMAIN-SUFFIX,z-lib.gd
+DOMAIN-SUFFIX,z-lib.gl
 DOMAIN-SUFFIX,z-lib.gs
 DOMAIN-SUFFIX,z-lib.io
 DOMAIN-SUFFIX,z-lib.org
