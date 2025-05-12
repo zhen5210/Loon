@@ -8,7 +8,7 @@
 #!loon_version = 3.3.0(853)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Dingdongmaicai.png
-#!date = 2025-05-10 16:00
+#!date = 2025-05-12 13:00
 
 [Rule]
 DOMAIN, trackercollect.ddxq.mobi, REJECT
@@ -53,6 +53,8 @@ DOMAIN, rttrack.ddxq.mobi, REJECT
 ^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/bottomNavi response-body-json-jq 'del(.data.adId?) | if (.data.bottom_list? | length > 0) then .data.bottom_list |= map(select(.type != "eatwhat")) else . end'
 
 ^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/homeFlowDetail response-body-json-jq 'walk(if type == "object" and has("list") then .list |= map(if type == "object" and has("multi_advertise_data_list") then del(.multi_advertise_data_list) else . end) else . end)'
+
+^https?:\/\/maicai\.api\.ddxq\.mobi\/tool\/getConfig response-body-json-jq '.data |= del(.ai_enter_config)'
 
 [MitM]
 hostname = 119.29.29.*, maicai.api.ddxq.mobi, user.api.ddxq.mobi

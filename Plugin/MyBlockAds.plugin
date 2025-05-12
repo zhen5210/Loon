@@ -8,7 +8,7 @@
 #!loon_version = 3.3.0(853)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/MyBlockAds.png
-#!date = 2025-05-09 21:00
+#!date = 2025-05-12 12:30
 
 [Rule]
 # ======= A ======= #
@@ -296,15 +296,6 @@ URL-REGEX, "^http:\/\/\w{32}\.jddebug\.com\/diagnose\?", REJECT
 ^https:\/\/emdcadvertise(?:pj)?\.eastmoney\.com\/infoService\/v2 response-body-json-replace data.adpositionidlist []
 ^https:\/\/swdlcdn\.eastmoney\.com\/app\/adimg\/ reject-dict
 
-# 豆瓣 //api.douban.com, img3.doubanio.com, qnmob3.doubanio.com, frodo.douban.com, erebor.douban.com
-^https:\/\/api\.douban\.com\/v2\/app_ads\/splash\w+ reject-dict
-^https:\/\/(?:img|qnmob)3\.doubanio\.com\/view\/dale-online\/dale_ad\/public\/\w+ reject-dict
-^https?:\/\/api\.douban\.com\/v\d\/app_ads\/ reject-dict
-^https?:\/\/api\.douban\.com\/b.*\/common_ads\?.* reject-dict
-^https?:\/\/img\d\.doubanio\.com\/view\/dale-online\/dale_ad\/ reject
-^https?:\/\/frodo\.douban\.com\/api\/v2\/movie\/banner reject
-^https?:\/\/erebor\.douban\.com\/count\/\?ad= reject
-
 # 饿了么 //elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, www1.elecfans.com, nr-op.elemecdn.com
 ^https?:\/\/elemecdn\.com\/.+\/sitemap reject
 ^https?:\/\/fuss10\.elemecdn\.com\/.+\/w\/640\/h\/\d{3,4} reject
@@ -438,4 +429,4 @@ http-response ^https:\/\/ad\.mcloud\.139\.com\/advertapi\/adv-filter\/ script-pa
 http-response ^https:\/\/jzts\.cmpassport\.com\/personalized\/getPushContent script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/MyBlockAds/Cloud139.js, requires-body = true, tag = [MyBlockAds]中国移动云盘
 
 [MitM]
-hostname = app-v1.ecoliving168.com, 852b95d36.xwlpk.cn, gab.122.gov.cn, acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, list-app-m.i4.cn, tiebac.baidu.com, www.washpayer.com, img.alicdn.com, emdcadvertise.eastmoney.com, emdcadvertisepj.eastmoney.com, swdlcdn.eastmoney.com, api.douban.com, img3.doubanio.com, qnmob3.doubanio.com, frodo.douban.com, erebor.douban.com, elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, www1.elecfans.com, nr-op.elemecdn.com, www.haixue.com, hfapp-service.qweather.net, acs-m.freshippo.com, gw.alicdn.com, mobileapi.hupu.com, goblin.hupu.com, *.hupu.com, gab.122.gov.cn, p0.pipi.cn, app-cdn.2q10.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, web.meituan.com, npay.meituan.com, apimobile.meituan.com, osg-service.sgcc.com.cn, api.m.mi.com, shop-api.retail.mi.com, home.mi.com, wallet.95516.com, ecssmobile.e-chinalife.com, 114.115.217.129, home.umetrip.com, adserviceretry.kglink.cn, gateway.kugou.com, mobilepaas.abchina.com.cn, ad.mcloud.139.com, jzts.cmpassport.com
+hostname = app-v1.ecoliving168.com, 852b95d36.xwlpk.cn, gab.122.gov.cn, acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, list-app-m.i4.cn, tiebac.baidu.com, www.washpayer.com, img.alicdn.com, emdcadvertise.eastmoney.com, emdcadvertisepj.eastmoney.com, swdlcdn.eastmoney.com, elemecdn.com, fuss10.elemecdn.com, cube.elemecdn.com, www1.elecfans.com, nr-op.elemecdn.com, www.haixue.com, hfapp-service.qweather.net, acs-m.freshippo.com, gw.alicdn.com, mobileapi.hupu.com, goblin.hupu.com, *.hupu.com, gab.122.gov.cn, p0.pipi.cn, app-cdn.2q10.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, web.meituan.com, npay.meituan.com, apimobile.meituan.com, osg-service.sgcc.com.cn, api.m.mi.com, shop-api.retail.mi.com, home.mi.com, wallet.95516.com, ecssmobile.e-chinalife.com, 114.115.217.129, home.umetrip.com, adserviceretry.kglink.cn, gateway.kugou.com, mobilepaas.abchina.com.cn, ad.mcloud.139.com, jzts.cmpassport.com
