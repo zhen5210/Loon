@@ -358,7 +358,7 @@
         <td align=center>13</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/DiDi.plugin">滴滴出行</a></td>
         <td align=center>14</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Dingdongmaicai.plugin">叮咚买菜</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/DingdongMaicai.plugin">叮咚买菜</a></td>
         <td align=center>15</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Douyin_HK.plugin">香港抖音</a></td>
     </tr>
