@@ -20,6 +20,7 @@
 # https://kelee.one/Tool/Loon/Plugin/WexinMiniPrograms_Remove_ads.plugin
 # 2025-04-30
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/WxPureDominion.snippet
+
 [Rule]
 # WeChat用户请走代理，微信用户直连
 DOMAIN, btrace.qq.com, PROXY
