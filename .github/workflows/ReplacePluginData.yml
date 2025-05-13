@@ -28,7 +28,7 @@ jobs:
       - name: Replace #!date and #!loon_version
         run: |
           cd Loon
-          CURRENT_DATE="#!date = 2025-04-17 11:00"
+          CURRENT_DATE="#!date = 2025-05-13 22:00"
           LOON_VERSION="#!loon_version = 3.3.0(853)"
           
           # 查找并替换文件内容

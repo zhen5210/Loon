@@ -10,15 +10,12 @@
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/DiDi.png
 #!date = 2025-04-17 11:00
 
-# 2025-03-06 14:59:35
+# 2025-05-13 15:17:08
 # https://kelee.one/Tool/Loon/Plugin/DiDi_remove_ads.plugin
 # 2025-03-07 13:36
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.snippet
 
 [Rule]
-# 拦截HTTPDNS
-DOMAIN, hd.xiaojukeji.com, REJECT
-
 # 拦截广告下发
 DOMAIN, gwp.xiaojukeji.com, REJECT
 AND, ((IP-ASN, 45090, no-resolve), (DEST-PORT, 25641), (PROTOCOL, TCP)), REJECT

@@ -8,11 +8,11 @@
 #!loon_version = 3.3.0(853)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/ShieldReject.png
-#!date = 2025-05-12 19:00
+#!date = 2025-05-13 16:00
 
 # 2025-05-12 18:57:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
-# 2025-05-12 18:57:00
+# 2025-05-13 13:57:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/blockAds.plugin
 
 [Argument]
@@ -39,6 +39,7 @@ jingxi_enable = switch, true, false, tag = 京喜
 kuaishou_enable = switch, true, false, tag = 快手
 quark_enable = switch, true, false, tag = 夸克
 adnetwork_enable = switch, true, false, tag = 广告联盟
+lvtusuishenting_enable = switch, true, false, tag = 旅途随身听
 maidanba_enable = switch, true, false, tag = 买单吧
 maimai_enable = switch, true, false, tag = 脉脉
 mafengwo_enable = switch, true, false, tag = 马蜂窝
@@ -48,7 +49,6 @@ reddit_enable = switch, true, false, tag = Reddit
 qmai_enable = switch, true, false, tag = 企迈
 renrentv_enable = switch, true, false, tag = 人人视频
 sodalife_enable = switch, true, false, tag = 苏打校园
-lvtusuishenting_enable = switch, true, false, tag = 旅途随身听
 qqnews_enable = switch, true, false, tag = 腾讯新闻
 vgtime_enable = switch, true, false, tag = 游戏时光
 youdao_enable = switch, true, false, tag = 网易有道词典
@@ -1087,6 +1087,9 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 ^https?:\/\/api-ac\.liepin\.com\/api\/com\.liepin\.cyclops\.live\.get-ad-cards reject-dict
 ^https?:\/\/api-wanda\.liepin\.com\/api\/com\.liepin\.cbp\.baizhong\.op\.v2-show-4app reject-200
 
+# 旅途随身听 - www.1314zhilv.com
+^https?:\/\/www\.1314zhilv\.com\/ltsstnew\/(guideScenic\/getRecentlyUpdatedScenic|city\/getWeatherByCityName) reject-dict
+
 # >>>>>>>>>>>>>>> ✅ M ✅ <<<<<<<<<<<<<<< #
 # MIX - dispatcher.camera360.com
 ^https?:\/\/dispatcher\.camera360\.com\/api\/v1\/list$ reject
@@ -1508,9 +1511,6 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 ^https?:\/\/api-sams\.walmartmobile\.cn\/api\/v\d\/sams\/goods-portal\/spu\/searchRecommendPool reject-dict
 ^https?:\/\/api-sams\.walmartmobile\.cn\/api\/v\d\/sams\/configuration\/appVersionUpdate\/getAppVersionUpdateInfo reject-dict
 ^https?:\/\/api-sams\.walmartmobile\.cn\/api\/v1\/sams\/configuration\/portal\/beUpdate reject-dict
-
-# 旅途随身听 - www.1314zhilv.com
-^https?:\/\/www\.1314zhilv\.com\/ltsstnew\/(guideScenic\/getRecentlyUpdatedScenic|city\/getWeatherByCityName) reject-dict
 
 # 省省回头车 - www.ymm56.com
 ^https:\/\/www\.ymm56\.com\/short-distance-match-app\/openAppAd reject-dict
@@ -2359,6 +2359,10 @@ http-response ^https?:\/\/open-cms-api\.(uc|quark)\.cn\/open-cms script-path = h
 # 快手联盟,优量汇,穿山甲「广告联盟」 - api-access.pangolin-sdk-toutiao.com, mi.gdt.qq.com, open.e.kuaishou.com
 http-response ^https:\/\/(api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/get_ads|open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$|mi\.gdt\.qq\.com\/gdt_mview\.fcg\?) script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/adsense.js, requires-body = true, tag = [广告拦截合集]广告联盟, enable={adnetwork_enable}
 
+# >>>>>>>>>>>>>>> ✅ L ✅ <<<<<<<<<<<<<<< #
+# 旅途随身听 - www.1314zhilv.com
+http-response ^https?:\/\/www\.1314zhilv\.com\/ltsstnew\/(common\/getJGQIconNew|city\/getAllBannelByCity) script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/lvtusuishenting/ltsst-ad.js, requires-body = true, tag = [广告拦截合集]旅途随身听, enable={lvtusuishenting_enable}
+
 # >>>>>>>>>>>>>>> ✅ M ✅ <<<<<<<<<<<<<<< #
 # 买单吧 - creditcardapp.bankcomm.cn, creditcardapp.bankcomm.com, creditcard.bankcomm.cn, creditcard.bankcomm.com
 http-response ^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/rcg\/index\.html\?callbackurl=rcg\/index\.html&orclogin=1& script-path = https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/mdb.js, requires-body = true, tag = [广告拦截合集]买单吧, enable={maidanba_enable}
@@ -2406,9 +2410,6 @@ http-response ^https?:\/\/api\.rr\.tv\/user\/profile script-path = https://raw.g
 
 # 苏打校园 - api.sodalife.xyz
 http-response ^https?:\/\/api\.sodalife\.xyz\/v1\/posters\?location=SODA_APP%3AHOME%3ATOP script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soda.js, requires-body = true, tag = [广告拦截合集]苏打校园, enable={sodalife_enable}
-
-# 旅途随身听 - www.1314zhilv.com
-http-response ^https?:\/\/www\.1314zhilv\.com\/ltsstnew\/(common\/getJGQIconNew|city\/getAllBannelByCity) script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/lvtusuishenting/ltsst-ad.js, requires-body = true, tag = [广告拦截合集]旅途随身听, enable={lvtusuishenting_enable}
 
 # >>>>>>>>>>>>>>> ✅ T ✅ <<<<<<<<<<<<<<< #
 # 腾讯新闻 - r.inews.qq.com, news.ssp.qq.com
