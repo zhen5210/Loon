@@ -8,7 +8,7 @@
 #!loon_version = 3.3.0(853)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/MyBlockAds.png
-#!date = 2025-05-12 12:30
+#!date = 2025-05-13 09:00
 
 [Rule]
 # ======= A ======= #
@@ -267,9 +267,14 @@ URL-REGEX, "^http:\/\/\w{32}\.jddebug\.com\/diagnose\?", REJECT
 ^https:\/\/list-app-m\.i4\.cn\/(?:adclickcb|getHotSearchList|getopfstadinfo)\.xhtml reject
 
 # 百度贴吧 //tiebac.baidu.com
-^https:\/\/tiebac\.baidu\.com\/c\/u\/chat\/getChatSubscriptionList reject-dict
-^https:\/\/tiebac\.baidu\.com\/c\/f\/search\/discover reject-dict
-^https:\/\/tiebac\.baidu\.com\/c\/f\/forum\/forumGuide reject-dict
+^https:\/\/tieba\.baidu\.com\/c\/f\/member\/getMemberPopups$ reject-dict
+^https:\/\/tiebac\.baidu\.com\/c\/u\/user\/profile$ response-body-json-del recom_naws_list namoaixud_entry custom_grid duxiaoman_entry finance_tab
+^https:\/\/tiebac\.baidu\.com\/c\/u\/user\/profile$ response-body-json-replace user.shake_ad_switch.is_show 0
+^https:\/\/tiebac\.baidu\.com\/c\/u\/user\/profile$ response-body-json-jq '.zone_info |= map(select(.type as $t | ["commerce","banner","game"] | index($t) | not))'
+^https:\/\/tiebac\.baidu\.com\/c\/f\/sidebar\/home$ response-body-json-del task_list game_center tools tools.yunying_tools_list tools.show_tools_list
+^https:\/\/tiebac\.baidu\.com\/c\/f\/sidebar\/home$ response-body-json-jq '.tools.show_tools_list |= map(.tools_list |= map(select(.title != "度小满钱包")))'
+^https:\/\/tiebac\.baidu\.com\/c\/f\/search\/discover$ reject-dict
+^https:\/\/tiebac\.baidu\.com\/c\/f\/frs\/frsBottom$ response-body-json-del card_activity
 
 # 昌原云充 五代十路 //www.washpayer.com
 ^http:\/\/ad\.5tao5ai\.com\/common\/getReceipt\? response-body-json-del payload.adInfo
@@ -388,12 +393,7 @@ URL-REGEX, "^http:\/\/\w{32}\.jddebug\.com\/diagnose\?", REJECT
 
 [Script]
 # 百度贴吧 //tiebac.baidu.com
-http-response ^https:\/\/tiebac\.baidu\.com\/livefeed\/feed script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Baidu/BaiduTieba.js, requires-body = true, tag = [MyBlockAds]百度贴吧首页
-http-response ^https:\/\/tiebac\.baidu\.com\/c\/f\/sidebar\/home script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Baidu/BaiduTieba.js, requires-body = true, tag = [MyBlockAds]百度贴吧侧拉抽屉
-http-response ^https:\/\/tiebac\.baidu\.com\/c\/u\/user\/profile script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Baidu/BaiduTieba.js, requires-body = true, tag = [MyBlockAds]百度贴吧我的页面
-http-response ^https:\/\/tieba\.baidu\.com\/c\/f\/frs\/frsBottom script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Baidu/BaiduTieba.js, requires-body = true, tag = [MyBlockAds]百度贴吧首页
-http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/(c\/f\/(?:frs\/(?:page|threadlist|generalTabList)|pb\/page|excellent\/personalized)$|tiebaads\/commonbatch|c\/s\/sync$) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Baidu/BaiduTiebaJson.js, requires-body = true, timeout = 10, tag = [MyBlockAds]百度贴吧JSON处理
-http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(?:frs\/(?:page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Baidu/BaiduTiebaProto.js, requires-body = true, binary-body-mode = true, timeout = 10, tag = [MyBlockAds]百度贴吧Proto处理
+http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/TB.js, requires-body = true, binary-body-mode = true, timeout = 10, tag = [MyBlockAds]百度贴吧
 
 # 昌原云充 五代十路 //www.washpayer.com
 http-response ^https:\/\/www\.washpayer\.com\/user\/message\/equipmentPara\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/MyBlockAds/Changyuan.js, requires-body = true, tag = [MyBlockAds]昌原云充 五代十路

@@ -8,7 +8,7 @@
 #!loon_version = 3.3.0(853)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/BaiduNetDisk.png
-#!date = 2025-04-17 11:00
+#!date = 2025-05-13 09:00
 
 # 2025-01-09
 # https://github.com/chxm1023/Rewrite/blob/main/bdcloud.js
@@ -92,25 +92,24 @@ DOMAIN-KEYWORD, video-cn.snssdk.com, REJECT
 DOMAIN-KEYWORD, asiad.byteactivity, REJECT
 
 # 百度联盟 - 广告服务商
-DOMAIN, mobads.baidu.com, REJECT
-DOMAIN, mobads-logs.baidu.com, REJECT
-DOMAIN, wn.pos.baidu.com, REJECT
-DOMAIN, bgg.baidu.com, REJECT
-DOMAIN, als.baidu.com, REJECT
-DOMAIN, mobads-pre-config.cdn.bcebos.com, REJECT
-DOMAIN, cpro.baidustatic.com, REJECT
-DOMAIN, feed-image.baidu.com, REJECT
-DOMAIN-SUFFIX, union.baidu.cn, REJECT
-DOMAIN-SUFFIX, union.baidu.com, REJECT
+DOMAIN, httpdns.baidu.com, REJECT
+DOMAIN, httpsdns.baidu.com, REJECT
+DOMAIN, httpdns.bcelive.com, REJECT
+DOMAIN, httpdns.baidubce.com, REJECT
+DOMAIN, dns.iqiyi.com, REJECT
+DOMAIN, doh.iqiyi.com, REJECT
+DOMAIN, dns.qiyipic.iqiyi.com, REJECT
+DOMAIN, httpdns.n.shifen.com, REJECT
+URL-REGEX, "^http:\/\/180\.76\.76\.112\/v\d\/", REJECT
+URL-REGEX, "^http:\/\/180\.76\.76\.112\/v\d\/resolve", REJECT
+URL-REGEX, "^http:\/\/180\.76\.76\.220\/v\d\/resolve", REJECT
+IP-CIDR, 186.76.76.200/32, REJECT, no-resolve
 
 [Rewrite]
 # RuCu6
 ^https?:\/\/pan\.baidu\.com\/(?:act\/|aipic\/|aisearch\/|api\/getsyscfg\?) reject-dict
 
 # 可莉🅥
-# 拦截HTTPDNS
-^https?:\/\/180\.76\.76\.200\/v\d\/resolve reject
-^https?:\/\/180\.76\.76\.112\/v\d\/resolve reject
 # 应用配置
 ^https:\/\/pan\.baidu\.com\/api\/getconfig reject-dict
 ^https:\/\/pan\.baidu\.com\/api\/getsyscfg reject-dict
@@ -170,4 +169,4 @@ http-request ^https:\/\/pan\.baidu\.com\/api\/streaming\?app_id=\d+&type=M3U8_HQ
 http-response ^https:\/\/pan\.baidu\.com\/rest\/.*\/membership\/user script-path = https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.adblock.js, requires-body = true, tag = [百度网盘]视频倍速@ddgksf2013
 
 [Mitm]
-hostname = pan.baidu.com, afd.baidu.com, 180.76.76.200, 180.76.76.112
+hostname = pan.baidu.com, afd.baidu.com
