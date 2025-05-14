@@ -1665,7 +1665,7 @@ https?:\/\/api\.taptapdada\.com\/startup\-logo\/v1\/combo\? reject-dict
 ^https?:\/\/m\.pvp\.xoyo\.com\/conf\/server-mapping reject-dict
 
 # 台铃智能 - www.tailgdd.com
-^https://www\.tailgdd\.com/v8/smart/app/config/get$ response-body-json-replace data {}
+^https:\/\/www\.tailgdd\.com\/v8\/smart\/app\/config\/get$ response-body-json-replace data {}
 
 # >>>>>>>>>>>>>>> ✅ U ✅ <<<<<<<<<<<<<<< #
 # U净 - api-marketing.zhinengxiyifang.cn, adsoss.zhinengxiyifang.cn, ads.zhinengxiyifang.cn
