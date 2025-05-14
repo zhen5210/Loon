@@ -1,4 +1,4 @@
-# 20245-04-28 22:11:00
+# 20245-05-14 22:11:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/rule/rejectAd.list
 
 # >>>>>>>>>>>>>>> ✅ # ✅ <<<<<<<<<<<<<<
@@ -52,7 +52,7 @@ DOMAIN, ad.mcloud.139.com
 
 
 # >>>>>>>>>>>>>>> ✅ 5 ✅ <<<<<<<<<<<<<<
-# 51wnl
+# 万年历
 DOMAIN, ad.51wnl-cq.com
 DOMAIN, adextra.51wnl-cq.com
 DOMAIN, log.51wnl-cq.com
@@ -106,6 +106,7 @@ DOMAIN, webproxy-advp.iad-apple.com
 DOMAIN, webproxy-advp.iad-apple.com.akadns.net
 DOMAIN-SUFFIX, advp.apple.com
 DOMAIN-SUFFIX, iadsdk.apple.com
+
 # 安全浏览限制解除
 DOMAIN, lookup.api.bsb.baidu.com
 DOMAIN, proxy.safebrowsing.apple
@@ -528,8 +529,8 @@ DOMAIN, apis.alenable.com
 
 # >>>>>>>>>>>>>>> ✅ H ✅ <<<<<<<<<<<<<<
 # HDO
-# DOMAIN-suffix, applovin.com
-# DOMAIN-suffix, applvn.com
+# DOMAIN-SUFFIX, applovin.com
+# DOMAIN-SUFFIX, applvn.com
 
 # Huawei AspiegelBot
 IP-CIDR, 114.119.160.0/21, no-resolve
@@ -567,7 +568,7 @@ DOMAIN-SUFFIX, mob.com
 
 
 # >>>>>>>>>>>>>>> ✅ J ✅ <<<<<<<<<<<<<<
-# jxedt
+# 驾校一点通
 DOMAIN, richmanapi.jxedt.com
 DOMAIN, richmanmain.jxedt.com
 DOMAIN, richmanrules.jxedt.com
@@ -827,6 +828,9 @@ DOMAIN-SUFFIX, x.da.mgtv.com
 DOMAIN-SUFFIX, y.da.mgtv.com
 DOMAIN-SUFFIX, da.mgtv.com
 
+# 美柚
+DOMAIN, ad.seeyouyima.com
+
 
 # >>>>>>>>>>>>>>> ✅ N ✅ <<<<<<<<<<<<<<
 # NicoNico
@@ -942,7 +946,7 @@ DOMAIN, adm3.autoimg.cn
 
 
 # >>>>>>>>>>>>>>> ✅ S ✅ <<<<<<<<<<<<<<
-# soul
+# Soul
 DOMAIN, soul-ad.soulapp.cn
 DOMAIN, ad-r.soulapp.cn
 DOMAIN, ad-reward.soulapp.cn
@@ -1439,6 +1443,9 @@ DOMAIN, u1.img.mobile.sina.cn
 DOMAIN, sax.sina.com.cn
 DOMAIN, saxs.sina.com.cn
 DOMAIN, saxn.sina.com.cn
+
+# 小爱音箱
+DOMAIN, mistat.xiaomi.com
 
 
 # >>>>>>>>>>>>>>> ✅ Y ✅ <<<<<<<<<<<<<<
