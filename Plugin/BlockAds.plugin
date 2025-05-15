@@ -8,7 +8,7 @@
 #!loon_version = 3.3.0(853)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/ShieldReject.png
-#!date = 2025-05-14 21:00
+#!date = 2025-05-15 16:00
 
 # 2025-05-14 20:00:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
@@ -265,10 +265,16 @@ IP-CIDR, 115.236.121.195/32, REJECT, no-resolve
 # 500 - evs.500.com
 ^https?:\/\/evs\.500\.com\/esinfo\/loading\/loading reject
 
-# 51Job - appapi.51job*.com, cupid.51job*.com, img01.51jobcdn.com
-^https?:\/\/appapi\.51job(app)?\.com\/api\/market\/(adtrace|get_launch|get_prompt) reject
-^https?:\/\/cupid\.51job(app)?\.com\/open\/index\/recommend-infos reject
+# 51Job - img01.51jobcdn.com, appapi.51job*.com, cupid.51job*.com
 ^https:\/\/img01\.51jobcdn\.com\/im\/mkt/(?:tg/((19|20)\d{2})banner/(?!jcgz2/)|\d{4}/bd/\d{4}/).*\.jpg reject
+^https?:\/\/appapi\.51job(app)?\.com\/api\/util\/get_version reject-dict
+^https?:\/\/cupid\.51job(app)?\.com\/open\/noauth\/index\/last-version reject-dict
+^https?:\/\/appapi\.51job(app)?\.com\/api\/market\/(?>adtrace|get_launch|get_prompt) reject
+^https?:\/\/cupid\.51job(app)?\.com\/open\/guide\/home-page-top reject
+^https?:\/\/cupid\.51job(app)?\.com\/open\/user-task\/user\/task\/init reject
+^https?:\/\/cupid\.51job(app)?\.com\/open\/index\/notice-infos reject-dict
+^https?:\/\/cupid\.51job(app)?\.com\/launch-hub\/open\/noauth\/popUp reject
+^https?:\/\/cupid\.51job(app)?\.com\/open\/index\/recommend-infos reject
 
 # >>>>>>>>>>>>>>> ✅ A ✅ <<<<<<<<<<<<<<< #
 # AcFun - aes.acfun.cn, api-new.app.acfun.cn
@@ -2286,8 +2292,9 @@ http-response ^https:\/\/app-v1\.ecoliving168\.com\/api\/v1\/movie\/index_recomm
 http-response ^https?:\/\/api\.u51\.com\/liabilitygateway\/api\/v\d\/homepage\/liabilityline script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/51card.js, requires-body = true, tag = [广告拦截合集]51信用卡管家, enable={51xyk_script}
 http-response ^https?:\/\/api\.u51\.com\/generic-config-gateway\/api\/v\d\/guanjia\/me-tab2\/config script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/51card.js, requires-body = true, tag = [广告拦截合集]51信用卡管家, enable={51xyk_script}
 
-# 51job - appapi.51job*.com, cupid.51job*.com
+# 51Job - cupid.51job*.com
 http-response ^https?:\/\/cupid\.51job(app)?\.com\/open\/noauth\/recommend\/job-tab-dynamic script-path = https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/51job.js, requires-body = true, tag = [广告拦截合集]51Job, enable={51job_enable}
+http-response ^https?:\/\/cupid\.51job(app)?\.com\/open\/my-page\/ script-path = https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/AntiAd/51job.js, requires-body = true, tag = [广告拦截合集]51Job, enable={51job_enable}
 
 # >>>>>>>>>>>>>>> ✅ A ✅ <<<<<<<<<<<<<<< #
 # 阿里巴巴 - acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
