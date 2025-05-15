@@ -1,0 +1,34 @@
+#!name = 什么值得买
+#!desc = 过滤什么值得买广告
+#!openUrl = https://apps.apple.com/app/id518213356
+#!author = ZenmoFeiShi[https://github.com/ZenmoFeiShi], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.0(853)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Zhidemai.png
+#!date = 2025-05-15 10:00
+
+# 2024-02-11 01:02
+# https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Smzdm.snippet
+# 2025-05-15 03:41:01
+# https://kelee.one/Tool/Loon/Plugin/smzdm_remove_ads.plugin
+
+[Rewrite]
+^https:\/\/app-api\.smzdm\.com\/util\/loading\? reject-dict
+
+^https:\/\/homepage-api\.smzdm\.com\/v3\/home\? response-body-json-jq jq-path="https://kelee.one/Resource/JQLang/smzdm/home_smzdm_remove_ads.jq"
+
+^https:\/\/h5\.smzdm\.com\/user\/coupon\/coupon_list\? reject
+
+^https:\/\/haojia-api\.smzdm\.com\/home\/list\? response-body-json-jq '.data.banner_v2 |= if type == "array" then map(select(has("hongbao") | not)) else . end | .data.rows |= map(if .ad_campaign_id == null or .ad_campaign_id == "" then . else empty end)'
+
+^https:\/\/haojia\.m\.smzdm\.com\/detail_modul\/user_related_modul\? response-body-json-del data.super_coupon
+
+^https:\/\/user-api\.smzdm\.com\/vip$ response-body-json-del data.big_banner 
+
+^https:\/\/user-api\.smzdm\.com\/vip\/bottom_card_list\? reject-dict
+
+[MitM]
+hostname = app-api.smzdm.com, homepage-api.smzdm.com, haojia-api.smzdm.com, haojia.m.smzdm.com, user-api.smzdm.com
