@@ -8,11 +8,11 @@
 #!loon_version = 3.3.0(853)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Zhidemai.png
-#!date = 2025-05-15 16:00
+#!date = 2025-05-16 12:00
 
 # 2024-02-11 01:02
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Smzdm.snippet
-# 2025-05-15 15:19:01
+# 2025-05-16 03:30:15
 # https://kelee.one/Tool/Loon/Plugin/smzdm_remove_ads.plugin
 
 [Rule]
@@ -44,4 +44,4 @@ DOMAIN, adx-api.zdmimg.com, REJECT
 ^https:\/\/s-api\.smzdm\.com\/sou\/search_default_keyword\? reject-dict
 
 [MitM]
-hostname = app-api.smzdm.com, homepage-api.smzdm.com, haojia-api.smzdm.com, haojia.m.smzdm.com, user-api.smzdm.com, article-api.smzdm.com, s-api.smzdm.com
+hostname = app-api.smzdm.com, homepage-api.smzdm.com, h5.smzdm.com, haojia-api.smzdm.com, haojia.m.smzdm.com, user-api.smzdm.com, article-api.smzdm.com, s-api.smzdm.com
