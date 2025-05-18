@@ -8,9 +8,9 @@
 #!loon_version = 3.3.0(853)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/SodaMusic.png
-#!date = 2025-05-14 10:00
+#!date = 2025-05-18 17:00
 
-# 2025-05-14 03:12:36
+# 2025-05-18 01:29:34
 # https://kelee.one/Tool/Loon/Plugin/SodaMusic_remove_ads.plugin
 
 [Rewrite]
@@ -31,8 +31,6 @@
 # 搜索页面 - 新歌首发
 ^https:\/\/beta-luna\.douyin\.com\/luna\/activities\? reject-dict
 
-^https:\/\/beta-luna\.douyin\.com\/luna\/me\/recently-played-media\? response-body-json-jq '.media |= map(select(.type != "video"))'
-
 ^https:\/\/beta-luna\.douyin\.com\/luna\/feed\/song-tab\? response-body-json-jq 'del(.items[] | select(.type == "video_track_mix"))'
 
 ^https:\/\/beta-luna\.douyin\.com\/luna\/card\? response-body-json-del preview_guide
@@ -50,6 +48,9 @@
 
 # 邀请开通会员弹窗
 ^https:\/\/beta-luna\.douyin\.com\/luna\/commerce\/v2\/commerce_info\? reject-dict
+
+[Script]
+http-response ^https:\/\/beta-luna\.douyin\.com\/luna\/me\/recently-played-media\? script-path = https://kelee.one/Resource/Script/SodaMusic/SodaMusic_remove_ads.js, requires-body = true, tag = [汽水音乐]移除播放页面视频流
 
 [MitM]
 hostname = webcast-open.douyin.com, beta-luna.douyin.com, api.qishui.com
