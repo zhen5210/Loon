@@ -8,9 +8,9 @@
 #!loon_version = 3.3.0(853)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Amap.png
-#!date = 2025-05-13 22:00
+#!date = 2025-05-22 23:00
 
-# 2025-05-13 15:17:08
+# 2025-05-22 21:41:32
 # https://kelee.one/Tool/Loon/Plugin/Amap_remove_ads.plugin
 
 [Rule]
@@ -56,7 +56,7 @@ http-response ^https:\/\/m5\.amap\.com\/ws\/aos\/perception\/publicTravel\/befor
 http-response ^https:\/\/m5\.amap\.com\/ws\/bus\/plan\/integrate\? script-path = https://kelee.one/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = [高德地图]移除路线规划、导航结束页推广
 http-response ^https:\/\/m5\.amap\.com\/ws\/c3frontend\/(?:af-(?:hotel|launch)\/page\/main|af-nearby\/nearby) script-path = https://kelee.one/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = [高德地图]移除导航详情页底部酒店、处理附近页
 http-response ^https:\/\/m5\.amap\.com\/ws\/perception\/drive\/(?:routeInfo|routePlan) script-path = https://kelee.one/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = [高德地图]移除路线规划推广
-http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/(?:common\/coupon\/info|poi\/detail) script-path = https://kelee.one/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = [高德地图]移除导航详情页推广
+http-response ^https:\/\/(?:info|m5)\.amap\.com\/ws\/shield\/search\/(?:common\/coupon\/info|poi\/detail) script-path = https://kelee.one/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = [高德地图]移除导航详情页推广
 http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/search_bff\/hotword\? script-path = https://kelee.one/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = [高德地图]移除搜索栏推广
 http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/(?:mps|search\/sp|sug|tips_operation_location) script-path = https://kelee.one/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = [高德地图]移除搜索详情页推广
 
@@ -78,4 +78,4 @@ http-response ^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(?:car\/order\/content_info
 http-response ^https:\/\/m5-zb\.amap\.com\/ws\/promotion-web\/resource(\/home)?\? script-path = https://kelee.one/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = [高德地图]移除打车页红点角标、天气图标
 
 [MitM]
-hostname = m5.amap.com, m5-zb.amap.com, oss.amap.com, sns.amap.com
+hostname = info.amap.com, m5.amap.com, m5-zb.amap.com, oss.amap.com, sns.amap.com
