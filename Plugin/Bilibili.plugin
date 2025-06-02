@@ -8,7 +8,7 @@
 #!loon_version = 3.3.0(853)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/BilibiliPink.png
-#!date = 2025-05-20 22:30
+#!date = 2025-06-02 12:00
 
 # 2025-05-17 00:04:07
 # https://kelee.one/Tool/Loon/Plugin/Bilibili_remove_ads.plugin
@@ -19,8 +19,8 @@
 [Argument]
 showUpList = select, "auto", "true", "false", tag = [动态]中[最常访问]的显示方式, desc = auto: 仅当列表中存在直播状态时显示; true: 始终显示; false: 始终隐藏;
 filterTopReplies = switch, true, false, tag = [评论区]过滤置顶评论广告, desc = true: 开启; false: 关闭;
-enableAirborne = switch, true, false, tag = [空降助手]跳过[视频内]插播广告, desc = true: 开启; false: 关闭;
-enableAirborneDm = switch, false, true, tag = [空降助手弹幕版]仅限iPad开启, desc = true: 开启; false: 关闭;
+airborne = switch, true, false, tag = [空降助手]跳过[视频内]插播广告, desc = true: 开启; false: 关闭;
+airborneDm = switch, false, true, tag = [空降助手弹幕版]仅限iPad开启, desc = true: 开启; false: 关闭;
 
 [Rule]
 # 阻止B站备用域名访问
@@ -82,11 +82,11 @@ URL-REGEX, "^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH", REJECT-DICT
 
 [Script]
 # Proto处理
-http-request ^https:\/\/(?:grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.playerunite\.v1\.Player\/PlayViewUnite$ script-path = https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/bilibili.airborne.js, requires-body = true, binary-body-mode = true, tag = [哔哩哔哩]空降助手, enable={enableAirborne}
+http-request ^https:\/\/(?:grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.playerunite\.v1\.Player\/PlayViewUnite$ script-path = https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/bilibili.airborne.js, requires-body = true, binary-body-mode = true, tag = [哔哩哔哩]空降助手, enable={airborne}
 
-http-request ^https:\/\/(?:grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.community\.service\.dm\.v1\.DM\/DmSegMobile$ script-path = https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/bilibili.airborne.js, requires-body = true, binary-body-mode = true, tag = [哔哩哔哩]空降助手弹幕版, enable={enableAirborneDm}
+http-request ^https:\/\/(?:grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.community\.service\.dm\.v1\.DM\/DmSegMobile$ script-path = https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/bilibili.airborne.js, requires-body = true, binary-body-mode = true, tag = [哔哩哔哩]空降助手弹幕版, enable={airborneDm}
 
-http-response ^https:\/\/(?:grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.(?:app\.(?:show\.v1\.Popular\/Index|dynamic\.v2\.Dynamic\/DynAll|view(?:unite)?\.v1\.View\/(?:View|ViewProgress|RelatesFeed)|playurl\.v1\.PlayURL\/PlayView|playerunite\.v1\.Player\/PlayViewUnite)|polymer\.app\.search\.v1\.Search\/SearchAll|community\.service\.dm\.v1\.DM\/DmView|main\.community\.reply\.v1\.Reply\/MainList|pgc\.gateway\.player\.v2\.PlayURL\/PlayView)$ script-path = https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/bilibili.protobuf.js, requires-body = true, binary-body-mode = true, tag = [哔哩哔哩]Proto处理, argument=[{showUpList},{filterTopReplies}]
+http-response ^https:\/\/(?:grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.(?:app\.(?:show\.v1\.Popular\/Index|dynamic\.v2\.Dynamic\/DynAll|view(?:unite)?\.v1\.View\/(?:View|ViewProgress|RelatesFeed)|playurl\.v1\.PlayURL\/PlayView|playerunite\.v1\.Player\/PlayViewUnite)|polymer\.app\.search\.v1\.Search\/SearchAll|community\.service\.dm\.v1\.DM\/DmView|main\.community\.reply\.v1\.Reply\/MainList|pgc\.gateway\.player\.v2\.PlayURL\/PlayView)$ script-path = https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/bilibili.protobuf.js, requires-body = true, binary-body-mode = true, tag = [哔哩哔哩]Proto处理, argument=[{showUpList},{filterTopReplies},{airborneDm}]
 
 # http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.dynamic\.v2\.Dynamic\/DynAll$ script-path = https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/bilibili.protobuf.js, requires-body = true, binary-body-mode = true, tag = [哔哩哔哩]移除动态页面广告, argument=[{showUpList}]
 
