@@ -8,11 +8,11 @@
 #!loon_version = 3.3.0(853)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Zhidemai.png
-#!date = 2025-05-21 18:00
+#!date = 2025-06-03 22:00
 
 # 2024-02-11 01:02
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Smzdm.snippet
-# 2025-05-21 14:54:15
+# 2025-06-03 18:12:18
 # https://kelee.one/Tool/Loon/Plugin/smzdm_remove_ads.plugin
 
 [Rule]
@@ -23,11 +23,13 @@ DOMAIN, adx-api.zdmimg.com, REJECT
 
 ^https:\/\/app-api\.smzdm\.com\/util\/update$ response-body-json-replace data.silence_local_push 0 data.baichuan_redirect_switch 0
 
-^https:\/\/app-api\.smzdm\.com\/util\/update$ response-body-json-del data.silence_local_push_msg data.video_cache_num_configs data.haojia_widget
+^https:\/\/app-api\.smzdm\.com\/util\/update$ response-body-json-del data.silence_local_push_msg data.video_cache_num_configs data.haojia_widget data.widget
 
 ^https:\/\/app-api\.smzdm\.com\/util\/update$ response-body-json-jq 'def r: if type=="object" then if has("ad_campaign_name") and (.ad_campaign_name|type=="string") and (.ad_campaign_name|test("\\S")) then empty else . end elif type=="array" then map(r) else . end; .data.operation_float |= map(map(r))'
 
 ^https:\/\/homepage-api\.smzdm\.com\/v3\/home\? response-body-json-jq jq-path="https://kelee.one/Resource/JQLang/smzdm/home_smzdm_remove_ads.jq"
+
+^https:\/\/app-api\.smzdm\.com\/mychannel\/list$ reject-dict
 
 ^https:\/\/h5\.smzdm\.com\/user\/coupon\/coupon_list\? reject
 
@@ -37,7 +39,7 @@ DOMAIN, adx-api.zdmimg.com, REJECT
 
 ^https:\/\/haojia\.m\.smzdm\.com\/detail_modul\/other_modul\? response-body-json-del data.banner
 
-^https:\/\/user-api\.smzdm\.com\/vip$ response-body-json-del data.big_banner
+^https:\/\/user-api\.smzdm\.com\/vip$ response-body-json-del data.activity_entrance_info data.big_banner data.top_banner data.banner_switch
 
 ^https:\/\/user-api\.smzdm\.com\/vip\/bottom_card_list\? reject-dict
 
