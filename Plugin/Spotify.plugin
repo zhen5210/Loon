@@ -1,5 +1,5 @@
 #!name = Spotify
-#!desc = 过滤Spotify广告。修改插件自定义配置项需要重新登陆方可生效。
+#!desc = 过滤Spotify广告，修改插件自定义配置项需要重新登陆方可生效。
 #!openUrl = https://apps.apple.com/app/id324684580
 #!author = 001ProMax[https://github.com/001ProMax], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!tag = 去广告
@@ -8,9 +8,9 @@
 #!loon_version = 3.3.0(853)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Spotify.png
-#!date = 2025-06-04 00:00
+#!date = 2025-06-04 01:00
 
-# 2025-06-04
+# 2025-06-04 00:58
 # https://github.com/001ProMax/Surge/blob/main/Plugin/Spotify.plugin
 # 2025-06-02 19:39:26
 # https://kelee.one/Tool/Loon/Plugin/Spotify_remove_ads.plugin
@@ -20,15 +20,15 @@ tab = switch, false, true, tag = 移除底栏创建按钮, desc = 此开关控�
 useractivity = switch, true, false, tag = 启用Apple设备接力, desc = 此开关控制是否使用Apple设备接力
 
 [Rule]
-AND, ((DOMAIN, spclient.wg.spotify.com), (PROTOCOL, QUIC)), REJECT
+AND, ((DOMAIN-SUFFIX, spotify.com), (PROTOCOL, QUIC)), REJECT
 
 [Rewrite]
-^https:\/\/.+\.spotify\.com(:443)?\/pendragon\/ reject-dict
+^https:\/\/.+\.spotify\.com\/pendragon\/ reject-dict
 
-^https:\/\/.+\.spotify\.com(:443)?\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/(.*)platform=iphone header https://spclient.wg.spotify.com/$1/$2platform=ipad
+^https:\/\/(.+)\.spotify\.com(:443)?\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/(.*)platform=iphone header https://$1.spotify.com$2/$3/$4platform=ipad
 
 [Script]
-http-response ^https:\/\/.+\.spotify\.com(:443)?\/(?:bootstrap|user-customization-service) script-path = https://raw.githubusercontent.com/001ProMax/Surge/main/Script/Spotify.Crack.Dev.js, requires-body = true, binary-body-mode = true, timeout = 3, tag = [Spotify]Protobuf, argument=[{tab},{useractivity}]
+http-response ^https:\/\/.+\.spotify\.com\/(?:bootstrap|user-customization-service) script-path = https://raw.githubusercontent.com/001ProMax/Surge/main/Script/Spotify.Crack.Dev.js, requires-body = true, binary-body-mode = true, timeout = 3, tag = [Spotify]Protobuf, argument=[{tab},{useractivity}]
 
 [MitM]
 hostname = *.spotify.com
