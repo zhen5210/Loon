@@ -1,5 +1,5 @@
 #!name = Telegram
-#!desc = Telegram外部链接跳转，可选择Telegram、Swiftgram、Turrit
+#!desc = Telegram外部链接跳转，可选择Telegram、Swiftgram、Turrit、iMe、Nicegram、Intent
 #!openUrl = https://apps.apple.com/app/id686449807
 #!author = sooyaaabo[https://github.com/sooyaaabo]
 #!tag = 功能增强
@@ -8,10 +8,10 @@
 #!loon_version = 3.3.0(853)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Telegram-01.png
-#!date = 2025-05-13 22:00
+#!date = 2025-06-06 22:00
 
 [Argument]
-t.me_redirect = select, "Telegram", "Swiftgram", "Turrit", "iMe", "Nicegram", tag = 跳转至对应客户端
+t.me_redirect = select, "Telegram", "Swiftgram", "Turrit", "iMe", "Nicegram", "Intent", tag = 跳转至对应客户端
 
 [Rule]
 DOMAIN-SUFFIX, swiftgram.app, PROXY
@@ -19,6 +19,7 @@ DOMAIN-SUFFIX, iturrit.com, PROXY
 DOMAIN-SUFFIX, imem.app, PROXY
 DOMAIN-SUFFIX, nicegram.app, PROXY
 DOMAIN-SUFFIX, nicegram.cloud, PROXY
+DOMAIN-SUFFIX, intentchat.app, PROXY
 DOMAIN-SUFFIX, comments.app, PROXY
 DOMAIN-SUFFIX, mbrx.app, PROXY
 DOMAIN-SUFFIX, contest.com, PROXY

@@ -7,7 +7,8 @@ const mapping = {
     "Swiftgram": "sg",
     "Turrit": "turrit",
     "iMe": "ime",
-    "Nicegram": "ng"
+    "Nicegram": "ng",
+    "Intent": "intent"
 };
 
 // 检查并转换 t.me_redirect 参数
