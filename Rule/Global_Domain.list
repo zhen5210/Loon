@@ -2,14 +2,14 @@
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-06-04 02:15:38
+# UPDATED: 2025-06-06 09:16:33
 # DOMAIN: 91
 # DOMAIN-KEYWORD: 36
-# DOMAIN-SUFFIX: 31531
+# DOMAIN-SUFFIX: 31534
 # IP-CIDR: 112
 # IP-CIDR6: 4
 # USER-AGENT: 46
-# TOTAL: 31820
+# TOTAL: 31823
 DOMAIN-SUFFIX,000webhost.com
 DOMAIN-SUFFIX,01.org
 DOMAIN-SUFFIX,02weqj32.com
@@ -5800,6 +5800,7 @@ DOMAIN-SUFFIX,cdn-telegram.org
 DOMAIN-SUFFIX,cdn-terapeak.com
 DOMAIN-SUFFIX,cdn.ac.uk
 DOMAIN-SUFFIX,cdn.angruo.com
+DOMAIN-SUFFIX,cdn.arstechnica.net
 DOMAIN-SUFFIX,cdn.segment.com
 DOMAIN-SUFFIX,cdn77.com
 DOMAIN-SUFFIX,cdn77.org
@@ -6265,6 +6266,7 @@ DOMAIN-SUFFIX,cia.ac.uk
 DOMAIN-SUFFIX,cias.ac.uk
 DOMAIN-SUFFIX,ciattackers.com
 DOMAIN-SUFFIX,cib.ac.uk
+DOMAIN-SUFFIX,cici.com
 DOMAIN-SUFFIX,ciciai.com
 DOMAIN-SUFFIX,cicl.ac.uk
 DOMAIN-SUFFIX,cied.ac.uk
@@ -6619,6 +6621,7 @@ DOMAIN-SUFFIX,coedcherry.com
 DOMAIN-SUFFIX,coem.ac.uk
 DOMAIN-SUFFIX,cof.ac.uk
 DOMAIN-SUFFIX,cofacts.tw
+DOMAIN-SUFFIX,coffeemanga.to
 DOMAIN-SUFFIX,cogc.ac.uk
 DOMAIN-SUFFIX,coin2co.in
 DOMAIN-SUFFIX,coinalyze.net
