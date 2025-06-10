@@ -2,14 +2,14 @@
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-06-08 02:07:15
+# UPDATED: 2025-06-10 02:07:55
 # DOMAIN: 91
 # DOMAIN-KEYWORD: 36
-# DOMAIN-SUFFIX: 31535
+# DOMAIN-SUFFIX: 31537
 # IP-CIDR: 112
 # IP-CIDR6: 4
 # USER-AGENT: 46
-# TOTAL: 31824
+# TOTAL: 31826
 DOMAIN-SUFFIX,000webhost.com
 DOMAIN-SUFFIX,01.org
 DOMAIN-SUFFIX,02weqj32.com
@@ -29298,6 +29298,7 @@ DOMAIN-SUFFIX,walker-institute.ac.uk
 DOMAIN-SUFFIX,walker.ac.uk
 DOMAIN-SUFFIX,wallet.com
 DOMAIN-SUFFIX,walletconnect.com
+DOMAIN-SUFFIX,wallhaven.cc
 DOMAIN-SUFFIX,wallmama.com
 DOMAIN-SUFFIX,wallornot.org
 DOMAIN-SUFFIX,wallpapercasa.com
@@ -29653,6 +29654,7 @@ DOMAIN-SUFFIX,whoreteensex.com
 DOMAIN-SUFFIX,whorevintagesex.com
 DOMAIN-SUFFIX,whosthehost.com
 DOMAIN-SUFFIX,whotalking.com
+DOMAIN-SUFFIX,whvn.cc
 DOMAIN-SUFFIX,whvuxtub.com
 DOMAIN-SUFFIX,whychoosehorizon.com
 DOMAIN-SUFFIX,whychooseview.com
