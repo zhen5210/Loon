@@ -8,13 +8,13 @@
 #!loon_version = 3.3.1(869)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Pinduoduo.png
-#!date = 2025-06-08 17:00
+#!date = 2025-06-11 09:00
 
 # 2024-10-18 13:13
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Pinduoduo.snippet
 # 2024-08-10
 # https://raw.githubusercontent.com/ZenmoFeiShi/rule/main/Pinduoduo.list
-# 2025-05-13 15:17:08
+# 2025-06-11 00:30:29
 # https://kelee.one/Tool/Loon/Plugin/PinDuoDuo_remove_ads.plugin
 
 [Rule]
@@ -43,14 +43,12 @@ DOMAIN, titan.pinduoduo.com, REJECT
 ^https:\/\/api\.pinduoduo\.com\/api\/zaire_biz\/chat\/resource\/get_list_data reject-dict
 ^https:\/\/api\.pinduoduo\.com\/search_hotquery\? reject-dict
 
-^https:\/\/api\.pinduoduo\.com\/search response-body-json-del expansion
-^https:\/\/api\.pinduoduo\.com\/api\/philo\/personal\/hub\? response-body-json-del monthly_card_entrance personal_center_style_v2_vo icon_set.icons icon_set.top_personal_icons title_bar_items
-^https:\/\/api\.pinduoduo\.com\/api\/oak\/integration\/render response-body-json-del bottom_section_list ui.bottom_section ui.live_section.float_info
+^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? response-body-json-del result.search_bar_hot_query result.dy_module.irregular_banner_dy
 
-^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? response-body-json-jq '.result |= (.bottom_tabs |= map(select(.title | IN("首页", "聊天", "个人中心"))) | .buffer_bottom_tabs |= map(select(.title | IN("首页", "聊天", "个人中心"))) | del(.top_skin, .search_bar_hot_query, .dy_module.irregular_banner_dy))'
+^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? response-body-json-jq '.result.bottom_tabs? |= map(select(.link | IN("index.html", "chat_list.html", "personal.html"))) | .result.buffer_bottom_tabs? |= map(select(.link | IN("index.html", "chat_list.html", "personal.html")))'
 
 [Script]
-http-response ^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? script-path = https://kelee.one/Resource/Script/PinDuoDuo/PinDuoDuo_remove_ads.js, requires-body = true, tag = [拼多多]精简首页
+# http-response ^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? script-path = https://kelee.one/Resource/Script/PinDuoDuo/PinDuoDuo_remove_ads.js, requires-body = true, tag = [拼多多]精简首页
 
 [MitM]
 hostname = api.pinduoduo.com, api.yangkeduo.com
