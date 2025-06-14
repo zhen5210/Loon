@@ -28,8 +28,8 @@ jobs:
       - name: Replace #!date and #!loon_version
         run: |
           cd Loon
-          CURRENT_DATE="#!date = 2025-06-08 17:00"
-          LOON_VERSION="#!loon_version = 3.3.1(869)"
+          CURRENT_DATE="#!date = 2025-06-15 00:00"
+          LOON_VERSION="#!loon_version = 3.3.2(877)"
           
           # 查找并替换文件内容
           find . -type f -name "*.plugin" -exec sed -i \
