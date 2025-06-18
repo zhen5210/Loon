@@ -2,14 +2,14 @@
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-06-16 02:07:26
+# UPDATED: 2025-06-18 02:07:39
 # DOMAIN: 91
 # DOMAIN-KEYWORD: 36
-# DOMAIN-SUFFIX: 31547
+# DOMAIN-SUFFIX: 31548
 # IP-CIDR: 112
 # IP-CIDR6: 4
 # USER-AGENT: 46
-# TOTAL: 31836
+# TOTAL: 31837
 DOMAIN-SUFFIX,000webhost.com
 DOMAIN-SUFFIX,01.org
 DOMAIN-SUFFIX,02weqj32.com
@@ -20811,6 +20811,7 @@ DOMAIN-SUFFIX,ontrack.ac.uk
 DOMAIN-SUFFIX,onxxxtube.com
 DOMAIN-SUFFIX,onxxxvideo.com
 DOMAIN-SUFFIX,oocdtp.ac.uk
+DOMAIN-SUFFIX,oojj.de
 DOMAIN-SUFFIX,ooni.org
 DOMAIN-SUFFIX,oopsforum.com
 DOMAIN-SUFFIX,ootbstudio.co.kr
