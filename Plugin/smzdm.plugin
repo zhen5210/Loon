@@ -8,11 +8,11 @@
 #!loon_version = 3.3.2(877)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Zhidemai.png
-#!date = 2025-06-15 00:00
+#!date = 2025-06-19 12:00
 
 # 2024-02-11 01:02
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Smzdm.snippet
-# 2025-06-14 03:41:00
+# 2025-06-19 10:50:43
 # https://kelee.one/Tool/Loon/Plugin/smzdm_remove_ads.plugin
 
 [Rule]
@@ -32,6 +32,8 @@ DOMAIN, adx-api.zdmimg.com, REJECT
 ^https:\/\/app-api\.smzdm\.com\/mychannel\/list$ reject-dict
 
 ^https:\/\/h5\.smzdm\.com\/user\/coupon\/coupon_list\? reject
+
+^https:\/\/haojia-api\.smzdm\.com\/home\/list\? response-body-json-del data.header_operation.theme
 
 ^https:\/\/haojia-api\.smzdm\.com\/home\/list\? response-body-json-jq '.data.rows |= map(select(.cell_type == "39001")) | .data.banner_v2 |= map(select(.cell_type == "21028"))'
 
