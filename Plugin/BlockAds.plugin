@@ -8,7 +8,7 @@
 #!loon_version = 3.3.2(877)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/ShieldReject.png
-#!date = 2025-06-21 18:00
+#!date = 2025-06-22 00:00
 
 # 2025-06-20 23:40:17
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
@@ -1155,14 +1155,13 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 ^https?:\/\/mapi\.mafengwo\.cn\/system\/push\/get_local_push_config reject
 
 # 咪咕视频 - ggc.miguvideo.com, public-deliver9.miguvideo.com, display*-sc.miguvideo.com, recommend-dy.miguvideo.com, app-sc.miguvideo.com, common-sc.miguvideo.com, ggx*.miguvideo.com, ggic*.miguvideo.com
-^https?:\/\/ggc\.miguvideo\.com\/v1\/iflyad\/deliverysystem\/direct\/ reject-img
-^https?:\/\/public-deliver9\.miguvideo\.com\/deliver\/site\/batchMatch\/mergeSpot\/miguvideo\/ reject
-^https?:\/\/recommend-dy\.miguvideo\.com\/recommend-dynamic\/dataSource\/v1\/recommend\/merge reject
-^https?:\/\/app-sc\.miguvideo\.com\/app-management\/v1\/staticcache\/settings\/miguvideo\/SHARE_PIC reject
-^https?:\/\/common-sc\.miguvideo\.com\/videoActivity\/activityList\/ reject
-^https?:\/\/display-sc\.miguvideo\.com\/display\/v3\/static\/PERSONAL_CENTER\/ reject
-^https?:\/\/ggx\d+\.miguvideo\.com\/request\/sdk reject
-^https?:\/\/ggic\d+.miguvideo\.com\/ad\/ reject
+^https?:\/\/public-deliver9\.miguvideo\.com\/deliver\/site\/batchMatch\/mergeSpot\/miguvideo\/ reject-dict
+^https?:\/\/recommend-dy\.miguvideo\.com\/recommend-dynamic\/dataSource\/v1\/recommend\/merge reject-dict
+^https?:\/\/app-sc\.miguvideo\.com\/app-management\/v1\/staticcache\/settings\/miguvideo\/SHARE_PIC reject-dict
+^https?:\/\/common-sc\.miguvideo\.com\/videoActivity\/activityList\/ reject-dict
+^https?:\/\/display-sc\.miguvideo\.com\/display\/v3\/static\/PERSONAL_CENTER reject-dict
+^https?:\/\/ggx\d+\.miguvideo\.com\/request\/sdk reject-dict
+^https?:\/\/ggic\d+.miguvideo\.com\/ad\/ reject-dict
 
 # 秒拍 - b-api.ins.miaopai.com
 ^https?:\/\/b-api\.ins\.miaopai\.com\/\d\/ad/ reject
