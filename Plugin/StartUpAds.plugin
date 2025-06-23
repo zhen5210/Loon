@@ -1115,7 +1115,7 @@
 
 # ZhuiShuShenQi
 ^https?:\/\/adx-cn\.anythinktech\.com\/bid reject-200
-^http:\/\/[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+){1,4}(:\d+)?\/amdc\/mobileDispatch reject-200
+# ^http:\/\/[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+){1,4}(:\d+)?\/amdc\/mobileDispatch reject-200
 
 # ZhangShangDaoJuCheng
 ^https?:\/\/djcapp\.game\.qq\.com\/daoju\/igw\/main\/\?_service=welink\.ad\.list reject-200
@@ -1190,7 +1190,7 @@ http-response ^https?:\/\/api\.369cx\.cn\/v\d\/Splash\/GetSplashAd script-path =
 
 # ======= A ======= #
 # Amdc
-http-response ^http:\/\/amdc\.m\.taobao\.com script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/amdc.js, requires-body = true, tag = [墨鱼去开屏2.0]Amdc
+# http-response ^http:\/\/amdc\.m\.taobao\.com script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/amdc.js, requires-body = true, tag = [墨鱼去开屏2.0]Amdc
 
 # Ahhhhfs
 http-response ^https?:\/\/.*(xbwpys|ahhhhfs)\.com\/($|[0-9a-zA-Z_/]+\/$) script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/ahfs.js, requires-body = true, tag = [墨鱼去开屏2.0]Ahhhhfs
