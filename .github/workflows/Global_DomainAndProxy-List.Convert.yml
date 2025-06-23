@@ -2,7 +2,7 @@ name: Convert Global_Domain.list and proxy-list.txt
 
 on:
   schedule:
-    - cron: '0 */6 * * *' # 每6小时运行一次
+    - cron: '0 */12 * * *' # 每6小时运行一次
   workflow_dispatch: # 允许手动触发
 
 permissions:

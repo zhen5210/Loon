@@ -681,4 +681,5 @@
 
 
 ## Star History
-[![Stargazers over time](https://starchart.cc/sooyaaabo/Loon.svg?variant=adaptive)](https://starchart.cc/sooyaaabo/Loon)
+
+[![Star History Chart](https://api.star-history.com/svg?repos=sooyaaabo/Loon&type=Date)](https://www.star-history.com/#sooyaaabo/Loon&Date)
