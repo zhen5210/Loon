@@ -2,14 +2,14 @@
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-06-22 02:07:12
+# UPDATED: 2025-06-24 02:07:32
 # DOMAIN: 91
 # DOMAIN-KEYWORD: 36
-# DOMAIN-SUFFIX: 31552
+# DOMAIN-SUFFIX: 31557
 # IP-CIDR: 112
 # IP-CIDR6: 4
 # USER-AGENT: 46
-# TOTAL: 31841
+# TOTAL: 31846
 DOMAIN-SUFFIX,000webhost.com
 DOMAIN-SUFFIX,01.org
 DOMAIN-SUFFIX,02weqj32.com
@@ -2399,6 +2399,7 @@ DOMAIN-SUFFIX,aru.ac.uk
 DOMAIN-SUFFIX,arukas.io
 DOMAIN-SUFFIX,arunachalforests.gov.in
 DOMAIN-SUFFIX,arupoc.ac.uk
+DOMAIN-SUFFIX,arvanstorage.ir
 DOMAIN-SUFFIX,arxiv.org
 DOMAIN-SUFFIX,arzon.jp
 DOMAIN-SUFFIX,as-hp.ca
@@ -12215,6 +12216,7 @@ DOMAIN-SUFFIX,gotrusted.com
 DOMAIN-SUFFIX,gotw.ca
 DOMAIN-SUFFIX,gouhuo.qq.com
 DOMAIN-SUFFIX,gouri.xyz
+DOMAIN-SUFFIX,gov.ir
 DOMAIN-SUFFIX,gov.taipei
 DOMAIN-SUFFIX,gov.tw
 DOMAIN-SUFFIX,governmentengineer.com
@@ -14993,6 +14995,7 @@ DOMAIN-SUFFIX,iqiyiavlive.buzz
 DOMAIN-SUFFIX,iqq2.cc
 DOMAIN-SUFFIX,iqq3.cc
 DOMAIN-SUFFIX,iqqtv.net
+DOMAIN-SUFFIX,irangov.ir
 DOMAIN-SUFFIX,iranianboobs.com
 DOMAIN-SUFFIX,iranlms.ir
 DOMAIN-SUFFIX,iransextv.com
@@ -15006,6 +15009,7 @@ DOMAIN-SUFFIX,irib.ir
 DOMAIN-SUFFIX,iridiumbrowser.de
 DOMAIN-SUFFIX,iris.ac.uk
 DOMAIN-SUFFIX,iriss.ac.uk
+DOMAIN-SUFFIX,irna.ir
 DOMAIN-SUFFIX,iromod91.info
 DOMAIN-SUFFIX,ironna.jp
 DOMAIN-SUFFIX,ironpython.net
@@ -22440,6 +22444,7 @@ DOMAIN-SUFFIX,prescribingsafetyassessment.ac.uk
 DOMAIN-SUFFIX,presentation.new
 DOMAIN-SUFFIX,presentationzen.com
 DOMAIN-SUFFIX,presidencylondoncollege.ac.uk
+DOMAIN-SUFFIX,president.ir
 DOMAIN-SUFFIX,presidentlee.tw
 DOMAIN-SUFFIX,press.vin
 DOMAIN-SUFFIX,prestige-av.com
