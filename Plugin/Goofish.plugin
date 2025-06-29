@@ -8,9 +8,9 @@
 #!loon_version = 3.3.2(877)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Goofish.png
-#!date = 2025-06-27 22:00
+#!date = 2025-06-29 15:00
 
-# 2025-06-27 19:38:53
+# 2025-06-29 13:08:37
 # https://kelee.one/Tool/Loon/Plugin/FleaMarket_remove_ads.plugin
 
 [Rule]
@@ -20,7 +20,7 @@ AND, ((URL-REGEX, "^http:\/\/.+\/amdc\/mobileDispatch"), (USER-AGENT, "%E9%97%B2
 [Rewrite]
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlecommerce\.splash\.ads\/ reject-dict
 
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.nextfresh\/ response-body-json-jq '.data.homeTopList |= map(select(.sectionType == "kingkongDo")) | .data.sections |= map(select(.data.clickParam.args.cardType as $ct | $ct != "homeMultiBanner" and $ct != "mamaAD")) | .data.sections |= map(select(.template.name | contains("fish_home_tags_item_card")))'
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.nextfresh\/ response-body-json-jq '.data.homeTopList |= map(select(.sectionType == "kingkongDo")) | .data.sections |= map(select(.data.clickParam.args.cardType as $ct | $ct != "homeMultiBanner" and $ct != "mamaAD")) | .data.sections |= map(select((.template.name|type=="string")and(.template.name=="idlefish_home_new_commodity_card"or(.template.name|contains("fish_home_tags_item_card")))))'
 
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.widget\.refresh\.get\/ response-body-json-jq '.data.homeTopList |= map(select(.sectionType == "kingkongDo"))'
 

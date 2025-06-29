@@ -8,11 +8,11 @@
 #!loon_version = 3.3.2(877)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Weibo.png
-#!date = 2025-06-15 00:00
+#!date = 2025-06-29 15:00
 
-# 2025-05-15 22:51:24
+# 2025-06-26 18:00:24
 # https://kelee.one/Tool/Loon/Plugin/Weibo_remove_ads.plugin
-# 2025-02-15 21:00:00
+# 2025-06-05 11:23:56
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/weibo.plugin
 # 2025-02-10
 # https://raw.githubusercontent.com/neishe321/My_Scripts/main/Surge/Module/weibo.sgmodule
@@ -27,7 +27,7 @@ DOMAIN-SUFFIX, biz.weibo.com, REJECT
 
 [Rewrite]
 # 首页 - 签到、发布按钮、侧边栏、右上角红包、顶部标签页、侧边栏提醒、超话标签页悬浮、顶部直播
-^https:\/\/api\.weibo\.cn\/2\/(?:ug\/checkin\/list|push\/daily) reject-dict
+^https:\/\/api\.weibo\.cn\/2\/(?:ug\/checkin\/list|push\/daily|push\/info) reject-dict
 ^https:\/\/api\.weibo\.cn\/2\/!\/live\/media_homelist\? reject-dict
 
 # 详情页 - 超话、评论区、看图界面、个人主页、我的页面、信息流、商品橱窗、视频流、视频号、视频调查、话题卡片
