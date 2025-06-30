@@ -11,7 +11,7 @@
 #!date = 2025-06-15 00:00
 
 # 2025-05-13 15:17:08
-# https://kelee.one/Tool/Loon/Plugin/Himalaya_remove_ads.plugin
+# https://kelee.one/Tool/Loon/Lpx/Himalaya_remove_ads.lpx
 
 [Rule]
 # 广告下发
@@ -70,7 +70,7 @@ DOMAIN, adbehavior.wsa.ximalaya.com, REJECT
 ^https:\/\/(?:mobile|mobilehera|mobwsa)\.ximalaya\.com\/mobile-user\/v\d\/homePage\/ response-body-json-del data.freeListenV2
 
 # 我的页面 - 直播提醒气泡
-^https:\/\/livewsa\.ximalaya\.com\/lamia\/v1\/subscribe\/status$ reject-dict
+^https:\/\/(?:live|livewsa)\.ximalaya\.com\/lamia\/v1\/subscribe\/status$ reject-dict
 
 # 我的页面 - 服务模块
 ^https:\/\/(?:mobile|mobilehera|mobwsa)\.ximalaya\.com\/mobile-user\/v\d\/homePage\/ response-body-json-jq '.data.serviceModule.entrances |= map(select(.name == "全部服务"))'

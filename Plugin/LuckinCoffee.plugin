@@ -11,7 +11,7 @@
 #!date = 2025-06-15 00:00
 
 # 2025-05-13 15:17:08
-# https://kelee.one/Tool/Loon/Plugin/LuckinCoffee_remove_ads.plugin
+# https://kelee.one/Tool/Loon/Lpx/LuckinCoffee_remove_ads.lpx
 
 [Rewrite]
 # 日历
@@ -35,7 +35,6 @@
 
 # 开屏广告
 ^https:\/\/capi\.lkcoffee\.com\/resource\/m\/sys\/app\/adposNew reject
-# ^https:\/\/capi\.lkcoffee\.com\/resource\/m\/sys\/home\/ordertips reject
 
 [MitM]
 hostname = capi.lkcoffee.com

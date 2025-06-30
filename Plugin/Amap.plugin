@@ -11,7 +11,7 @@
 #!date = 2025-06-15 00:00
 
 # 2025-05-22 21:41:32
-# https://kelee.one/Tool/Loon/Plugin/Amap_remove_ads.plugin
+# https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx
 
 [Rule]
 # 移除广告下发请求

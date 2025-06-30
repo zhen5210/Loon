@@ -8,27 +8,31 @@
 #!loon_version = 3.3.2(877)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Spotify.png
-#!date = 2025-06-15 00:00
+#!date = 2025-06-30 16:00
 
-# 2025-06-04
+# 2025-06-11
 # https://github.com/001ProMax/Surge/blob/main/Loon/Spotify.plugin
 # 2025-06-08 03:40:18
-# https://kelee.one/Tool/Loon/Plugin/Spotify_remove_ads.plugin
+# https://kelee.one/Tool/Loon/Lpx/Spotify_remove_ads.lpx
 
 [Argument]
 tab = switch, false, true, tag = 移除底栏创建按钮, desc = 此开关控制是否移除底栏创建按钮
 useractivity = switch, true, false, tag = 启用Apple设备接力, desc = 此开关控制是否使用Apple设备接力
 
 [Rule]
-AND, ((DOMAIN-SUFFIX, spotify.com), (PROTOCOL, QUIC)), REJECT
+AND, ((DOMAIN, spclient.wg.spotify.com), (PROTOCOL, QUIC)), REJECT
+AND, ((DOMAIN, gae2-spclient.spotify.com), (PROTOCOL, QUIC)), REJECT
+AND, ((DOMAIN, guc3-spclient.spotify.com), (PROTOCOL, QUIC)), REJECT
 
 [Rewrite]
-^https:\/\/.+\.spotify\.com\/pendragon\/ reject-dict
+# 播放广告
+^https?:\/\/(?:gae2-spclient|guc3-spclient|spclient\.wg)\.spotify\.com(?::443)?\/pendragon\/ reject-dict
 
-^https:\/\/(.+)\.spotify\.com(:443)?\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/(.*)platform=iphone header https://$1.spotify.com$2/$3/$4platform=ipad
+# 恢复歌手和专辑列表的正常展示
+^https?:\/\/(gae2-spclient|guc3-spclient|spclient\.wg)\.spotify\.com(?::443)?\/artistview\/v1\/artist\/(.*)&platform=iphone header https://$1.spotify.com/artistview/v1/artist/$2&platform=ipad
 
 [Script]
-http-response ^https:\/\/.+\.spotify\.com(:443)?\/(?:bootstrap|user-customization-service) script-path = https://raw.githubusercontent.com/001ProMax/Surge/main/Script/Spotify.Crack.Dev.js, requires-body = true, binary-body-mode = true, timeout = 3, tag = [Spotify]Protobuf, argument=[{tab},{useractivity}]
+http-response ^https?:\/\/(?:gae2-spclient|guc3-spclient|spclient\.wg)\.spotify\.com(?::443)?\/(?:bootstrap|user-customization-service) script-path = https://raw.githubusercontent.com/001ProMax/Surge/main/Script/Spotify.Crack.Dev.js, requires-body = true, binary-body-mode = true, timeout = 3, tag = [Spotify]Protobuf, argument = [{tab},{useractivity}]
 
 [MitM]
 hostname = *.spotify.com

@@ -13,7 +13,7 @@
 # 2024-08-15 19:00
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.snippet
 # 2025-05-13 15:17:08
-# https://kelee.one/Tool/Loon/Plugin/Soul_remove_ads.plugin
+# https://kelee.one/Tool/Loon/Lpx/Soul_remove_ads.lpx
 # 2025-05-04 23:25:00
 # https://raw.githubusercontent.com/mist-whisper/Loon/master/Plugins/Soul_remove_ads.plugin
 
@@ -43,8 +43,25 @@ guess = switch, true, false, tag = 派对猜你喜欢, desc = true: 开启; fals
 vist = switch, true, false, tag = 主页访问数量提示, desc = true: 开启; false: 关闭;
 
 [Rule]
-IP-CIDR, 8.210.3.170/32, PROXY
-IP-CIDR, 47.75.72.47/32, PROXY
+# 地理位置 - 影响注册账号时的属地判断
+DOMAIN-SUFFIX, soulapp.cn, DIRECT
+IP-CIDR, 8.210.3.170/32, DIRECT, no-resolve
+IP-CIDR, 47.75.72.47/32, DIRECT, no-resolve
+
+# 广告下发
+DOMAIN, ad-h5-cdn.soulapp.cn, REJECT
+DOMAIN, ad-h5-station-cdn.soulapp.cn, REJECT
+DOMAIN, ad-r.soulapp.cn, REJECT
+DOMAIN, soul-ad.soulapp.cn, REJECT
+
+# 广告域名IP查询
+IP-CIDR, 47.56.131.76/32, REJECT, no-resolve
+IP-CIDR, 47.97.215.55/32, REJECT, no-resolve
+IP-CIDR, 47.99.42.29/32, REJECT, no-resolve
+IP-CIDR, 47.110.187.87/32, REJECT, no-resolve
+IP-CIDR, 47.243.147.125/32, REJECT, no-resolve
+IP-CIDR, 120.27.235.201/32, REJECT, no-resolve
+IP-CIDR, 121.196.197.147/32, REJECT, no-resolve
 
 [Rewrite]
 # 广告下发

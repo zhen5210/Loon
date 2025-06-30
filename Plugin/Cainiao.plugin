@@ -11,7 +11,7 @@
 #!date = 2025-06-15 00:00
 
 # 2025-05-13 15:17:08
-# https://kelee.one/Tool/Loon/Plugin/Cainiao_remove_ads.plugin
+# https://kelee.one/Tool/Loon/Lpx/Cainiao_remove_ads.lpx
 
 [Rule]
 # 移除广告下发请求
@@ -53,6 +53,8 @@ DOMAIN, youku-acs.m.taobao.com, REJECT
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbmensa\.research\.researchservice\.(?:acquire|event|close)\.cn reject-dict
 ^https:\/\/(?:cn-acs\.m|netflow-mtop)\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(?:batch\.show\.v2|click\.reply|expose\.m?reply|index)\.cn reject-dict
 ^https:\/\/(?:cn-acs\.m|mtop-bff-mtop)\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.(?:homepage\.merge|tabbar\.marketing)\.get\.cn reject-dict
+
+# 首页 - 补贴专区
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbcps\.presentation\.fetch\.cn reject-dict
 
 # 发现页 - 数字角标、裹裹券

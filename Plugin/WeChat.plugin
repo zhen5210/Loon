@@ -13,11 +13,11 @@
 # 2024-07-03 16:17:23
 # https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/WeChat/WeChat.list
 # 2025-05-13 15:17:08
-# https://kelee.one/Tool/Loon/Plugin/Weixin_Official_Accounts_remove_ads.plugin
+# https://kelee.one/Tool/Loon/Lpx/Weixin_Official_Accounts_remove_ads.lpx
 # 2025-05-13 15:17:08
-# https://kelee.one/Tool/Loon/Plugin/Weixin_external_links_unlock.plugin
+# https://kelee.one/Tool/Loon/Lpx/Weixin_external_links_unlock.lpx
 # 2025-05-13 15:17:08
-# https://kelee.one/Tool/Loon/Plugin/WexinMiniPrograms_Remove_ads.plugin
+# https://kelee.one/Tool/Loon/Lpx/WexinMiniPrograms_Remove_ads.lpx
 # 2025-05-30
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/WxPureDominion.snippet
 
@@ -99,8 +99,9 @@ DOMAIN, et.ykccn.com, REJECT
 # --------------- 微信公众号 --------------- #
 # 移除公众号中的推广内容 //mp.weixin.qq.com
 # ^http:\/\/\w+\.wxs\.qq\.com\/\d+\/\d+\/(snscosdownload|snssvpdownload)\/(SH|SZ)\/reserved\/\w+ reject-dict
-^https:\/\/mp\.weixin\.qq\.com\/mp\/(?:cps_product_info|getappmsgad|jsmonitor|masonryfeed|relatedarticle) reject-dict
-# 移除微信公众号文章底栏都在搜
+^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|jsmonitor|masonryfeed|relatedarticle)\? reject-dict
+
+# 移除微信公众号文章底栏都在搜 @wish
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/relatedsearchword reject-dict
 
 # --------------- 微信小程序 --------------- #
@@ -395,7 +396,7 @@ DOMAIN, et.ykccn.com, REJECT
 ^https:\/\/wx\.17u\.cn\/wechatmypubapi\/myInfo\/listIcons reject-dict
 ^https:\/\/a1d5b283e-wx621112590b635086\.sh\.wxgateway\.com\/xcxhomeapi\/home\/screen reject-dict
 
-# 美团 //rms.meituan.com, mapi.dianping.com, web.meituan.com, npay.meituan.com, apimobile.meituan.com
+# 美团点餐 //rms.meituan.com, mapi.dianping.com, web.meituan.com, npay.meituan.com, apimobile.meituan.com
 ^https:\/\/rms\.meituan\.com\/api\/v1\/rmsmina\/c\/queryShopPortalInfo\? response-body-json-del data.popUpWindows
 ^https:\/\/mapi\.dianping\.com\/baymax\/adrec\/getrecads reject-dict
 ^https:\/\/mapi\.dianping\.com\/baymax\/getSlotAds url reject-dict
@@ -406,11 +407,14 @@ DOMAIN, et.ykccn.com, REJECT
 ^https:\/\/npay\.meituan\.com\/conch\/walletv3\/wechat-pop-window reject-dict
 ^https:\/\/apimobile\.meituan\.com\/group\/v1\/deal\/searchpage\/defaultword reject-dict
 
-# 腾讯手机充值 //chong.qq.com
+# 腾讯手机充值 - 充值选择页面推广 //chong.qq.com
 ^https:\/\/chong\.qq\.com\/tws\/wxmobile\/GetProduct4App\? response-body-json-jq 'del(.respInfo.reserveProductList) | .respInfo.shortcut |= map(select(.name != "充流量" and .name != "领话费券"))'
 ^https:\/\/chong\.qq\.com\/tws\/wxmobile4app\/GetSecondProduct\? response-body-json-jq 'del(.respInfo.productList) | .respInfo.shortcut |= map(select(.name != "充流量" and .name != "领话费券"))'
+# 腾讯手机充值 - 余额查询页面 - 特惠流量包推广
 ^https:\/\/chong\.qq\.com\/tws\/usernumberinfo\/GetUserInfo\? response-body-json-del data.request.number.markSeat.servicehallOperList data.request.number.servicehallOperList data.request.number.markSeat.servicehallFuncList data.request.number.servicehallFuncList
+# 腾讯手机充值 - 充值付款页面推广 - 中国移动
 ^https:\/\/wx\.online-cmcc\.cn\/contactpoint\/customer\/api\/list\? reject-dict
+# 腾讯手机充值 - 付款成功页面推广 - 中国移动
 ^https:\/\/wx\.10086\.cn\/qwhdhub\/activity\/info reject-dict
 
 # 工银e生活 //elife.icbc.com.cn

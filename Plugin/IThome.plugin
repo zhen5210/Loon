@@ -13,7 +13,7 @@
 # 2024-01-27 20:57:40
 # https://raw.githubusercontent.com/Keywos/rule/main/script/ithome/it.plugin
 # 2025-05-13 15:17:08
-# https://kelee.one/Tool/Loon/Plugin/IThome_remove_ads.plugin
+# https://kelee.one/Tool/Loon/Lpx/IThome_remove_ads.lpx
 
 [Argument]
 removeTopSwitch = switch, true, false, tag = 移除置顶项, desc = 是否启用移除置顶项功能
