@@ -82,7 +82,7 @@
 6. 提供 4 个Emby服务以及 0.3 倍率节点畅享观影。<br>
 7. 每日可在群组发送指令签到获取随机流量。<br>
 8. 独家首发流量转结系统，上月剩余流量转结并延长有效期至下个月。<br>
-9. 更多详细内容教程，可在[官方博客公告](https://tutorial.aladdinnet.cc/)了解。<br>
+9. 有关套餐权益、使用教程等更多详细内容，可在[官方博客公告](https://tutorial.aladdinnet.cc/)了解。<br>
 
 - **套餐介绍**<br>
   <table>
@@ -97,42 +97,52 @@
 	  <th width="100px" align=center>流量重置</th>
       </tr>
       <tr>
+          <td align=center>入门套餐</td>
+          <td align=center>50G</td>
+          <td align=center>¥8</td>
+          <td align=center>¥24</td>
+          <td align=center>¥48</td>
+          <td align=center>¥96</td>
+          <td align=center>1~500M</td>
+          <td align=center>每月1号</td>
+      </tr>
+      <tr>
           <td align=center>轻量套餐</td>
-          <td align=center>88G</td>
-          <td align=center>¥7.5</td>
-          <td align=center>¥22.5</td>
+          <td align=center>100G</td>
+          <td align=center>¥15</td>
           <td align=center>¥45</td>
           <td align=center>¥90</td>
+          <td align=center>¥180</td>
           <td align=center>1~1000M</td>
           <td align=center>每月1号</td>
       </tr>
       <tr>
           <td align=center>基础套餐</td>
-          <td align=center>188G</td>
-          <td align=center>¥15</td>
-          <td align=center>¥45</td>
+          <td align=center>250G</td>
+          <td align=center>¥30</td>
           <td align=center>¥90</td>
           <td align=center>¥180</td>
+          <td align=center>¥360</td>
           <td align=center>1~2000M</td>
           <td align=center>每月1号</td>
       </tr>
       <tr>
           <td align=center>高级套餐</td>
-          <td align=center>388G</td>
-          <td align=center>¥30</td>
-          <td align=center>¥90</td>
-          <td align=center>¥180</td>
-          <td align=center>¥360</td>
+          <td align=center>450G</td>
+          <td align=center>¥50</td>
+          <td align=center>¥150</td>
+          <td align=center>¥300</td>
+          <td align=center>¥600</td>
           <td align=center>1~3000M</td>
           <td align=center>每月1号</td>
       </tr>
       <tr>
           <td align=center>豪华套餐</td>
-          <td align=center>688G</td>
-          <td align=center>¥50</td>
-          <td align=center>¥150</td>
+          <td align=center>1000G</td>
+          <td align=center>¥100</td>
           <td align=center>¥300</td>
-          <td align=center>¥600</td>
+          <td align=center>¥900</td>
+          <td align=center>¥1200</td>
           <td align=center>1~3888M</td>
           <td align=center>每月1号</td>
       </tr>
@@ -149,9 +159,9 @@
       <tr>
           <td align=center>888流量套餐</td>
           <td align=center>100G</td>
-          <td align=center>¥100</td>
+          <td align=center>¥188</td>
 	  <td align=center>888天</td>
-          <td align=center>1~1000M</td>
+          <td align=center>1~2000M</td>
           <td align=center>无重置</td>
       </tr>
   </table>
