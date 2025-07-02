@@ -42,7 +42,7 @@
 > - 本人对任何脚本相关问题概不负责，包括但不限于因脚本错误或使用不当导致的损失或损害。使用者应自行评估和承担相关风险，使用前请谨慎考虑。
 > 
 > - 任何以任何方式查看本仓库或直接或间接使用本仓库内容的用户，均应仔细阅读此声明。作者保留随时修改或补充本使用声明的权利。任何修改一旦发布，即时生效。使用或复制任何相关脚本或规则即视为您已接受此使用声明的所有条款。如有任何异议，请立即停止使用。
->
+> 
 > - 转载时你需要保留原作者署名信息，且遵守本仓库的 [CC BY-NC-SA 4.0](LICENSE) 许可协议。
 > 
 >   > **您必须在下载后的 24 小时内从计算机或手机中完全删除以上内容。**
@@ -54,7 +54,7 @@
 
 ### 配置文件导入（点击跳转）<br>
 - [适用于App Store版本](https://www.nsloon.com/openloon/import?sub=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Config/Loon_Simple_Configuration_AppStore.conf)
-    
+
 - [适用于TestFlight版本](https://www.nsloon.com/openloon/import?sub=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Config/Loon_Simple_Configuration_TestFlight.conf)
 
 ### 配置文件链接（手动复制）<br>
@@ -79,10 +79,10 @@
 3. 多达 60+ 节点，包含港、台、日、新、美常用地区及部分冷门地区节点。<br>
 4. 支持多种流媒体服务访问解锁，包括但不限于Disney+、YouTube、Netflix等。<br>
 5. 提供节点``免登流媒体``共享账号观看Netflix、HBO、PrimeVideo、PornHub。<br>
-6. 提供 4 个Emby服务以及 0.3 倍率节点畅享观影。<br>
+6. 提供 6 个Emby服务以及 0.3 倍率节点畅享观影。<br>
 7. 每日可在群组发送指令签到获取随机流量。<br>
 8. 独家首发流量转结系统，上月剩余流量转结并延长有效期至下个月。<br>
-9. 有关套餐权益、使用教程等更多详细内容，可在[官方博客公告](https://tutorial.aladdinnet.cc/)了解。<br>
+9. 有关套餐权益、使用教程等更多详细内容，请在[官方博客公告](https://tutorial.aladdinnet.cc/)仔细阅读了解。<br>
 
 - **套餐介绍**<br>
   <table>
@@ -249,7 +249,7 @@
   </table>
 
 - **购买方式**<br>
-点击[CloudFisher官网](https://cloudfisher.net/web/#/login?code=eeP6V0lX)购买，85折优惠码（Air套餐除外）`且听渔吟`
+点击[CloudFisher官网](https://cloudfisher.net/web/#/login?code=eeP6V0lX)购买，85折优惠码（Air套餐除外）`且听渔吟`，限时83折优惠码（截止至7月15日 22:00）`1year_CloudFisher`
 
 - **联系方式**<br>
 官方频道：[@CloudFisher](https://t.me/CloudFisher)<br>
