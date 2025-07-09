@@ -25,7 +25,7 @@
 ^https:\/\/bootpreload\.uve\.weibo\.com\/v1\/ad\/preload$ reject-dict
 
 # 发现页面 - 横幅推广、最常访问、主页访客、热门视频、热门话题
-^https:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=trends response-body-json-del data.banner data.user_footprint data.profile_accessrecord data.native_content data.topics data.discover
+^https:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=trends response-body-json-del data.banner data.discover data.user_footprint data.profile_accessrecord data.native_content data.topics
 
 # 发现页面 - 顶部尊享会员图标入口
 ^https:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=trends response-body-json-jq '.data.discover |= map(select(.schema != "尊享会员"))'
