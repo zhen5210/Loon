@@ -1,40 +1,45 @@
-name: Replace URLs in .plugin files
+name: Replace Script URL in .plugin Files
 
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
+  # schedule:
+    # - cron: "30 * * * *"
+
+permissions:
+  actions: write  
+  contents: write  
 
 jobs:
-  replace-text:
+  replace-url:
     runs-on: ubuntu-latest
-
+    
     steps:
-    # Step 1: Checkout repository
-    - name: Checkout repository
-      uses: actions/checkout@v3
-
-    # Step 2: Replace URLs in .plugin files
-    - name: Replace URLs in .plugin files
-      run: |
-        # Find all .plugin files in the Loon directory and replace the URL
-        find ./Loon -type f -name "*.plugin" | while read plugin_file; do
-          echo "Processing file: $plugin_file"
-          
-          # Replace the old URL with the new one
-          sed -i 's|https://kelee.one/Resource/Script/|https://kelee.one/Resource/JavaScript/|g' "$plugin_file"
-        done
-
-    # Step 3: Commit the changes if any file was modified
-    - name: Commit changes if any
-      run: |
-        git config --global user.name 'github-actions'
-        git config --global user.email 'github-actions@users.noreply.github.com'
+      - name: Checkout code
+        uses: actions/checkout@v4.2.2
+        with:
+          repository: sooyaaabo/Loon
+          path: Loon
+          token: ${{ secrets.GITHUB_TOKEN }} 
         
-        # Check if any files were changed
-        git diff --quiet || (
-          git add .
-          git commit -m "Replace Script URL with JavaScript URL in .plugin files"
+      - name: Set timezone to China/Shanghai
+        run: |
+          sudo timedatectl set-timezone Asia/Shanghai
+
+      - name: Replace Script URL
+        run: |
+          cd Loon
+          OLD_URL="https://kelee.one/Resource/Script/"
+          NEW_URL="https://kelee.one/Resource/JavaScript/"
+          
+          # 查找并替换文件内容
+          find . -type f -name "*.plugin" -exec sed -i \
+            -e "s|$OLD_URL|$NEW_URL|g" {} +
+          
+      - name: Commit changes
+        run: |
+          cd Loon
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add . 
+          git commit -m "Replace Script URL with JavaScript URL" || echo "No changes to commit"
           git push
-        )
