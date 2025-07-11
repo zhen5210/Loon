@@ -28,7 +28,7 @@
 ^https:\/\/api\.ys7\.com\/v3\/videoclips\/square\/video\/query reject-dict
 
 [Script]
-# http-response ^https:\/\/api\.ys7\.com\/v3\/valueadded\/operation\/config\/master\/station script-path = https://kelee.one/Resource/Script/VideoGo/VideoGo_remove_ads.js, requires-body = true, tag = [萤石云视频]移除我的页面广告
+# http-response ^https:\/\/api\.ys7\.com\/v3\/valueadded\/operation\/config\/master\/station script-path = https://kelee.one/Resource/JavaScript/VideoGo/VideoGo_remove_ads.js, requires-body = true, tag = [萤石云视频]移除我的页面广告
 
 [MitM]
 hostname = api.ys7.com, i.ys7.com
