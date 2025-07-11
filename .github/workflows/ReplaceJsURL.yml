@@ -15,7 +15,7 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
-    # Step 2: Replace text in .plugin files
+    # Step 2: Replace URLs in .plugin files
     - name: Replace URLs in .plugin files
       run: |
         # Find all .plugin files in the Loon directory and replace the URL
@@ -30,4 +30,11 @@ jobs:
     - name: Commit changes if any
       run: |
         git config --global user.name 'github-actions'
-        git config --global user.email 'git
+        git config --global user.email 'github-actions@users.noreply.github.com'
+        
+        # Check if any files were changed
+        git diff --quiet || (
+          git add .
+          git commit -m "Replace Script URL with JavaScript URL in .plugin files"
+          git push
+        )
