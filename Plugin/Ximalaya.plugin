@@ -8,9 +8,9 @@
 #!loon_version = 3.3.2(877)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Ximalaya.png
-#!date = 2025-06-15 00:00
+#!date = 2025-07-11 21:00
 
-# 2025-05-13 15:17:08
+# 2025-07-11 17:53:22
 # https://kelee.one/Tool/Loon/Lpx/Himalaya_remove_ads.lpx
 
 [Rule]
@@ -52,6 +52,9 @@ DOMAIN, adbehavior.wsa.ximalaya.com, REJECT
 
 # 订阅 - 圈子 - 圈子推荐
 ^https:\/\/(?:m|mwsa)\.ximalaya\.com\/community\/square\/v\d\/stream\? mock-response-body data-type=json data="{"data":{"cards":[{"content":{},"type":"RECOMMENDS"}]},"ret":0}" status-code=200
+
+# 播放器 - 提示语
+^https:\/\/mobwsa\.ximalaya\.com\/mobile-playpage\/playpage\/tabs\/v2\/ response-body-json-del data.playpage.resourceMap.defaultResource data.playpage.resourceMap.playPageTip
 
 # 播放器 - 推荐
 ^https:\/\/(?:mobile|mobilehera|mobwsa)\.ximalaya\.com\/mobile-playpage\/playpage\/recommendContentV\d\/ reject-dict
