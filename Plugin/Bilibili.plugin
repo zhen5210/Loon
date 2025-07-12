@@ -8,9 +8,9 @@
 #!loon_version = 3.3.2(877)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/BilibiliPink.png
-#!date = 2025-07-11 22:00
+#!date = 2025-07-12 08:00
 
-# 2025-07-06 20:49:50
+# 2025-07-12 00:57:50
 # https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx
 # 2025-07-11
 # https://raw.githubusercontent.com/kokoryh/Sparkle/master/release/loon/plugin/bilibili.plugin
@@ -20,7 +20,7 @@
 showUpList = select, "auto", "true", "false", tag = [动态]中[最常访问]的显示方式, desc = auto: 仅当列表中存在直播状态时显示; true: 始终显示; false: 始终隐藏;
 filterTopReplies = switch, true, false, tag = [评论区]过滤置顶评论广告, desc = true: 开启; false: 关闭;
 airborne = switch, true, false, tag = [空降助手]跳过[视频内]插播广告, desc = true: 开启; false: 关闭;
-logLevel = select, "off", "error", "warn", "info", "debug", tag = 日志等级, desc = 选择日志等级
+logLevel = select, "off", "error", "warn", "info", "debug", tag = 日志等级, desc = 选择日志输出等级
 
 [Rule]
 # 阻止B站备用域名访问
