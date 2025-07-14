@@ -8,9 +8,9 @@
 #!loon_version = 3.3.2(877)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/BilibiliPink.png
-#!date = 2025-07-12 08:00
+#!date = 2025-07-14 23:00
 
-# 2025-07-12 00:57:50
+# 2025-07-14 22:29:43
 # https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx
 # 2025-07-11
 # https://raw.githubusercontent.com/kokoryh/Sparkle/master/release/loon/plugin/bilibili.plugin
@@ -31,6 +31,8 @@ DOMAIN, app.biliapi.net, REJECT
 DOMAIN-SUFFIX, chat.bilibili.com, REJECT
 
 [Rewrite]
+^https:\/\/api\.bilibili\.com\/x\/pd-proxy\/tracker\? response-body-json-jq '.data[][]?="chat.bilibili.com:3478"'
+
 # 移除直播广告
 ^https:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_info\? reject-dict
 

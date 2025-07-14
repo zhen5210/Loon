@@ -1,5 +1,5 @@
-// 2024.10.22 10:13
 // https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/KuAn.js
+// 2024.10.22 10:13
 
 const url = $request.url;
 const obj = JSON.parse($response.body);

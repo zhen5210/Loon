@@ -1,4 +1,4 @@
-# 2025-06-03 21:11:00
+# 2025-07-14 22:20:17
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/rule/rejectAd.list
 
 # >>>>>>>>>>>>>>> ✅ # ✅ <<<<<<<<<<<<<<
@@ -9807,8 +9807,17 @@ DOMAIN-SUFFIX, yumcs.xiaohuau.xyz
 DOMAIN-SUFFIX, banner.itweb.co.za
 DOMAIN-SUFFIX, banners.itweb.co.za
 DOMAIN-SUFFIX, xn--3bs795g.zone
+DOMAIN-SUFFIX, ppezijkacga.com
+DOMAIN-SUFFIX, kreopbkabsit.com
+DOMAIN-SUFFIX, admiitad.com
+DOMAIN-SUFFIX, thelifeandmore.com
+DOMAIN-SUFFIX, fractionfridgejudiciary.com
+DOMAIN-SUFFIX, ocponcphaafb.com
+DOMAIN-SUFFIX, tapwhigwy.com
+DOMAIN-SUFFIX, ahqovxli.com
+DOMAIN-SUFFIX, fipabtomqok.com
 
-# IPV4 addresses
+# IPv4 addresses
 IP-CIDR, 117.177.248.17/32, no-resolve
 IP-CIDR, 117.177.248.41/32, no-resolve
 IP-CIDR, 223.87.176.139/32, no-resolve

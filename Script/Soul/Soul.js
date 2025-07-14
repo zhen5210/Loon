@@ -1,4 +1,7 @@
 // https://klraw.pages.dev/kelv1n1n/script/refs/heads/main/js/soul.js?token=209863
+//  2025-04-04
+//  树先生
+//  当前文件内容仅供个人学习和研究使用，若使用过程中发生任何问题概不负责
 
 let url = $request.url;
 let body = $response.body;
@@ -33,22 +36,22 @@ if (url.indexOf("/chat/limitInfo") != -1) {
     };
 
     let resultArray = [];
-    if (soulMatch == false) {
+    if (soulMatch) {
         resultArray.push(sortIdMap.soulMatch);
     }
-    if (voiceMatch == false) {
+    if (voiceMatch) {
         resultArray.push(sortIdMap.voiceMatch);
     }
-    if (partyMatch == false) {
+    if (partyMatch) {
         resultArray.push(sortIdMap.partyMatch);
     }
-    if (masked == false) {
+    if (masked) {
         resultArray.push(sortIdMap.masked);
     }
-    if (maskedMatch == false) {
+    if (maskedMatch) {
         resultArray.push(sortIdMap.maskedMatch);
     }
-    if (planet == false) {
+    if (planet) {
         resultArray.push(sortIdMap.planet);
     }
     
@@ -136,34 +139,34 @@ if (url.indexOf("/chat/limitInfo") != -1) {
     let resultArray = [];
 
     // 检查每个变量，如果为 true 则将对应的 id 添加到结果数组中
-    if (hot == false) {
+    if (hot) {
         resultArray.push(idMap.hot);
     }
-    if (all == false) {
+    if (all) {
         resultArray.push(idMap.all);
     }
-    if (emotion == false) {
+    if (emotion) {
         resultArray.push(idMap.emotion);
     }
-    if (personal == false) {
+    if (personal) {
         resultArray.push(idMap.personal);
     }
-    if (play == false) {
+    if (play) {
         resultArray.push(idMap.play);
     }
-    if (interest == false) {
+    if (interest) {
         resultArray.push(idMap.interest);
     }
-    if (argue == false) {
+    if (argue) {
         resultArray.push(idMap.argue);
     }
-    if (story == false) {
+    if (story) {
         resultArray.push(idMap.story);
     }
-    if (chat == false) {
+    if (chat) {
         resultArray.push(idMap.chat);
     }
-    if (heart == false) {
+    if (heart) {
         resultArray.push(idMap.heart);
     }
     obj.data.res = obj.data.res.filter(t => resultArray.includes(t.id));
