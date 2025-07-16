@@ -2,14 +2,14 @@
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-07-06 02:07:17
+# UPDATED: 2025-07-16 02:07:37
 # DOMAIN: 110
 # DOMAIN-KEYWORD: 36
-# DOMAIN-SUFFIX: 31560
+# DOMAIN-SUFFIX: 31562
 # IP-CIDR: 112
 # IP-CIDR6: 4
 # USER-AGENT: 46
-# TOTAL: 31868
+# TOTAL: 31870
 DOMAIN-SUFFIX,000webhost.com
 DOMAIN-SUFFIX,01.org
 DOMAIN-SUFFIX,02weqj32.com
@@ -30062,6 +30062,7 @@ DOMAIN-SUFFIX,www-sms-apple.com
 DOMAIN-SUFFIX,www.destinationurl.com
 DOMAIN-SUFFIX,www.pxcc.com
 DOMAIN-SUFFIX,www.sb
+DOMAIN-SUFFIX,www.xicons.org
 DOMAIN-SUFFIX,www1.biz
 DOMAIN-SUFFIX,www8-hp.com
 DOMAIN-SUFFIX,wwwapple.com
@@ -30253,6 +30254,7 @@ DOMAIN-SUFFIX,xinfhw.com
 DOMAIN-SUFFIX,xing.com
 DOMAIN-SUFFIX,xing66.life
 DOMAIN-SUFFIX,xing840.info
+DOMAIN-SUFFIX,xinggan77.vip
 DOMAIN-SUFFIX,xingrz.me
 DOMAIN-SUFFIX,xinhuanet.org
 DOMAIN-SUFFIX,xinjiangpolicefiles.org
