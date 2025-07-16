@@ -249,7 +249,7 @@
   </table>
 
 - **购买方式**<br>
-点击[CloudFisher官网](https://cloudfisher.net/web/#/login?code=eeP6V0lX)购买，85折优惠码（Air套餐除外）`且听渔吟`，限时83折优惠码（截止至7月15日 22:00）`1year_CloudFisher`
+点击[CloudFisher官网](https://cloudfisher.net/web/#/login?code=eeP6V0lX)购买，85折优惠码（Air套餐除外）`且听渔吟`
 
 - **联系方式**<br>
 官方频道：[@CloudFisher](https://t.me/CloudFisher)<br>
