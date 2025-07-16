@@ -15,6 +15,8 @@ DOMAIN-KEYWORD, apple.com.edgekey.net
 DOMAIN-KEYWORD, apple-support.akadns.net
 
 # Apple 推送通知 - 当使用 Apple 推送通知服务 (APNS) 时，Apple 设备需要访问以下主机。
+DOMAIN, identity.apple.com // APNs 证书请求门户
+DOMAIN-SUFFIX, push.apple.com // 推送通知
 IP-CIDR, 17.249.0.0/16, no-resolve
 IP-CIDR, 17.252.0.0/16, no-resolve
 IP-CIDR, 17.57.144.0/22, no-resolve

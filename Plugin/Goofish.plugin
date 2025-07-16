@@ -8,9 +8,9 @@
 #!loon_version = 3.3.2(877)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Goofish.png
-#!date = 2025-07-10 23:00
+#!date = 2025-07-16 08:00
 
-# 2025-07-10 22:53:07
+# 2025-07-16 03:29:43
 # https://kelee.one/Tool/Loon/Lpx/FleaMarket_remove_ads.lpx
 
 [Rule]
@@ -31,8 +31,8 @@ AND, ((URL-REGEX, "^http:\/\/.+\/amdc\/mobileDispatch"), (USER-AGENT, "%E9%97%B2
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.home\.whale\.modulet\/ response-body-json-jq '.data.container.sections |= map(select(.template.name == "fish_home_miniapp"))'
 Add commentMore actions
 
-# 首页 - 左上角签到、右下角悬浮广告
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.user\.strategy\.list\/ response-body-json-jq '.data.strategies |= map(select(.type | . != "BIZ_IDLE_COIN_ENTRANCE_2" and . != "FLOAT_LAYER"))'
+# 首页 - 左上角签到、右下角悬浮广告、底栏动态发布球、底栏同城标签红点
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.user\.strategy\.list\/ reject-dict
 
 # 商品详情 - 为你推荐
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.fun\.follow\.feed\.list\/ response-body-json-jq '.data.sections|=map(select(.cardType==2001))'
