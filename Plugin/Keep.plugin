@@ -8,14 +8,18 @@
 #!loon_version = 3.3.2(877)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Keep.png
-#!date = 2025-06-15 00:00
+#!date = 2025-07-19 10:00
 
 # 2025-05-23 13:32:55
 # https://kelee.one/Tool/Loon/Lpx/Keep_remove_ads.lpx
+# 2025-07-19
+# https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Keep.snippet
 
 [Rule]
 # 信息流广告
 DOMAIN, kad.gotokeep.com, REJECT
+DOMAIN, hc-ssp.sm.cn, REJECT
+DOMAIN, httpdns.calorietech.com, REJECT
 
 [Rewrite]
 # 精简配置
