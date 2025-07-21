@@ -1,4 +1,4 @@
-# 2025-07-14 22:20:17
+# 2025-07-21 10:20:17
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/rule/rejectAd.list
 
 # >>>>>>>>>>>>>>> ✅ # ✅ <<<<<<<<<<<<<<
@@ -1444,6 +1444,10 @@ DOMAIN-SUFFIX, api-htp.beizi.biz
 DOMAIN-SUFFIX, yfanads.com
 DOMAIN-SUFFIX, 1rtb.net
 DOMAIN-SUFFIX, adwangmai.com
+DOMAIN-SUFFIX, yunxinfw.com
+DOMAIN-SUFFIX, bridgeoos.com
+DOMAIN-SUFFIX, cloooud.com
+IP-CIDR, 114.132.165.205/32
 
 # 新浪
 DOMAIN-SUFFIX, beacon.sina.com.cn
